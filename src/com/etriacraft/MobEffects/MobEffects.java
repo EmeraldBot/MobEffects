@@ -5,6 +5,7 @@ import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.etriacraft.MobEffects.Listeners.MEPlayerListener;
+import com.etriacraft.MobEffects.Listeners.MEZombieListener;
 
 public class MobEffects extends JavaPlugin {
 	
@@ -14,6 +15,7 @@ public class MobEffects extends JavaPlugin {
 		config.load(new File(getDataFolder(), "config.yml"));
 		this.getServer().getPluginManager().registerEvents(new MobListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEPlayerListener(), this);
+		this.getServer().getPluginManager().registerEvents(new MEZombieListener(), this);
 	}
 	
 	public void onDisable() {

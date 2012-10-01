@@ -191,9 +191,9 @@ public class Config {
 		PlayerConfusionPower = config.getInt("Player.Confusion.Power", PlayerConfusionPower);
 		
 		// Player Damage Resistance
-		PlayerDamageResistanceEnabled = config.getBoolean("Player.Damage_Resistance.Enabled", PlayerDamageResistanceEnabled);
-		PlayerDamageResistanceTime = config.getInt("Player.Damage_Resistance.Time", PlayerDamageResistanceTime);
-		PlayerDamageResistancePower = config.getInt("Player.Damage_Resistance.Power", PlayerDamageResistancePower);
+		PlayerDamageResistanceEnabled = config.getBoolean("Player.DamageResistance.Enabled", PlayerDamageResistanceEnabled);
+		PlayerDamageResistanceTime = config.getInt("Player.DamageResistance.Time", PlayerDamageResistanceTime);
+		PlayerDamageResistancePower = config.getInt("Player.DamageResistance.Power", PlayerDamageResistancePower);
 		
 		// Player Fast Digging
 		PlayerFastDiggingEnabled = config.getBoolean("Player.FastDigging.Enabled", PlayerFastDiggingEnabled);
@@ -220,10 +220,10 @@ public class Config {
 		PlayerHungerTime = config.getInt("Player.Hunger.Time", PlayerHungerTime);
 		PlayerHungerPower = config.getInt("Player.Hunger.Power", PlayerHungerPower);
 		
-		// Player FastDamage
-		PlayerIncreaseDamageEnabled = config.getBoolean("Player.FastDamage.Enabled", PlayerIncreaseDamageEnabled);
-		PlayerIncreaseDamageTime = config.getInt("Player.FastDamage.Time", PlayerIncreaseDamageTime);
-		PlayerIncreaseDamagePower = config.getInt("Player.FastDamage.Power", PlayerIncreaseDamagePower);
+		// Player IncreaseDamage
+		PlayerIncreaseDamageEnabled = config.getBoolean("Player.IncreaseDamage.Enabled", PlayerIncreaseDamageEnabled);
+		PlayerIncreaseDamageTime = config.getInt("Player.IncreaseDamage.Time", PlayerIncreaseDamageTime);
+		PlayerIncreaseDamagePower = config.getInt("Player.IncreaseDamage.Power", PlayerIncreaseDamagePower);
 		
 		// Player Jump
 		PlayerJumpEnabled = config.getBoolean("Player.Jump.Enabled", PlayerJumpEnabled);
@@ -276,9 +276,9 @@ public class Config {
 		ZombieConfusionPower = config.getInt("Zombie.Confusion.Power", ZombieConfusionPower);
 
 		// Zombie Damage Resistance
-		ZombieDamageResistanceEnabled = config.getBoolean("Zombie.Damage_Resistance.Enabled", ZombieDamageResistanceEnabled);
-		ZombieDamageResistanceTime = config.getInt("Zombie.Damage_Resistance.Time", ZombieDamageResistanceTime);
-		ZombieDamageResistancePower = config.getInt("Zombie.Damage_Resistance.Power", ZombieDamageResistancePower);
+		ZombieDamageResistanceEnabled = config.getBoolean("Zombie.DamageResistance.Enabled", ZombieDamageResistanceEnabled);
+		ZombieDamageResistanceTime = config.getInt("Zombie.DamageResistance.Time", ZombieDamageResistanceTime);
+		ZombieDamageResistancePower = config.getInt("Zombie.DamageResistance.Power", ZombieDamageResistancePower);
 
 		// Zombie Fast Digging
 		ZombieFastDiggingEnabled = config.getBoolean("Zombie.FastDigging.Enabled", ZombieFastDiggingEnabled);
@@ -305,10 +305,10 @@ public class Config {
 		ZombieHungerTime = config.getInt("Zombie.Hunger.Time", ZombieHungerTime);
 		ZombieHungerPower = config.getInt("Zombie.Hunger.Power", ZombieHungerPower);
 
-		// Zombie FastDamage
-		ZombieIncreaseDamageEnabled = config.getBoolean("Zombie.FastDamage.Enabled", ZombieIncreaseDamageEnabled);
-		ZombieIncreaseDamageTime = config.getInt("Zombie.FastDamage.Time", ZombieIncreaseDamageTime);
-		ZombieIncreaseDamagePower = config.getInt("Zombie.FastDamage.Power", ZombieIncreaseDamagePower);
+		// Zombie IncreaseDamage
+		ZombieIncreaseDamageEnabled = config.getBoolean("Zombie.IncreaseDamage.Enabled", ZombieIncreaseDamageEnabled);
+		ZombieIncreaseDamageTime = config.getInt("Zombie.IncraseDamage.Time", ZombieIncreaseDamageTime);
+		ZombieIncreaseDamagePower = config.getInt("Zombie.IncreaseDamage.Power", ZombieIncreaseDamagePower);
 
 		// Zombie Jump
 		ZombieJumpEnabled = config.getBoolean("Zombie.Jump.Enabled", ZombieJumpEnabled);
@@ -376,9 +376,9 @@ public class Config {
 		config.set("Player.Confusion.Enabled", PlayerConfusionEnabled);
 		config.set("Player.Confusion.Time", PlayerConfusionTime);
 		config.set("Player.Confusion.Power", PlayerConfusionPower);
-		config.set("Player.Damage_Resistance.Enabled", PlayerDamageResistanceEnabled);
-		config.set("Player.Damage_Resistance.Time", PlayerDamageResistanceTime);
-		config.set("Player.Damage_Resistance.Power", PlayerDamageResistancePower);
+		config.set("Player.DamageResistance.Enabled", PlayerDamageResistanceEnabled);
+		config.set("Player.DamageResistance.Time", PlayerDamageResistanceTime);
+		config.set("Player.DamageResistance.Power", PlayerDamageResistancePower);
 		config.set("Player.FastDigging.Enabled", PlayerFastDiggingEnabled);
 		config.set("Player.FastDigging.Time", PlayerFastDiggingTime);
 		config.set("Player.FastDigging.Power", PlayerFastDiggingPower);
@@ -409,30 +409,43 @@ public class Config {
 		config.set("Player.Weakness.Enabled", PlayerWeaknessEnabled);
 		config.set("Player.Weakness.Time", PlayerWeaknessTime);
 		config.set("Player.Weakness.Power", PlayerWeaknessPower);
+		// Zombies
 		config.set("Zombie.Blindness.Enabled", ZombieBlindnessEnabled);
 		config.set("Zombie.Blindness.Time", ZombieBlindnessTime);
 		config.set("Zombie.Blindness.Power", ZombieBlindnessPower);
 		config.set("Zombie.Confusion.Enabled", ZombieConfusionEnabled);
 		config.set("Zombie.Confusion.Time", ZombieConfusionTime);
 		config.set("Zombie.Confusion.Power", ZombieConfusionPower);
-		config.set("Zombie.Damage_Resistance.Enabled", ZombieDamageResistanceEnabled);
-		config.set("Zombie.Damage_Resistance.Time", ZombieDamageResistanceTime);
-		config.set("Zombie.Damage_Resistance.Power", ZombieDamageResistancePower);
+		config.set("Zombie.DamageResistance.Enabled", ZombieDamageResistanceEnabled);
+		config.set("Zombie.DamageResistance.Time", ZombieDamageResistanceTime);
+		config.set("Zombie.DamageResistance.Power", ZombieDamageResistancePower);
 		config.set("Zombie.FastDigging.Enabled", ZombieFastDiggingEnabled);
 		config.set("Zombie.FastDigging.Time", ZombieFastDiggingTime);
 		config.set("Zombie.FastDigging.Power", ZombieFastDiggingPower);
+		config.set("Zombie.FireResistance.Enabled", ZombieFireResistanceEnabled);
+		config.set("Zombie.FireResistance.Time", ZombieFireResistanceTime);
+		config.set("Zombie.FireResistance.Power", ZombieFireResistancePower);
 		config.set("Zombie.Harm.Enabled", ZombieHarmEnabled);
 		config.set("Zombie.Harm.Time", ZombieHarmTime);
 		config.set("Zombie.Harm.Power", ZombieHarmPower);
 		config.set("Zombie.Heal.Enabled", ZombieHealEnabled);
 		config.set("Zombie.Heal.Time", ZombieHealTime);
 		config.set("Zombie.Heal.Power", ZombieHealPower);
+		config.set("Zombie.Hunger.Enabled", ZombieHungerEnabled);
+		config.set("Zombie.Hunger.Time", ZombieHungerTime);
+		config.set("Zombie.Hunger.Power", ZombieHungerPower);
 		config.set("Zombie.IncreaseDamage.Enabled", ZombieIncreaseDamageEnabled);
 		config.set("Zombie.IncreaseDamage.Time", ZombieIncreaseDamageTime);
 		config.set("Zombie.IncreaseDamage.Power", ZombieIncreaseDamagePower);
 		config.set("Zombie.Jump.Enabled", ZombieJumpEnabled);
 		config.set("Zombie.Jump.Time", ZombieJumpTime);
 		config.set("Zombie.Jump.Power", ZombieJumpPower);
+		config.set("Zombie.Poison.Enabled", ZombiePoisonEnabled);
+		config.set("Zombie.Poison.Time", ZombiePoisonTime);
+		config.set("Zombie.Poison.Power", ZombiePoisonPower);
+		config.set("Zombie.Regeneration.Enabled", ZombieRegenerationEnabled);
+		config.set("Zombie.Regeneration.Time", ZombieRegenerationTime);
+		config.set("Zombie.Regeneration.Power", ZombieRegenerationPower);
 		config.set("Zombie.Slow.Enabled", ZombieSlowEnabled);
 		config.set("Zombie.Slow.Time", ZombieSlowTime);
 		config.set("Zombie.Slow.Power", ZombieSlowPower);
