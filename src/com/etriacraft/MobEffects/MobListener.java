@@ -16,34 +16,49 @@ import org.bukkit.potion.PotionEffectType;
 
 public class MobListener implements Listener {
 	
+	
 	@EventHandler
-	public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
+	public void ZombieEvent(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+
+		if (Config.ZombiesEnabled != false && damager instanceof Zombie && e instanceof Player) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.ZombiePoisonTime, Config.ZombiePoisonPower));
+			}
+		}
+	
+	@EventHandler
+	public void EnderEvent(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		
-		if (e instanceof Player && damager instanceof Zombie) {
+		if (Config.EndermanEnabled != false && damager instanceof Enderman && e instanceof Player) {
 			Player player = (Player) e;
-			
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON,
-					500, 1));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.EndermanBlindTime, Config.EndermanBlindPower));
 		}
-			else if (e instanceof Player && damager instanceof Enderman) {
-				Player player = (Player) e;
-				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,
-						500, 1));
-			}
-			else if (e instanceof Player && damager instanceof Spider) {
-				Player player = (Player) e;
-				player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 500, 1));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 500, 1));
-			}
-
-			else if (e instanceof Player && damager instanceof Creeper) {
-				Player player = (Player) e;
-				player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 250, 1));
-				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 500, 1));
-			}
-		
-		} 
-		
 	}
+	@EventHandler
+	public void SpiderEvent(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		
+		if (Config.SpiderEnabled != false && damager instanceof Spider && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.SpiderWeakTime, Config.SpiderWeakPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.SpiderSlowTime, Config.SpiderSlowPower));
+		}
+	}
+	
+	@EventHandler
+	public void CreeperEvent(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		
+		if(Config.CreeperEnabled != false && damager instanceof Creeper && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.CreeperConfusionTime, Config.CreeperConfusionPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.CreeperPoisonPower, Config.CreeperPoisonTime));
+		}
+	}
+}
