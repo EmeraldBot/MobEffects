@@ -123,4 +123,13 @@ public class MEPlayerListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.PlayerRegenerationTime, Config.PlayerRegenerationPower));
 		}
 	}
+	@EventHandler
+	public void PlayerSlow(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerSlowEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.PlayerSlowTime, Config.PlayerSlowPower));
+		}
+	}
 }

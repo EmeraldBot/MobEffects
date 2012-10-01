@@ -58,6 +58,10 @@ public class Config {
 	public static boolean PlayerRegenerationEnabled = true;
 	public static int PlayerRegenerationTime = 500;
 	public static int PlayerRegenerationPower = 1;
+		// Slow
+	public static boolean PlayerSlowEnabled = true;
+	public static int PlayerSlowTime = 500;
+	public static int PlayerSlowPower = 1;
 	
 	// Zombie Stuffs
 	public static boolean ZombiesEnabled = true;
@@ -155,6 +159,11 @@ public class Config {
 		PlayerRegenerationTime = config.getInt("Player.Regeneration.Time", PlayerRegenerationTime);
 		PlayerRegenerationPower = config.getInt("Player.Regeneration.Power", PlayerRegenerationPower);
 		
+		// Player Slow
+		PlayerSlowEnabled = config.getBoolean("Player.Slow.Enabled", PlayerSlowEnabled);
+		PlayerSlowTime = config.getInt("Player.Slow.Time", PlayerSlowTime);
+		PlayerSlowPower = config.getInt("Player.Slow.Power", PlayerSlowPower);
+		
 		// Zombies
 		ZombiesEnabled = config.getBoolean("Zombies.Enabled", ZombiesEnabled);
 		ZombiePoisonTime = config.getInt("Zombies.Poison.Time", ZombiePoisonTime);
@@ -204,6 +213,9 @@ public class Config {
 		config.set("Player.Jump.Enabled", PlayerJumpEnabled);
 		config.set("Player.Jump.Time", PlayerJumpTime);
 		config.set("Player.Jump.Power", PlayerJumpPower);
+		config.set("Player.Slow.Enabled", PlayerSlowEnabled);
+		config.set("Player.Slow.Time", PlayerSlowTime);
+		config.set("Player.Slow.Power", PlayerSlowPower);
 	config.set("Zombies.Enabled", ZombiesEnabled);
 	config.set("Zombies.Poison.Time", ZombiePoisonTime);
 	config.set("Zombies.Poison.Power", ZombiePoisonPower);
