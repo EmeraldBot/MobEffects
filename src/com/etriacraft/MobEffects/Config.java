@@ -62,6 +62,22 @@ public class Config {
 	public static boolean PlayerSlowEnabled = true;
 	public static int PlayerSlowTime = 500;
 	public static int PlayerSlowPower = 1;
+		// Slow Digging
+	public static boolean PlayerSlowDiggingEnabled = true;
+	public static int PlayerSlowDiggingTime = 500;
+	public static int PlayerSlowDiggingPower = 1;
+		// Speed
+	public static boolean PlayerSpeedEnabled = true;
+	public static int PlayerSpeedTime = 500;
+	public static int PlayerSpeedPower = 1;
+		// Water Breathing
+	public static boolean PlayerWaterBreathingEnabled = true;
+	public static int PlayerWaterBreathingTime = 500;
+	public static int PlayerWaterBreathingPower = 100;
+		// Weakness
+	public static boolean PlayerWeaknessEnabled = true;
+	public static int PlayerWeaknessTime = 500;
+	public static int PlayerWeaknessPower = 100;
 	
 	// Zombie Stuffs
 	public static boolean ZombiesEnabled = true;
@@ -164,6 +180,26 @@ public class Config {
 		PlayerSlowTime = config.getInt("Player.Slow.Time", PlayerSlowTime);
 		PlayerSlowPower = config.getInt("Player.Slow.Power", PlayerSlowPower);
 		
+		// Player Slow Digging
+		PlayerSlowDiggingEnabled = config.getBoolean("Player.SlowDigging.Enabled", PlayerSlowDiggingEnabled);
+		PlayerSlowDiggingTime = config.getInt("Player.SlowDigging.Time", PlayerSlowDiggingTime);
+		PlayerSlowDiggingPower = config.getInt("Player.SlowDigging.Power", PlayerSlowDiggingPower);
+		
+		// Player Speed
+		PlayerSpeedEnabled = config.getBoolean("Player.Speed.Enabled", PlayerSpeedEnabled);
+		PlayerSpeedTime = config.getInt("Player.Speed.Time", PlayerSpeedTime);
+		PlayerSpeedPower = config.getInt("Player.Speed.Power", PlayerSpeedPower);
+		
+		// Player Water Breathing
+		PlayerWaterBreathingEnabled = config.getBoolean("Player.WaterBreathing.Enabled", PlayerWaterBreathingEnabled);
+		PlayerWaterBreathingTime = config.getInt("Player.WaterBreathing.Time", PlayerWaterBreathingTime);
+		PlayerWaterBreathingPower = config.getInt("Player.WaterBreathing.Power", PlayerWaterBreathingPower);
+		
+		// Player Weakness
+		PlayerWeaknessEnabled = config.getBoolean("Player.Weakness.Enabled", PlayerWeaknessEnabled);
+		PlayerWeaknessTime = config.getInt("Player.Weakness.Time", PlayerWeaknessTime);
+		PlayerWeaknessPower = config.getInt("Player.Weakness.Power", PlayerWeaknessPower);
+		
 		// Zombies
 		ZombiesEnabled = config.getBoolean("Zombies.Enabled", ZombiesEnabled);
 		ZombiePoisonTime = config.getInt("Zombies.Poison.Time", ZombiePoisonTime);
@@ -216,6 +252,18 @@ public class Config {
 		config.set("Player.Slow.Enabled", PlayerSlowEnabled);
 		config.set("Player.Slow.Time", PlayerSlowTime);
 		config.set("Player.Slow.Power", PlayerSlowPower);
+		config.set("Player.SlowDigging.Enabled", PlayerSlowDiggingEnabled);
+		config.set("Player.SlowDigging.Time", PlayerSlowDiggingTime);
+		config.set("Player.SlowDigging.Power", PlayerSlowDiggingPower);
+		config.set("Player.Speed.Enabled", PlayerSpeedEnabled);
+		config.set("Player.Speed.Time", PlayerSpeedTime);
+		config.set("Player.Speed.Power", PlayerSpeedPower);
+		config.set("Player.WaterBreathing.Enabled", PlayerWaterBreathingEnabled);
+		config.set("Player.WaterBreathing.Time", PlayerWaterBreathingTime);
+		config.set("Player.WaterBreathing.Power", PlayerWaterBreathingPower);
+		config.set("Player.Weakness.Enabled", PlayerWeaknessEnabled);
+		config.set("Player.Weakness.Time", PlayerWeaknessTime);
+		config.set("Player.Weakness.Power", PlayerWeaknessPower);
 	config.set("Zombies.Enabled", ZombiesEnabled);
 	config.set("Zombies.Poison.Time", ZombiePoisonTime);
 	config.set("Zombies.Poison.Power", ZombiePoisonPower);

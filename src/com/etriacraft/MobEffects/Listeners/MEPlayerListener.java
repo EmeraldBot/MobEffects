@@ -132,4 +132,40 @@ public class MEPlayerListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.PlayerSlowTime, Config.PlayerSlowPower));
 		}
 	}
+	@EventHandler
+	public void PlayerSlowDigging(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerSlowDiggingEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.PlayerSlowDiggingTime, Config.PlayerSlowDiggingPower));
+		}
+	}
+	@EventHandler
+	public void PlayerSpeed(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerSpeedEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.PlayerSpeedTime, Config.PlayerSpeedPower));
+		}
+	}
+	@EventHandler
+	public void PlayerWaterBreathing(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerWaterBreathingEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.PlayerWaterBreathingTime, Config.PlayerWaterBreathingPower));
+		}
+	}
+	@EventHandler
+	public void PlayerWeakness(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerWeaknessEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.PlayerWeaknessTime, Config.PlayerWeaknessPower));
+		}
+	}
 }
