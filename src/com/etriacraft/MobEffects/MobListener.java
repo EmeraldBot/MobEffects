@@ -23,18 +23,7 @@ public class MobListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.EndermanBlindTime, Config.EndermanBlindPower));
 		}
 	}
-	@EventHandler
-	public void SpiderEvent(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		
-		if (Config.SpiderEnabled != false && damager instanceof Spider && e instanceof Player) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.SpiderWeakTime, Config.SpiderWeakPower));
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.SpiderSlowTime, Config.SpiderSlowPower));
-		}
-	}
-	
+
 	@EventHandler
 	public void CreeperEvent(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();

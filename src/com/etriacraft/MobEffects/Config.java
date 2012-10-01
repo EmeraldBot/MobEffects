@@ -149,17 +149,80 @@ public class Config {
 	public static int ZombieWeaknessTime = 500;
 	public static int ZombieWeaknessPower = 0;
 	
+	// Spider Stuffs
+		// Blindness
+	public static boolean SpiderBlindnessEnabled = false;
+	public static int SpiderBlindnessTime = 500;
+	public static int SpiderBlindnessPower = 0;
+		// Confusion
+	public static boolean SpiderConfusionEnabled = false;
+	public static int SpiderConfusionTime = 500;
+	public static int SpiderConfusionPower = 0;
+		// Damage Resistance
+	public static boolean SpiderDamageResistanceEnabled = false;
+	public static int SpiderDamageResistanceTime = 500;
+	public static int SpiderDamageResistancePower = 0;
+		// Fast Digging
+	public static boolean SpiderFastDiggingEnabled = false;
+	public static int SpiderFastDiggingTime = 500;
+	public static int SpiderFastDiggingPower = 0;
+		// Fire Resistance
+	public static boolean SpiderFireResistanceEnabled = false;
+	public static int SpiderFireResistanceTime = 500;
+	public static int SpiderFireResistancePower = 0;
+		// Harm
+	public static boolean SpiderHarmEnabled = false;
+	public static int SpiderHarmTime = 500;
+	public static int SpiderHarmPower = 0;
+		// Heal
+	public static boolean SpiderHealEnabled = false;
+	public static int SpiderHealTime = 500;
+	public static int SpiderHealPower = 0;
+		// Hunger
+	public static boolean SpiderHungerEnabled = false;
+	public static int SpiderHungerTime = 500;
+	public static int SpiderHungerPower = 0;
+		// Increase Damage
+	public static boolean SpiderIncreaseDamageEnabled = false;
+	public static int SpiderIncreaseDamageTime = 500;
+	public static int SpiderIncreaseDamagePower = 0;
+		// Jump
+	public static boolean SpiderJumpEnabled = false;
+	public static int SpiderJumpTime = 500;
+	public static int SpiderJumpPower = 0;
+		// Poison
+	public static boolean SpiderPoisonEnabled = false;
+	public static int SpiderPoisonTime = 500;
+	public static int SpiderPoisonPower = 0;
+		// Regeneration
+	public static boolean SpiderRegenerationEnabled = false;
+	public static int SpiderRegenerationTime = 500;
+	public static int SpiderRegenerationPower = 0;
+		// Slow
+	public static boolean SpiderSlowEnabled = false;
+	public static int SpiderSlowTime = 500;
+	public static int SpiderSlowPower = 0;
+		// Slow Digging
+	public static boolean SpiderSlowDiggingEnabled = false;
+	public static int SpiderSlowDiggingTime = 500;
+	public static int SpiderSlowDiggingPower = 0;
+		// Speed
+	public static boolean SpiderSpeedEnabled = false;
+	public static int SpiderSpeedTime = 500;
+	public static int SpiderSpeedPower = 0;
+		// Water Breathing
+	public static boolean SpiderWaterBreathingEnabled = false;
+	public static int SpiderWaterBreathingTime = 500;
+	public static int SpiderWaterBreathingPower = 0;
+		// Weakness
+	public static boolean SpiderWeaknessEnabled = false;
+	public static int SpiderWeaknessTime = 500;
+	public static int SpiderWeaknessPower = 0;
+	
 	// Enders
 	public static boolean EndermanEnabled = true;
 	public static int EndermanBlindTime = 500;
 	public static int EndermanBlindPower = 1;
-	
-	// Spiders
-	public static boolean SpiderEnabled = true;
-	public static int SpiderWeakTime = 500;
-	public static int SpiderWeakPower = 1;
-	public static int SpiderSlowTime = 500;
-	public static int SpiderSlowPower = 1;
 	
 	// Creepers
 	public static boolean CreeperEnabled = true;
@@ -350,17 +413,95 @@ public class Config {
 		ZombieWeaknessTime = config.getInt("Zombie.Weakness.Time", ZombieWeaknessTime);
 		ZombieWeaknessPower = config.getInt("Zombie.Weakness.Power", ZombieWeaknessPower);
 		
+		// Spider Blindness
+		SpiderBlindnessEnabled = config.getBoolean("Spider.Blindness.Enabled", SpiderBlindnessEnabled);
+		SpiderBlindnessTime = config.getInt("Spider.Blindness.Time", SpiderBlindnessTime);
+		SpiderBlindnessPower = config.getInt("Spider.Blindness.Power", SpiderBlindnessPower);
+
+		//Spider Confusion
+		SpiderConfusionEnabled = config.getBoolean("Spider.Confusion.Enabled", SpiderConfusionEnabled);
+		SpiderConfusionTime = config.getInt("Spider.Confusion.Time", SpiderConfusionTime);
+		SpiderConfusionPower = config.getInt("Spider.Confusion.Power", SpiderConfusionPower);
+
+		// Spider Damage Resistance
+		SpiderDamageResistanceEnabled = config.getBoolean("Spider.DamageResistance.Enabled", SpiderDamageResistanceEnabled);
+		SpiderDamageResistanceTime = config.getInt("Spider.DamageResistance.Time", SpiderDamageResistanceTime);
+		SpiderDamageResistancePower = config.getInt("Spider.DamageResistance.Power", SpiderDamageResistancePower);
+
+		// Spider Fast Digging
+		SpiderFastDiggingEnabled = config.getBoolean("Spider.FastDigging.Enabled", SpiderFastDiggingEnabled);
+		SpiderFastDiggingTime = config.getInt("Spider.FastDigging.Time", SpiderFastDiggingTime);
+		SpiderFastDiggingPower = config.getInt("Spider.FastDigging.Power", SpiderFastDiggingPower);
+
+		// Spider Fire Resistance
+		SpiderFireResistanceEnabled = config.getBoolean("Spider.FireResistance.Enabled", SpiderFireResistanceEnabled);
+		SpiderFireResistanceTime = config.getInt("Spider.FireResistance.Time", SpiderFireResistanceTime);
+		SpiderFireResistancePower = config.getInt("Spider.FireResistance.Power", SpiderFireResistancePower);
+
+		// Spider Harm
+		SpiderHarmEnabled = config.getBoolean("Spider.Harm.Enabled", SpiderHarmEnabled);
+		SpiderHarmTime = config.getInt("Spider.Harm.Time", SpiderHarmTime);
+		SpiderHarmPower = config.getInt("Spider.Harm.Powre", SpiderHarmPower);
+
+		// Spider Heal
+		SpiderHealEnabled = config.getBoolean("Spider.Heal.Enabled", SpiderHealEnabled);
+		SpiderHealTime = config.getInt("Spider.Heal.Time", SpiderHealTime);
+		SpiderHealPower = config.getInt("Spider.Heal.Power", SpiderHealPower);
+
+		// Spider Hunger
+		SpiderHungerEnabled = config.getBoolean("Spider.Hunger.Enabled", SpiderHungerEnabled);
+		SpiderHungerTime = config.getInt("Spider.Hunger.Time", SpiderHungerTime);
+		SpiderHungerPower = config.getInt("Spider.Hunger.Power", SpiderHungerPower);
+
+		// Spider IncreaseDamage
+		SpiderIncreaseDamageEnabled = config.getBoolean("Spider.IncreaseDamage.Enabled", SpiderIncreaseDamageEnabled);
+		SpiderIncreaseDamageTime = config.getInt("Spider.IncraseDamage.Time", SpiderIncreaseDamageTime);
+		SpiderIncreaseDamagePower = config.getInt("Spider.IncreaseDamage.Power", SpiderIncreaseDamagePower);
+
+		// Spider Jump
+		SpiderJumpEnabled = config.getBoolean("Spider.Jump.Enabled", SpiderJumpEnabled);
+		SpiderJumpTime = config.getInt("Spider.Jump.Time", SpiderJumpTime);
+		SpiderJumpPower = config.getInt("Spider.Jump.Power", SpiderJumpPower);
+
+		// Spider Poison
+		SpiderPoisonEnabled = config.getBoolean("Spider.Poison.Enabled", SpiderPoisonEnabled);
+		SpiderPoisonTime = config.getInt("Spider.Poison.Time", SpiderPoisonTime);
+		SpiderPoisonPower = config.getInt("Spider.Poison.Power", SpiderPoisonPower);
+
+		// Spider Regeneration
+		SpiderRegenerationEnabled = config.getBoolean("Spider.Regeneration.Enabled", SpiderRegenerationEnabled);
+		SpiderRegenerationTime = config.getInt("Spider.Regeneration.Time", SpiderRegenerationTime);
+		SpiderRegenerationPower = config.getInt("Spider.Regeneration.Power", SpiderRegenerationPower);
+
+		// Spider Slow
+		SpiderSlowEnabled = config.getBoolean("Spider.Slow.Enabled", SpiderSlowEnabled);
+		SpiderSlowTime = config.getInt("Spider.Slow.Time", SpiderSlowTime);
+		SpiderSlowPower = config.getInt("Spider.Slow.Power", SpiderSlowPower);
+
+		// Spider Slow Digging
+		SpiderSlowDiggingEnabled = config.getBoolean("Spider.SlowDigging.Enabled", SpiderSlowDiggingEnabled);
+		SpiderSlowDiggingTime = config.getInt("Spider.SlowDigging.Time", SpiderSlowDiggingTime);
+		SpiderSlowDiggingPower = config.getInt("Spider.SlowDigging.Power", SpiderSlowDiggingPower);
+
+		// Spider Speed
+		SpiderSpeedEnabled = config.getBoolean("Spider.Speed.Enabled", SpiderSpeedEnabled);
+		SpiderSpeedTime = config.getInt("Spider.Speed.Time", SpiderSpeedTime);
+		SpiderSpeedPower = config.getInt("Spider.Speed.Power", SpiderSpeedPower);
+
+		// Spider Water Breathing
+		SpiderWaterBreathingEnabled = config.getBoolean("Spider.WaterBreathing.Enabled", SpiderWaterBreathingEnabled);
+		SpiderWaterBreathingTime = config.getInt("Spider.WaterBreathing.Time", SpiderWaterBreathingTime);
+		SpiderWaterBreathingPower = config.getInt("Spider.WaterBreathing.Power", SpiderWaterBreathingPower);
+
+		// Spider Weakness
+		SpiderWeaknessEnabled = config.getBoolean("Spider.Weakness.Enabled", SpiderWeaknessEnabled);
+		SpiderWeaknessTime = config.getInt("Spider.Weakness.Time", SpiderWeaknessTime);
+		SpiderWeaknessPower = config.getInt("Spider.Weakness.Power", SpiderWeaknessPower);
+		
 		// Enders
 		EndermanEnabled = config.getBoolean("Enderman.Enabled", EndermanEnabled);
 		EndermanBlindTime = config.getInt("Enderman.Blindness.Time", EndermanBlindTime);
 		EndermanBlindPower = config.getInt("Enderman.Blindness.Power", EndermanBlindPower);
-		
-		// Spiders
-		SpiderEnabled = config.getBoolean("Spider.Enabled", SpiderEnabled);
-		SpiderWeakTime = config.getInt("Spider.Weakness.Time", SpiderWeakTime);
-		SpiderWeakPower = config.getInt("Spider.Weakness.Power", SpiderWeakPower);
-		SpiderSlowTime = config.getInt("Spider.Slow.Time", SpiderSlowTime);
-		SpiderSlowPower = config.getInt("Spider.Slow.Power", SpiderSlowPower);
 		
 		// Creepers
 		CreeperEnabled = config.getBoolean("Creeper.Enabled", CreeperEnabled);
@@ -461,12 +602,61 @@ public class Config {
 		config.set("Zombie.Weakness.Enabled", ZombieWeaknessEnabled);
 		config.set("Zombie.Weakness.Time", ZombieWeaknessTime);
 		config.set("Zombie.Weakness.Power", ZombieWeaknessPower);
+		// Spiders
+		config.set("Spider.Blindness.Enabled", SpiderBlindnessEnabled);
+		config.set("Spider.Blindness.Time", SpiderBlindnessTime);
+		config.set("Spider.Blindness.Power", SpiderBlindnessPower);
+		config.set("Spider.Confusion.Enabled", SpiderConfusionEnabled);
+		config.set("Spider.Confusion.Time", SpiderConfusionTime);
+		config.set("Spider.Confusion.Power", SpiderConfusionPower);
+		config.set("Spider.DamageResistance.Enabled", SpiderDamageResistanceEnabled);
+		config.set("Spider.DamageResistance.Time", SpiderDamageResistanceTime);
+		config.set("Spider.DamageResistance.Power", SpiderDamageResistancePower);
+		config.set("Spider.FastDigging.Enabled", SpiderFastDiggingEnabled);
+		config.set("Spider.FastDigging.Time", SpiderFastDiggingTime);
+		config.set("Spider.FastDigging.Power", SpiderFastDiggingPower);
+		config.set("Spider.FireResistance.Enabled", SpiderFireResistanceEnabled);
+		config.set("Spider.FireResistance.Time", SpiderFireResistanceTime);
+		config.set("Spider.FireResistance.Power", SpiderFireResistancePower);
+		config.set("Spider.Harm.Enabled", SpiderHarmEnabled);
+		config.set("Spider.Harm.Time", SpiderHarmTime);
+		config.set("Spider.Harm.Power", SpiderHarmPower);
+		config.set("Spider.Heal.Enabled", SpiderHealEnabled);
+		config.set("Spider.Heal.Time", SpiderHealTime);
+		config.set("Spider.Heal.Power", SpiderHealPower);
+		config.set("Spider.Hunger.Enabled", SpiderHungerEnabled);
+		config.set("Spider.Hunger.Time", SpiderHungerTime);
+		config.set("Spider.Hunger.Power", SpiderHungerPower);
+		config.set("Spider.IncreaseDamage.Enabled", SpiderIncreaseDamageEnabled);
+		config.set("Spider.IncreaseDamage.Time", SpiderIncreaseDamageTime);
+		config.set("Spider.IncreaseDamage.Power", SpiderIncreaseDamagePower);
+		config.set("Spider.Jump.Enabled", SpiderJumpEnabled);
+		config.set("Spider.Jump.Time", SpiderJumpTime);
+		config.set("Spider.Jump.Power", SpiderJumpPower);
+		config.set("Spider.Poison.Enabled", SpiderPoisonEnabled);
+		config.set("Spider.Poison.Time", SpiderPoisonTime);
+		config.set("Spider.Poison.Power", SpiderPoisonPower);
+		config.set("Spider.Regeneration.Enabled", SpiderRegenerationEnabled);
+		config.set("Spider.Regeneration.Time", SpiderRegenerationTime);
+		config.set("Spider.Regeneration.Power", SpiderRegenerationPower);
+		config.set("Spider.Slow.Enabled", SpiderSlowEnabled);
+		config.set("Spider.Slow.Time", SpiderSlowTime);
+		config.set("Spider.Slow.Power", SpiderSlowPower);
+		config.set("Spider.SlowDigging.Enabled", SpiderSlowDiggingEnabled);
+		config.set("Spider.SlowDigging.Time", SpiderSlowDiggingTime);
+		config.set("Spider.SlowDigging.Power", SpiderSlowDiggingPower);
+		config.set("Spider.Speed.Enabled", SpiderSpeedEnabled);
+		config.set("Spider.Speed.Time", SpiderSpeedTime);
+		config.set("Spider.Speed.Power", SpiderSpeedPower);
+		config.set("Spider.WaterBreathing.Enabled", SpiderWaterBreathingEnabled);
+		config.set("Spider.WaterBreathing.Time", SpiderWaterBreathingTime);
+		config.set("Spider.WaterBreathing.Power", SpiderWaterBreathingPower);
+		config.set("Spider.Weakness.Enabled", SpiderWeaknessEnabled);
+		config.set("Spider.Weakness.Time", SpiderWeaknessTime);
+		config.set("Spider.Weakness.Power", SpiderWeaknessPower);
 	config.set("Enderman.Enabled", EndermanEnabled);
 	config.set("Enderman.Blindness.Time", EndermanBlindTime);
 	config.set("Enderman.Blindness.Power", EndermanBlindPower);
-	config.set("Spider.Enabled", SpiderEnabled);
-	config.set("Spider.Weakness.Time", SpiderWeakTime);
-	config.set("Spider.Weakness.Power", SpiderWeakPower);
 	config.set("Spider.Slow.Time", SpiderSlowTime);
 	config.set("Spider.Slow.Power", SpiderSlowPower);
 	config.set("Creeper.Enabled", CreeperEnabled);
