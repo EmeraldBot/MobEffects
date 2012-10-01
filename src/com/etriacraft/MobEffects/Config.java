@@ -30,6 +30,26 @@ public class Config {
 	public static boolean PlayerFireResistanceEnabled = true;
 	public static int PlayerFireResistanceTime = 500;
 	public static int PlayerFireResistancePower = 1;
+		// Harm
+	public static boolean PlayerHarmEnabled = true;
+	public static int PlayerHarmTime = 500;
+	public static int PlayerHarmPower = 1;
+		// Heal
+	public static boolean PlayerHealEnabled = true;
+	public static int PlayerHealTime = 500;
+	public static int PlayerHealPower = 1;
+		// Hunger
+	public static boolean PlayerHungerEnabled = true;
+	public static int PlayerHungerTime = 500;
+	public static int PlayerHungerPower = 1;
+		// Increase Damage
+	public static boolean PlayerIncreaseDamageEnabled = true;
+	public static int PlayerIncreaseDamageTime = 500;
+	public static int PlayerIncreaseDamagePower = 1;
+		// Jump
+	public static boolean PlayerJumpEnabled = true;
+	public static int PlayerJumpTime = 500;
+	public static int PlayerJumpPower = 1;
 	
 	// Zombie Stuffs
 	public static boolean ZombiesEnabled = true;
@@ -92,6 +112,31 @@ public class Config {
 		PlayerFireResistanceTime = config.getInt("Player.FireResistance.Time", PlayerFireResistanceTime);
 		PlayerFireResistancePower = config.getInt("Player.FireResistance.Power", PlayerFireResistancePower);
 		
+		// Player Harm
+		PlayerHarmEnabled = config.getBoolean("Player.Harm.Enabled", PlayerHarmEnabled);
+		PlayerHarmTime = config.getInt("Player.Harm.Time", PlayerHarmTime);
+		PlayerHarmPower = config.getInt("Player.Harm.Powre", PlayerHarmPower);
+		
+		// Player Heal
+		PlayerHealEnabled = config.getBoolean("Player.Heal.Enabled", PlayerHealEnabled);
+		PlayerHealTime = config.getInt("Player.Heal.Time", PlayerHealTime);
+		PlayerHealPower = config.getInt("Player.Heal.Power", PlayerHealPower);
+		
+		// Player Hunger
+		PlayerHungerEnabled = config.getBoolean("Player.Hunger.Enabled", PlayerHungerEnabled);
+		PlayerHungerTime = config.getInt("Player.Hunger.Time", PlayerHungerTime);
+		PlayerHungerPower = config.getInt("Player.Hunger.Power", PlayerHungerPower);
+		
+		// Player FastDamage
+		PlayerIncreaseDamageEnabled = config.getBoolean("Player.FastDamage.Enabled", PlayerIncreaseDamageEnabled);
+		PlayerIncreaseDamageTime = config.getInt("Player.FastDamage.Time", PlayerIncreaseDamageTime);
+		PlayerIncreaseDamagePower = config.getInt("Player.FastDamage.Power", PlayerIncreaseDamagePower);
+		
+		// Player Jump
+		PlayerJumpEnabled = config.getBoolean("Player.Jump.Enabled", PlayerJumpEnabled);
+		PlayerJumpTime = config.getInt("Player.Jump.Time", PlayerJumpTime);
+		PlayerJumpPower = config.getInt("Player.Jump.Power", PlayerJumpPower);
+		
 		// Zombies
 		ZombiesEnabled = config.getBoolean("Zombies.Enabled", ZombiesEnabled);
 		ZombiePoisonTime = config.getInt("Zombies.Poison.Time", ZombiePoisonTime);
@@ -129,6 +174,18 @@ public class Config {
 		config.set("Player.FastDigging.Enabled", PlayerFastDiggingEnabled);
 		config.set("Player.FastDigging.Time", PlayerFastDiggingTime);
 		config.set("Player.FastDigging.Power", PlayerFastDiggingPower);
+		config.set("Player.Harm.Enabled", PlayerHarmEnabled);
+		config.set("Player.Harm.Time", PlayerHarmTime);
+		config.set("Player.Harm.Power", PlayerHarmPower);
+		config.set("Player.Heal.Enabled", PlayerHealEnabled);
+		config.set("Player.Heal.Time", PlayerHealTime);
+		config.set("Player.Heal.Power", PlayerHealPower);
+		config.set("Player.IncreaseDamage.Enabled", PlayerIncreaseDamageEnabled);
+		config.set("Player.IncreaseDamage.Time", PlayerIncreaseDamageTime);
+		config.set("Player.IncreaseDamage.Power", PlayerIncreaseDamagePower);
+		config.set("Player.Jump.Enabled", PlayerJumpEnabled);
+		config.set("Player.Jump.Time", PlayerJumpTime);
+		config.set("Player.Jump.Power", PlayerJumpPower);
 	config.set("Zombies.Enabled", ZombiesEnabled);
 	config.set("Zombies.Poison.Time", ZombiePoisonTime);
 	config.set("Zombies.Poison.Power", ZombiePoisonPower);

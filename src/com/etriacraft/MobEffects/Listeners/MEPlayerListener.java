@@ -60,5 +60,49 @@ public class MEPlayerListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.PlayerFireResistanceTime, Config.PlayerFireResistancePower));
 		}
 	}
-
+	@EventHandler
+	public void PlayerHarm(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerHarmEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.PlayerHarmTime, Config.PlayerHarmPower));
+		}
+	}
+	@EventHandler
+	public void PlayerHeal(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerHarmEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.PlayerHealTime, Config.PlayerHealPower));
+		}
+	}
+	@EventHandler
+	public void PlayerHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerHungerEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.PlayerHungerTime, Config.PlayerHungerPower));
+		}
+	}
+	@EventHandler
+	public void PlayerIncreaseDamage(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerIncreaseDamageEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.PlayerIncreaseDamageTime, Config.PlayerIncreaseDamagePower));
+		}
+	}
+	@EventHandler
+	public void PlayerJump(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		if (Config.PlayerJumpEnabled != false && damager instanceof Player && e instanceof Player) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.PlayerJumpTime, Config.PlayerJumpPower));
+		}
+	}
 }
