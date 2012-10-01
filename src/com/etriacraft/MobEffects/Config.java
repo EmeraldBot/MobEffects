@@ -11,143 +11,143 @@ public class Config {
 	
 	// Player Stuffs
 		// Blindness
-	public static boolean PlayerBlindnessEnabled = true;
+	public static boolean PlayerBlindnessEnabled = false;
 	public static int PlayerBlindnessTime = 500;
-	public static int PlayerBlindnessPower = 1;
+	public static int PlayerBlindnessPower = 0;
 		// Confusion
-	public static boolean PlayerConfusionEnabled = true;
+	public static boolean PlayerConfusionEnabled = false;
 	public static int PlayerConfusionTime = 500;
-	public static int PlayerConfusionPower = 1;
+	public static int PlayerConfusionPower = 0;
 		// Damage Resistance
-	public static boolean PlayerDamageResistanceEnabled = true;
+	public static boolean PlayerDamageResistanceEnabled = false;
 	public static int PlayerDamageResistanceTime = 500;
-	public static int PlayerDamageResistancePower = 1;
+	public static int PlayerDamageResistancePower = 0;
 		// Fast Digging
-	public static boolean PlayerFastDiggingEnabled = true;
+	public static boolean PlayerFastDiggingEnabled = false;
 	public static int PlayerFastDiggingTime = 500;
-	public static int PlayerFastDiggingPower = 1;
+	public static int PlayerFastDiggingPower = 0;
 		// Fire Resistance
-	public static boolean PlayerFireResistanceEnabled = true;
+	public static boolean PlayerFireResistanceEnabled = false;
 	public static int PlayerFireResistanceTime = 500;
-	public static int PlayerFireResistancePower = 1;
+	public static int PlayerFireResistancePower = 0;
 		// Harm
-	public static boolean PlayerHarmEnabled = true;
+	public static boolean PlayerHarmEnabled = false;
 	public static int PlayerHarmTime = 500;
-	public static int PlayerHarmPower = 1;
+	public static int PlayerHarmPower = 0;
 		// Heal
-	public static boolean PlayerHealEnabled = true;
+	public static boolean PlayerHealEnabled = false;
 	public static int PlayerHealTime = 500;
-	public static int PlayerHealPower = 1;
+	public static int PlayerHealPower = 0;
 		// Hunger
-	public static boolean PlayerHungerEnabled = true;
+	public static boolean PlayerHungerEnabled = false;
 	public static int PlayerHungerTime = 500;
-	public static int PlayerHungerPower = 1;
+	public static int PlayerHungerPower = 0;
 		// Increase Damage
-	public static boolean PlayerIncreaseDamageEnabled = true;
+	public static boolean PlayerIncreaseDamageEnabled = false;
 	public static int PlayerIncreaseDamageTime = 500;
-	public static int PlayerIncreaseDamagePower = 1;
+	public static int PlayerIncreaseDamagePower = 0;
 		// Jump
-	public static boolean PlayerJumpEnabled = true;
+	public static boolean PlayerJumpEnabled = false;
 	public static int PlayerJumpTime = 500;
-	public static int PlayerJumpPower = 1;
+	public static int PlayerJumpPower = 0;
 		// Poison
-	public static boolean PlayerPoisonEnabled = true;
+	public static boolean PlayerPoisonEnabled = false;
 	public static int PlayerPoisonTime = 500;
-	public static int PlayerPoisonPower = 1;
+	public static int PlayerPoisonPower = 0;
 		// Regeneration
-	public static boolean PlayerRegenerationEnabled = true;
+	public static boolean PlayerRegenerationEnabled = false;
 	public static int PlayerRegenerationTime = 500;
-	public static int PlayerRegenerationPower = 1;
+	public static int PlayerRegenerationPower = 0;
 		// Slow
-	public static boolean PlayerSlowEnabled = true;
+	public static boolean PlayerSlowEnabled = false;
 	public static int PlayerSlowTime = 500;
-	public static int PlayerSlowPower = 1;
+	public static int PlayerSlowPower = 0;
 		// Slow Digging
-	public static boolean PlayerSlowDiggingEnabled = true;
+	public static boolean PlayerSlowDiggingEnabled = false;
 	public static int PlayerSlowDiggingTime = 500;
-	public static int PlayerSlowDiggingPower = 1;
+	public static int PlayerSlowDiggingPower = 0;
 		// Speed
-	public static boolean PlayerSpeedEnabled = true;
+	public static boolean PlayerSpeedEnabled = false;
 	public static int PlayerSpeedTime = 500;
-	public static int PlayerSpeedPower = 1;
+	public static int PlayerSpeedPower = 0;
 		// Water Breathing
-	public static boolean PlayerWaterBreathingEnabled = true;
+	public static boolean PlayerWaterBreathingEnabled = false;
 	public static int PlayerWaterBreathingTime = 500;
-	public static int PlayerWaterBreathingPower = 100;
+	public static int PlayerWaterBreathingPower = 0;
 		// Weakness
-	public static boolean PlayerWeaknessEnabled = true;
+	public static boolean PlayerWeaknessEnabled = false;
 	public static int PlayerWeaknessTime = 500;
-	public static int PlayerWeaknessPower = 100;
+	public static int PlayerWeaknessPower = 0;
 	
 	// Zombie Stuffs
 		// Blindness
-	public static boolean ZombieBlindnessEnabled = true;
+	public static boolean ZombieBlindnessEnabled = false;
 	public static int ZombieBlindnessTime = 500;
-	public static int ZombieBlindnessPower = 1;
+	public static int ZombieBlindnessPower = 0;
 		// Confusion
-	public static boolean ZombieConfusionEnabled = true;
+	public static boolean ZombieConfusionEnabled = false;
 	public static int ZombieConfusionTime = 500;
-	public static int ZombieConfusionPower = 1;
+	public static int ZombieConfusionPower = 0;
 		// Damage Resistance
-	public static boolean ZombieDamageResistanceEnabled = true;
+	public static boolean ZombieDamageResistanceEnabled = false;
 	public static int ZombieDamageResistanceTime = 500;
-	public static int ZombieDamageResistancePower = 1;
+	public static int ZombieDamageResistancePower = 0;
 		// Fast Digging
-	public static boolean ZombieFastDiggingEnabled = true;
+	public static boolean ZombieFastDiggingEnabled = false;
 	public static int ZombieFastDiggingTime = 500;
-	public static int ZombieFastDiggingPower = 1;
+	public static int ZombieFastDiggingPower = 0;
 		// Fire Resistance
-	public static boolean ZombieFireResistanceEnabled = true;
+	public static boolean ZombieFireResistanceEnabled = false;
 	public static int ZombieFireResistanceTime = 500;
-	public static int ZombieFireResistancePower = 1;
+	public static int ZombieFireResistancePower = 0;
 		// Harm
-	public static boolean ZombieHarmEnabled = true;
+	public static boolean ZombieHarmEnabled = false;
 	public static int ZombieHarmTime = 500;
-	public static int ZombieHarmPower = 1;
+	public static int ZombieHarmPower = 0;
 		// Heal
-	public static boolean ZombieHealEnabled = true;
+	public static boolean ZombieHealEnabled = false;
 	public static int ZombieHealTime = 500;
-	public static int ZombieHealPower = 1;
+	public static int ZombieHealPower = 0;
 		// Hunger
-	public static boolean ZombieHungerEnabled = true;
+	public static boolean ZombieHungerEnabled = false;
 	public static int ZombieHungerTime = 500;
-	public static int ZombieHungerPower = 1;
+	public static int ZombieHungerPower = 0;
 		// Increase Damage
-	public static boolean ZombieIncreaseDamageEnabled = true;
+	public static boolean ZombieIncreaseDamageEnabled = false;
 	public static int ZombieIncreaseDamageTime = 500;
-	public static int ZombieIncreaseDamagePower = 1;
+	public static int ZombieIncreaseDamagePower = 0;
 		// Jump
-	public static boolean ZombieJumpEnabled = true;
+	public static boolean ZombieJumpEnabled = false;
 	public static int ZombieJumpTime = 500;
-	public static int ZombieJumpPower = 1;
+	public static int ZombieJumpPower = 0;
 		// Poison
-	public static boolean ZombiePoisonEnabled = true;
+	public static boolean ZombiePoisonEnabled = false;
 	public static int ZombiePoisonTime = 500;
-	public static int ZombiePoisonPower = 1;
+	public static int ZombiePoisonPower = 0;
 		// Regeneration
-	public static boolean ZombieRegenerationEnabled = true;
+	public static boolean ZombieRegenerationEnabled = false;
 	public static int ZombieRegenerationTime = 500;
-	public static int ZombieRegenerationPower = 1;
+	public static int ZombieRegenerationPower = 0;
 		// Slow
-	public static boolean ZombieSlowEnabled = true;
+	public static boolean ZombieSlowEnabled = false;
 	public static int ZombieSlowTime = 500;
-	public static int ZombieSlowPower = 1;
+	public static int ZombieSlowPower = 0;
 		// Slow Digging
-	public static boolean ZombieSlowDiggingEnabled = true;
+	public static boolean ZombieSlowDiggingEnabled = false;
 	public static int ZombieSlowDiggingTime = 500;
-	public static int ZombieSlowDiggingPower = 1;
+	public static int ZombieSlowDiggingPower = 0;
 		// Speed
-	public static boolean ZombieSpeedEnabled = true;
+	public static boolean ZombieSpeedEnabled = false;
 	public static int ZombieSpeedTime = 500;
-	public static int ZombieSpeedPower = 1;
+	public static int ZombieSpeedPower = 0;
 		// Water Breathing
-	public static boolean ZombieWaterBreathingEnabled = true;
+	public static boolean ZombieWaterBreathingEnabled = false;
 	public static int ZombieWaterBreathingTime = 500;
-	public static int ZombieWaterBreathingPower = 100;
+	public static int ZombieWaterBreathingPower = 0;
 		// Weakness
-	public static boolean ZombieWeaknessEnabled = true;
+	public static boolean ZombieWeaknessEnabled = false;
 	public static int ZombieWeaknessTime = 500;
-	public static int ZombieWeaknessPower = 100;
+	public static int ZombieWeaknessPower = 0;
 	
 	// Enders
 	public static boolean EndermanEnabled = true;
