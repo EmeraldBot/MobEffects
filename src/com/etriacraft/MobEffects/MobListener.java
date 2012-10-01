@@ -1,13 +1,10 @@
 package com.etriacraft.MobEffects;
 
-import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Enderman;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.Spider;
-import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -15,18 +12,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class MobListener implements Listener {
-	
-	
-	@EventHandler
-	public void ZombieEvent(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-
-		if (Config.ZombiesEnabled != false && damager instanceof Zombie && e instanceof Player) {
-				Player player = (Player) e;
-				player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.ZombiePoisonTime, Config.ZombiePoisonPower));
-			}
-		}
 	
 	@EventHandler
 	public void EnderEvent(EntityDamageByEntityEvent event) {
