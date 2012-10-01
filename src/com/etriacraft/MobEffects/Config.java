@@ -219,17 +219,145 @@ public class Config {
 	public static int SpiderWeaknessTime = 500;
 	public static int SpiderWeaknessPower = 0;
 	
-	// Enders
-	public static boolean EndermanEnabled = true;
-	public static int EndermanBlindTime = 500;
-	public static int EndermanBlindPower = 1;
-	
-	// Creepers
-	public static boolean CreeperEnabled = true;
+	// Creeper Stuff
+		// Blindness
+	public static boolean CreeperBlindnessEnabled = false;
+	public static int CreeperBlindnessTime = 500;
+	public static int CreeperBlindnessPower = 0;
+		// Confusion
+	public static boolean CreeperConfusionEnabled = false;
 	public static int CreeperConfusionTime = 500;
-	public static int CreeperConfusionPower = 1;
+	public static int CreeperConfusionPower = 0;
+		// Damage Resistance
+	public static boolean CreeperDamageResistanceEnabled = false;
+	public static int CreeperDamageResistanceTime = 500;
+	public static int CreeperDamageResistancePower = 0;
+		// Fast Digging
+	public static boolean CreeperFastDiggingEnabled = false;
+	public static int CreeperFastDiggingTime = 500;
+	public static int CreeperFastDiggingPower = 0;
+		// Fire Resistance
+	public static boolean CreeperFireResistanceEnabled = false;
+	public static int CreeperFireResistanceTime = 500;
+	public static int CreeperFireResistancePower = 0;
+		// Harm
+	public static boolean CreeperHarmEnabled = false;
+	public static int CreeperHarmTime = 500;
+	public static int CreeperHarmPower = 0;
+		// Heal
+	public static boolean CreeperHealEnabled = false;
+	public static int CreeperHealTime = 500;
+	public static int CreeperHealPower = 0;
+		// Hunger
+	public static boolean CreeperHungerEnabled = false;
+	public static int CreeperHungerTime = 500;
+	public static int CreeperHungerPower = 0;
+		// Increase Damage
+	public static boolean CreeperIncreaseDamageEnabled = false;
+	public static int CreeperIncreaseDamageTime = 500;
+	public static int CreeperIncreaseDamagePower = 0;
+		// Jump
+	public static boolean CreeperJumpEnabled = false;
+	public static int CreeperJumpTime = 500;
+	public static int CreeperJumpPower = 0;
+		// Poison
+	public static boolean CreeperPoisonEnabled = false;
 	public static int CreeperPoisonTime = 500;
-	public static int CreeperPoisonPower = 1;
+	public static int CreeperPoisonPower = 0;
+		// Regeneration
+	public static boolean CreeperRegenerationEnabled = false;
+	public static int CreeperRegenerationTime = 500;
+	public static int CreeperRegenerationPower = 0;
+		// Slow
+	public static boolean CreeperSlowEnabled = false;
+	public static int CreeperSlowTime = 500;
+	public static int CreeperSlowPower = 0;
+		// Slow Digging
+	public static boolean CreeperSlowDiggingEnabled = false;
+	public static int CreeperSlowDiggingTime = 500;
+	public static int CreeperSlowDiggingPower = 0;
+		// Speed
+	public static boolean CreeperSpeedEnabled = false;
+	public static int CreeperSpeedTime = 500;
+	public static int CreeperSpeedPower = 0;
+		// Water Breathing
+	public static boolean CreeperWaterBreathingEnabled = false;
+	public static int CreeperWaterBreathingTime = 500;
+	public static int CreeperWaterBreathingPower = 0;
+		// Weakness
+	public static boolean CreeperWeaknessEnabled = false;
+	public static int CreeperWeaknessTime = 500;
+	public static int CreeperWeaknessPower = 0;
+	
+	// Enderman Stuff
+		// Blindness
+	public static boolean EndermanBlindnessEnabled = false;
+	public static int EndermanBlindnessTime = 500;
+	public static int EndermanBlindnessPower = 0;
+		// Confusion
+	public static boolean EndermanConfusionEnabled = false;
+	public static int EndermanConfusionTime = 500;
+	public static int EndermanConfusionPower = 0;
+		// Damage Resistance
+	public static boolean EndermanDamageResistanceEnabled = false;
+	public static int EndermanDamageResistanceTime = 500;
+	public static int EndermanDamageResistancePower = 0;
+		// Fast Digging
+	public static boolean EndermanFastDiggingEnabled = false;
+	public static int EndermanFastDiggingTime = 500;
+	public static int EndermanFastDiggingPower = 0;
+		// Fire Resistance
+	public static boolean EndermanFireResistanceEnabled = false;
+	public static int EndermanFireResistanceTime = 500;
+	public static int EndermanFireResistancePower = 0;
+		// Harm
+	public static boolean EndermanHarmEnabled = false;
+	public static int EndermanHarmTime = 500;
+	public static int EndermanHarmPower = 0;
+		// Heal
+	public static boolean EndermanHealEnabled = false;
+	public static int EndermanHealTime = 500;
+	public static int EndermanHealPower = 0;
+		// Hunger
+	public static boolean EndermanHungerEnabled = false;
+	public static int EndermanHungerTime = 500;
+	public static int EndermanHungerPower = 0;
+		// Increase Damage
+	public static boolean EndermanIncreaseDamageEnabled = false;
+	public static int EndermanIncreaseDamageTime = 500;
+	public static int EndermanIncreaseDamagePower = 0;
+		// Jump
+	public static boolean EndermanJumpEnabled = false;
+	public static int EndermanJumpTime = 500;
+	public static int EndermanJumpPower = 0;
+		// Poison
+	public static boolean EndermanPoisonEnabled = false;
+	public static int EndermanPoisonTime = 500;
+	public static int EndermanPoisonPower = 0;
+		// Regeneration
+	public static boolean EndermanRegenerationEnabled = false;
+	public static int EndermanRegenerationTime = 500;
+	public static int EndermanRegenerationPower = 0;
+		// Slow
+	public static boolean EndermanSlowEnabled = false;
+	public static int EndermanSlowTime = 500;
+	public static int EndermanSlowPower = 0;
+		// Slow Digging
+	public static boolean EndermanSlowDiggingEnabled = false;
+	public static int EndermanSlowDiggingTime = 500;
+	public static int EndermanSlowDiggingPower = 0;
+		// Speed
+	public static boolean EndermanSpeedEnabled = false;
+	public static int EndermanSpeedTime = 500;
+	public static int EndermanSpeedPower = 0;
+		// Water Breathing
+	public static boolean EndermanWaterBreathingEnabled = false;
+	public static int EndermanWaterBreathingTime = 500;
+	public static int EndermanWaterBreathingPower = 0;
+		// Weakness
+	public static boolean EndermanWeaknessEnabled = false;
+	public static int EndermanWeaknessTime = 500;
+	public static int EndermanWeaknessPower = 0;
 	
 	public void load(File file) {
 		FileConfiguration config = new YamlConfiguration();
@@ -498,17 +626,175 @@ public class Config {
 		SpiderWeaknessTime = config.getInt("Spider.Weakness.Time", SpiderWeaknessTime);
 		SpiderWeaknessPower = config.getInt("Spider.Weakness.Power", SpiderWeaknessPower);
 		
-		// Enders
-		EndermanEnabled = config.getBoolean("Enderman.Enabled", EndermanEnabled);
-		EndermanBlindTime = config.getInt("Enderman.Blindness.Time", EndermanBlindTime);
-		EndermanBlindPower = config.getInt("Enderman.Blindness.Power", EndermanBlindPower);
-		
-		// Creepers
-		CreeperEnabled = config.getBoolean("Creeper.Enabled", CreeperEnabled);
+		// Creeper Blindness
+		CreeperBlindnessEnabled = config.getBoolean("Creeper.Blindness.Enabled", CreeperBlindnessEnabled);
+		CreeperBlindnessTime = config.getInt("Creeper.Blindness.Time", CreeperBlindnessTime);
+		CreeperBlindnessPower = config.getInt("Creeper.Blindness.Power", CreeperBlindnessPower);
+
+		//Creeper Confusion
+		CreeperConfusionEnabled = config.getBoolean("Creeper.Confusion.Enabled", CreeperConfusionEnabled);
 		CreeperConfusionTime = config.getInt("Creeper.Confusion.Time", CreeperConfusionTime);
 		CreeperConfusionPower = config.getInt("Creeper.Confusion.Power", CreeperConfusionPower);
+
+		// Creeper Damage Resistance
+		CreeperDamageResistanceEnabled = config.getBoolean("Creeper.DamageResistance.Enabled", CreeperDamageResistanceEnabled);
+		CreeperDamageResistanceTime = config.getInt("Creeper.DamageResistance.Time", CreeperDamageResistanceTime);
+		CreeperDamageResistancePower = config.getInt("Creeper.DamageResistance.Power", CreeperDamageResistancePower);
+
+		// Creeper Fast Digging
+		CreeperFastDiggingEnabled = config.getBoolean("Creeper.FastDigging.Enabled", CreeperFastDiggingEnabled);
+		CreeperFastDiggingTime = config.getInt("Creeper.FastDigging.Time", CreeperFastDiggingTime);
+		CreeperFastDiggingPower = config.getInt("Creeper.FastDigging.Power", CreeperFastDiggingPower);
+
+		// Creeper Fire Resistance
+		CreeperFireResistanceEnabled = config.getBoolean("Creeper.FireResistance.Enabled", CreeperFireResistanceEnabled);
+		CreeperFireResistanceTime = config.getInt("Creeper.FireResistance.Time", CreeperFireResistanceTime);
+		CreeperFireResistancePower = config.getInt("Creeper.FireResistance.Power", CreeperFireResistancePower);
+
+		// Creeper Harm
+		CreeperHarmEnabled = config.getBoolean("Creeper.Harm.Enabled", CreeperHarmEnabled);
+		CreeperHarmTime = config.getInt("Creeper.Harm.Time", CreeperHarmTime);
+		CreeperHarmPower = config.getInt("Creeper.Harm.Powre", CreeperHarmPower);
+
+		// Creeper Heal
+		CreeperHealEnabled = config.getBoolean("Creeper.Heal.Enabled", CreeperHealEnabled);
+		CreeperHealTime = config.getInt("Creeper.Heal.Time", CreeperHealTime);
+		CreeperHealPower = config.getInt("Creeper.Heal.Power", CreeperHealPower);
+
+		// Creeper Hunger
+		CreeperHungerEnabled = config.getBoolean("Creeper.Hunger.Enabled", CreeperHungerEnabled);
+		CreeperHungerTime = config.getInt("Creeper.Hunger.Time", CreeperHungerTime);
+		CreeperHungerPower = config.getInt("Creeper.Hunger.Power", CreeperHungerPower);
+
+		// Creeper IncreaseDamage
+		CreeperIncreaseDamageEnabled = config.getBoolean("Creeper.IncreaseDamage.Enabled", CreeperIncreaseDamageEnabled);
+		CreeperIncreaseDamageTime = config.getInt("Creeper.IncraseDamage.Time", CreeperIncreaseDamageTime);
+		CreeperIncreaseDamagePower = config.getInt("Creeper.IncreaseDamage.Power", CreeperIncreaseDamagePower);
+
+		// Creeper Jump
+		CreeperJumpEnabled = config.getBoolean("Creeper.Jump.Enabled", CreeperJumpEnabled);
+		CreeperJumpTime = config.getInt("Creeper.Jump.Time", CreeperJumpTime);
+		CreeperJumpPower = config.getInt("Creeper.Jump.Power", CreeperJumpPower);
+
+		// Creeper Poison
+		CreeperPoisonEnabled = config.getBoolean("Creeper.Poison.Enabled", CreeperPoisonEnabled);
 		CreeperPoisonTime = config.getInt("Creeper.Poison.Time", CreeperPoisonTime);
 		CreeperPoisonPower = config.getInt("Creeper.Poison.Power", CreeperPoisonPower);
+
+		// Creeper Regeneration
+		CreeperRegenerationEnabled = config.getBoolean("Creeper.Regeneration.Enabled", CreeperRegenerationEnabled);
+		CreeperRegenerationTime = config.getInt("Creeper.Regeneration.Time", CreeperRegenerationTime);
+		CreeperRegenerationPower = config.getInt("Creeper.Regeneration.Power", CreeperRegenerationPower);
+
+		// Creeper Slow
+		CreeperSlowEnabled = config.getBoolean("Creeper.Slow.Enabled", CreeperSlowEnabled);
+		CreeperSlowTime = config.getInt("Creeper.Slow.Time", CreeperSlowTime);
+		CreeperSlowPower = config.getInt("Creeper.Slow.Power", CreeperSlowPower);
+
+		// Creeper Slow Digging
+		CreeperSlowDiggingEnabled = config.getBoolean("Creeper.SlowDigging.Enabled", CreeperSlowDiggingEnabled);
+		CreeperSlowDiggingTime = config.getInt("Creeper.SlowDigging.Time", CreeperSlowDiggingTime);
+		CreeperSlowDiggingPower = config.getInt("Creeper.SlowDigging.Power", CreeperSlowDiggingPower);
+
+		// Creeper Speed
+		CreeperSpeedEnabled = config.getBoolean("Creeper.Speed.Enabled", CreeperSpeedEnabled);
+		CreeperSpeedTime = config.getInt("Creeper.Speed.Time", CreeperSpeedTime);
+		CreeperSpeedPower = config.getInt("Creeper.Speed.Power", CreeperSpeedPower);
+
+		// Creeper Water Breathing
+		CreeperWaterBreathingEnabled = config.getBoolean("Creeper.WaterBreathing.Enabled", CreeperWaterBreathingEnabled);
+		CreeperWaterBreathingTime = config.getInt("Creeper.WaterBreathing.Time", CreeperWaterBreathingTime);
+		CreeperWaterBreathingPower = config.getInt("Creeper.WaterBreathing.Power", CreeperWaterBreathingPower);
+
+		// Creeper Weakness
+		CreeperWeaknessEnabled = config.getBoolean("Creeper.Weakness.Enabled", CreeperWeaknessEnabled);
+		CreeperWeaknessTime = config.getInt("Creeper.Weakness.Time", CreeperWeaknessTime);
+		CreeperWeaknessPower = config.getInt("Creeper.Weakness.Power", CreeperWeaknessPower);
+		
+		// Enderman Blindness
+		EndermanBlindnessEnabled = config.getBoolean("Enderman.Blindness.Enabled", EndermanBlindnessEnabled);
+		EndermanBlindnessTime = config.getInt("Enderman.Blindness.Time", EndermanBlindnessTime);
+		EndermanBlindnessPower = config.getInt("Enderman.Blindness.Power", EndermanBlindnessPower);
+
+		//Enderman Confusion
+		EndermanConfusionEnabled = config.getBoolean("Enderman.Confusion.Enabled", EndermanConfusionEnabled);
+		EndermanConfusionTime = config.getInt("Enderman.Confusion.Time", EndermanConfusionTime);
+		EndermanConfusionPower = config.getInt("Enderman.Confusion.Power", EndermanConfusionPower);
+
+		// Enderman Damage Resistance
+		EndermanDamageResistanceEnabled = config.getBoolean("Enderman.DamageResistance.Enabled", EndermanDamageResistanceEnabled);
+		EndermanDamageResistanceTime = config.getInt("Enderman.DamageResistance.Time", EndermanDamageResistanceTime);
+		EndermanDamageResistancePower = config.getInt("Enderman.DamageResistance.Power", EndermanDamageResistancePower);
+
+		// Enderman Fast Digging
+		EndermanFastDiggingEnabled = config.getBoolean("Enderman.FastDigging.Enabled", EndermanFastDiggingEnabled);
+		EndermanFastDiggingTime = config.getInt("Enderman.FastDigging.Time", EndermanFastDiggingTime);
+		EndermanFastDiggingPower = config.getInt("Enderman.FastDigging.Power", EndermanFastDiggingPower);
+
+		// Enderman Fire Resistance
+		EndermanFireResistanceEnabled = config.getBoolean("Enderman.FireResistance.Enabled", EndermanFireResistanceEnabled);
+		EndermanFireResistanceTime = config.getInt("Enderman.FireResistance.Time", EndermanFireResistanceTime);
+		EndermanFireResistancePower = config.getInt("Enderman.FireResistance.Power", EndermanFireResistancePower);
+
+		// Enderman Harm
+		EndermanHarmEnabled = config.getBoolean("Enderman.Harm.Enabled", EndermanHarmEnabled);
+		EndermanHarmTime = config.getInt("Enderman.Harm.Time", EndermanHarmTime);
+		EndermanHarmPower = config.getInt("Enderman.Harm.Powre", EndermanHarmPower);
+
+		// Enderman Heal
+		EndermanHealEnabled = config.getBoolean("Enderman.Heal.Enabled", EndermanHealEnabled);
+		EndermanHealTime = config.getInt("Enderman.Heal.Time", EndermanHealTime);
+		EndermanHealPower = config.getInt("Enderman.Heal.Power", EndermanHealPower);
+
+		// Enderman Hunger
+		EndermanHungerEnabled = config.getBoolean("Enderman.Hunger.Enabled", EndermanHungerEnabled);
+		EndermanHungerTime = config.getInt("Enderman.Hunger.Time", EndermanHungerTime);
+		EndermanHungerPower = config.getInt("Enderman.Hunger.Power", EndermanHungerPower);
+
+		// Enderman IncreaseDamage
+		EndermanIncreaseDamageEnabled = config.getBoolean("Enderman.IncreaseDamage.Enabled", EndermanIncreaseDamageEnabled);
+		EndermanIncreaseDamageTime = config.getInt("Enderman.IncraseDamage.Time", EndermanIncreaseDamageTime);
+		EndermanIncreaseDamagePower = config.getInt("Enderman.IncreaseDamage.Power", EndermanIncreaseDamagePower);
+
+		// Enderman Jump
+		EndermanJumpEnabled = config.getBoolean("Enderman.Jump.Enabled", EndermanJumpEnabled);
+		EndermanJumpTime = config.getInt("Enderman.Jump.Time", EndermanJumpTime);
+		EndermanJumpPower = config.getInt("Enderman.Jump.Power", EndermanJumpPower);
+
+		// Enderman Poison
+		EndermanPoisonEnabled = config.getBoolean("Enderman.Poison.Enabled", EndermanPoisonEnabled);
+		EndermanPoisonTime = config.getInt("Enderman.Poison.Time", EndermanPoisonTime);
+		EndermanPoisonPower = config.getInt("Enderman.Poison.Power", EndermanPoisonPower);
+
+		// Enderman Regeneration
+		EndermanRegenerationEnabled = config.getBoolean("Enderman.Regeneration.Enabled", EndermanRegenerationEnabled);
+		EndermanRegenerationTime = config.getInt("Enderman.Regeneration.Time", EndermanRegenerationTime);
+		EndermanRegenerationPower = config.getInt("Enderman.Regeneration.Power", EndermanRegenerationPower);
+
+		// Enderman Slow
+		EndermanSlowEnabled = config.getBoolean("Enderman.Slow.Enabled", EndermanSlowEnabled);
+		EndermanSlowTime = config.getInt("Enderman.Slow.Time", EndermanSlowTime);
+		EndermanSlowPower = config.getInt("Enderman.Slow.Power", EndermanSlowPower);
+
+		// Enderman Slow Digging
+		EndermanSlowDiggingEnabled = config.getBoolean("Enderman.SlowDigging.Enabled", EndermanSlowDiggingEnabled);
+		EndermanSlowDiggingTime = config.getInt("Enderman.SlowDigging.Time", EndermanSlowDiggingTime);
+		EndermanSlowDiggingPower = config.getInt("Enderman.SlowDigging.Power", EndermanSlowDiggingPower);
+
+		// Enderman Speed
+		EndermanSpeedEnabled = config.getBoolean("Enderman.Speed.Enabled", EndermanSpeedEnabled);
+		EndermanSpeedTime = config.getInt("Enderman.Speed.Time", EndermanSpeedTime);
+		EndermanSpeedPower = config.getInt("Enderman.Speed.Power", EndermanSpeedPower);
+
+		// Enderman Water Breathing
+		EndermanWaterBreathingEnabled = config.getBoolean("Enderman.WaterBreathing.Enabled", EndermanWaterBreathingEnabled);
+		EndermanWaterBreathingTime = config.getInt("Enderman.WaterBreathing.Time", EndermanWaterBreathingTime);
+		EndermanWaterBreathingPower = config.getInt("Enderman.WaterBreathing.Power", EndermanWaterBreathingPower);
+
+		// Enderman Weakness
+		EndermanWeaknessEnabled = config.getBoolean("Enderman.Weakness.Enabled", EndermanWeaknessEnabled);
+		EndermanWeaknessTime = config.getInt("Enderman.Weakness.Time", EndermanWeaknessTime);
+		EndermanWeaknessPower = config.getInt("Enderman.Weakness.Power", EndermanWeaknessPower);
 	
 	// Set Defaults
 		config.set("Player.Blindness.Enabled", PlayerBlindnessEnabled);
@@ -654,16 +940,110 @@ public class Config {
 		config.set("Spider.Weakness.Enabled", SpiderWeaknessEnabled);
 		config.set("Spider.Weakness.Time", SpiderWeaknessTime);
 		config.set("Spider.Weakness.Power", SpiderWeaknessPower);
-	config.set("Enderman.Enabled", EndermanEnabled);
-	config.set("Enderman.Blindness.Time", EndermanBlindTime);
-	config.set("Enderman.Blindness.Power", EndermanBlindPower);
-	config.set("Spider.Slow.Time", SpiderSlowTime);
-	config.set("Spider.Slow.Power", SpiderSlowPower);
-	config.set("Creeper.Enabled", CreeperEnabled);
-	config.set("Crepeer.Confusion.Time", CreeperConfusionTime);
-	config.set("Creeper.Confusion.Power", CreeperConfusionPower);
-	config.set("Creeper.Poison.Time", CreeperPoisonTime);
-	config.set("Creeper.Poison.Power", CreeperPoisonPower);
+		// Creeper
+		config.set("Creeper.Blindness.Enabled", CreeperBlindnessEnabled);
+		config.set("Creeper.Blindness.Time", CreeperBlindnessTime);
+		config.set("Creeper.Blindness.Power", CreeperBlindnessPower);
+		config.set("Creeper.Confusion.Enabled", CreeperConfusionEnabled);
+		config.set("Creeper.Confusion.Time", CreeperConfusionTime);
+		config.set("Creeper.Confusion.Power", CreeperConfusionPower);
+		config.set("Creeper.DamageResistance.Enabled", CreeperDamageResistanceEnabled);
+		config.set("Creeper.DamageResistance.Time", CreeperDamageResistanceTime);
+		config.set("Creeper.DamageResistance.Power", CreeperDamageResistancePower);
+		config.set("Creeper.FastDigging.Enabled", CreeperFastDiggingEnabled);
+		config.set("Creeper.FastDigging.Time", CreeperFastDiggingTime);
+		config.set("Creeper.FastDigging.Power", CreeperFastDiggingPower);
+		config.set("Creeper.FireResistance.Enabled", CreeperFireResistanceEnabled);
+		config.set("Creeper.FireResistance.Time", CreeperFireResistanceTime);
+		config.set("Creeper.FireResistance.Power", CreeperFireResistancePower);
+		config.set("Creeper.Harm.Enabled", CreeperHarmEnabled);
+		config.set("Creeper.Harm.Time", CreeperHarmTime);
+		config.set("Creeper.Harm.Power", CreeperHarmPower);
+		config.set("Creeper.Heal.Enabled", CreeperHealEnabled);
+		config.set("Creeper.Heal.Time", CreeperHealTime);
+		config.set("Creeper.Heal.Power", CreeperHealPower);
+		config.set("Creeper.Hunger.Enabled", CreeperHungerEnabled);
+		config.set("Creeper.Hunger.Time", CreeperHungerTime);
+		config.set("Creeper.Hunger.Power", CreeperHungerPower);
+		config.set("Creeper.IncreaseDamage.Enabled", CreeperIncreaseDamageEnabled);
+		config.set("Creeper.IncreaseDamage.Time", CreeperIncreaseDamageTime);
+		config.set("Creeper.IncreaseDamage.Power", CreeperIncreaseDamagePower);
+		config.set("Creeper.Jump.Enabled", CreeperJumpEnabled);
+		config.set("Creeper.Jump.Time", CreeperJumpTime);
+		config.set("Creeper.Jump.Power", CreeperJumpPower);
+		config.set("Creeper.Poison.Enabled", CreeperPoisonEnabled);
+		config.set("Creeper.Poison.Time", CreeperPoisonTime);
+		config.set("Creeper.Poison.Power", CreeperPoisonPower);
+		config.set("Creeper.Regeneration.Enabled", CreeperRegenerationEnabled);
+		config.set("Creeper.Regeneration.Time", CreeperRegenerationTime);
+		config.set("Creeper.Regeneration.Power", CreeperRegenerationPower);
+		config.set("Creeper.Slow.Enabled", CreeperSlowEnabled);
+		config.set("Creeper.Slow.Time", CreeperSlowTime);
+		config.set("Creeper.Slow.Power", CreeperSlowPower);
+		config.set("Creeper.SlowDigging.Enabled", CreeperSlowDiggingEnabled);
+		config.set("Creeper.SlowDigging.Time", CreeperSlowDiggingTime);
+		config.set("Creeper.SlowDigging.Power", CreeperSlowDiggingPower);
+		config.set("Creeper.Speed.Enabled", CreeperSpeedEnabled);
+		config.set("Creeper.Speed.Time", CreeperSpeedTime);
+		config.set("Creeper.Speed.Power", CreeperSpeedPower);
+		config.set("Creeper.WaterBreathing.Enabled", CreeperWaterBreathingEnabled);
+		config.set("Creeper.WaterBreathing.Time", CreeperWaterBreathingTime);
+		config.set("Creeper.WaterBreathing.Power", CreeperWaterBreathingPower);
+		config.set("Creeper.Weakness.Enabled", CreeperWeaknessEnabled);
+		config.set("Creeper.Weakness.Time", CreeperWeaknessTime);
+		config.set("Creeper.Weakness.Power", CreeperWeaknessPower);
+		// Enderman
+		config.set("Enderman.Blindness.Enabled", EndermanBlindnessEnabled);
+		config.set("Enderman.Blindness.Time", EndermanBlindnessTime);
+		config.set("Enderman.Blindness.Power", EndermanBlindnessPower);
+		config.set("Enderman.Confusion.Enabled", EndermanConfusionEnabled);
+		config.set("Enderman.Confusion.Time", EndermanConfusionTime);
+		config.set("Enderman.Confusion.Power", EndermanConfusionPower);
+		config.set("Enderman.DamageResistance.Enabled", EndermanDamageResistanceEnabled);
+		config.set("Enderman.DamageResistance.Time", EndermanDamageResistanceTime);
+		config.set("Enderman.DamageResistance.Power", EndermanDamageResistancePower);
+		config.set("Enderman.FastDigging.Enabled", EndermanFastDiggingEnabled);
+		config.set("Enderman.FastDigging.Time", EndermanFastDiggingTime);
+		config.set("Enderman.FastDigging.Power", EndermanFastDiggingPower);
+		config.set("Enderman.FireResistance.Enabled", EndermanFireResistanceEnabled);
+		config.set("Enderman.FireResistance.Time", EndermanFireResistanceTime);
+		config.set("Enderman.FireResistance.Power", EndermanFireResistancePower);
+		config.set("Enderman.Harm.Enabled", EndermanHarmEnabled);
+		config.set("Enderman.Harm.Time", EndermanHarmTime);
+		config.set("Enderman.Harm.Power", EndermanHarmPower);
+		config.set("Enderman.Heal.Enabled", EndermanHealEnabled);
+		config.set("Enderman.Heal.Time", EndermanHealTime);
+		config.set("Enderman.Heal.Power", EndermanHealPower);
+		config.set("Enderman.Hunger.Enabled", EndermanHungerEnabled);
+		config.set("Enderman.Hunger.Time", EndermanHungerTime);
+		config.set("Enderman.Hunger.Power", EndermanHungerPower);
+		config.set("Enderman.IncreaseDamage.Enabled", EndermanIncreaseDamageEnabled);
+		config.set("Enderman.IncreaseDamage.Time", EndermanIncreaseDamageTime);
+		config.set("Enderman.IncreaseDamage.Power", EndermanIncreaseDamagePower);
+		config.set("Enderman.Jump.Enabled", EndermanJumpEnabled);
+		config.set("Enderman.Jump.Time", EndermanJumpTime);
+		config.set("Enderman.Jump.Power", EndermanJumpPower);
+		config.set("Enderman.Poison.Enabled", EndermanPoisonEnabled);
+		config.set("Enderman.Poison.Time", EndermanPoisonTime);
+		config.set("Enderman.Poison.Power", EndermanPoisonPower);
+		config.set("Enderman.Regeneration.Enabled", EndermanRegenerationEnabled);
+		config.set("Enderman.Regeneration.Time", EndermanRegenerationTime);
+		config.set("Enderman.Regeneration.Power", EndermanRegenerationPower);
+		config.set("Enderman.Slow.Enabled", EndermanSlowEnabled);
+		config.set("Enderman.Slow.Time", EndermanSlowTime);
+		config.set("Enderman.Slow.Power", EndermanSlowPower);
+		config.set("Enderman.SlowDigging.Enabled", EndermanSlowDiggingEnabled);
+		config.set("Enderman.SlowDigging.Time", EndermanSlowDiggingTime);
+		config.set("Enderman.SlowDigging.Power", EndermanSlowDiggingPower);
+		config.set("Enderman.Speed.Enabled", EndermanSpeedEnabled);
+		config.set("Enderman.Speed.Time", EndermanSpeedTime);
+		config.set("Enderman.Speed.Power", EndermanSpeedPower);
+		config.set("Enderman.WaterBreathing.Enabled", EndermanWaterBreathingEnabled);
+		config.set("Enderman.WaterBreathing.Time", EndermanWaterBreathingTime);
+		config.set("Enderman.WaterBreathing.Power", EndermanWaterBreathingPower);
+		config.set("Enderman.Weakness.Enabled", EndermanWeaknessEnabled);
+		config.set("Enderman.Weakness.Time", EndermanWeaknessTime);
+		config.set("Enderman.Weakness.Power", EndermanWeaknessPower);
 	
 	try {
 		config.save(file);
