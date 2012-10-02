@@ -148,7 +148,6 @@ public class Config {
 	public static boolean ZombieWeaknessEnabled = false;
 	public static int ZombieWeaknessTime = 500;
 	public static int ZombieWeaknessPower = 0;
-	
 	// Spider Stuffs
 		// Blindness
 	public static boolean SpiderBlindnessEnabled = false;
@@ -358,6 +357,76 @@ public class Config {
 	public static boolean EndermanWeaknessEnabled = false;
 	public static int EndermanWeaknessTime = 500;
 	public static int EndermanWeaknessPower = 0;
+	
+	// Slime Stuff
+	// Blindness
+	public static boolean SlimeBlindnessEnabled = false;
+	public static int SlimeBlindnessTime = 500;
+	public static int SlimeBlindnessPower = 0;
+	// Confusion
+	public static boolean SlimeConfusionEnabled = false;
+	public static int SlimeConfusionTime = 500;
+	public static int SlimeConfusionPower = 0;
+	// Damage Resistance
+	public static boolean SlimeDamageResistanceEnabled = false;
+	public static int SlimeDamageResistanceTime = 500;
+	public static int SlimeDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean SlimeFastDiggingEnabled = false;
+	public static int SlimeFastDiggingTime = 500;
+	public static int SlimeFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean SlimeFireResistanceEnabled = false;
+	public static int SlimeFireResistanceTime = 500;
+	public static int SlimeFireResistancePower = 0;
+	// Harm
+	public static boolean SlimeHarmEnabled = false;
+	public static int SlimeHarmTime = 500;
+	public static int SlimeHarmPower = 0;
+	// Heal
+	public static boolean SlimeHealEnabled = false;
+	public static int SlimeHealTime = 500;
+	public static int SlimeHealPower = 0;
+	// Hunger
+	public static boolean SlimeHungerEnabled = false;
+	public static int SlimeHungerTime = 500;
+	public static int SlimeHungerPower = 0;
+	// Increase Damage
+	public static boolean SlimeIncreaseDamageEnabled = false;
+	public static int SlimeIncreaseDamageTime = 500;
+	public static int SlimeIncreaseDamagePower = 0;
+	// Jump
+	public static boolean SlimeJumpEnabled = false;
+	public static int SlimeJumpTime = 500;
+	public static int SlimeJumpPower = 0;
+	// Poison
+	public static boolean SlimePoisonEnabled = false;
+	public static int SlimePoisonTime = 500;
+	public static int SlimePoisonPower = 0;
+	// Regeneration
+	public static boolean SlimeRegenerationEnabled = false;
+	public static int SlimeRegenerationTime = 500;
+	public static int SlimeRegenerationPower = 0;
+	// Slow
+	public static boolean SlimeSlowEnabled = false;
+	public static int SlimeSlowTime = 500;
+	public static int SlimeSlowPower = 0;
+	// Slow Digging
+	public static boolean SlimeSlowDiggingEnabled = false;
+	public static int SlimeSlowDiggingTime = 500;
+	public static int SlimeSlowDiggingPower = 0;
+	// Speed
+	public static boolean SlimeSpeedEnabled = false;
+	public static int SlimeSpeedTime = 500;
+	public static int SlimeSpeedPower = 0;
+	// Water Breathing
+	public static boolean SlimeWaterBreathingEnabled = false;
+	public static int SlimeWaterBreathingTime = 500;
+	public static int SlimeWaterBreathingPower = 0;
+	// Weakness
+	public static boolean SlimeWeaknessEnabled = false;
+	public static int SlimeWeaknessTime = 500;
+	public static int SlimeWeaknessPower = 0;
 	
 	public void load(File file) {
 		FileConfiguration config = new YamlConfiguration();
@@ -795,6 +864,91 @@ public class Config {
 		EndermanWeaknessEnabled = config.getBoolean("Enderman.Weakness.Enabled", EndermanWeaknessEnabled);
 		EndermanWeaknessTime = config.getInt("Enderman.Weakness.Time", EndermanWeaknessTime);
 		EndermanWeaknessPower = config.getInt("Enderman.Weakness.Power", EndermanWeaknessPower);
+		
+		// Slime Blindness
+		SlimeBlindnessEnabled = config.getBoolean("Slime.Blindness.Enabled", SlimeBlindnessEnabled);
+		SlimeBlindnessTime = config.getInt("Slime.Blindness.Time", SlimeBlindnessTime);
+		SlimeBlindnessPower = config.getInt("Slime.Blindness.Power", SlimeBlindnessPower);
+
+		//Slime Confusion
+		SlimeConfusionEnabled = config.getBoolean("Slime.Confusion.Enabled", SlimeConfusionEnabled);
+		SlimeConfusionTime = config.getInt("Slime.Confusion.Time", SlimeConfusionTime);
+		SlimeConfusionPower = config.getInt("Slime.Confusion.Power", SlimeConfusionPower);
+
+		// Slime Damage Resistance
+		SlimeDamageResistanceEnabled = config.getBoolean("Slime.DamageResistance.Enabled", SlimeDamageResistanceEnabled);
+		SlimeDamageResistanceTime = config.getInt("Slime.DamageResistance.Time", SlimeDamageResistanceTime);
+		SlimeDamageResistancePower = config.getInt("Slime.DamageResistance.Power", SlimeDamageResistancePower);
+
+		// Slime Fast Digging
+		SlimeFastDiggingEnabled = config.getBoolean("Slime.FastDigging.Enabled", SlimeFastDiggingEnabled);
+		SlimeFastDiggingTime = config.getInt("Slime.FastDigging.Time", SlimeFastDiggingTime);
+		SlimeFastDiggingPower = config.getInt("Slime.FastDigging.Power", SlimeFastDiggingPower);
+
+		// Slime Fire Resistance
+		SlimeFireResistanceEnabled = config.getBoolean("Slime.FireResistance.Enabled", SlimeFireResistanceEnabled);
+		SlimeFireResistanceTime = config.getInt("Slime.FireResistance.Time", SlimeFireResistanceTime);
+		SlimeFireResistancePower = config.getInt("Slime.FireResistance.Power", SlimeFireResistancePower);
+
+		// Slime Harm
+		SlimeHarmEnabled = config.getBoolean("Slime.Harm.Enabled", SlimeHarmEnabled);
+		SlimeHarmTime = config.getInt("Slime.Harm.Time", SlimeHarmTime);
+		SlimeHarmPower = config.getInt("Slime.Harm.Powre", SlimeHarmPower);
+
+		// Slime Heal
+		SlimeHealEnabled = config.getBoolean("Slime.Heal.Enabled", SlimeHealEnabled);
+		SlimeHealTime = config.getInt("Slime.Heal.Time", SlimeHealTime);
+		SlimeHealPower = config.getInt("Slime.Heal.Power", SlimeHealPower);
+
+		// Slime Hunger
+		SlimeHungerEnabled = config.getBoolean("Slime.Hunger.Enabled", SlimeHungerEnabled);
+		SlimeHungerTime = config.getInt("Slime.Hunger.Time", SlimeHungerTime);
+		SlimeHungerPower = config.getInt("Slime.Hunger.Power", SlimeHungerPower);
+
+		// Slime IncreaseDamage
+		SlimeIncreaseDamageEnabled = config.getBoolean("Slime.IncreaseDamage.Enabled", SlimeIncreaseDamageEnabled);
+		SlimeIncreaseDamageTime = config.getInt("Slime.IncraseDamage.Time", SlimeIncreaseDamageTime);
+		SlimeIncreaseDamagePower = config.getInt("Slime.IncreaseDamage.Power", SlimeIncreaseDamagePower);
+
+		// Slime Jump
+		SlimeJumpEnabled = config.getBoolean("Slime.Jump.Enabled", SlimeJumpEnabled);
+		SlimeJumpTime = config.getInt("Slime.Jump.Time", SlimeJumpTime);
+		SlimeJumpPower = config.getInt("Slime.Jump.Power", SlimeJumpPower);
+
+		// Slime Poison
+		SlimePoisonEnabled = config.getBoolean("Slime.Poison.Enabled", SlimePoisonEnabled);
+		SlimePoisonTime = config.getInt("Slime.Poison.Time", SlimePoisonTime);
+		SlimePoisonPower = config.getInt("Slime.Poison.Power", SlimePoisonPower);
+
+		// Slime Regeneration
+		SlimeRegenerationEnabled = config.getBoolean("Slime.Regeneration.Enabled", SlimeRegenerationEnabled);
+		SlimeRegenerationTime = config.getInt("Slime.Regeneration.Time", SlimeRegenerationTime);
+		SlimeRegenerationPower = config.getInt("Slime.Regeneration.Power", SlimeRegenerationPower);
+
+		// Slime Slow
+		SlimeSlowEnabled = config.getBoolean("Slime.Slow.Enabled", SlimeSlowEnabled);
+		SlimeSlowTime = config.getInt("Slime.Slow.Time", SlimeSlowTime);
+		SlimeSlowPower = config.getInt("Slime.Slow.Power", SlimeSlowPower);
+
+		// Slime Slow Digging
+		SlimeSlowDiggingEnabled = config.getBoolean("Slime.SlowDigging.Enabled", SlimeSlowDiggingEnabled);
+		SlimeSlowDiggingTime = config.getInt("Slime.SlowDigging.Time", SlimeSlowDiggingTime);
+		SlimeSlowDiggingPower = config.getInt("Slime.SlowDigging.Power", SlimeSlowDiggingPower);
+
+		// Slime Speed
+		SlimeSpeedEnabled = config.getBoolean("Slime.Speed.Enabled", SlimeSpeedEnabled);
+		SlimeSpeedTime = config.getInt("Slime.Speed.Time", SlimeSpeedTime);
+		SlimeSpeedPower = config.getInt("Slime.Speed.Power", SlimeSpeedPower);
+
+		// Slime Water Breathing
+		SlimeWaterBreathingEnabled = config.getBoolean("Slime.WaterBreathing.Enabled", SlimeWaterBreathingEnabled);
+		SlimeWaterBreathingTime = config.getInt("Slime.WaterBreathing.Time", SlimeWaterBreathingTime);
+		SlimeWaterBreathingPower = config.getInt("Slime.WaterBreathing.Power", SlimeWaterBreathingPower);
+
+		// Slime Weakness
+		SlimeWeaknessEnabled = config.getBoolean("Slime.Weakness.Enabled", SlimeWeaknessEnabled);
+		SlimeWeaknessTime = config.getInt("Slime.Weakness.Time", SlimeWeaknessTime);
+		SlimeWeaknessPower = config.getInt("Slime.Weakness.Power", SlimeWeaknessPower);
 	
 	// Set Defaults
 		config.set("Player.Blindness.Enabled", PlayerBlindnessEnabled);
@@ -1044,6 +1198,46 @@ public class Config {
 		config.set("Enderman.Weakness.Enabled", EndermanWeaknessEnabled);
 		config.set("Enderman.Weakness.Time", EndermanWeaknessTime);
 		config.set("Enderman.Weakness.Power", EndermanWeaknessPower);
+		// Slimes
+		config.set("Slime.Blindness.Enabled", SlimeBlindnessEnabled);
+		config.set("Slime.Blindness.Time", SlimeBlindnessTime);
+		config.set("Slime.Blindness.Power", SlimeBlindnessPower);
+		config.set("Slime.Confusion.Enabled", SlimeConfusionEnabled);
+		config.set("Slime.Confusion.Time", SlimeConfusionTime);
+		config.set("Slime.Confusion.Power", SlimeConfusionPower);
+		config.set("Slime.DamageResistance.Enabled", SlimeDamageResistanceEnabled);
+		config.set("Slime.DamageResistance.Time", SlimeDamageResistanceTime);
+		config.set("Slime.DamageResistance.Power", SlimeDamageResistancePower);
+		config.set("Slime.FastDigging.Enabled", SlimeFastDiggingEnabled);
+		config.set("Slime.FastDigging.Time", SlimeFastDiggingTime);
+		config.set("Slime.FastDigging.Power", SlimeFastDiggingPower);
+		config.set("Slime.Harm.Enabled", SlimeHarmEnabled);
+		config.set("Slime.Harm.Time", SlimeHarmTime);
+		config.set("Slime.Harm.Power", SlimeHarmPower);
+		config.set("Slime.Heal.Enabled", SlimeHealEnabled);
+		config.set("Slime.Heal.Time", SlimeHealTime);
+		config.set("Slime.Heal.Power", SlimeHealPower);
+		config.set("Slime.IncreaseDamage.Enabled", SlimeIncreaseDamageEnabled);
+		config.set("Slime.IncreaseDamage.Time", SlimeIncreaseDamageTime);
+		config.set("Slime.IncreaseDamage.Power", SlimeIncreaseDamagePower);
+		config.set("Slime.Jump.Enabled", SlimeJumpEnabled);
+		config.set("Slime.Jump.Time", SlimeJumpTime);
+		config.set("Slime.Jump.Power", SlimeJumpPower);
+		config.set("Slime.Slow.Enabled", SlimeSlowEnabled);
+		config.set("Slime.Slow.Time", SlimeSlowTime);
+		config.set("Slime.Slow.Power", SlimeSlowPower);
+		config.set("Slime.SlowDigging.Enabled", SlimeSlowDiggingEnabled);
+		config.set("Slime.SlowDigging.Time", SlimeSlowDiggingTime);
+		config.set("Slime.SlowDigging.Power", SlimeSlowDiggingPower);
+		config.set("Slime.Speed.Enabled", SlimeSpeedEnabled);
+		config.set("Slime.Speed.Time", SlimeSpeedTime);
+		config.set("Slime.Speed.Power", SlimeSpeedPower);
+		config.set("Slime.WaterBreathing.Enabled", SlimeWaterBreathingEnabled);
+		config.set("Slime.WaterBreathing.Time", SlimeWaterBreathingTime);
+		config.set("Slime.WaterBreathing.Power", SlimeWaterBreathingPower);
+		config.set("Slime.Weakness.Enabled", SlimeWeaknessEnabled);
+		config.set("Slime.Weakness.Time", SlimeWeaknessTime);
+		config.set("Slime.Weakness.Power", SlimeWeaknessPower);
 	
 	try {
 		config.save(file);

@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.etriacraft.MobEffects.Listeners.MECreeperListener;
 import com.etriacraft.MobEffects.Listeners.MEEndermanListener;
 import com.etriacraft.MobEffects.Listeners.MEPlayerListener;
+import com.etriacraft.MobEffects.Listeners.MESlimeListener;
 import com.etriacraft.MobEffects.Listeners.MESpiderListener;
 import com.etriacraft.MobEffects.Listeners.MEZombieListener;
 
@@ -19,6 +20,7 @@ public class MobEffects extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new MECreeperListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEEndermanListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEPlayerListener(), this);
+		this.getServer().getPluginManager().registerEvents(new MESlimeListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MESpiderListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEZombieListener(), this);
 	}
