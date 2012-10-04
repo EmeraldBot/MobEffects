@@ -428,6 +428,353 @@ public class Config {
 	public static int SlimeWeaknessTime = 500;
 	public static int SlimeWeaknessPower = 0;
 	
+	// Giants
+	// Blindness
+	public static boolean GiantBlindnessEnabled = false;
+	public static int GiantBlindnessTime = 500;
+	public static int GiantBlindnessPower = 0;
+	// Confusion
+	public static boolean GiantConfusionEnabled = false;
+	public static int GiantConfusionTime = 500;
+	public static int GiantConfusionPower = 0;
+	// Damage Resistance
+	public static boolean GiantDamageResistanceEnabled = false;
+	public static int GiantDamageResistanceTime = 500;
+	public static int GiantDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean GiantFastDiggingEnabled = false;
+	public static int GiantFastDiggingTime = 500;
+	public static int GiantFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean GiantFireResistanceEnabled = false;
+	public static int GiantFireResistanceTime = 500;
+	public static int GiantFireResistancePower = 0;
+	// Harm
+	public static boolean GiantHarmEnabled = false;
+	public static int GiantHarmTime = 500;
+	public static int GiantHarmPower = 0;
+	// Heal
+	public static boolean GiantHealEnabled = false;
+	public static int GiantHealTime = 500;
+	public static int GiantHealPower = 0;
+	// Hunger
+	public static boolean GiantHungerEnabled = false;
+	public static int GiantHungerTime = 500;
+	public static int GiantHungerPower = 0;
+	// Increase Damage
+	public static boolean GiantIncreaseDamageEnabled = false;
+	public static int GiantIncreaseDamageTime = 500;
+	public static int GiantIncreaseDamagePower = 0;
+	// Jump
+	public static boolean GiantJumpEnabled = false;
+	public static int GiantJumpTime = 500;
+	public static int GiantJumpPower = 0;
+	// Poison
+	public static boolean GiantPoisonEnabled = false;
+	public static int GiantPoisonTime = 500;
+	public static int GiantPoisonPower = 0;
+	// Regeneration
+	public static boolean GiantRegenerationEnabled = false;
+	public static int GiantRegenerationTime = 500;
+	public static int GiantRegenerationPower = 0;
+	// Slow
+	public static boolean GiantSlowEnabled = false;
+	public static int GiantSlowTime = 500;
+	public static int GiantSlowPower = 0;
+	// Slow Digging
+	public static boolean GiantSlowDiggingEnabled = false;
+	public static int GiantSlowDiggingTime = 500;
+	public static int GiantSlowDiggingPower = 0;
+	// Speed
+	public static boolean GiantSpeedEnabled = false;
+	public static int GiantSpeedTime = 500;
+	public static int GiantSpeedPower = 0;
+	// Water Breathing
+	public static boolean GiantWaterBreathingEnabled = false;
+	public static int GiantWaterBreathingTime = 500;
+	public static int GiantWaterBreathingPower = 0;
+	// Weakness
+	public static boolean GiantWeaknessEnabled = false;
+	public static int GiantWeaknessTime = 500;
+	public static int GiantWeaknessPower = 0;
+	
+	// Blaze
+	// Blindness
+	public static boolean BlazeBlindnessEnabled = false;
+	public static int BlazeBlindnessTime = 500;
+	public static int BlazeBlindnessPower = 0;
+	// Confusion
+	public static boolean BlazeConfusionEnabled = false;
+	public static int BlazeConfusionTime = 500;
+	public static int BlazeConfusionPower = 0;
+	// Damage Resistance
+	public static boolean BlazeDamageResistanceEnabled = false;
+	public static int BlazeDamageResistanceTime = 500;
+	public static int BlazeDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean BlazeFastDiggingEnabled = false;
+	public static int BlazeFastDiggingTime = 500;
+	public static int BlazeFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean BlazeFireResistanceEnabled = false;
+	public static int BlazeFireResistanceTime = 500;
+	public static int BlazeFireResistancePower = 0;
+	// Harm
+	public static boolean BlazeHarmEnabled = false;
+	public static int BlazeHarmTime = 500;
+	public static int BlazeHarmPower = 0;
+	// Heal
+	public static boolean BlazeHealEnabled = false;
+	public static int BlazeHealTime = 500;
+	public static int BlazeHealPower = 0;
+	// Hunger
+	public static boolean BlazeHungerEnabled = false;
+	public static int BlazeHungerTime = 500;
+	public static int BlazeHungerPower = 0;
+	// Increase Damage
+	public static boolean BlazeIncreaseDamageEnabled = false;
+	public static int BlazeIncreaseDamageTime = 500;
+	public static int BlazeIncreaseDamagePower = 0;
+	// Jump
+	public static boolean BlazeJumpEnabled = false;
+	public static int BlazeJumpTime = 500;
+	public static int BlazeJumpPower = 0;
+	// Poison
+	public static boolean BlazePoisonEnabled = false;
+	public static int BlazePoisonTime = 500;
+	public static int BlazePoisonPower = 0;
+	// Regeneration
+	public static boolean BlazeRegenerationEnabled = false;
+	public static int BlazeRegenerationTime = 500;
+	public static int BlazeRegenerationPower = 0;
+	// Slow
+	public static boolean BlazeSlowEnabled = false;
+	public static int BlazeSlowTime = 500;
+	public static int BlazeSlowPower = 0;
+	// Slow Digging
+	public static boolean BlazeSlowDiggingEnabled = false;
+	public static int BlazeSlowDiggingTime = 500;
+	public static int BlazeSlowDiggingPower = 0;
+	// Speed
+	public static boolean BlazeSpeedEnabled = false;
+	public static int BlazeSpeedTime = 500;
+	public static int BlazeSpeedPower = 0;
+	// Water Breathing
+	public static boolean BlazeWaterBreathingEnabled = false;
+	public static int BlazeWaterBreathingTime = 500;
+	public static int BlazeWaterBreathingPower = 0;
+	// Weakness
+	public static boolean BlazeWeaknessEnabled = false;
+	public static int BlazeWeaknessTime = 500;
+	public static int BlazeWeaknessPower = 0;
+	// Magma Cube
+	// Blindness
+	public static boolean MagmaCubeBlindnessEnabled = false;
+	public static int MagmaCubeBlindnessTime = 500;
+	public static int MagmaCubeBlindnessPower = 0;
+	// Confusion
+	public static boolean MagmaCubeConfusionEnabled = false;
+	public static int MagmaCubeConfusionTime = 500;
+	public static int MagmaCubeConfusionPower = 0;
+	// Damage Resistance
+	public static boolean MagmaCubeDamageResistanceEnabled = false;
+	public static int MagmaCubeDamageResistanceTime = 500;
+	public static int MagmaCubeDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean MagmaCubeFastDiggingEnabled = false;
+	public static int MagmaCubeFastDiggingTime = 500;
+	public static int MagmaCubeFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean MagmaCubeFireResistanceEnabled = false;
+	public static int MagmaCubeFireResistanceTime = 500;
+	public static int MagmaCubeFireResistancePower = 0;
+	// Harm
+	public static boolean MagmaCubeHarmEnabled = false;
+	public static int MagmaCubeHarmTime = 500;
+	public static int MagmaCubeHarmPower = 0;
+	// Heal
+	public static boolean MagmaCubeHealEnabled = false;
+	public static int MagmaCubeHealTime = 500;
+	public static int MagmaCubeHealPower = 0;
+	// Hunger
+	public static boolean MagmaCubeHungerEnabled = false;
+	public static int MagmaCubeHungerTime = 500;
+	public static int MagmaCubeHungerPower = 0;
+	// Increase Damage
+	public static boolean MagmaCubeIncreaseDamageEnabled = false;
+	public static int MagmaCubeIncreaseDamageTime = 500;
+	public static int MagmaCubeIncreaseDamagePower = 0;
+	// Jump
+	public static boolean MagmaCubeJumpEnabled = false;
+	public static int MagmaCubeJumpTime = 500;
+	public static int MagmaCubeJumpPower = 0;
+	// Poison
+	public static boolean MagmaCubePoisonEnabled = false;
+	public static int MagmaCubePoisonTime = 500;
+	public static int MagmaCubePoisonPower = 0;
+	// Regeneration
+	public static boolean MagmaCubeRegenerationEnabled = false;
+	public static int MagmaCubeRegenerationTime = 500;
+	public static int MagmaCubeRegenerationPower = 0;
+	// Slow
+	public static boolean MagmaCubeSlowEnabled = false;
+	public static int MagmaCubeSlowTime = 500;
+	public static int MagmaCubeSlowPower = 0;
+	// Slow Digging
+	public static boolean MagmaCubeSlowDiggingEnabled = false;
+	public static int MagmaCubeSlowDiggingTime = 500;
+	public static int MagmaCubeSlowDiggingPower = 0;
+	// Speed
+	public static boolean MagmaCubeSpeedEnabled = false;
+	public static int MagmaCubeSpeedTime = 500;
+	public static int MagmaCubeSpeedPower = 0;
+	// Water Breathing
+	public static boolean MagmaCubeWaterBreathingEnabled = false;
+	public static int MagmaCubeWaterBreathingTime = 500;
+	public static int MagmaCubeWaterBreathingPower = 0;
+	// Weakness
+	public static boolean MagmaCubeWeaknessEnabled = false;
+	public static int MagmaCubeWeaknessTime = 500;
+	public static int MagmaCubeWeaknessPower = 0;
+	// CaveSpiders
+	// Blindness
+	public static boolean CaveSpiderBlindnessEnabled = false;
+	public static int CaveSpiderBlindnessTime = 500;
+	public static int CaveSpiderBlindnessPower = 0;
+	// Confusion
+	public static boolean CaveSpiderConfusionEnabled = false;
+	public static int CaveSpiderConfusionTime = 500;
+	public static int CaveSpiderConfusionPower = 0;
+	// Damage Resistance
+	public static boolean CaveSpiderDamageResistanceEnabled = false;
+	public static int CaveSpiderDamageResistanceTime = 500;
+	public static int CaveSpiderDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean CaveSpiderFastDiggingEnabled = false;
+	public static int CaveSpiderFastDiggingTime = 500;
+	public static int CaveSpiderFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean CaveSpiderFireResistanceEnabled = false;
+	public static int CaveSpiderFireResistanceTime = 500;
+	public static int CaveSpiderFireResistancePower = 0;
+	// Harm
+	public static boolean CaveSpiderHarmEnabled = false;
+	public static int CaveSpiderHarmTime = 500;
+	public static int CaveSpiderHarmPower = 0;
+	// Heal
+	public static boolean CaveSpiderHealEnabled = false;
+	public static int CaveSpiderHealTime = 500;
+	public static int CaveSpiderHealPower = 0;
+	// Hunger
+	public static boolean CaveSpiderHungerEnabled = false;
+	public static int CaveSpiderHungerTime = 500;
+	public static int CaveSpiderHungerPower = 0;
+	// Increase Damage
+	public static boolean CaveSpiderIncreaseDamageEnabled = false;
+	public static int CaveSpiderIncreaseDamageTime = 500;
+	public static int CaveSpiderIncreaseDamagePower = 0;
+	// Jump
+	public static boolean CaveSpiderJumpEnabled = false;
+	public static int CaveSpiderJumpTime = 500;
+	public static int CaveSpiderJumpPower = 0;
+	// Poison
+	public static boolean CaveSpiderPoisonEnabled = false;
+	public static int CaveSpiderPoisonTime = 500;
+	public static int CaveSpiderPoisonPower = 0;
+	// Regeneration
+	public static boolean CaveSpiderRegenerationEnabled = false;
+	public static int CaveSpiderRegenerationTime = 500;
+	public static int CaveSpiderRegenerationPower = 0;
+	// Slow
+	public static boolean CaveSpiderSlowEnabled = false;
+	public static int CaveSpiderSlowTime = 500;
+	public static int CaveSpiderSlowPower = 0;
+	// Slow Digging
+	public static boolean CaveSpiderSlowDiggingEnabled = false;
+	public static int CaveSpiderSlowDiggingTime = 500;
+	public static int CaveSpiderSlowDiggingPower = 0;
+	// Speed
+	public static boolean CaveSpiderSpeedEnabled = false;
+	public static int CaveSpiderSpeedTime = 500;
+	public static int CaveSpiderSpeedPower = 0;
+	// Water Breathing
+	public static boolean CaveSpiderWaterBreathingEnabled = false;
+	public static int CaveSpiderWaterBreathingTime = 500;
+	public static int CaveSpiderWaterBreathingPower = 0;
+	// Weakness
+	public static boolean CaveSpiderWeaknessEnabled = false;
+	public static int CaveSpiderWeaknessTime = 500;
+	public static int CaveSpiderWeaknessPower = 0;
+	// PigZombies
+	// Blindness
+	public static boolean PigZombieBlindnessEnabled = false;
+	public static int PigZombieBlindnessTime = 500;
+	public static int PigZombieBlindnessPower = 0;
+	// Confusion
+	public static boolean PigZombieConfusionEnabled = false;
+	public static int PigZombieConfusionTime = 500;
+	public static int PigZombieConfusionPower = 0;
+	// Damage Resistance
+	public static boolean PigZombieDamageResistanceEnabled = false;
+	public static int PigZombieDamageResistanceTime = 500;
+	public static int PigZombieDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean PigZombieFastDiggingEnabled = false;
+	public static int PigZombieFastDiggingTime = 500;
+	public static int PigZombieFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean PigZombieFireResistanceEnabled = false;
+	public static int PigZombieFireResistanceTime = 500;
+	public static int PigZombieFireResistancePower = 0;
+	// Harm
+	public static boolean PigZombieHarmEnabled = false;
+	public static int PigZombieHarmTime = 500;
+	public static int PigZombieHarmPower = 0;
+	// Heal
+	public static boolean PigZombieHealEnabled = false;
+	public static int PigZombieHealTime = 500;
+	public static int PigZombieHealPower = 0;
+	// Hunger
+	public static boolean PigZombieHungerEnabled = false;
+	public static int PigZombieHungerTime = 500;
+	public static int PigZombieHungerPower = 0;
+	// Increase Damage
+	public static boolean PigZombieIncreaseDamageEnabled = false;
+	public static int PigZombieIncreaseDamageTime = 500;
+	public static int PigZombieIncreaseDamagePower = 0;
+	// Jump
+	public static boolean PigZombieJumpEnabled = false;
+	public static int PigZombieJumpTime = 500;
+	public static int PigZombieJumpPower = 0;
+	// Poison
+	public static boolean PigZombiePoisonEnabled = false;
+	public static int PigZombiePoisonTime = 500;
+	public static int PigZombiePoisonPower = 0;
+	// Regeneration
+	public static boolean PigZombieRegenerationEnabled = false;
+	public static int PigZombieRegenerationTime = 500;
+	public static int PigZombieRegenerationPower = 0;
+	// Slow
+	public static boolean PigZombieSlowEnabled = false;
+	public static int PigZombieSlowTime = 500;
+	public static int PigZombieSlowPower = 0;
+	// Slow Digging
+	public static boolean PigZombieSlowDiggingEnabled = false;
+	public static int PigZombieSlowDiggingTime = 500;
+	public static int PigZombieSlowDiggingPower = 0;
+	// Speed
+	public static boolean PigZombieSpeedEnabled = false;
+	public static int PigZombieSpeedTime = 500;
+	public static int PigZombieSpeedPower = 0;
+	// Water Breathing
+	public static boolean PigZombieWaterBreathingEnabled = false;
+	public static int PigZombieWaterBreathingTime = 500;
+	public static int PigZombieWaterBreathingPower = 0;
+	// Weakness
+	public static boolean PigZombieWeaknessEnabled = false;
+	public static int PigZombieWeaknessTime = 500;
+	public static int PigZombieWeaknessPower = 0;
+	
 	public void load(File file) {
 		FileConfiguration config = new YamlConfiguration();
 		try {
@@ -949,6 +1296,431 @@ public class Config {
 		SlimeWeaknessEnabled = config.getBoolean("Slime.Weakness.Enabled", SlimeWeaknessEnabled);
 		SlimeWeaknessTime = config.getInt("Slime.Weakness.Time", SlimeWeaknessTime);
 		SlimeWeaknessPower = config.getInt("Slime.Weakness.Power", SlimeWeaknessPower);
+		
+		// Giant Blindness
+		GiantBlindnessEnabled = config.getBoolean("Giant.Blindness.Enabled", GiantBlindnessEnabled);
+		GiantBlindnessTime = config.getInt("Giant.Blindness.Time", GiantBlindnessTime);
+		GiantBlindnessPower = config.getInt("Giant.Blindness.Power", GiantBlindnessPower);
+
+		//Giant Confusion
+		GiantConfusionEnabled = config.getBoolean("Giant.Confusion.Enabled", GiantConfusionEnabled);
+		GiantConfusionTime = config.getInt("Giant.Confusion.Time", GiantConfusionTime);
+		GiantConfusionPower = config.getInt("Giant.Confusion.Power", GiantConfusionPower);
+
+		// Giant Damage Resistance
+		GiantDamageResistanceEnabled = config.getBoolean("Giant.DamageResistance.Enabled", GiantDamageResistanceEnabled);
+		GiantDamageResistanceTime = config.getInt("Giant.DamageResistance.Time", GiantDamageResistanceTime);
+		GiantDamageResistancePower = config.getInt("Giant.DamageResistance.Power", GiantDamageResistancePower);
+
+		// Giant Fast Digging
+		GiantFastDiggingEnabled = config.getBoolean("Giant.FastDigging.Enabled", GiantFastDiggingEnabled);
+		GiantFastDiggingTime = config.getInt("Giant.FastDigging.Time", GiantFastDiggingTime);
+		GiantFastDiggingPower = config.getInt("Giant.FastDigging.Power", GiantFastDiggingPower);
+
+		// Giant Fire Resistance
+		GiantFireResistanceEnabled = config.getBoolean("Giant.FireResistance.Enabled", GiantFireResistanceEnabled);
+		GiantFireResistanceTime = config.getInt("Giant.FireResistance.Time", GiantFireResistanceTime);
+		GiantFireResistancePower = config.getInt("Giant.FireResistance.Power", GiantFireResistancePower);
+
+		// Giant Harm
+		GiantHarmEnabled = config.getBoolean("Giant.Harm.Enabled", GiantHarmEnabled);
+		GiantHarmTime = config.getInt("Giant.Harm.Time", GiantHarmTime);
+		GiantHarmPower = config.getInt("Giant.Harm.Powre", GiantHarmPower);
+
+		// Giant Heal
+		GiantHealEnabled = config.getBoolean("Giant.Heal.Enabled", GiantHealEnabled);
+		GiantHealTime = config.getInt("Giant.Heal.Time", GiantHealTime);
+		GiantHealPower = config.getInt("Giant.Heal.Power", GiantHealPower);
+
+		// Giant Hunger
+		GiantHungerEnabled = config.getBoolean("Giant.Hunger.Enabled", GiantHungerEnabled);
+		GiantHungerTime = config.getInt("Giant.Hunger.Time", GiantHungerTime);
+		GiantHungerPower = config.getInt("Giant.Hunger.Power", GiantHungerPower);
+
+		// Giant IncreaseDamage
+		GiantIncreaseDamageEnabled = config.getBoolean("Giant.IncreaseDamage.Enabled", GiantIncreaseDamageEnabled);
+		GiantIncreaseDamageTime = config.getInt("Giant.IncraseDamage.Time", GiantIncreaseDamageTime);
+		GiantIncreaseDamagePower = config.getInt("Giant.IncreaseDamage.Power", GiantIncreaseDamagePower);
+
+		// Giant Jump
+		GiantJumpEnabled = config.getBoolean("Giant.Jump.Enabled", GiantJumpEnabled);
+		GiantJumpTime = config.getInt("Giant.Jump.Time", GiantJumpTime);
+		GiantJumpPower = config.getInt("Giant.Jump.Power", GiantJumpPower);
+
+		// Giant Poison
+		GiantPoisonEnabled = config.getBoolean("Giant.Poison.Enabled", GiantPoisonEnabled);
+		GiantPoisonTime = config.getInt("Giant.Poison.Time", GiantPoisonTime);
+		GiantPoisonPower = config.getInt("Giant.Poison.Power", GiantPoisonPower);
+
+		// Giant Regeneration
+		GiantRegenerationEnabled = config.getBoolean("Giant.Regeneration.Enabled", GiantRegenerationEnabled);
+		GiantRegenerationTime = config.getInt("Giant.Regeneration.Time", GiantRegenerationTime);
+		GiantRegenerationPower = config.getInt("Giant.Regeneration.Power", GiantRegenerationPower);
+
+		// Giant Slow
+		GiantSlowEnabled = config.getBoolean("Giant.Slow.Enabled", GiantSlowEnabled);
+		GiantSlowTime = config.getInt("Giant.Slow.Time", GiantSlowTime);
+		GiantSlowPower = config.getInt("Giant.Slow.Power", GiantSlowPower);
+
+		// Giant Slow Digging
+		GiantSlowDiggingEnabled = config.getBoolean("Giant.SlowDigging.Enabled", GiantSlowDiggingEnabled);
+		GiantSlowDiggingTime = config.getInt("Giant.SlowDigging.Time", GiantSlowDiggingTime);
+		GiantSlowDiggingPower = config.getInt("Giant.SlowDigging.Power", GiantSlowDiggingPower);
+
+		// Giant Speed
+		GiantSpeedEnabled = config.getBoolean("Giant.Speed.Enabled", GiantSpeedEnabled);
+		GiantSpeedTime = config.getInt("Giant.Speed.Time", GiantSpeedTime);
+		GiantSpeedPower = config.getInt("Giant.Speed.Power", GiantSpeedPower);
+
+		// Giant Water Breathing
+		GiantWaterBreathingEnabled = config.getBoolean("Giant.WaterBreathing.Enabled", GiantWaterBreathingEnabled);
+		GiantWaterBreathingTime = config.getInt("Giant.WaterBreathing.Time", GiantWaterBreathingTime);
+		GiantWaterBreathingPower = config.getInt("Giant.WaterBreathing.Power", GiantWaterBreathingPower);
+
+		// Giant Weakness
+		GiantWeaknessEnabled = config.getBoolean("Giant.Weakness.Enabled", GiantWeaknessEnabled);
+		GiantWeaknessTime = config.getInt("Giant.Weakness.Time", GiantWeaknessTime);
+		GiantWeaknessPower = config.getInt("Giant.Weakness.Power", GiantWeaknessPower);
+		
+		// Blaze Blindness
+		BlazeBlindnessEnabled = config.getBoolean("Blaze.Blindness.Enabled", BlazeBlindnessEnabled);
+		BlazeBlindnessTime = config.getInt("Blaze.Blindness.Time", BlazeBlindnessTime);
+		BlazeBlindnessPower = config.getInt("Blaze.Blindness.Power", BlazeBlindnessPower);
+
+		//Blaze Confusion
+		BlazeConfusionEnabled = config.getBoolean("Blaze.Confusion.Enabled", BlazeConfusionEnabled);
+		BlazeConfusionTime = config.getInt("Blaze.Confusion.Time", BlazeConfusionTime);
+		BlazeConfusionPower = config.getInt("Blaze.Confusion.Power", BlazeConfusionPower);
+
+		// Blaze Damage Resistance
+		BlazeDamageResistanceEnabled = config.getBoolean("Blaze.DamageResistance.Enabled", BlazeDamageResistanceEnabled);
+		BlazeDamageResistanceTime = config.getInt("Blaze.DamageResistance.Time", BlazeDamageResistanceTime);
+		BlazeDamageResistancePower = config.getInt("Blaze.DamageResistance.Power", BlazeDamageResistancePower);
+
+		// Blaze Fast Digging
+		BlazeFastDiggingEnabled = config.getBoolean("Blaze.FastDigging.Enabled", BlazeFastDiggingEnabled);
+		BlazeFastDiggingTime = config.getInt("Blaze.FastDigging.Time", BlazeFastDiggingTime);
+		BlazeFastDiggingPower = config.getInt("Blaze.FastDigging.Power", BlazeFastDiggingPower);
+
+		// Blaze Fire Resistance
+		BlazeFireResistanceEnabled = config.getBoolean("Blaze.FireResistance.Enabled", BlazeFireResistanceEnabled);
+		BlazeFireResistanceTime = config.getInt("Blaze.FireResistance.Time", BlazeFireResistanceTime);
+		BlazeFireResistancePower = config.getInt("Blaze.FireResistance.Power", BlazeFireResistancePower);
+
+		// Blaze Harm
+		BlazeHarmEnabled = config.getBoolean("Blaze.Harm.Enabled", BlazeHarmEnabled);
+		BlazeHarmTime = config.getInt("Blaze.Harm.Time", BlazeHarmTime);
+		BlazeHarmPower = config.getInt("Blaze.Harm.Powre", BlazeHarmPower);
+
+		// Blaze Heal
+		BlazeHealEnabled = config.getBoolean("Blaze.Heal.Enabled", BlazeHealEnabled);
+		BlazeHealTime = config.getInt("Blaze.Heal.Time", BlazeHealTime);
+		BlazeHealPower = config.getInt("Blaze.Heal.Power", BlazeHealPower);
+
+		// Blaze Hunger
+		BlazeHungerEnabled = config.getBoolean("Blaze.Hunger.Enabled", BlazeHungerEnabled);
+		BlazeHungerTime = config.getInt("Blaze.Hunger.Time", BlazeHungerTime);
+		BlazeHungerPower = config.getInt("Blaze.Hunger.Power", BlazeHungerPower);
+
+		// Blaze IncreaseDamage
+		BlazeIncreaseDamageEnabled = config.getBoolean("Blaze.IncreaseDamage.Enabled", BlazeIncreaseDamageEnabled);
+		BlazeIncreaseDamageTime = config.getInt("Blaze.IncreaseDamage.Time", BlazeIncreaseDamageTime);
+		BlazeIncreaseDamagePower = config.getInt("Blaze.IncreaseDamage.Power", BlazeIncreaseDamagePower);
+
+		// Blaze Jump
+		BlazeJumpEnabled = config.getBoolean("Blaze.Jump.Enabled", BlazeJumpEnabled);
+		BlazeJumpTime = config.getInt("Blaze.Jump.Time", BlazeJumpTime);
+		BlazeJumpPower = config.getInt("Blaze.Jump.Power", BlazeJumpPower);
+
+		// Blaze Poison
+		BlazePoisonEnabled = config.getBoolean("Blaze.Poison.Enabled", BlazePoisonEnabled);
+		BlazePoisonTime = config.getInt("Blaze.Poison.Time", BlazePoisonTime);
+		BlazePoisonPower = config.getInt("Blaze.Poison.Power", BlazePoisonPower);
+
+		// Blaze Regeneration
+		BlazeRegenerationEnabled = config.getBoolean("Blaze.Regeneration.Enabled", BlazeRegenerationEnabled);
+		BlazeRegenerationTime = config.getInt("Blaze.Regeneration.Time", BlazeRegenerationTime);
+		BlazeRegenerationPower = config.getInt("Blaze.Regeneration.Power", BlazeRegenerationPower);
+
+		// Blaze Slow
+		BlazeSlowEnabled = config.getBoolean("Blaze.Slow.Enabled", BlazeSlowEnabled);
+		BlazeSlowTime = config.getInt("Blaze.Slow.Time", BlazeSlowTime);
+		BlazeSlowPower = config.getInt("Blaze.Slow.Power", BlazeSlowPower);
+
+		// Blaze Slow Digging
+		BlazeSlowDiggingEnabled = config.getBoolean("Blaze.SlowDigging.Enabled", BlazeSlowDiggingEnabled);
+		BlazeSlowDiggingTime = config.getInt("Blaze.SlowDigging.Time", BlazeSlowDiggingTime);
+		BlazeSlowDiggingPower = config.getInt("Blaze.SlowDigging.Power", BlazeSlowDiggingPower);
+
+		// Blaze Speed
+		BlazeSpeedEnabled = config.getBoolean("Blaze.Speed.Enabled", BlazeSpeedEnabled);
+		BlazeSpeedTime = config.getInt("Blaze.Speed.Time", BlazeSpeedTime);
+		BlazeSpeedPower = config.getInt("Blaze.Speed.Power", BlazeSpeedPower);
+
+		// Blaze Water Breathing
+		BlazeWaterBreathingEnabled = config.getBoolean("Blaze.WaterBreathing.Enabled", BlazeWaterBreathingEnabled);
+		BlazeWaterBreathingTime = config.getInt("Blaze.WaterBreathing.Time", BlazeWaterBreathingTime);
+		BlazeWaterBreathingPower = config.getInt("Blaze.WaterBreathing.Power", BlazeWaterBreathingPower);
+
+		// Blaze Weakness
+		BlazeWeaknessEnabled = config.getBoolean("Blaze.Weakness.Enabled", BlazeWeaknessEnabled);
+		BlazeWeaknessTime = config.getInt("Blaze.Weakness.Time", BlazeWeaknessTime);
+		BlazeWeaknessPower = config.getInt("Blaze.Weakness.Power", BlazeWeaknessPower);
+		
+		// MagmaCube Blindness
+		MagmaCubeBlindnessEnabled = config.getBoolean("MagmaCube.Blindness.Enabled", MagmaCubeBlindnessEnabled);
+		MagmaCubeBlindnessTime = config.getInt("MagmaCube.Blindness.Time", MagmaCubeBlindnessTime);
+		MagmaCubeBlindnessPower = config.getInt("MagmaCube.Blindness.Power", MagmaCubeBlindnessPower);
+
+		//MagmaCube Confusion
+		MagmaCubeConfusionEnabled = config.getBoolean("MagmaCube.Confusion.Enabled", MagmaCubeConfusionEnabled);
+		MagmaCubeConfusionTime = config.getInt("MagmaCube.Confusion.Time", MagmaCubeConfusionTime);
+		MagmaCubeConfusionPower = config.getInt("MagmaCube.Confusion.Power", MagmaCubeConfusionPower);
+
+		// MagmaCube Damage Resistance
+		MagmaCubeDamageResistanceEnabled = config.getBoolean("MagmaCube.DamageResistance.Enabled", MagmaCubeDamageResistanceEnabled);
+		MagmaCubeDamageResistanceTime = config.getInt("MagmaCube.DamageResistance.Time", MagmaCubeDamageResistanceTime);
+		MagmaCubeDamageResistancePower = config.getInt("MagmaCube.DamageResistance.Power", MagmaCubeDamageResistancePower);
+
+		// MagmaCube Fast Digging
+		MagmaCubeFastDiggingEnabled = config.getBoolean("MagmaCube.FastDigging.Enabled", MagmaCubeFastDiggingEnabled);
+		MagmaCubeFastDiggingTime = config.getInt("MagmaCube.FastDigging.Time", MagmaCubeFastDiggingTime);
+		MagmaCubeFastDiggingPower = config.getInt("MagmaCube.FastDigging.Power", MagmaCubeFastDiggingPower);
+
+		// MagmaCube Fire Resistance
+		MagmaCubeFireResistanceEnabled = config.getBoolean("MagmaCube.FireResistance.Enabled", MagmaCubeFireResistanceEnabled);
+		MagmaCubeFireResistanceTime = config.getInt("MagmaCube.FireResistance.Time", MagmaCubeFireResistanceTime);
+		MagmaCubeFireResistancePower = config.getInt("MagmaCube.FireResistance.Power", MagmaCubeFireResistancePower);
+
+		// MagmaCube Harm
+		MagmaCubeHarmEnabled = config.getBoolean("MagmaCube.Harm.Enabled", MagmaCubeHarmEnabled);
+		MagmaCubeHarmTime = config.getInt("MagmaCube.Harm.Time", MagmaCubeHarmTime);
+		MagmaCubeHarmPower = config.getInt("MagmaCube.Harm.Powre", MagmaCubeHarmPower);
+
+		// MagmaCube Heal
+		MagmaCubeHealEnabled = config.getBoolean("MagmaCube.Heal.Enabled", MagmaCubeHealEnabled);
+		MagmaCubeHealTime = config.getInt("MagmaCube.Heal.Time", MagmaCubeHealTime);
+		MagmaCubeHealPower = config.getInt("MagmaCube.Heal.Power", MagmaCubeHealPower);
+
+		// MagmaCube Hunger
+		MagmaCubeHungerEnabled = config.getBoolean("MagmaCube.Hunger.Enabled", MagmaCubeHungerEnabled);
+		MagmaCubeHungerTime = config.getInt("MagmaCube.Hunger.Time", MagmaCubeHungerTime);
+		MagmaCubeHungerPower = config.getInt("MagmaCube.Hunger.Power", MagmaCubeHungerPower);
+
+		// MagmaCube IncreaseDamage
+		MagmaCubeIncreaseDamageEnabled = config.getBoolean("MagmaCube.IncreaseDamage.Enabled", MagmaCubeIncreaseDamageEnabled);
+		MagmaCubeIncreaseDamageTime = config.getInt("MagmaCube.IncreaseDamage.Time", MagmaCubeIncreaseDamageTime);
+		MagmaCubeIncreaseDamagePower = config.getInt("MagmaCube.IncreaseDamage.Power", MagmaCubeIncreaseDamagePower);
+
+		// MagmaCube Jump
+		MagmaCubeJumpEnabled = config.getBoolean("MagmaCube.Jump.Enabled", MagmaCubeJumpEnabled);
+		MagmaCubeJumpTime = config.getInt("MagmaCube.Jump.Time", MagmaCubeJumpTime);
+		MagmaCubeJumpPower = config.getInt("MagmaCube.Jump.Power", MagmaCubeJumpPower);
+
+		// MagmaCube Poison
+		MagmaCubePoisonEnabled = config.getBoolean("MagmaCube.Poison.Enabled", MagmaCubePoisonEnabled);
+		MagmaCubePoisonTime = config.getInt("MagmaCube.Poison.Time", MagmaCubePoisonTime);
+		MagmaCubePoisonPower = config.getInt("MagmaCube.Poison.Power", MagmaCubePoisonPower);
+
+		// MagmaCube Regeneration
+		MagmaCubeRegenerationEnabled = config.getBoolean("MagmaCube.Regeneration.Enabled", MagmaCubeRegenerationEnabled);
+		MagmaCubeRegenerationTime = config.getInt("MagmaCube.Regeneration.Time", MagmaCubeRegenerationTime);
+		MagmaCubeRegenerationPower = config.getInt("MagmaCube.Regeneration.Power", MagmaCubeRegenerationPower);
+
+		// MagmaCube Slow
+		MagmaCubeSlowEnabled = config.getBoolean("MagmaCube.Slow.Enabled", MagmaCubeSlowEnabled);
+		MagmaCubeSlowTime = config.getInt("MagmaCube.Slow.Time", MagmaCubeSlowTime);
+		MagmaCubeSlowPower = config.getInt("MagmaCube.Slow.Power", MagmaCubeSlowPower);
+
+		// MagmaCube Slow Digging
+		MagmaCubeSlowDiggingEnabled = config.getBoolean("MagmaCube.SlowDigging.Enabled", MagmaCubeSlowDiggingEnabled);
+		MagmaCubeSlowDiggingTime = config.getInt("MagmaCube.SlowDigging.Time", MagmaCubeSlowDiggingTime);
+		MagmaCubeSlowDiggingPower = config.getInt("MagmaCube.SlowDigging.Power", MagmaCubeSlowDiggingPower);
+
+		// MagmaCube Speed
+		MagmaCubeSpeedEnabled = config.getBoolean("MagmaCube.Speed.Enabled", MagmaCubeSpeedEnabled);
+		MagmaCubeSpeedTime = config.getInt("MagmaCube.Speed.Time", MagmaCubeSpeedTime);
+		MagmaCubeSpeedPower = config.getInt("MagmaCube.Speed.Power", MagmaCubeSpeedPower);
+
+		// MagmaCube Water Breathing
+		MagmaCubeWaterBreathingEnabled = config.getBoolean("MagmaCube.WaterBreathing.Enabled", MagmaCubeWaterBreathingEnabled);
+		MagmaCubeWaterBreathingTime = config.getInt("MagmaCube.WaterBreathing.Time", MagmaCubeWaterBreathingTime);
+		MagmaCubeWaterBreathingPower = config.getInt("MagmaCube.WaterBreathing.Power", MagmaCubeWaterBreathingPower);
+
+		// MagmaCube Weakness
+		MagmaCubeWeaknessEnabled = config.getBoolean("MagmaCube.Weakness.Enabled", MagmaCubeWeaknessEnabled);
+		MagmaCubeWeaknessTime = config.getInt("MagmaCube.Weakness.Time", MagmaCubeWeaknessTime);
+		MagmaCubeWeaknessPower = config.getInt("MagmaCube.Weakness.Power", MagmaCubeWeaknessPower);
+		
+		// CaveSpider Blindness
+		CaveSpiderBlindnessEnabled = config.getBoolean("CaveSpider.Blindness.Enabled", CaveSpiderBlindnessEnabled);
+		CaveSpiderBlindnessTime = config.getInt("CaveSpider.Blindness.Time", CaveSpiderBlindnessTime);
+		CaveSpiderBlindnessPower = config.getInt("CaveSpider.Blindness.Power", CaveSpiderBlindnessPower);
+
+		//CaveSpider Confusion
+		CaveSpiderConfusionEnabled = config.getBoolean("CaveSpider.Confusion.Enabled", CaveSpiderConfusionEnabled);
+		CaveSpiderConfusionTime = config.getInt("CaveSpider.Confusion.Time", CaveSpiderConfusionTime);
+		CaveSpiderConfusionPower = config.getInt("CaveSpider.Confusion.Power", CaveSpiderConfusionPower);
+
+		// CaveSpider Damage Resistance
+		CaveSpiderDamageResistanceEnabled = config.getBoolean("CaveSpider.DamageResistance.Enabled", CaveSpiderDamageResistanceEnabled);
+		CaveSpiderDamageResistanceTime = config.getInt("CaveSpider.DamageResistance.Time", CaveSpiderDamageResistanceTime);
+		CaveSpiderDamageResistancePower = config.getInt("CaveSpider.DamageResistance.Power", CaveSpiderDamageResistancePower);
+
+		// CaveSpider Fast Digging
+		CaveSpiderFastDiggingEnabled = config.getBoolean("CaveSpider.FastDigging.Enabled", CaveSpiderFastDiggingEnabled);
+		CaveSpiderFastDiggingTime = config.getInt("CaveSpider.FastDigging.Time", CaveSpiderFastDiggingTime);
+		CaveSpiderFastDiggingPower = config.getInt("CaveSpider.FastDigging.Power", CaveSpiderFastDiggingPower);
+
+		// CaveSpider Fire Resistance
+		CaveSpiderFireResistanceEnabled = config.getBoolean("CaveSpider.FireResistance.Enabled", CaveSpiderFireResistanceEnabled);
+		CaveSpiderFireResistanceTime = config.getInt("CaveSpider.FireResistance.Time", CaveSpiderFireResistanceTime);
+		CaveSpiderFireResistancePower = config.getInt("CaveSpider.FireResistance.Power", CaveSpiderFireResistancePower);
+
+		// CaveSpider Harm
+		CaveSpiderHarmEnabled = config.getBoolean("CaveSpider.Harm.Enabled", CaveSpiderHarmEnabled);
+		CaveSpiderHarmTime = config.getInt("CaveSpider.Harm.Time", CaveSpiderHarmTime);
+		CaveSpiderHarmPower = config.getInt("CaveSpider.Harm.Powre", CaveSpiderHarmPower);
+
+		// CaveSpider Heal
+		CaveSpiderHealEnabled = config.getBoolean("CaveSpider.Heal.Enabled", CaveSpiderHealEnabled);
+		CaveSpiderHealTime = config.getInt("CaveSpider.Heal.Time", CaveSpiderHealTime);
+		CaveSpiderHealPower = config.getInt("CaveSpider.Heal.Power", CaveSpiderHealPower);
+
+		// CaveSpider Hunger
+		CaveSpiderHungerEnabled = config.getBoolean("CaveSpider.Hunger.Enabled", CaveSpiderHungerEnabled);
+		CaveSpiderHungerTime = config.getInt("CaveSpider.Hunger.Time", CaveSpiderHungerTime);
+		CaveSpiderHungerPower = config.getInt("CaveSpider.Hunger.Power", CaveSpiderHungerPower);
+
+		// CaveSpider IncreaseDamage
+		CaveSpiderIncreaseDamageEnabled = config.getBoolean("CaveSpider.IncreaseDamage.Enabled", CaveSpiderIncreaseDamageEnabled);
+		CaveSpiderIncreaseDamageTime = config.getInt("CaveSpider.IncreaseDamage.Time", CaveSpiderIncreaseDamageTime);
+		CaveSpiderIncreaseDamagePower = config.getInt("CaveSpider.IncreaseDamage.Power", CaveSpiderIncreaseDamagePower);
+
+		// CaveSpider Jump
+		CaveSpiderJumpEnabled = config.getBoolean("CaveSpider.Jump.Enabled", CaveSpiderJumpEnabled);
+		CaveSpiderJumpTime = config.getInt("CaveSpider.Jump.Time", CaveSpiderJumpTime);
+		CaveSpiderJumpPower = config.getInt("CaveSpider.Jump.Power", CaveSpiderJumpPower);
+
+		// CaveSpider Poison
+		CaveSpiderPoisonEnabled = config.getBoolean("CaveSpider.Poison.Enabled", CaveSpiderPoisonEnabled);
+		CaveSpiderPoisonTime = config.getInt("CaveSpider.Poison.Time", CaveSpiderPoisonTime);
+		CaveSpiderPoisonPower = config.getInt("CaveSpider.Poison.Power", CaveSpiderPoisonPower);
+
+		// CaveSpider Regeneration
+		CaveSpiderRegenerationEnabled = config.getBoolean("CaveSpider.Regeneration.Enabled", CaveSpiderRegenerationEnabled);
+		CaveSpiderRegenerationTime = config.getInt("CaveSpider.Regeneration.Time", CaveSpiderRegenerationTime);
+		CaveSpiderRegenerationPower = config.getInt("CaveSpider.Regeneration.Power", CaveSpiderRegenerationPower);
+
+		// CaveSpider Slow
+		CaveSpiderSlowEnabled = config.getBoolean("CaveSpider.Slow.Enabled", CaveSpiderSlowEnabled);
+		CaveSpiderSlowTime = config.getInt("CaveSpider.Slow.Time", CaveSpiderSlowTime);
+		CaveSpiderSlowPower = config.getInt("CaveSpider.Slow.Power", CaveSpiderSlowPower);
+
+		// CaveSpider Slow Digging
+		CaveSpiderSlowDiggingEnabled = config.getBoolean("CaveSpider.SlowDigging.Enabled", CaveSpiderSlowDiggingEnabled);
+		CaveSpiderSlowDiggingTime = config.getInt("CaveSpider.SlowDigging.Time", CaveSpiderSlowDiggingTime);
+		CaveSpiderSlowDiggingPower = config.getInt("CaveSpider.SlowDigging.Power", CaveSpiderSlowDiggingPower);
+
+		// CaveSpider Speed
+		CaveSpiderSpeedEnabled = config.getBoolean("CaveSpider.Speed.Enabled", CaveSpiderSpeedEnabled);
+		CaveSpiderSpeedTime = config.getInt("CaveSpider.Speed.Time", CaveSpiderSpeedTime);
+		CaveSpiderSpeedPower = config.getInt("CaveSpider.Speed.Power", CaveSpiderSpeedPower);
+
+		// CaveSpider Water Breathing
+		CaveSpiderWaterBreathingEnabled = config.getBoolean("CaveSpider.WaterBreathing.Enabled", CaveSpiderWaterBreathingEnabled);
+		CaveSpiderWaterBreathingTime = config.getInt("CaveSpider.WaterBreathing.Time", CaveSpiderWaterBreathingTime);
+		CaveSpiderWaterBreathingPower = config.getInt("CaveSpider.WaterBreathing.Power", CaveSpiderWaterBreathingPower);
+
+		// CaveSpider Weakness
+		CaveSpiderWeaknessEnabled = config.getBoolean("CaveSpider.Weakness.Enabled", CaveSpiderWeaknessEnabled);
+		CaveSpiderWeaknessTime = config.getInt("CaveSpider.Weakness.Time", CaveSpiderWeaknessTime);
+		CaveSpiderWeaknessPower = config.getInt("CaveSpider.Weakness.Power", CaveSpiderWeaknessPower);
+		
+		// PigZombie Blindness
+		PigZombieBlindnessEnabled = config.getBoolean("PigZombie.Blindness.Enabled", PigZombieBlindnessEnabled);
+		PigZombieBlindnessTime = config.getInt("PigZombie.Blindness.Time", PigZombieBlindnessTime);
+		PigZombieBlindnessPower = config.getInt("PigZombie.Blindness.Power", PigZombieBlindnessPower);
+
+		//PigZombie Confusion
+		PigZombieConfusionEnabled = config.getBoolean("PigZombie.Confusion.Enabled", PigZombieConfusionEnabled);
+		PigZombieConfusionTime = config.getInt("PigZombie.Confusion.Time", PigZombieConfusionTime);
+		PigZombieConfusionPower = config.getInt("PigZombie.Confusion.Power", PigZombieConfusionPower);
+
+		// PigZombie Damage Resistance
+		PigZombieDamageResistanceEnabled = config.getBoolean("PigZombie.DamageResistance.Enabled", PigZombieDamageResistanceEnabled);
+		PigZombieDamageResistanceTime = config.getInt("PigZombie.DamageResistance.Time", PigZombieDamageResistanceTime);
+		PigZombieDamageResistancePower = config.getInt("PigZombie.DamageResistance.Power", PigZombieDamageResistancePower);
+
+		// PigZombie Fast Digging
+		PigZombieFastDiggingEnabled = config.getBoolean("PigZombie.FastDigging.Enabled", PigZombieFastDiggingEnabled);
+		PigZombieFastDiggingTime = config.getInt("PigZombie.FastDigging.Time", PigZombieFastDiggingTime);
+		PigZombieFastDiggingPower = config.getInt("PigZombie.FastDigging.Power", PigZombieFastDiggingPower);
+
+		// PigZombie Fire Resistance
+		PigZombieFireResistanceEnabled = config.getBoolean("PigZombie.FireResistance.Enabled", PigZombieFireResistanceEnabled);
+		PigZombieFireResistanceTime = config.getInt("PigZombie.FireResistance.Time", PigZombieFireResistanceTime);
+		PigZombieFireResistancePower = config.getInt("PigZombie.FireResistance.Power", PigZombieFireResistancePower);
+
+		// PigZombie Harm
+		PigZombieHarmEnabled = config.getBoolean("PigZombie.Harm.Enabled", PigZombieHarmEnabled);
+		PigZombieHarmTime = config.getInt("PigZombie.Harm.Time", PigZombieHarmTime);
+		PigZombieHarmPower = config.getInt("PigZombie.Harm.Powre", PigZombieHarmPower);
+
+		// PigZombie Heal
+		PigZombieHealEnabled = config.getBoolean("PigZombie.Heal.Enabled", PigZombieHealEnabled);
+		PigZombieHealTime = config.getInt("PigZombie.Heal.Time", PigZombieHealTime);
+		PigZombieHealPower = config.getInt("PigZombie.Heal.Power", PigZombieHealPower);
+
+		// PigZombie Hunger
+		PigZombieHungerEnabled = config.getBoolean("PigZombie.Hunger.Enabled", PigZombieHungerEnabled);
+		PigZombieHungerTime = config.getInt("PigZombie.Hunger.Time", PigZombieHungerTime);
+		PigZombieHungerPower = config.getInt("PigZombie.Hunger.Power", PigZombieHungerPower);
+
+		// PigZombie IncreaseDamage
+		PigZombieIncreaseDamageEnabled = config.getBoolean("PigZombie.IncreaseDamage.Enabled", PigZombieIncreaseDamageEnabled);
+		PigZombieIncreaseDamageTime = config.getInt("PigZombie.IncreaseDamage.Time", PigZombieIncreaseDamageTime);
+		PigZombieIncreaseDamagePower = config.getInt("PigZombie.IncreaseDamage.Power", PigZombieIncreaseDamagePower);
+
+		// PigZombie Jump
+		PigZombieJumpEnabled = config.getBoolean("PigZombie.Jump.Enabled", PigZombieJumpEnabled);
+		PigZombieJumpTime = config.getInt("PigZombie.Jump.Time", PigZombieJumpTime);
+		PigZombieJumpPower = config.getInt("PigZombie.Jump.Power", PigZombieJumpPower);
+
+		// PigZombie Poison
+		PigZombiePoisonEnabled = config.getBoolean("PigZombie.Poison.Enabled", PigZombiePoisonEnabled);
+		PigZombiePoisonTime = config.getInt("PigZombie.Poison.Time", PigZombiePoisonTime);
+		PigZombiePoisonPower = config.getInt("PigZombie.Poison.Power", PigZombiePoisonPower);
+
+		// PigZombie Regeneration
+		PigZombieRegenerationEnabled = config.getBoolean("PigZombie.Regeneration.Enabled", PigZombieRegenerationEnabled);
+		PigZombieRegenerationTime = config.getInt("PigZombie.Regeneration.Time", PigZombieRegenerationTime);
+		PigZombieRegenerationPower = config.getInt("PigZombie.Regeneration.Power", PigZombieRegenerationPower);
+
+		// PigZombie Slow
+		PigZombieSlowEnabled = config.getBoolean("PigZombie.Slow.Enabled", PigZombieSlowEnabled);
+		PigZombieSlowTime = config.getInt("PigZombie.Slow.Time", PigZombieSlowTime);
+		PigZombieSlowPower = config.getInt("PigZombie.Slow.Power", PigZombieSlowPower);
+
+		// PigZombie Slow Digging
+		PigZombieSlowDiggingEnabled = config.getBoolean("PigZombie.SlowDigging.Enabled", PigZombieSlowDiggingEnabled);
+		PigZombieSlowDiggingTime = config.getInt("PigZombie.SlowDigging.Time", PigZombieSlowDiggingTime);
+		PigZombieSlowDiggingPower = config.getInt("PigZombie.SlowDigging.Power", PigZombieSlowDiggingPower);
+
+		// PigZombie Speed
+		PigZombieSpeedEnabled = config.getBoolean("PigZombie.Speed.Enabled", PigZombieSpeedEnabled);
+		PigZombieSpeedTime = config.getInt("PigZombie.Speed.Time", PigZombieSpeedTime);
+		PigZombieSpeedPower = config.getInt("PigZombie.Speed.Power", PigZombieSpeedPower);
+
+		// PigZombie Water Breathing
+		PigZombieWaterBreathingEnabled = config.getBoolean("PigZombie.WaterBreathing.Enabled", PigZombieWaterBreathingEnabled);
+		PigZombieWaterBreathingTime = config.getInt("PigZombie.WaterBreathing.Time", PigZombieWaterBreathingTime);
+		PigZombieWaterBreathingPower = config.getInt("PigZombie.WaterBreathing.Power", PigZombieWaterBreathingPower);
+
+		// PigZombie Weakness
+		PigZombieWeaknessEnabled = config.getBoolean("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
+		PigZombieWeaknessTime = config.getInt("PigZombie.Weakness.Time", PigZombieWeaknessTime);
+		PigZombieWeaknessPower = config.getInt("PigZombie.Weakness.Power", PigZombieWeaknessPower);
 	
 	// Set Defaults
 		config.set("Player.Blindness.Enabled", PlayerBlindnessEnabled);
@@ -1238,6 +2010,206 @@ public class Config {
 		config.set("Slime.Weakness.Enabled", SlimeWeaknessEnabled);
 		config.set("Slime.Weakness.Time", SlimeWeaknessTime);
 		config.set("Slime.Weakness.Power", SlimeWeaknessPower);
+		// Giants
+		config.set("Giant.Blindness.Enabled", GiantBlindnessEnabled);
+		config.set("Giant.Blindness.Time", GiantBlindnessTime);
+		config.set("Giant.Blindness.Power", GiantBlindnessPower);
+		config.set("Giant.Confusion.Enabled", GiantConfusionEnabled);
+		config.set("Giant.Confusion.Time", GiantConfusionTime);
+		config.set("Giant.Confusion.Power", GiantConfusionPower);
+		config.set("Giant.DamageResistance.Enabled", GiantDamageResistanceEnabled);
+		config.set("Giant.DamageResistance.Time", GiantDamageResistanceTime);
+		config.set("Giant.DamageResistance.Power", GiantDamageResistancePower);
+		config.set("Giant.FastDigging.Enabled", GiantFastDiggingEnabled);
+		config.set("Giant.FastDigging.Time", GiantFastDiggingTime);
+		config.set("Giant.FastDigging.Power", GiantFastDiggingPower);
+		config.set("Giant.Harm.Enabled", GiantHarmEnabled);
+		config.set("Giant.Harm.Time", GiantHarmTime);
+		config.set("Giant.Harm.Power", GiantHarmPower);
+		config.set("Giant.Heal.Enabled", GiantHealEnabled);
+		config.set("Giant.Heal.Time", GiantHealTime);
+		config.set("Giant.Heal.Power", GiantHealPower);
+		config.set("Giant.IncreaseDamage.Enabled", GiantIncreaseDamageEnabled);
+		config.set("Giant.IncreaseDamage.Time", GiantIncreaseDamageTime);
+		config.set("Giant.IncreaseDamage.Power", GiantIncreaseDamagePower);
+		config.set("Giant.Jump.Enabled", GiantJumpEnabled);
+		config.set("Giant.Jump.Time", GiantJumpTime);
+		config.set("Giant.Jump.Power", GiantJumpPower);
+		config.set("Giant.Slow.Enabled", GiantSlowEnabled);
+		config.set("Giant.Slow.Time", GiantSlowTime);
+		config.set("Giant.Slow.Power", GiantSlowPower);
+		config.set("Giant.SlowDigging.Enabled", GiantSlowDiggingEnabled);
+		config.set("Giant.SlowDigging.Time", GiantSlowDiggingTime);
+		config.set("Giant.SlowDigging.Power", GiantSlowDiggingPower);
+		config.set("Giant.Speed.Enabled", GiantSpeedEnabled);
+		config.set("Giant.Speed.Time", GiantSpeedTime);
+		config.set("Giant.Speed.Power", GiantSpeedPower);
+		config.set("Giant.WaterBreathing.Enabled", GiantWaterBreathingEnabled);
+		config.set("Giant.WaterBreathing.Time", GiantWaterBreathingTime);
+		config.set("Giant.WaterBreathing.Power", GiantWaterBreathingPower);
+		config.set("Giant.Weakness.Enabled", GiantWeaknessEnabled);
+		config.set("Giant.Weakness.Time", GiantWeaknessTime);
+		config.set("Giant.Weakness.Power", GiantWeaknessPower);
+		// Blaze
+		config.set("Blaze.Blindness.Enabled", BlazeBlindnessEnabled);
+		config.set("Blaze.Blindness.Time", BlazeBlindnessTime);
+		config.set("Blaze.Blindness.Power", BlazeBlindnessPower);
+		config.set("Blaze.Confusion.Enabled", BlazeConfusionEnabled);
+		config.set("Blaze.Confusion.Time", BlazeConfusionTime);
+		config.set("Blaze.Confusion.Power", BlazeConfusionPower);
+		config.set("Blaze.DamageResistance.Enabled", BlazeDamageResistanceEnabled);
+		config.set("Blaze.DamageResistance.Time", BlazeDamageResistanceTime);
+		config.set("Blaze.DamageResistance.Power", BlazeDamageResistancePower);
+		config.set("Blaze.FastDigging.Enabled", BlazeFastDiggingEnabled);
+		config.set("Blaze.FastDigging.Time", BlazeFastDiggingTime);
+		config.set("Blaze.FastDigging.Power", BlazeFastDiggingPower);
+		config.set("Blaze.Harm.Enabled", BlazeHarmEnabled);
+		config.set("Blaze.Harm.Time", BlazeHarmTime);
+		config.set("Blaze.Harm.Power", BlazeHarmPower);
+		config.set("Blaze.Heal.Enabled", BlazeHealEnabled);
+		config.set("Blaze.Heal.Time", BlazeHealTime);
+		config.set("Blaze.Heal.Power", BlazeHealPower);
+		config.set("Blaze.IncreaseDamage.Enabled", BlazeIncreaseDamageEnabled);
+		config.set("Blaze.IncreaseDamage.Time", BlazeIncreaseDamageTime);
+		config.set("Blaze.IncreaseDamage.Power", BlazeIncreaseDamagePower);
+		config.set("Blaze.Jump.Enabled", BlazeJumpEnabled);
+		config.set("Blaze.Jump.Time", BlazeJumpTime);
+		config.set("Blaze.Jump.Power", BlazeJumpPower);
+		config.set("Blaze.Slow.Enabled", BlazeSlowEnabled);
+		config.set("Blaze.Slow.Time", BlazeSlowTime);
+		config.set("Blaze.Slow.Power", BlazeSlowPower);
+		config.set("Blaze.SlowDigging.Enabled", BlazeSlowDiggingEnabled);
+		config.set("Blaze.SlowDigging.Time", BlazeSlowDiggingTime);
+		config.set("Blaze.SlowDigging.Power", BlazeSlowDiggingPower);
+		config.set("Blaze.Speed.Enabled", BlazeSpeedEnabled);
+		config.set("Blaze.Speed.Time", BlazeSpeedTime);
+		config.set("Blaze.Speed.Power", BlazeSpeedPower);
+		config.set("Blaze.WaterBreathing.Enabled", BlazeWaterBreathingEnabled);
+		config.set("Blaze.WaterBreathing.Time", BlazeWaterBreathingTime);
+		config.set("Blaze.WaterBreathing.Power", BlazeWaterBreathingPower);
+		config.set("Blaze.Weakness.Enabled", BlazeWeaknessEnabled);
+		config.set("Blaze.Weakness.Time", BlazeWeaknessTime);
+		config.set("Blaze.Weakness.Power", BlazeWeaknessPower);
+		// Magma Cube
+		config.set("MagmaCube.Blindness.Enabled", MagmaCubeBlindnessEnabled);
+		config.set("MagmaCube.Blindness.Time", MagmaCubeBlindnessTime);
+		config.set("MagmaCube.Blindness.Power", MagmaCubeBlindnessPower);
+		config.set("MagmaCube.Confusion.Enabled", MagmaCubeConfusionEnabled);
+		config.set("MagmaCube.Confusion.Time", MagmaCubeConfusionTime);
+		config.set("MagmaCube.Confusion.Power", MagmaCubeConfusionPower);
+		config.set("MagmaCube.DamageResistance.Enabled", MagmaCubeDamageResistanceEnabled);
+		config.set("MagmaCube.DamageResistance.Time", MagmaCubeDamageResistanceTime);
+		config.set("MagmaCube.DamageResistance.Power", MagmaCubeDamageResistancePower);
+		config.set("MagmaCube.FastDigging.Enabled", MagmaCubeFastDiggingEnabled);
+		config.set("MagmaCube.FastDigging.Time", MagmaCubeFastDiggingTime);
+		config.set("MagmaCube.FastDigging.Power", MagmaCubeFastDiggingPower);
+		config.set("MagmaCube.Harm.Enabled", MagmaCubeHarmEnabled);
+		config.set("MagmaCube.Harm.Time", MagmaCubeHarmTime);
+		config.set("MagmaCube.Harm.Power", MagmaCubeHarmPower);
+		config.set("MagmaCube.Heal.Enabled", MagmaCubeHealEnabled);
+		config.set("MagmaCube.Heal.Time", MagmaCubeHealTime);
+		config.set("MagmaCube.Heal.Power", MagmaCubeHealPower);
+		config.set("MagmaCube.IncreaseDamage.Enabled", MagmaCubeIncreaseDamageEnabled);
+		config.set("MagmaCube.IncreaseDamage.Time", MagmaCubeIncreaseDamageTime);
+		config.set("MagmaCube.IncreaseDamage.Power", MagmaCubeIncreaseDamagePower);
+		config.set("MagmaCube.Jump.Enabled", MagmaCubeJumpEnabled);
+		config.set("MagmaCube.Jump.Time", MagmaCubeJumpTime);
+		config.set("MagmaCube.Jump.Power", MagmaCubeJumpPower);
+		config.set("MagmaCube.Slow.Enabled", MagmaCubeSlowEnabled);
+		config.set("MagmaCube.Slow.Time", MagmaCubeSlowTime);
+		config.set("MagmaCube.Slow.Power", MagmaCubeSlowPower);
+		config.set("MagmaCube.SlowDigging.Enabled", MagmaCubeSlowDiggingEnabled);
+		config.set("MagmaCube.SlowDigging.Time", MagmaCubeSlowDiggingTime);
+		config.set("MagmaCube.SlowDigging.Power", MagmaCubeSlowDiggingPower);
+		config.set("MagmaCube.Speed.Enabled", MagmaCubeSpeedEnabled);
+		config.set("MagmaCube.Speed.Time", MagmaCubeSpeedTime);
+		config.set("MagmaCube.Speed.Power", MagmaCubeSpeedPower);
+		config.set("MagmaCube.WaterBreathing.Enabled", MagmaCubeWaterBreathingEnabled);
+		config.set("MagmaCube.WaterBreathing.Time", MagmaCubeWaterBreathingTime);
+		config.set("MagmaCube.WaterBreathing.Power", MagmaCubeWaterBreathingPower);
+		config.set("MagmaCube.Weakness.Enabled", MagmaCubeWeaknessEnabled);
+		config.set("MagmaCube.Weakness.Time", MagmaCubeWeaknessTime);
+		config.set("MagmaCube.Weakness.Power", MagmaCubeWeaknessPower);
+		// Cave Spiders
+		config.set("CaveSpider.Blindness.Enabled", CaveSpiderBlindnessEnabled);
+		config.set("CaveSpider.Blindness.Time", CaveSpiderBlindnessTime);
+		config.set("CaveSpider.Blindness.Power", CaveSpiderBlindnessPower);
+		config.set("CaveSpider.Confusion.Enabled", CaveSpiderConfusionEnabled);
+		config.set("CaveSpider.Confusion.Time", CaveSpiderConfusionTime);
+		config.set("CaveSpider.Confusion.Power", CaveSpiderConfusionPower);
+		config.set("CaveSpider.DamageResistance.Enabled", CaveSpiderDamageResistanceEnabled);
+		config.set("CaveSpider.DamageResistance.Time", CaveSpiderDamageResistanceTime);
+		config.set("CaveSpider.DamageResistance.Power", CaveSpiderDamageResistancePower);
+		config.set("CaveSpider.FastDigging.Enabled", CaveSpiderFastDiggingEnabled);
+		config.set("CaveSpider.FastDigging.Time", CaveSpiderFastDiggingTime);
+		config.set("CaveSpider.FastDigging.Power", CaveSpiderFastDiggingPower);
+		config.set("CaveSpider.Harm.Enabled", CaveSpiderHarmEnabled);
+		config.set("CaveSpider.Harm.Time", CaveSpiderHarmTime);
+		config.set("CaveSpider.Harm.Power", CaveSpiderHarmPower);
+		config.set("CaveSpider.Heal.Enabled", CaveSpiderHealEnabled);
+		config.set("CaveSpider.Heal.Time", CaveSpiderHealTime);
+		config.set("CaveSpider.Heal.Power", CaveSpiderHealPower);
+		config.set("CaveSpider.IncreaseDamage.Enabled", CaveSpiderIncreaseDamageEnabled);
+		config.set("CaveSpider.IncreaseDamage.Time", CaveSpiderIncreaseDamageTime);
+		config.set("CaveSpider.IncreaseDamage.Power", CaveSpiderIncreaseDamagePower);
+		config.set("CaveSpider.Jump.Enabled", CaveSpiderJumpEnabled);
+		config.set("CaveSpider.Jump.Time", CaveSpiderJumpTime);
+		config.set("CaveSpider.Jump.Power", CaveSpiderJumpPower);
+		config.set("CaveSpider.Slow.Enabled", CaveSpiderSlowEnabled);
+		config.set("CaveSpider.Slow.Time", CaveSpiderSlowTime);
+		config.set("CaveSpider.Slow.Power", CaveSpiderSlowPower);
+		config.set("CaveSpider.SlowDigging.Enabled", CaveSpiderSlowDiggingEnabled);
+		config.set("CaveSpider.SlowDigging.Time", CaveSpiderSlowDiggingTime);
+		config.set("CaveSpider.SlowDigging.Power", CaveSpiderSlowDiggingPower);
+		config.set("CaveSpider.Speed.Enabled", CaveSpiderSpeedEnabled);
+		config.set("CaveSpider.Speed.Time", CaveSpiderSpeedTime);
+		config.set("CaveSpider.Speed.Power", CaveSpiderSpeedPower);
+		config.set("CaveSpider.WaterBreathing.Enabled", CaveSpiderWaterBreathingEnabled);
+		config.set("CaveSpider.WaterBreathing.Time", CaveSpiderWaterBreathingTime);
+		config.set("CaveSpider.WaterBreathing.Power", CaveSpiderWaterBreathingPower);
+		config.set("CaveSpider.Weakness.Enabled", CaveSpiderWeaknessEnabled);
+		config.set("CaveSpider.Weakness.Time", CaveSpiderWeaknessTime);
+		config.set("CaveSpider.Weakness.Power", CaveSpiderWeaknessPower);
+		// PigZombie
+		config.set("PigZombie.Blindness.Enabled", PigZombieBlindnessEnabled);
+		config.set("PigZombie.Blindness.Time", PigZombieBlindnessTime);
+		config.set("PigZombie.Blindness.Power", PigZombieBlindnessPower);
+		config.set("PigZombie.Confusion.Enabled", PigZombieConfusionEnabled);
+		config.set("PigZombie.Confusion.Time", PigZombieConfusionTime);
+		config.set("PigZombie.Confusion.Power", PigZombieConfusionPower);
+		config.set("PigZombie.DamageResistance.Enabled", PigZombieDamageResistanceEnabled);
+		config.set("PigZombie.DamageResistance.Time", PigZombieDamageResistanceTime);
+		config.set("PigZombie.DamageResistance.Power", PigZombieDamageResistancePower);
+		config.set("PigZombie.FastDigging.Enabled", PigZombieFastDiggingEnabled);
+		config.set("PigZombie.FastDigging.Time", PigZombieFastDiggingTime);
+		config.set("PigZombie.FastDigging.Power", PigZombieFastDiggingPower);
+		config.set("PigZombie.Harm.Enabled", PigZombieHarmEnabled);
+		config.set("PigZombie.Harm.Time", PigZombieHarmTime);
+		config.set("PigZombie.Harm.Power", PigZombieHarmPower);
+		config.set("PigZombie.Heal.Enabled", PigZombieHealEnabled);
+		config.set("PigZombie.Heal.Time", PigZombieHealTime);
+		config.set("PigZombie.Heal.Power", PigZombieHealPower);
+		config.set("PigZombie.IncreaseDamage.Enabled", PigZombieIncreaseDamageEnabled);
+		config.set("PigZombie.IncreaseDamage.Time", PigZombieIncreaseDamageTime);
+		config.set("PigZombie.IncreaseDamage.Power", PigZombieIncreaseDamagePower);
+		config.set("PigZombie.Jump.Enabled", PigZombieJumpEnabled);
+		config.set("PigZombie.Jump.Time", PigZombieJumpTime);
+		config.set("PigZombie.Jump.Power", PigZombieJumpPower);
+		config.set("PigZombie.Slow.Enabled", PigZombieSlowEnabled);
+		config.set("PigZombie.Slow.Time", PigZombieSlowTime);
+		config.set("PigZombie.Slow.Power", PigZombieSlowPower);
+		config.set("PigZombie.SlowDigging.Enabled", PigZombieSlowDiggingEnabled);
+		config.set("PigZombie.SlowDigging.Time", PigZombieSlowDiggingTime);
+		config.set("PigZombie.SlowDigging.Power", PigZombieSlowDiggingPower);
+		config.set("PigZombie.Speed.Enabled", PigZombieSpeedEnabled);
+		config.set("PigZombie.Speed.Time", PigZombieSpeedTime);
+		config.set("PigZombie.Speed.Power", PigZombieSpeedPower);
+		config.set("PigZombie.WaterBreathing.Enabled", PigZombieWaterBreathingEnabled);
+		config.set("PigZombie.WaterBreathing.Time", PigZombieWaterBreathingTime);
+		config.set("PigZombie.WaterBreathing.Power", PigZombieWaterBreathingPower);
+		config.set("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
+		config.set("PigZombie.Weakness.Time", PigZombieWeaknessTime);
+		config.set("PigZombie.Weakness.Power", PigZombieWeaknessPower);
 	
 	try {
 		config.save(file);
