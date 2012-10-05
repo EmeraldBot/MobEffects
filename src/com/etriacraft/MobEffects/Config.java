@@ -2,13 +2,17 @@ package com.etriacraft.MobEffects;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
+import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 public class Config {
 	
+	public static List<String> Worlds;
+
 	// Player Stuffs
 		// Blindness
 	public static boolean PlayerBlindnessEnabled = false;
@@ -786,7 +790,8 @@ public class Config {
 			e.printStackTrace();
 		}
 		
-		
+		// Worlds
+		Worlds = config.getStringList("Worlds");
 		// Player Blindness
 		PlayerBlindnessEnabled = config.getBoolean("Player.Blindness.Enabled", PlayerBlindnessEnabled);
 		PlayerBlindnessTime = config.getInt("Player.Blindness.Time", PlayerBlindnessTime);
@@ -2210,6 +2215,11 @@ public class Config {
 		config.set("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
 		config.set("PigZombie.Weakness.Time", PigZombieWeaknessTime);
 		config.set("PigZombie.Weakness.Power", PigZombieWeaknessPower);
+		
+		if (!config.contains("Worlds")) {
+			final String[] def_worlds = {"world", "world_nether", "world_the_end"};
+			config.set("Worlds", def_worlds);
+		}
 	
 	try {
 		config.save(file);
