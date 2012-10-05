@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -778,6 +777,75 @@ public class Config {
 	public static boolean PigZombieWeaknessEnabled = false;
 	public static int PigZombieWeaknessTime = 500;
 	public static int PigZombieWeaknessPower = 0;
+	// Silverfish Stuffs
+	// Blindness
+	public static boolean SilverfishBlindnessEnabled = false;
+	public static int SilverfishBlindnessTime = 500;
+	public static int SilverfishBlindnessPower = 0;
+	// Confusion
+	public static boolean SilverfishConfusionEnabled = false;
+	public static int SilverfishConfusionTime = 500;
+	public static int SilverfishConfusionPower = 0;
+	// Damage Resistance
+	public static boolean SilverfishDamageResistanceEnabled = false;
+	public static int SilverfishDamageResistanceTime = 500;
+	public static int SilverfishDamageResistancePower = 0;
+	// Fast Digging
+	public static boolean SilverfishFastDiggingEnabled = false;
+	public static int SilverfishFastDiggingTime = 500;
+	public static int SilverfishFastDiggingPower = 0;
+	// Fire Resistance
+	public static boolean SilverfishFireResistanceEnabled = false;
+	public static int SilverfishFireResistanceTime = 500;
+	public static int SilverfishFireResistancePower = 0;
+	// Harm
+	public static boolean SilverfishHarmEnabled = false;
+	public static int SilverfishHarmTime = 500;
+	public static int SilverfishHarmPower = 0;
+	// Heal
+	public static boolean SilverfishHealEnabled = false;
+	public static int SilverfishHealTime = 500;
+	public static int SilverfishHealPower = 0;
+	// Hunger
+	public static boolean SilverfishHungerEnabled = false;
+	public static int SilverfishHungerTime = 500;
+	public static int SilverfishHungerPower = 0;
+	// Increase Damage
+	public static boolean SilverfishIncreaseDamageEnabled = false;
+	public static int SilverfishIncreaseDamageTime = 500;
+	public static int SilverfishIncreaseDamagePower = 0;
+	// Jump
+	public static boolean SilverfishJumpEnabled = false;
+	public static int SilverfishJumpTime = 500;
+	public static int SilverfishJumpPower = 0;
+	// Poison
+	public static boolean SilverfishPoisonEnabled = false;
+	public static int SilverfishPoisonTime = 500;
+	public static int SilverfishPoisonPower = 0;
+	// Regeneration
+	public static boolean SilverfishRegenerationEnabled = false;
+	public static int SilverfishRegenerationTime = 500;
+	public static int SilverfishRegenerationPower = 0;
+	// Slow
+	public static boolean SilverfishSlowEnabled = false;
+	public static int SilverfishSlowTime = 500;
+	public static int SilverfishSlowPower = 0;
+	// Slow Digging
+	public static boolean SilverfishSlowDiggingEnabled = false;
+	public static int SilverfishSlowDiggingTime = 500;
+	public static int SilverfishSlowDiggingPower = 0;
+	// Speed
+	public static boolean SilverfishSpeedEnabled = false;
+	public static int SilverfishSpeedTime = 500;
+	public static int SilverfishSpeedPower = 0;
+	// Water Breathing
+	public static boolean SilverfishWaterBreathingEnabled = false;
+	public static int SilverfishWaterBreathingTime = 500;
+	public static int SilverfishWaterBreathingPower = 0;
+	// Weakness
+	public static boolean SilverfishWeaknessEnabled = false;
+	public static int SilverfishWeaknessTime = 500;
+	public static int SilverfishWeaknessPower = 0;
 	
 	public void load(File file) {
 		FileConfiguration config = new YamlConfiguration();
@@ -1726,6 +1794,91 @@ public class Config {
 		PigZombieWeaknessEnabled = config.getBoolean("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
 		PigZombieWeaknessTime = config.getInt("PigZombie.Weakness.Time", PigZombieWeaknessTime);
 		PigZombieWeaknessPower = config.getInt("PigZombie.Weakness.Power", PigZombieWeaknessPower);
+		
+		// Silverfish Blindness
+		SilverfishBlindnessEnabled = config.getBoolean("Silverfish.Blindness.Enabled", SilverfishBlindnessEnabled);
+		SilverfishBlindnessTime = config.getInt("Silverfish.Blindness.Time", SilverfishBlindnessTime);
+		SilverfishBlindnessPower = config.getInt("Silverfish.Blindness.Power", SilverfishBlindnessPower);
+
+		//Silverfish Confusion
+		SilverfishConfusionEnabled = config.getBoolean("Silverfish.Confusion.Enabled", SilverfishConfusionEnabled);
+		SilverfishConfusionTime = config.getInt("Silverfish.Confusion.Time", SilverfishConfusionTime);
+		SilverfishConfusionPower = config.getInt("Silverfish.Confusion.Power", SilverfishConfusionPower);
+
+		// Silverfish Damage Resistance
+		SilverfishDamageResistanceEnabled = config.getBoolean("Silverfish.DamageResistance.Enabled", SilverfishDamageResistanceEnabled);
+		SilverfishDamageResistanceTime = config.getInt("Silverfish.DamageResistance.Time", SilverfishDamageResistanceTime);
+		SilverfishDamageResistancePower = config.getInt("Silverfish.DamageResistance.Power", SilverfishDamageResistancePower);
+
+		// Silverfish Fast Digging
+		SilverfishFastDiggingEnabled = config.getBoolean("Silverfish.FastDigging.Enabled", SilverfishFastDiggingEnabled);
+		SilverfishFastDiggingTime = config.getInt("Silverfish.FastDigging.Time", SilverfishFastDiggingTime);
+		SilverfishFastDiggingPower = config.getInt("Silverfish.FastDigging.Power", SilverfishFastDiggingPower);
+
+		// Silverfish Fire Resistance
+		SilverfishFireResistanceEnabled = config.getBoolean("Silverfish.FireResistance.Enabled", SilverfishFireResistanceEnabled);
+		SilverfishFireResistanceTime = config.getInt("Silverfish.FireResistance.Time", SilverfishFireResistanceTime);
+		SilverfishFireResistancePower = config.getInt("Silverfish.FireResistance.Power", SilverfishFireResistancePower);
+
+		// Silverfish Harm
+		SilverfishHarmEnabled = config.getBoolean("Silverfish.Harm.Enabled", SilverfishHarmEnabled);
+		SilverfishHarmTime = config.getInt("Silverfish.Harm.Time", SilverfishHarmTime);
+		SilverfishHarmPower = config.getInt("Silverfish.Harm.Powre", SilverfishHarmPower);
+
+		// Silverfish Heal
+		SilverfishHealEnabled = config.getBoolean("Silverfish.Heal.Enabled", SilverfishHealEnabled);
+		SilverfishHealTime = config.getInt("Silverfish.Heal.Time", SilverfishHealTime);
+		SilverfishHealPower = config.getInt("Silverfish.Heal.Power", SilverfishHealPower);
+
+		// Silverfish Hunger
+		SilverfishHungerEnabled = config.getBoolean("Silverfish.Hunger.Enabled", SilverfishHungerEnabled);
+		SilverfishHungerTime = config.getInt("Silverfish.Hunger.Time", SilverfishHungerTime);
+		SilverfishHungerPower = config.getInt("Silverfish.Hunger.Power", SilverfishHungerPower);
+
+		// Silverfish IncreaseDamage
+		SilverfishIncreaseDamageEnabled = config.getBoolean("Silverfish.IncreaseDamage.Enabled", SilverfishIncreaseDamageEnabled);
+		SilverfishIncreaseDamageTime = config.getInt("Silverfish.IncreaseDamage.Time", SilverfishIncreaseDamageTime);
+		SilverfishIncreaseDamagePower = config.getInt("Silverfish.IncreaseDamage.Power", SilverfishIncreaseDamagePower);
+
+		// Silverfish Jump
+		SilverfishJumpEnabled = config.getBoolean("Silverfish.Jump.Enabled", SilverfishJumpEnabled);
+		SilverfishJumpTime = config.getInt("Silverfish.Jump.Time", SilverfishJumpTime);
+		SilverfishJumpPower = config.getInt("Silverfish.Jump.Power", SilverfishJumpPower);
+
+		// Silverfish Poison
+		SilverfishPoisonEnabled = config.getBoolean("Silverfish.Poison.Enabled", SilverfishPoisonEnabled);
+		SilverfishPoisonTime = config.getInt("Silverfish.Poison.Time", SilverfishPoisonTime);
+		SilverfishPoisonPower = config.getInt("Silverfish.Poison.Power", SilverfishPoisonPower);
+
+		// Silverfish Regeneration
+		SilverfishRegenerationEnabled = config.getBoolean("Silverfish.Regeneration.Enabled", SilverfishRegenerationEnabled);
+		SilverfishRegenerationTime = config.getInt("Silverfish.Regeneration.Time", SilverfishRegenerationTime);
+		SilverfishRegenerationPower = config.getInt("Silverfish.Regeneration.Power", SilverfishRegenerationPower);
+
+		// Silverfish Slow
+		SilverfishSlowEnabled = config.getBoolean("Silverfish.Slow.Enabled", SilverfishSlowEnabled);
+		SilverfishSlowTime = config.getInt("Silverfish.Slow.Time", SilverfishSlowTime);
+		SilverfishSlowPower = config.getInt("Silverfish.Slow.Power", SilverfishSlowPower);
+
+		// Silverfish Slow Digging
+		SilverfishSlowDiggingEnabled = config.getBoolean("Silverfish.SlowDigging.Enabled", SilverfishSlowDiggingEnabled);
+		SilverfishSlowDiggingTime = config.getInt("Silverfish.SlowDigging.Time", SilverfishSlowDiggingTime);
+		SilverfishSlowDiggingPower = config.getInt("Silverfish.SlowDigging.Power", SilverfishSlowDiggingPower);
+
+		// Silverfish Speed
+		SilverfishSpeedEnabled = config.getBoolean("Silverfish.Speed.Enabled", SilverfishSpeedEnabled);
+		SilverfishSpeedTime = config.getInt("Silverfish.Speed.Time", SilverfishSpeedTime);
+		SilverfishSpeedPower = config.getInt("Silverfish.Speed.Power", SilverfishSpeedPower);
+
+		// Silverfish Water Breathing
+		SilverfishWaterBreathingEnabled = config.getBoolean("Silverfish.WaterBreathing.Enabled", SilverfishWaterBreathingEnabled);
+		SilverfishWaterBreathingTime = config.getInt("Silverfish.WaterBreathing.Time", SilverfishWaterBreathingTime);
+		SilverfishWaterBreathingPower = config.getInt("Silverfish.WaterBreathing.Power", SilverfishWaterBreathingPower);
+
+		// Silverfish Weakness
+		SilverfishWeaknessEnabled = config.getBoolean("Silverfish.Weakness.Enabled", SilverfishWeaknessEnabled);
+		SilverfishWeaknessTime = config.getInt("Silverfish.Weakness.Time", SilverfishWeaknessTime);
+		SilverfishWeaknessPower = config.getInt("Silverfish.Weakness.Power", SilverfishWeaknessPower);
 	
 	// Set Defaults
 		if (!config.contains("Worlds")) {
@@ -2219,6 +2372,46 @@ public class Config {
 		config.set("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
 		config.set("PigZombie.Weakness.Time", PigZombieWeaknessTime);
 		config.set("PigZombie.Weakness.Power", PigZombieWeaknessPower);
+		// Silverfish
+		config.set("Silverfish.Blindness.Enabled", SilverfishBlindnessEnabled);
+		config.set("Silverfish.Blindness.Time", SilverfishBlindnessTime);
+		config.set("Silverfish.Blindness.Power", SilverfishBlindnessPower);
+		config.set("Silverfish.Confusion.Enabled", SilverfishConfusionEnabled);
+		config.set("Silverfish.Confusion.Time", SilverfishConfusionTime);
+		config.set("Silverfish.Confusion.Power", SilverfishConfusionPower);
+		config.set("Silverfish.DamageResistance.Enabled", SilverfishDamageResistanceEnabled);
+		config.set("Silverfish.DamageResistance.Time", SilverfishDamageResistanceTime);
+		config.set("Silverfish.DamageResistance.Power", SilverfishDamageResistancePower);
+		config.set("Silverfish.FastDigging.Enabled", SilverfishFastDiggingEnabled);
+		config.set("Silverfish.FastDigging.Time", SilverfishFastDiggingTime);
+		config.set("Silverfish.FastDigging.Power", SilverfishFastDiggingPower);
+		config.set("Silverfish.Harm.Enabled", SilverfishHarmEnabled);
+		config.set("Silverfish.Harm.Time", SilverfishHarmTime);
+		config.set("Silverfish.Harm.Power", SilverfishHarmPower);
+		config.set("Silverfish.Heal.Enabled", SilverfishHealEnabled);
+		config.set("Silverfish.Heal.Time", SilverfishHealTime);
+		config.set("Silverfish.Heal.Power", SilverfishHealPower);
+		config.set("Silverfish.IncreaseDamage.Enabled", SilverfishIncreaseDamageEnabled);
+		config.set("Silverfish.IncreaseDamage.Time", SilverfishIncreaseDamageTime);
+		config.set("Silverfish.IncreaseDamage.Power", SilverfishIncreaseDamagePower);
+		config.set("Silverfish.Jump.Enabled", SilverfishJumpEnabled);
+		config.set("Silverfish.Jump.Time", SilverfishJumpTime);
+		config.set("Silverfish.Jump.Power", SilverfishJumpPower);
+		config.set("Silverfish.Slow.Enabled", SilverfishSlowEnabled);
+		config.set("Silverfish.Slow.Time", SilverfishSlowTime);
+		config.set("Silverfish.Slow.Power", SilverfishSlowPower);
+		config.set("Silverfish.SlowDigging.Enabled", SilverfishSlowDiggingEnabled);
+		config.set("Silverfish.SlowDigging.Time", SilverfishSlowDiggingTime);
+		config.set("Silverfish.SlowDigging.Power", SilverfishSlowDiggingPower);
+		config.set("Silverfish.Speed.Enabled", SilverfishSpeedEnabled);
+		config.set("Silverfish.Speed.Time", SilverfishSpeedTime);
+		config.set("Silverfish.Speed.Power", SilverfishSpeedPower);
+		config.set("Silverfish.WaterBreathing.Enabled", SilverfishWaterBreathingEnabled);
+		config.set("Silverfish.WaterBreathing.Time", SilverfishWaterBreathingTime);
+		config.set("Silverfish.WaterBreathing.Power", SilverfishWaterBreathingPower);
+		config.set("Silverfish.Weakness.Enabled", SilverfishWeaknessEnabled);
+		config.set("Silverfish.Weakness.Time", SilverfishWeaknessTime);
+		config.set("Silverfish.Weakness.Power", SilverfishWeaknessPower);
 	
 	try {
 		config.save(file);

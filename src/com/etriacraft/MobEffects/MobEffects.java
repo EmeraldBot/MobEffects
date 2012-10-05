@@ -18,6 +18,7 @@ public class MobEffects extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new MEEndermanListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEPlayerListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEPigZombieListener(), this);
+		this.getServer().getPluginManager().registerEvents(new MESilverfishListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MESlimeListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MESpiderListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEZombieListener(), this);
