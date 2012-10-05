@@ -17,8 +17,9 @@ public class MESpiderListener implements Listener {
 	public void SpiderBlindness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
 		
-		if (Config.SpiderBlindnessEnabled != false && damager instanceof Spider && e instanceof Player) {
+		if (Config.SpiderBlindnessEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.SpiderBlindnessTime, Config.SpiderBlindnessPower));
 		}
@@ -28,7 +29,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderConfusion(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderConfusionEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderConfusionEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SpiderConfusionTime, Config.SpiderConfusionPower));
 		}
@@ -37,7 +39,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderDamageResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderDamageResistanceEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderDamageResistanceEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SpiderDamageResistanceTime, Config.SpiderDamageResistancePower));
 		}
@@ -46,7 +49,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderFastDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderFastDiggingEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderFastDiggingEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.SpiderFastDiggingTime, Config.SpiderFastDiggingPower));
 		}
@@ -56,7 +60,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderFireResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderFireResistanceEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderFireResistanceEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.SpiderFireResistanceTime, Config.SpiderFireResistancePower));
 		}
@@ -65,7 +70,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderHarm(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderHarmEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderHarmEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.SpiderHarmTime, Config.SpiderHarmPower));
 		}
@@ -74,7 +80,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderHeal(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderHarmEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderHarmEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.SpiderHealTime, Config.SpiderHealPower));
 		}
@@ -83,7 +90,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderHungerEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderHungerEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.SpiderHungerTime, Config.SpiderHungerPower));
 		}
@@ -92,7 +100,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderIncreaseDamage(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderIncreaseDamageEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderIncreaseDamageEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SpiderIncreaseDamageTime, Config.SpiderIncreaseDamagePower));
 		}
@@ -101,7 +110,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderJump(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderJumpEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderJumpEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.SpiderJumpTime, Config.SpiderJumpPower));
 		}
@@ -110,7 +120,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderPoison(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderPoisonEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderPoisonEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.SpiderPoisonTime, Config.SpiderPoisonPower));
 		}
@@ -119,7 +130,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderRegeneratoin(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderRegenerationEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderRegenerationEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.SpiderRegenerationTime, Config.SpiderRegenerationPower));
 		}
@@ -128,7 +140,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderSlow(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderSlowEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderSlowEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.SpiderSlowTime, Config.SpiderSlowPower));
 		}
@@ -137,7 +150,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderSlowDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderSlowDiggingEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderSlowDiggingEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SpiderSlowDiggingTime, Config.SpiderSlowDiggingPower));
 		}
@@ -146,7 +160,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderSpeed(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderSpeedEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderSpeedEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.SpiderSpeedTime, Config.SpiderSpeedPower));
 		}
@@ -155,7 +170,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderWaterBreathing(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderWaterBreathingEnabled != false && damager instanceof Spider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderWaterBreathingEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.SpiderWaterBreathingTime, Config.SpiderWaterBreathingPower));
 		}
@@ -164,7 +180,8 @@ public class MESpiderListener implements Listener {
 	public void SpiderWeakness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.SpiderWeaknessEnabled != false && damager instanceof Spider && e instanceof Spider) {
+		String world = e.getWorld().getName();
+		if (Config.SpiderWeaknessEnabled != false && damager instanceof Spider && e instanceof Spider && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.SpiderWeaknessTime, Config.SpiderWeaknessPower));
 		}

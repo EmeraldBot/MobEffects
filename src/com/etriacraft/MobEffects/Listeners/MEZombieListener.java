@@ -1,6 +1,5 @@
 package com.etriacraft.MobEffects.Listeners;
 
-import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
@@ -18,8 +17,9 @@ public class MEZombieListener implements Listener {
 	public void ZombieBlindness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
 		
-		if (Config.ZombieBlindnessEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		if (Config.ZombieBlindnessEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.ZombieBlindnessTime, Config.ZombieBlindnessPower));
 		}
@@ -29,7 +29,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieConfusion(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieConfusionEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieConfusionEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.ZombieConfusionTime, Config.ZombieConfusionPower));
 		}
@@ -38,7 +39,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieDamageResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieDamageResistanceEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieDamageResistanceEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.ZombieDamageResistanceTime, Config.ZombieDamageResistancePower));
 		}
@@ -47,7 +49,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieFastDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieFastDiggingEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieFastDiggingEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.ZombieFastDiggingTime, Config.ZombieFastDiggingPower));
 		}
@@ -57,7 +60,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieFireResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieFireResistanceEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieFireResistanceEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.ZombieFireResistanceTime, Config.ZombieFireResistancePower));
 		}
@@ -66,7 +70,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieHarm(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieHarmEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieHarmEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.ZombieHarmTime, Config.ZombieHarmPower));
 		}
@@ -75,7 +80,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieHeal(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieHarmEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieHarmEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.ZombieHealTime, Config.ZombieHealPower));
 		}
@@ -84,7 +90,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieHungerEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieHungerEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.ZombieHungerTime, Config.ZombieHungerPower));
 		}
@@ -93,7 +100,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieIncreaseDamage(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieIncreaseDamageEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieIncreaseDamageEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.ZombieIncreaseDamageTime, Config.ZombieIncreaseDamagePower));
 		}
@@ -102,7 +110,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieJump(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieJumpEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieJumpEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.ZombieJumpTime, Config.ZombieJumpPower));
 		}
@@ -111,7 +120,8 @@ public class MEZombieListener implements Listener {
 	public void ZombiePoison(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombiePoisonEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombiePoisonEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.ZombiePoisonTime, Config.ZombiePoisonPower));
 		}
@@ -120,7 +130,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieRegeneratoin(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieRegenerationEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieRegenerationEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.ZombieRegenerationTime, Config.ZombieRegenerationPower));
 		}
@@ -129,7 +140,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieSlow(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieSlowEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieSlowEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.ZombieSlowTime, Config.ZombieSlowPower));
 		}
@@ -138,7 +150,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieSlowDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieSlowDiggingEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieSlowDiggingEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.ZombieSlowDiggingTime, Config.ZombieSlowDiggingPower));
 		}
@@ -147,7 +160,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieSpeed(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieSpeedEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieSpeedEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.ZombieSpeedTime, Config.ZombieSpeedPower));
 		}
@@ -156,7 +170,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieWaterBreathing(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieWaterBreathingEnabled != false && damager instanceof Zombie && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieWaterBreathingEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.ZombieWaterBreathingTime, Config.ZombieWaterBreathingPower));
 		}
@@ -165,7 +180,8 @@ public class MEZombieListener implements Listener {
 	public void ZombieWeakness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.ZombieWeaknessEnabled != false && damager instanceof Zombie && e instanceof Zombie) {
+		String world = e.getWorld().getName();
+		if (Config.ZombieWeaknessEnabled != false && damager instanceof Zombie && e instanceof Zombie && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.ZombieWeaknessTime, Config.ZombieWeaknessPower));
 		}

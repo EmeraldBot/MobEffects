@@ -17,8 +17,9 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderBlindness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
 		
-		if (Config.CaveSpiderBlindnessEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		if (Config.CaveSpiderBlindnessEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.CaveSpiderBlindnessTime, Config.CaveSpiderBlindnessPower));
 		}
@@ -28,7 +29,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderConfusion(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderConfusionEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderConfusionEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.CaveSpiderConfusionTime, Config.CaveSpiderConfusionPower));
 		}
@@ -37,7 +39,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderDamageResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderDamageResistanceEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderDamageResistanceEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.CaveSpiderDamageResistanceTime, Config.CaveSpiderDamageResistancePower));
 		}
@@ -46,7 +49,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderFastDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderFastDiggingEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderFastDiggingEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.CaveSpiderFastDiggingTime, Config.CaveSpiderFastDiggingPower));
 		}
@@ -56,7 +60,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderFireResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderFireResistanceEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderFireResistanceEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.CaveSpiderFireResistanceTime, Config.CaveSpiderFireResistancePower));
 		}
@@ -65,7 +70,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderHarm(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderHarmEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderHarmEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.CaveSpiderHarmTime, Config.CaveSpiderHarmPower));
 		}
@@ -74,7 +80,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderHeal(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderHarmEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderHarmEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.CaveSpiderHealTime, Config.CaveSpiderHealPower));
 		}
@@ -83,7 +90,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderHungerEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderHungerEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.CaveSpiderHungerTime, Config.CaveSpiderHungerPower));
 		}
@@ -92,7 +100,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderIncreaseDamage(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderIncreaseDamageEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderIncreaseDamageEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.CaveSpiderIncreaseDamageTime, Config.CaveSpiderIncreaseDamagePower));
 		}
@@ -101,7 +110,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderJump(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderJumpEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderJumpEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.CaveSpiderJumpTime, Config.CaveSpiderJumpPower));
 		}
@@ -110,7 +120,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderPoison(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderPoisonEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderPoisonEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.CaveSpiderPoisonTime, Config.CaveSpiderPoisonPower));
 		}
@@ -119,7 +130,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderRegeneratoin(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderRegenerationEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderRegenerationEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.CaveSpiderRegenerationTime, Config.CaveSpiderRegenerationPower));
 		}
@@ -128,7 +140,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderSlow(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderSlowEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderSlowEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.CaveSpiderSlowTime, Config.CaveSpiderSlowPower));
 		}
@@ -137,7 +150,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderSlowDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderSlowDiggingEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderSlowDiggingEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.CaveSpiderSlowDiggingTime, Config.CaveSpiderSlowDiggingPower));
 		}
@@ -146,7 +160,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderSpeed(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderSpeedEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderSpeedEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.CaveSpiderSpeedTime, Config.CaveSpiderSpeedPower));
 		}
@@ -155,7 +170,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderWaterBreathing(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderWaterBreathingEnabled != false && damager instanceof CaveSpider && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderWaterBreathingEnabled != false && damager instanceof CaveSpider && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.CaveSpiderWaterBreathingTime, Config.CaveSpiderWaterBreathingPower));
 		}
@@ -164,7 +180,8 @@ public class MECaveSpiderListener implements Listener {
 	public void CaveSpiderWeakness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CaveSpiderWeaknessEnabled != false && damager instanceof CaveSpider && e instanceof CaveSpider) {
+		String world = e.getWorld().getName();
+		if (Config.CaveSpiderWeaknessEnabled != false && damager instanceof CaveSpider && e instanceof CaveSpider && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.CaveSpiderWeaknessTime, Config.CaveSpiderWeaknessPower));
 		}

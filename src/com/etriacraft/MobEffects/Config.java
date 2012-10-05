@@ -1728,6 +1728,10 @@ public class Config {
 		PigZombieWeaknessPower = config.getInt("PigZombie.Weakness.Power", PigZombieWeaknessPower);
 	
 	// Set Defaults
+		if (!config.contains("Worlds")) {
+			final String[] def_worlds = {"world", "world_nether", "world_the_end"};
+			config.set("Worlds", def_worlds);
+		}
 		config.set("Player.Blindness.Enabled", PlayerBlindnessEnabled);
 		config.set("Player.Blindness.Time", PlayerBlindnessTime);
 		config.set("Player.Blindness.Power", PlayerBlindnessPower);
@@ -2215,11 +2219,6 @@ public class Config {
 		config.set("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
 		config.set("PigZombie.Weakness.Time", PigZombieWeaknessTime);
 		config.set("PigZombie.Weakness.Power", PigZombieWeaknessPower);
-		
-		if (!config.contains("Worlds")) {
-			final String[] def_worlds = {"world", "world_nether", "world_the_end"};
-			config.set("Worlds", def_worlds);
-		}
 	
 	try {
 		config.save(file);

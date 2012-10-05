@@ -17,8 +17,9 @@ public class MECreeperListener implements Listener {
 	public void CreeperBlindness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
 		
-		if (Config.CreeperBlindnessEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		if (Config.CreeperBlindnessEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.CreeperBlindnessTime, Config.CreeperBlindnessPower));
 		}
@@ -28,7 +29,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperConfusion(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperConfusionEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperConfusionEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.CreeperConfusionTime, Config.CreeperConfusionPower));
 		}
@@ -37,7 +39,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperDamageResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperDamageResistanceEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperDamageResistanceEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.CreeperDamageResistanceTime, Config.CreeperDamageResistancePower));
 		}
@@ -46,7 +49,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperFastDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperFastDiggingEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperFastDiggingEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.CreeperFastDiggingTime, Config.CreeperFastDiggingPower));
 		}
@@ -56,7 +60,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperFireResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperFireResistanceEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperFireResistanceEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.CreeperFireResistanceTime, Config.CreeperFireResistancePower));
 		}
@@ -65,7 +70,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperHarm(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperHarmEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperHarmEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.CreeperHarmTime, Config.CreeperHarmPower));
 		}
@@ -74,7 +80,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperHeal(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperHarmEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperHarmEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.CreeperHealTime, Config.CreeperHealPower));
 		}
@@ -83,7 +90,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperHungerEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperHungerEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.CreeperHungerTime, Config.CreeperHungerPower));
 		}
@@ -92,7 +100,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperIncreaseDamage(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperIncreaseDamageEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperIncreaseDamageEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.CreeperIncreaseDamageTime, Config.CreeperIncreaseDamagePower));
 		}
@@ -101,7 +110,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperJump(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperJumpEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperJumpEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.CreeperJumpTime, Config.CreeperJumpPower));
 		}
@@ -110,7 +120,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperPoison(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperPoisonEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperPoisonEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.CreeperPoisonTime, Config.CreeperPoisonPower));
 		}
@@ -119,7 +130,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperRegeneratoin(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperRegenerationEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperRegenerationEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.CreeperRegenerationTime, Config.CreeperRegenerationPower));
 		}
@@ -128,7 +140,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperSlow(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperSlowEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperSlowEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.CreeperSlowTime, Config.CreeperSlowPower));
 		}
@@ -137,7 +150,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperSlowDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperSlowDiggingEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperSlowDiggingEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.CreeperSlowDiggingTime, Config.CreeperSlowDiggingPower));
 		}
@@ -146,7 +160,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperSpeed(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperSpeedEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperSpeedEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.CreeperSpeedTime, Config.CreeperSpeedPower));
 		}
@@ -155,7 +170,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperWaterBreathing(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperWaterBreathingEnabled != false && damager instanceof Creeper && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperWaterBreathingEnabled != false && damager instanceof Creeper && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.CreeperWaterBreathingTime, Config.CreeperWaterBreathingPower));
 		}
@@ -164,7 +180,8 @@ public class MECreeperListener implements Listener {
 	public void CreeperWeakness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.CreeperWeaknessEnabled != false && damager instanceof Creeper && e instanceof Creeper) {
+		String world = e.getWorld().getName();
+		if (Config.CreeperWeaknessEnabled != false && damager instanceof Creeper && e instanceof Creeper && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.CreeperWeaknessTime, Config.CreeperWeaknessPower));
 		}

@@ -17,8 +17,9 @@ public class MEGiantListener implements Listener {
 	public void GiantBlindness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
 		
-		if (Config.GiantBlindnessEnabled != false && damager instanceof Giant && e instanceof Player) {
+		if (Config.GiantBlindnessEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.GiantBlindnessTime, Config.GiantBlindnessPower));
 		}
@@ -28,7 +29,8 @@ public class MEGiantListener implements Listener {
 	public void GiantConfusion(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantConfusionEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantConfusionEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.GiantConfusionTime, Config.GiantConfusionPower));
 		}
@@ -37,7 +39,8 @@ public class MEGiantListener implements Listener {
 	public void GiantDamageResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantDamageResistanceEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantDamageResistanceEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.GiantDamageResistanceTime, Config.GiantDamageResistancePower));
 		}
@@ -46,7 +49,8 @@ public class MEGiantListener implements Listener {
 	public void GiantFastDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantFastDiggingEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantFastDiggingEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.GiantFastDiggingTime, Config.GiantFastDiggingPower));
 		}
@@ -56,7 +60,8 @@ public class MEGiantListener implements Listener {
 	public void GiantFireResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantFireResistanceEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantFireResistanceEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.GiantFireResistanceTime, Config.GiantFireResistancePower));
 		}
@@ -65,7 +70,8 @@ public class MEGiantListener implements Listener {
 	public void GiantHarm(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantHarmEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantHarmEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.GiantHarmTime, Config.GiantHarmPower));
 		}
@@ -74,7 +80,8 @@ public class MEGiantListener implements Listener {
 	public void GiantHeal(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantHarmEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantHarmEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.GiantHealTime, Config.GiantHealPower));
 		}
@@ -83,7 +90,8 @@ public class MEGiantListener implements Listener {
 	public void GiantHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantHungerEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantHungerEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.GiantHungerTime, Config.GiantHungerPower));
 		}
@@ -92,7 +100,8 @@ public class MEGiantListener implements Listener {
 	public void GiantIncreaseDamage(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantIncreaseDamageEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantIncreaseDamageEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.GiantIncreaseDamageTime, Config.GiantIncreaseDamagePower));
 		}
@@ -101,7 +110,8 @@ public class MEGiantListener implements Listener {
 	public void GiantJump(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantJumpEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantJumpEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.GiantJumpTime, Config.GiantJumpPower));
 		}
@@ -110,7 +120,8 @@ public class MEGiantListener implements Listener {
 	public void GiantPoison(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantPoisonEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantPoisonEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.GiantPoisonTime, Config.GiantPoisonPower));
 		}
@@ -119,7 +130,8 @@ public class MEGiantListener implements Listener {
 	public void GiantRegeneratoin(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantRegenerationEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantRegenerationEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.GiantRegenerationTime, Config.GiantRegenerationPower));
 		}
@@ -128,7 +140,8 @@ public class MEGiantListener implements Listener {
 	public void GiantSlow(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantSlowEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantSlowEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.GiantSlowTime, Config.GiantSlowPower));
 		}
@@ -137,7 +150,8 @@ public class MEGiantListener implements Listener {
 	public void GiantSlowDigging(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantSlowDiggingEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantSlowDiggingEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.GiantSlowDiggingTime, Config.GiantSlowDiggingPower));
 		}
@@ -146,7 +160,8 @@ public class MEGiantListener implements Listener {
 	public void GiantSpeed(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantSpeedEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantSpeedEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.GiantSpeedTime, Config.GiantSpeedPower));
 		}
@@ -155,7 +170,8 @@ public class MEGiantListener implements Listener {
 	public void GiantWaterBreathing(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantWaterBreathingEnabled != false && damager instanceof Giant && e instanceof Player) {
+		String world = e.getWorld().getName();
+		if (Config.GiantWaterBreathingEnabled != false && damager instanceof Giant && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.GiantWaterBreathingTime, Config.GiantWaterBreathingPower));
 		}
@@ -164,7 +180,8 @@ public class MEGiantListener implements Listener {
 	public void GiantWeakness(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
-		if (Config.GiantWeaknessEnabled != false && damager instanceof Giant && e instanceof Giant) {
+		String world = e.getWorld().getName();
+		if (Config.GiantWeaknessEnabled != false && damager instanceof Giant && e instanceof Giant && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.GiantWeaknessTime, Config.GiantWeaknessPower));
 		}
