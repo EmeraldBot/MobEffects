@@ -12,7 +12,9 @@ public class MobEffects extends JavaPlugin {
 	protected Logger log;
 	protected UpdateChecker updateChecker;
 	public static Config config = new Config();
-
+	
+	MobEffectsCommand mec;
+	
 	@Override
 	public void onEnable() {
 		this.log = this.getLogger();
@@ -31,6 +33,8 @@ public class MobEffects extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new MEGiantListener(), this);
 		//
 		this.getServer().getPluginManager().registerEvents(new MiscListener(), this);
+		//
+		mec = new MobEffectsCommand(this);
 		
 		// Log Update to console
 		this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/mobeffects/files.rss");
