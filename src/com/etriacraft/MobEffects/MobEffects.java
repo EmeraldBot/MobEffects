@@ -2,15 +2,19 @@ package com.etriacraft.MobEffects;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import com.etriacraft.MobEffects.Listeners.*;
 
 public class MobEffects extends JavaPlugin {
 	
+	protected Logger log;
+	protected UpdateChecker updateChecker;
 	public static Config config = new Config();
-	
+
 	public void onEnable() {
+		this.log = this.getLogger();
 		config.load(new File(getDataFolder(), "config.yml"));
 		this.getServer().getPluginManager().registerEvents(new MEBlazeListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MECaveSpiderListener(), this);
@@ -23,6 +27,14 @@ public class MobEffects extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new MESpiderListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEZombieListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MEGiantListener(), this);
+		//
+		this.getServer().getPluginManager().registerEvents(new MiscListener(), this);
+		
+		this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/mobeffects/files.rss");
+		if (UpdateChecker.updateNeeded()) {
+			this.log.info("A new version is available: " + this.updateChecker.getVersion());
+			this.log.info("Get it from: " + this.updateChecker.getLink());
+		}
 		
 		try {
 			MetricsLite metrics = new MetricsLite(this);
