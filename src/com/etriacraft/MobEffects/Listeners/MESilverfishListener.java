@@ -26,23 +26,23 @@ public class MESilverfishListener implements Listener {
 	}
 	
 	@EventHandler
-	public void SilverfishConfusion(EntityDamageByEntityEvent event) {
+	public void SilverfishNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SilverfishConfusionEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SilverfishNauseaEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SilverfishConfusionTime, Config.SilverfishConfusionPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SilverfishNauseaTime, Config.SilverfishNauseaPower));
 		}
 	}
 	@EventHandler
-	public void SilverfishDamageResistance(EntityDamageByEntityEvent event) {
+	public void SilverfishResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SilverfishDamageResistanceEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SilverfishResistanceEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SilverfishDamageResistanceTime, Config.SilverfishDamageResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SilverfishResistanceTime, Config.SilverfishResistancePower));
 		}
 	}
 	@EventHandler
@@ -97,13 +97,13 @@ public class MESilverfishListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void SilverfishIncreaseDamage(EntityDamageByEntityEvent event) {
+	public void SilverfishStrength(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SilverfishIncreaseDamageEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SilverfishStrengthEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SilverfishIncreaseDamageTime, Config.SilverfishIncreaseDamagePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SilverfishStrengthTime, Config.SilverfishStrengthPower));
 		}
 	}
 	@EventHandler
@@ -147,13 +147,13 @@ public class MESilverfishListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void SilverfishSlowDigging(EntityDamageByEntityEvent event) {
+	public void SilverfishMiningFatigue(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SilverfishSlowDiggingEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SilverfishMiningFatigueEnabled != false && damager instanceof Silverfish && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SilverfishSlowDiggingTime, Config.SilverfishSlowDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SilverfishMiningFatigueTime, Config.SilverfishMiningFatiguePower));
 		}
 	}
 	@EventHandler

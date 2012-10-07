@@ -13,9 +13,11 @@ public class MobEffects extends JavaPlugin {
 	protected UpdateChecker updateChecker;
 	public static Config config = new Config();
 
+	@Override
 	public void onEnable() {
 		this.log = this.getLogger();
 		config.load(new File(getDataFolder(), "config.yml"));
+		
 		this.getServer().getPluginManager().registerEvents(new MEBlazeListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MECaveSpiderListener(), this);
 		this.getServer().getPluginManager().registerEvents(new MECreeperListener(), this);
@@ -30,6 +32,7 @@ public class MobEffects extends JavaPlugin {
 		//
 		this.getServer().getPluginManager().registerEvents(new MiscListener(), this);
 		
+		// Log Update to console
 		this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/mobeffects/files.rss");
 		if (UpdateChecker.updateNeeded()) {
 			this.log.info("A new version is available: " + this.updateChecker.getVersion());

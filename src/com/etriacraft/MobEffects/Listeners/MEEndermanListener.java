@@ -26,23 +26,23 @@ public class MEEndermanListener implements Listener {
 	}
 	
 	@EventHandler
-	public void EndermanConfusion(EntityDamageByEntityEvent event) {
+	public void EndermanNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.EndermanConfusionEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.EndermanNauseaEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.EndermanConfusionTime, Config.EndermanConfusionPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.EndermanNauseaTime, Config.EndermanNauseaPower));
 		}
 	}
 	@EventHandler
-	public void EndermanDamageResistance(EntityDamageByEntityEvent event) {
+	public void EndermanResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.EndermanDamageResistanceEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.EndermanResistanceEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.EndermanDamageResistanceTime, Config.EndermanDamageResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.EndermanResistanceTime, Config.EndermanResistancePower));
 		}
 	}
 	@EventHandler
@@ -97,13 +97,13 @@ public class MEEndermanListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void EndermanIncreaseDamage(EntityDamageByEntityEvent event) {
+	public void EndermanStrength(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.EndermanIncreaseDamageEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.EndermanStrengthEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.EndermanIncreaseDamageTime, Config.EndermanIncreaseDamagePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.EndermanStrengthTime, Config.EndermanStrengthPower));
 		}
 	}
 	@EventHandler
@@ -147,13 +147,13 @@ public class MEEndermanListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void EndermanSlowDigging(EntityDamageByEntityEvent event) {
+	public void EndermanMiningFatigue(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.EndermanSlowDiggingEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.EndermanMiningFatigueEnabled != false && damager instanceof Enderman && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.EndermanSlowDiggingTime, Config.EndermanSlowDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.EndermanMiningFatigueTime, Config.EndermanMiningFatiguePower));
 		}
 	}
 	@EventHandler

@@ -26,23 +26,23 @@ public class MEPigZombieListener implements Listener {
 	}
 	
 	@EventHandler
-	public void PigZombieConfusion(EntityDamageByEntityEvent event) {
+	public void PigZombieNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PigZombieConfusionEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.PigZombieNauseaEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.PigZombieConfusionTime, Config.PigZombieConfusionPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.PigZombieNauseaTime, Config.PigZombieNauseaPower));
 		}
 	}
 	@EventHandler
-	public void PigZombieDamageResistance(EntityDamageByEntityEvent event) {
+	public void PigZombieResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PigZombieDamageResistanceEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.PigZombieResistanceEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.PigZombieDamageResistanceTime, Config.PigZombieDamageResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.PigZombieResistanceTime, Config.PigZombieResistancePower));
 		}
 	}
 	@EventHandler
@@ -97,13 +97,13 @@ public class MEPigZombieListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void PigZombieIncreaseDamage(EntityDamageByEntityEvent event) {
+	public void PigZombieStrength(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PigZombieIncreaseDamageEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.PigZombieStrengthEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.PigZombieIncreaseDamageTime, Config.PigZombieIncreaseDamagePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.PigZombieStrengthTime, Config.PigZombieStrengthPower));
 		}
 	}
 	@EventHandler
@@ -147,13 +147,13 @@ public class MEPigZombieListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void PigZombieSlowDigging(EntityDamageByEntityEvent event) {
+	public void PigZombieMiningFatigue(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PigZombieSlowDiggingEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.PigZombieMiningFatigueEnabled != false && damager instanceof PigZombie && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.PigZombieSlowDiggingTime, Config.PigZombieSlowDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.PigZombieMiningFatigueTime, Config.PigZombieMiningFatiguePower));
 		}
 	}
 	@EventHandler

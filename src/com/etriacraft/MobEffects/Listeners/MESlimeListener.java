@@ -26,23 +26,23 @@ public class MESlimeListener implements Listener {
 	}
 	
 	@EventHandler
-	public void SlimeConfusion(EntityDamageByEntityEvent event) {
+	public void SlimeNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SlimeConfusionEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SlimeNauseaEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SlimeConfusionTime, Config.SlimeConfusionPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SlimeNauseaTime, Config.SlimeNauseaPower));
 		}
 	}
 	@EventHandler
-	public void SlimeDamageResistance(EntityDamageByEntityEvent event) {
+	public void SlimeResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SlimeDamageResistanceEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SlimeResistanceEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SlimeDamageResistanceTime, Config.SlimeDamageResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SlimeResistanceTime, Config.SlimeResistancePower));
 		}
 	}
 	@EventHandler
@@ -97,13 +97,13 @@ public class MESlimeListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void SlimeIncreaseDamage(EntityDamageByEntityEvent event) {
+	public void SlimeStrength(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SlimeIncreaseDamageEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SlimeStrengthEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SlimeIncreaseDamageTime, Config.SlimeIncreaseDamagePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SlimeStrengthTime, Config.SlimeStrengthPower));
 		}
 	}
 	@EventHandler
@@ -147,13 +147,13 @@ public class MESlimeListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void SlimeSlowDigging(EntityDamageByEntityEvent event) {
+	public void SlimeMiningFatigue(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.SlimeSlowDiggingEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.SlimeMiningFatigueEnabled != false && damager instanceof Slime && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SlimeSlowDiggingTime, Config.SlimeSlowDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SlimeMiningFatigueTime, Config.SlimeMiningFatiguePower));
 		}
 	}
 	@EventHandler

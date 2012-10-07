@@ -26,23 +26,23 @@ public class MEMagmaCubeListener implements Listener {
 	}
 	
 	@EventHandler
-	public void MagmaCubeConfusion(EntityDamageByEntityEvent event) {
+	public void MagmaCubeNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.MagmaCubeConfusionEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.MagmaCubeNauseaEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.MagmaCubeConfusionTime, Config.MagmaCubeConfusionPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.MagmaCubeNauseaTime, Config.MagmaCubeNauseaPower));
 		}
 	}
 	@EventHandler
-	public void MagmaCubeDamageResistance(EntityDamageByEntityEvent event) {
+	public void MagmaCubeResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.MagmaCubeDamageResistanceEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.MagmaCubeResistanceEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.MagmaCubeDamageResistanceTime, Config.MagmaCubeDamageResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.MagmaCubeResistanceTime, Config.MagmaCubeResistancePower));
 		}
 	}
 	@EventHandler
@@ -97,13 +97,13 @@ public class MEMagmaCubeListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void MagmaCubeIncreaseDamage(EntityDamageByEntityEvent event) {
+	public void MagmaCubeStrength(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.MagmaCubeIncreaseDamageEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.MagmaCubeStrengthEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.MagmaCubeIncreaseDamageTime, Config.MagmaCubeIncreaseDamagePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.MagmaCubeStrengthTime, Config.MagmaCubeStrengthPower));
 		}
 	}
 	@EventHandler
@@ -147,13 +147,13 @@ public class MEMagmaCubeListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void MagmaCubeSlowDigging(EntityDamageByEntityEvent event) {
+	public void MagmaCubeMiningFatigue(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.MagmaCubeSlowDiggingEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
+		if (Config.MagmaCubeMiningFatigueEnabled != false && damager instanceof MagmaCube && e instanceof Player && Config.Worlds.contains(world)) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.MagmaCubeSlowDiggingTime, Config.MagmaCubeSlowDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.MagmaCubeMiningFatigueTime, Config.MagmaCubeMiningFatiguePower));
 		}
 	}
 	@EventHandler
