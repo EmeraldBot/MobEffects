@@ -10,7 +10,9 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 public class Config {
 
+	// General
 	public static List<String> Worlds;
+	public static boolean AutoCheckForUpdates = true;
 
 	// Blaze Stuffs
 	// Blindness
@@ -1403,6 +1405,7 @@ public class Config {
 
 		// Worlds
 		Worlds = config.getStringList("Worlds");
+		AutoCheckForUpdates = config.getBoolean("AutoCheckForUpdates", AutoCheckForUpdates);
 		// Blaze
 		BlazeBlindnessEnabled = config.getBoolean("Blaze.Blindness.Enabled",BlazeBlindnessEnabled);
 		BlazeBlindnessTime = config.getInt("Blaze.Blindness.Time",BlazeBlindnessTime);
@@ -2509,6 +2512,7 @@ public class Config {
 		ZombieWeaknessDodgeChance = config.getDouble("Zombie.Weakness.DodgeChance", ZombieWeaknessDodgeChance);
 
 		// Set Defaults
+		config.set("AutoCheckForUpdates", AutoCheckForUpdates);
 		if (!config.contains("Worlds")) {
 			final String[] def_worlds = { "world", "world_nether",
 			"world_the_end" };

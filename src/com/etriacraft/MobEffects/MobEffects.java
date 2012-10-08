@@ -42,7 +42,7 @@ public class MobEffects extends JavaPlugin {
 		
 		// Log Update to console
 		this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/mobeffects/files.rss");
-		if (UpdateChecker.updateNeeded()) {
+		if (UpdateChecker.updateNeeded() && Config.AutoCheckForUpdates != false) {
 			this.log.info("A new version is available: " + this.updateChecker.getVersion());
 			this.log.info("Get it from: " + this.updateChecker.getLink());
 		}
