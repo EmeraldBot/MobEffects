@@ -18,8 +18,11 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		
-		if (Config.BlazeBlindnessEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeBlindnessDodgeChance / 100) {
+			dodged = true;
+		} if (Config.BlazeBlindnessEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.BlazeBlindnessTime, Config.BlazeBlindnessPower));
 		}
@@ -30,7 +33,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeNauseaEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeNauseaDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeNauseaEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.BlazeNauseaTime, Config.BlazeNauseaPower));
 		}
@@ -40,7 +48,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeResistanceEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeResistanceDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeResistanceEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.BlazeResistanceTime, Config.BlazeResistancePower));
 		}
@@ -50,7 +63,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeFastDiggingEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeFastDiggingDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeFastDiggingEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.BlazeFastDiggingTime, Config.BlazeFastDiggingPower));
 		}
@@ -61,7 +79,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeFireResistanceEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeFireResistanceDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeFireResistanceEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.BlazeFireResistanceTime, Config.BlazeFireResistancePower));
 		}
@@ -71,7 +94,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeHarmEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeHarmDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeHarmEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.BlazeHarmTime, Config.BlazeHarmPower));
 		}
@@ -81,7 +109,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeHarmEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeHealDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeHarmEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.BlazeHealTime, Config.BlazeHealPower));
 		}
@@ -91,7 +124,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeHungerEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeHungerDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeHungerEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.BlazeHungerTime, Config.BlazeHungerPower));
 		}
@@ -101,7 +139,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeStrengthEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeStrengthDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeStrengthEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.BlazeStrengthTime, Config.BlazeStrengthPower));
 		}
@@ -111,7 +154,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeJumpEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeJumpDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeJumpEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.BlazeJumpTime, Config.BlazeJumpPower));
 		}
@@ -121,17 +169,27 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazePoisonEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazePoisonDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazePoisonEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.BlazePoisonTime, Config.BlazePoisonPower));
 		}
 	}
 	@EventHandler
-	public void BlazeRegeneratoin(EntityDamageByEntityEvent event) {
+	public void BlazeRegeneration(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeRegenerationEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeRegenerationDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeRegenerationEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.BlazeRegenerationTime, Config.BlazeRegenerationPower));
 		}
@@ -141,7 +199,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeSlowEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeSlowDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeSlowEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.BlazeSlowTime, Config.BlazeSlowPower));
 		}
@@ -151,7 +214,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeMiningFatigueEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeMiningFatigueDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeMiningFatigueEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.BlazeMiningFatigueTime, Config.BlazeMiningFatiguePower));
 		}
@@ -161,7 +229,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeSpeedEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeSpeedDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeSpeedEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.BlazeSpeedTime, Config.BlazeSpeedPower));
 		}
@@ -171,7 +244,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeWaterBreathingEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeWaterBreathingDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeWaterBreathingEnabled != false && damager instanceof Blaze && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.BlazeWaterBreathingTime, Config.BlazeWaterBreathingPower));
 		}
@@ -181,7 +259,12 @@ public class MEBlazeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.BlazeWeaknessEnabled != false && damager instanceof Blaze && e instanceof Blaze && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.BlazeWeaknessDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.BlazeWeaknessEnabled != false && damager instanceof Blaze && e instanceof Blaze && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.BlazeWeaknessTime, Config.BlazeWeaknessPower));
 		}

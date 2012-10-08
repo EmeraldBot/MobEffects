@@ -17,8 +17,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		
-		if (Config.PlayerBlindnessEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerBlindnessDodgeChance / 100) {
+			dodged = true;
+		} if (Config.PlayerBlindnessEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.PlayerBlindnessTime, Config.PlayerBlindnessPower));
 		}
@@ -29,7 +32,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerNauseaEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerNauseaDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerNauseaEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.PlayerNauseaTime, Config.PlayerNauseaPower));
 		}
@@ -39,7 +47,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerResistanceEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerResistanceDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerResistanceEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.PlayerResistanceTime, Config.PlayerResistancePower));
 		}
@@ -49,7 +62,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerFastDiggingEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerFastDiggingDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerFastDiggingEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.PlayerFastDiggingTime, Config.PlayerFastDiggingPower));
 		}
@@ -60,7 +78,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerFireResistanceEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerFireResistanceDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerFireResistanceEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.PlayerFireResistanceTime, Config.PlayerFireResistancePower));
 		}
@@ -70,7 +93,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerHarmEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerHarmDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerHarmEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.PlayerHarmTime, Config.PlayerHarmPower));
 		}
@@ -80,7 +108,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerHarmEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerHealDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerHarmEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.PlayerHealTime, Config.PlayerHealPower));
 		}
@@ -90,7 +123,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerHungerEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerHungerDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerHungerEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.PlayerHungerTime, Config.PlayerHungerPower));
 		}
@@ -100,7 +138,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerStrengthEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerStrengthDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerStrengthEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.PlayerStrengthTime, Config.PlayerStrengthPower));
 		}
@@ -110,7 +153,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerJumpEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerJumpDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerJumpEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.PlayerJumpTime, Config.PlayerJumpPower));
 		}
@@ -120,17 +168,27 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerPoisonEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerPoisonDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerPoisonEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.PlayerPoisonTime, Config.PlayerPoisonPower));
 		}
 	}
 	@EventHandler
-	public void PlayerRegeneratoin(EntityDamageByEntityEvent event) {
+	public void PlayerRegeneration(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerRegenerationEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerRegenerationDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerRegenerationEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.PlayerRegenerationTime, Config.PlayerRegenerationPower));
 		}
@@ -140,7 +198,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerSlowEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerSlowDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerSlowEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.PlayerSlowTime, Config.PlayerSlowPower));
 		}
@@ -150,7 +213,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerMiningFatigueEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerMiningFatigueDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerMiningFatigueEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.PlayerMiningFatigueTime, Config.PlayerMiningFatiguePower));
 		}
@@ -160,7 +228,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerSpeedEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerSpeedDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerSpeedEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.PlayerSpeedTime, Config.PlayerSpeedPower));
 		}
@@ -170,7 +243,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerWaterBreathingEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerWaterBreathingDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerWaterBreathingEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.PlayerWaterBreathingTime, Config.PlayerWaterBreathingPower));
 		}
@@ -180,7 +258,12 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		if (Config.PlayerWeaknessEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world)) {
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= Config.PlayerWeaknessDodgeChance / 100) {
+			dodged = true;
+		}
+		if (Config.PlayerWeaknessEnabled != false && damager instanceof Player && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.PlayerWeaknessTime, Config.PlayerWeaknessPower));
 		}

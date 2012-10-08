@@ -9,2393 +9,2650 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 public class Config {
-	
+
 	public static List<String> Worlds;
 
-	// Player Stuffs
-		// Blindness
-	public static boolean PlayerBlindnessEnabled = false;
-	public static int PlayerBlindnessTime = 500;
-	public static int PlayerBlindnessPower = 0;
-		// Nausea
-	public static boolean PlayerNauseaEnabled = false;
-	public static int PlayerNauseaTime = 500;
-	public static int PlayerNauseaPower = 0;
-		// Damage Resistance
-	public static boolean PlayerResistanceEnabled = false;
-	public static int PlayerResistanceTime = 500;
-	public static int PlayerResistancePower = 0;
-		// Fast Digging
-	public static boolean PlayerFastDiggingEnabled = false;
-	public static int PlayerFastDiggingTime = 500;
-	public static int PlayerFastDiggingPower = 0;
-		// Fire Resistance
-	public static boolean PlayerFireResistanceEnabled = false;
-	public static int PlayerFireResistanceTime = 500;
-	public static int PlayerFireResistancePower = 0;
-		// Harm
-	public static boolean PlayerHarmEnabled = false;
-	public static int PlayerHarmTime = 500;
-	public static int PlayerHarmPower = 0;
-		// Heal
-	public static boolean PlayerHealEnabled = false;
-	public static int PlayerHealTime = 500;
-	public static int PlayerHealPower = 0;
-		// Hunger
-	public static boolean PlayerHungerEnabled = false;
-	public static int PlayerHungerTime = 500;
-	public static int PlayerHungerPower = 0;
-		// Increase Damage
-	public static boolean PlayerStrengthEnabled = false;
-	public static int PlayerStrengthTime = 500;
-	public static int PlayerStrengthPower = 0;
-		// Jump
-	public static boolean PlayerJumpEnabled = false;
-	public static int PlayerJumpTime = 500;
-	public static int PlayerJumpPower = 0;
-		// Poison
-	public static boolean PlayerPoisonEnabled = false;
-	public static int PlayerPoisonTime = 500;
-	public static int PlayerPoisonPower = 0;
-		// Regeneration
-	public static boolean PlayerRegenerationEnabled = false;
-	public static int PlayerRegenerationTime = 500;
-	public static int PlayerRegenerationPower = 0;
-		// Slow
-	public static boolean PlayerSlowEnabled = false;
-	public static int PlayerSlowTime = 500;
-	public static int PlayerSlowPower = 0;
-		// Slow Digging
-	public static boolean PlayerMiningFatigueEnabled = false;
-	public static int PlayerMiningFatigueTime = 500;
-	public static int PlayerMiningFatiguePower = 0;
-		// Speed
-	public static boolean PlayerSpeedEnabled = false;
-	public static int PlayerSpeedTime = 500;
-	public static int PlayerSpeedPower = 0;
-		// Water Breathing
-	public static boolean PlayerWaterBreathingEnabled = false;
-	public static int PlayerWaterBreathingTime = 500;
-	public static int PlayerWaterBreathingPower = 0;
-		// Weakness
-	public static boolean PlayerWeaknessEnabled = false;
-	public static int PlayerWeaknessTime = 500;
-	public static int PlayerWeaknessPower = 0;
-	
-	// Zombie Stuffs
-		// Blindness
-	public static boolean ZombieBlindnessEnabled = false;
-	public static int ZombieBlindnessTime = 500;
-	public static int ZombieBlindnessPower = 0;
-	public static double ZombieBlindnessDodgeChance = 10;
-		// Nausea
-	public static boolean ZombieNauseaEnabled = false;
-	public static int ZombieNauseaTime = 500;
-	public static int ZombieNauseaPower = 0;
-	public static double ZombieNauseaDodgeChance = 10;
-		// Damage Resistance
-	public static boolean ZombieResistanceEnabled = false;
-	public static int ZombieResistanceTime = 500;
-	public static int ZombieResistancePower = 0;
-	public static double ZombieResistanceDodgeChance = 0;
-		// Fast Digging
-	public static boolean ZombieFastDiggingEnabled = false;
-	public static int ZombieFastDiggingTime = 500;
-	public static int ZombieFastDiggingPower = 0;
-	public static double ZombieFastDiggingDodgeChance = 10;
-		// Fire Resistance
-	public static boolean ZombieFireResistanceEnabled = false;
-	public static int ZombieFireResistanceTime = 500;
-	public static int ZombieFireResistancePower = 0;
-	public static double ZombieFireResistanceDodgeChance = 10;
-		// Harm
-	public static boolean ZombieHarmEnabled = false;
-	public static int ZombieHarmTime = 500;
-	public static int ZombieHarmPower = 0;
-	public static double ZombieHarmDodgeChance = 10;
-		// Heal
-	public static boolean ZombieHealEnabled = false;
-	public static int ZombieHealTime = 500;
-	public static int ZombieHealPower = 0;
-	public static double ZombieHealDodgeChance = 10;
-		// Hunger
-	public static boolean ZombieHungerEnabled = false;
-	public static int ZombieHungerTime = 500;
-	public static int ZombieHungerPower = 0;
-	public static double ZombieHungerDodgeChance = 10;
-		// Increase Damage
-	public static boolean ZombieStrengthEnabled = false;
-	public static int ZombieStrengthTime = 500;
-	public static int ZombieStrengthPower = 0;
-	public static double ZombieStrengthDodgeChance = 10;
-		// Jump
-	public static boolean ZombieJumpEnabled = false;
-	public static int ZombieJumpTime = 500;
-	public static int ZombieJumpPower = 0;
-	public static double ZombieJumpDodgeChance = 10;
-		// Poison
-	public static boolean ZombiePoisonEnabled = false;
-	public static int ZombiePoisonTime = 500;
-	public static int ZombiePoisonPower = 0;
-	public static double ZombiePoisonDodgeChance = 10;
-		// Regeneration
-	public static boolean ZombieRegenerationEnabled = false;
-	public static int ZombieRegenerationTime = 500;
-	public static int ZombieRegenerationPower = 0;
-	public static double ZombieRegenerationDodgeChance = 10;
-		// Slow
-	public static boolean ZombieSlowEnabled = false;
-	public static int ZombieSlowTime = 500;
-	public static int ZombieSlowPower = 0;
-	public static double ZombieSlowDodgeChance = 10;
-		// Slow Digging
-	public static boolean ZombieMiningFatigueEnabled = false;
-	public static int ZombieMiningFatigueTime = 500;
-	public static int ZombieMiningFatiguePower = 0;
-	public static double ZombieMiningFatigueDodgeChance = 10;
-		// Speed
-	public static boolean ZombieSpeedEnabled = false;
-	public static int ZombieSpeedTime = 500;
-	public static int ZombieSpeedPower = 0;
-	public static double ZombieSpeedDodgeChance = 10;
-		// Water Breathing
-	public static boolean ZombieWaterBreathingEnabled = false;
-	public static int ZombieWaterBreathingTime = 500;
-	public static int ZombieWaterBreathingPower = 0;
-	public static double ZombieWaterBreathingDodgeChance = 10;
-		// Weakness
-	public static boolean ZombieWeaknessEnabled = false;
-	public static int ZombieWeaknessTime = 500;
-	public static int ZombieWeaknessPower = 0;
-	public static double ZombieWeaknessDodgeChance = 10;
-	// Spider Stuffs
-		// Blindness
-	public static boolean SpiderBlindnessEnabled = false;
-	public static int SpiderBlindnessTime = 500;
-	public static int SpiderBlindnessPower = 0;
-		// Nausea
-	public static boolean SpiderNauseaEnabled = false;
-	public static int SpiderNauseaTime = 500;
-	public static int SpiderNauseaPower = 0;
-		// Damage Resistance
-	public static boolean SpiderResistanceEnabled = false;
-	public static int SpiderResistanceTime = 500;
-	public static int SpiderResistancePower = 0;
-		// Fast Digging
-	public static boolean SpiderFastDiggingEnabled = false;
-	public static int SpiderFastDiggingTime = 500;
-	public static int SpiderFastDiggingPower = 0;
-		// Fire Resistance
-	public static boolean SpiderFireResistanceEnabled = false;
-	public static int SpiderFireResistanceTime = 500;
-	public static int SpiderFireResistancePower = 0;
-		// Harm
-	public static boolean SpiderHarmEnabled = false;
-	public static int SpiderHarmTime = 500;
-	public static int SpiderHarmPower = 0;
-		// Heal
-	public static boolean SpiderHealEnabled = false;
-	public static int SpiderHealTime = 500;
-	public static int SpiderHealPower = 0;
-		// Hunger
-	public static boolean SpiderHungerEnabled = false;
-	public static int SpiderHungerTime = 500;
-	public static int SpiderHungerPower = 0;
-		// Increase Damage
-	public static boolean SpiderStrengthEnabled = false;
-	public static int SpiderStrengthTime = 500;
-	public static int SpiderStrengthPower = 0;
-		// Jump
-	public static boolean SpiderJumpEnabled = false;
-	public static int SpiderJumpTime = 500;
-	public static int SpiderJumpPower = 0;
-		// Poison
-	public static boolean SpiderPoisonEnabled = false;
-	public static int SpiderPoisonTime = 500;
-	public static int SpiderPoisonPower = 0;
-		// Regeneration
-	public static boolean SpiderRegenerationEnabled = false;
-	public static int SpiderRegenerationTime = 500;
-	public static int SpiderRegenerationPower = 0;
-		// Slow
-	public static boolean SpiderSlowEnabled = false;
-	public static int SpiderSlowTime = 500;
-	public static int SpiderSlowPower = 0;
-		// Slow Digging
-	public static boolean SpiderMiningFatigueEnabled = false;
-	public static int SpiderMiningFatigueTime = 500;
-	public static int SpiderMiningFatiguePower = 0;
-		// Speed
-	public static boolean SpiderSpeedEnabled = false;
-	public static int SpiderSpeedTime = 500;
-	public static int SpiderSpeedPower = 0;
-		// Water Breathing
-	public static boolean SpiderWaterBreathingEnabled = false;
-	public static int SpiderWaterBreathingTime = 500;
-	public static int SpiderWaterBreathingPower = 0;
-		// Weakness
-	public static boolean SpiderWeaknessEnabled = false;
-	public static int SpiderWeaknessTime = 500;
-	public static int SpiderWeaknessPower = 0;
-	
-	// Creeper Stuff
-		// Blindness
-	public static boolean CreeperBlindnessEnabled = false;
-	public static int CreeperBlindnessTime = 500;
-	public static int CreeperBlindnessPower = 0;
-		// Nausea
-	public static boolean CreeperNauseaEnabled = false;
-	public static int CreeperNauseaTime = 500;
-	public static int CreeperNauseaPower = 0;
-		// Damage Resistance
-	public static boolean CreeperResistanceEnabled = false;
-	public static int CreeperResistanceTime = 500;
-	public static int CreeperResistancePower = 0;
-		// Fast Digging
-	public static boolean CreeperFastDiggingEnabled = false;
-	public static int CreeperFastDiggingTime = 500;
-	public static int CreeperFastDiggingPower = 0;
-		// Fire Resistance
-	public static boolean CreeperFireResistanceEnabled = false;
-	public static int CreeperFireResistanceTime = 500;
-	public static int CreeperFireResistancePower = 0;
-		// Harm
-	public static boolean CreeperHarmEnabled = false;
-	public static int CreeperHarmTime = 500;
-	public static int CreeperHarmPower = 0;
-		// Heal
-	public static boolean CreeperHealEnabled = false;
-	public static int CreeperHealTime = 500;
-	public static int CreeperHealPower = 0;
-		// Hunger
-	public static boolean CreeperHungerEnabled = false;
-	public static int CreeperHungerTime = 500;
-	public static int CreeperHungerPower = 0;
-		// Increase Damage
-	public static boolean CreeperStrengthEnabled = false;
-	public static int CreeperStrengthTime = 500;
-	public static int CreeperStrengthPower = 0;
-		// Jump
-	public static boolean CreeperJumpEnabled = false;
-	public static int CreeperJumpTime = 500;
-	public static int CreeperJumpPower = 0;
-		// Poison
-	public static boolean CreeperPoisonEnabled = false;
-	public static int CreeperPoisonTime = 500;
-	public static int CreeperPoisonPower = 0;
-		// Regeneration
-	public static boolean CreeperRegenerationEnabled = false;
-	public static int CreeperRegenerationTime = 500;
-	public static int CreeperRegenerationPower = 0;
-		// Slow
-	public static boolean CreeperSlowEnabled = false;
-	public static int CreeperSlowTime = 500;
-	public static int CreeperSlowPower = 0;
-		// Slow Digging
-	public static boolean CreeperMiningFatigueEnabled = false;
-	public static int CreeperMiningFatigueTime = 500;
-	public static int CreeperMiningFatiguePower = 0;
-		// Speed
-	public static boolean CreeperSpeedEnabled = false;
-	public static int CreeperSpeedTime = 500;
-	public static int CreeperSpeedPower = 0;
-		// Water Breathing
-	public static boolean CreeperWaterBreathingEnabled = false;
-	public static int CreeperWaterBreathingTime = 500;
-	public static int CreeperWaterBreathingPower = 0;
-		// Weakness
-	public static boolean CreeperWeaknessEnabled = false;
-	public static int CreeperWeaknessTime = 500;
-	public static int CreeperWeaknessPower = 0;
-	
-	// Enderman Stuff
-		// Blindness
-	public static boolean EndermanBlindnessEnabled = false;
-	public static int EndermanBlindnessTime = 500;
-	public static int EndermanBlindnessPower = 0;
-		// Nausea
-	public static boolean EndermanNauseaEnabled = false;
-	public static int EndermanNauseaTime = 500;
-	public static int EndermanNauseaPower = 0;
-		// Damage Resistance
-	public static boolean EndermanResistanceEnabled = false;
-	public static int EndermanResistanceTime = 500;
-	public static int EndermanResistancePower = 0;
-		// Fast Digging
-	public static boolean EndermanFastDiggingEnabled = false;
-	public static int EndermanFastDiggingTime = 500;
-	public static int EndermanFastDiggingPower = 0;
-		// Fire Resistance
-	public static boolean EndermanFireResistanceEnabled = false;
-	public static int EndermanFireResistanceTime = 500;
-	public static int EndermanFireResistancePower = 0;
-		// Harm
-	public static boolean EndermanHarmEnabled = false;
-	public static int EndermanHarmTime = 500;
-	public static int EndermanHarmPower = 0;
-		// Heal
-	public static boolean EndermanHealEnabled = false;
-	public static int EndermanHealTime = 500;
-	public static int EndermanHealPower = 0;
-		// Hunger
-	public static boolean EndermanHungerEnabled = false;
-	public static int EndermanHungerTime = 500;
-	public static int EndermanHungerPower = 0;
-		// Increase Damage
-	public static boolean EndermanStrengthEnabled = false;
-	public static int EndermanStrengthTime = 500;
-	public static int EndermanStrengthPower = 0;
-		// Jump
-	public static boolean EndermanJumpEnabled = false;
-	public static int EndermanJumpTime = 500;
-	public static int EndermanJumpPower = 0;
-		// Poison
-	public static boolean EndermanPoisonEnabled = false;
-	public static int EndermanPoisonTime = 500;
-	public static int EndermanPoisonPower = 0;
-		// Regeneration
-	public static boolean EndermanRegenerationEnabled = false;
-	public static int EndermanRegenerationTime = 500;
-	public static int EndermanRegenerationPower = 0;
-		// Slow
-	public static boolean EndermanSlowEnabled = false;
-	public static int EndermanSlowTime = 500;
-	public static int EndermanSlowPower = 0;
-		// Slow Digging
-	public static boolean EndermanMiningFatigueEnabled = false;
-	public static int EndermanMiningFatigueTime = 500;
-	public static int EndermanMiningFatiguePower = 0;
-		// Speed
-	public static boolean EndermanSpeedEnabled = false;
-	public static int EndermanSpeedTime = 500;
-	public static int EndermanSpeedPower = 0;
-		// Water Breathing
-	public static boolean EndermanWaterBreathingEnabled = false;
-	public static int EndermanWaterBreathingTime = 500;
-	public static int EndermanWaterBreathingPower = 0;
-		// Weakness
-	public static boolean EndermanWeaknessEnabled = false;
-	public static int EndermanWeaknessTime = 500;
-	public static int EndermanWeaknessPower = 0;
-	
-	// Slime Stuff
-	// Blindness
-	public static boolean SlimeBlindnessEnabled = false;
-	public static int SlimeBlindnessTime = 500;
-	public static int SlimeBlindnessPower = 0;
-	// Nausea
-	public static boolean SlimeNauseaEnabled = false;
-	public static int SlimeNauseaTime = 500;
-	public static int SlimeNauseaPower = 0;
-	// Damage Resistance
-	public static boolean SlimeResistanceEnabled = false;
-	public static int SlimeResistanceTime = 500;
-	public static int SlimeResistancePower = 0;
-	// Fast Digging
-	public static boolean SlimeFastDiggingEnabled = false;
-	public static int SlimeFastDiggingTime = 500;
-	public static int SlimeFastDiggingPower = 0;
-	// Fire Resistance
-	public static boolean SlimeFireResistanceEnabled = false;
-	public static int SlimeFireResistanceTime = 500;
-	public static int SlimeFireResistancePower = 0;
-	// Harm
-	public static boolean SlimeHarmEnabled = false;
-	public static int SlimeHarmTime = 500;
-	public static int SlimeHarmPower = 0;
-	// Heal
-	public static boolean SlimeHealEnabled = false;
-	public static int SlimeHealTime = 500;
-	public static int SlimeHealPower = 0;
-	// Hunger
-	public static boolean SlimeHungerEnabled = false;
-	public static int SlimeHungerTime = 500;
-	public static int SlimeHungerPower = 0;
-	// Increase Damage
-	public static boolean SlimeStrengthEnabled = false;
-	public static int SlimeStrengthTime = 500;
-	public static int SlimeStrengthPower = 0;
-	// Jump
-	public static boolean SlimeJumpEnabled = false;
-	public static int SlimeJumpTime = 500;
-	public static int SlimeJumpPower = 0;
-	// Poison
-	public static boolean SlimePoisonEnabled = false;
-	public static int SlimePoisonTime = 500;
-	public static int SlimePoisonPower = 0;
-	// Regeneration
-	public static boolean SlimeRegenerationEnabled = false;
-	public static int SlimeRegenerationTime = 500;
-	public static int SlimeRegenerationPower = 0;
-	// Slow
-	public static boolean SlimeSlowEnabled = false;
-	public static int SlimeSlowTime = 500;
-	public static int SlimeSlowPower = 0;
-	// Slow Digging
-	public static boolean SlimeMiningFatigueEnabled = false;
-	public static int SlimeMiningFatigueTime = 500;
-	public static int SlimeMiningFatiguePower = 0;
-	// Speed
-	public static boolean SlimeSpeedEnabled = false;
-	public static int SlimeSpeedTime = 500;
-	public static int SlimeSpeedPower = 0;
-	// Water Breathing
-	public static boolean SlimeWaterBreathingEnabled = false;
-	public static int SlimeWaterBreathingTime = 500;
-	public static int SlimeWaterBreathingPower = 0;
-	// Weakness
-	public static boolean SlimeWeaknessEnabled = false;
-	public static int SlimeWeaknessTime = 500;
-	public static int SlimeWeaknessPower = 0;
-	
-	// Giants
-	// Blindness
-	public static boolean GiantBlindnessEnabled = false;
-	public static int GiantBlindnessTime = 500;
-	public static int GiantBlindnessPower = 0;
-	// Nausea
-	public static boolean GiantNauseaEnabled = false;
-	public static int GiantNauseaTime = 500;
-	public static int GiantNauseaPower = 0;
-	// Damage Resistance
-	public static boolean GiantResistanceEnabled = false;
-	public static int GiantResistanceTime = 500;
-	public static int GiantResistancePower = 0;
-	// Fast Digging
-	public static boolean GiantFastDiggingEnabled = false;
-	public static int GiantFastDiggingTime = 500;
-	public static int GiantFastDiggingPower = 0;
-	// Fire Resistance
-	public static boolean GiantFireResistanceEnabled = false;
-	public static int GiantFireResistanceTime = 500;
-	public static int GiantFireResistancePower = 0;
-	// Harm
-	public static boolean GiantHarmEnabled = false;
-	public static int GiantHarmTime = 500;
-	public static int GiantHarmPower = 0;
-	// Heal
-	public static boolean GiantHealEnabled = false;
-	public static int GiantHealTime = 500;
-	public static int GiantHealPower = 0;
-	// Hunger
-	public static boolean GiantHungerEnabled = false;
-	public static int GiantHungerTime = 500;
-	public static int GiantHungerPower = 0;
-	// Increase Damage
-	public static boolean GiantStrengthEnabled = false;
-	public static int GiantStrengthTime = 500;
-	public static int GiantStrengthPower = 0;
-	// Jump
-	public static boolean GiantJumpEnabled = false;
-	public static int GiantJumpTime = 500;
-	public static int GiantJumpPower = 0;
-	// Poison
-	public static boolean GiantPoisonEnabled = false;
-	public static int GiantPoisonTime = 500;
-	public static int GiantPoisonPower = 0;
-	// Regeneration
-	public static boolean GiantRegenerationEnabled = false;
-	public static int GiantRegenerationTime = 500;
-	public static int GiantRegenerationPower = 0;
-	// Slow
-	public static boolean GiantSlowEnabled = false;
-	public static int GiantSlowTime = 500;
-	public static int GiantSlowPower = 0;
-	// Slow Digging
-	public static boolean GiantMiningFatigueEnabled = false;
-	public static int GiantMiningFatigueTime = 500;
-	public static int GiantMiningFatiguePower = 0;
-	// Speed
-	public static boolean GiantSpeedEnabled = false;
-	public static int GiantSpeedTime = 500;
-	public static int GiantSpeedPower = 0;
-	// Water Breathing
-	public static boolean GiantWaterBreathingEnabled = false;
-	public static int GiantWaterBreathingTime = 500;
-	public static int GiantWaterBreathingPower = 0;
-	// Weakness
-	public static boolean GiantWeaknessEnabled = false;
-	public static int GiantWeaknessTime = 500;
-	public static int GiantWeaknessPower = 0;
-	
-	// Blaze
+	// Blaze Stuffs
 	// Blindness
 	public static boolean BlazeBlindnessEnabled = false;
 	public static int BlazeBlindnessTime = 500;
 	public static int BlazeBlindnessPower = 0;
+	public static double BlazeBlindnessDodgeChance = 10;
 	// Nausea
 	public static boolean BlazeNauseaEnabled = false;
 	public static int BlazeNauseaTime = 500;
 	public static int BlazeNauseaPower = 0;
+	public static double BlazeNauseaDodgeChance = 10;
 	// Damage Resistance
 	public static boolean BlazeResistanceEnabled = false;
 	public static int BlazeResistanceTime = 500;
 	public static int BlazeResistancePower = 0;
+	public static double BlazeResistanceDodgeChance = 0;
 	// Fast Digging
 	public static boolean BlazeFastDiggingEnabled = false;
 	public static int BlazeFastDiggingTime = 500;
 	public static int BlazeFastDiggingPower = 0;
+	public static double BlazeFastDiggingDodgeChance = 10;
 	// Fire Resistance
 	public static boolean BlazeFireResistanceEnabled = false;
 	public static int BlazeFireResistanceTime = 500;
 	public static int BlazeFireResistancePower = 0;
+	public static double BlazeFireResistanceDodgeChance = 10;
 	// Harm
 	public static boolean BlazeHarmEnabled = false;
 	public static int BlazeHarmTime = 500;
 	public static int BlazeHarmPower = 0;
+	public static double BlazeHarmDodgeChance = 10;
 	// Heal
 	public static boolean BlazeHealEnabled = false;
 	public static int BlazeHealTime = 500;
 	public static int BlazeHealPower = 0;
+	public static double BlazeHealDodgeChance = 10;
 	// Hunger
 	public static boolean BlazeHungerEnabled = false;
 	public static int BlazeHungerTime = 500;
 	public static int BlazeHungerPower = 0;
+	public static double BlazeHungerDodgeChance = 10;
 	// Increase Damage
 	public static boolean BlazeStrengthEnabled = false;
 	public static int BlazeStrengthTime = 500;
 	public static int BlazeStrengthPower = 0;
+	public static double BlazeStrengthDodgeChance = 10;
 	// Jump
 	public static boolean BlazeJumpEnabled = false;
 	public static int BlazeJumpTime = 500;
 	public static int BlazeJumpPower = 0;
+	public static double BlazeJumpDodgeChance = 10;
 	// Poison
 	public static boolean BlazePoisonEnabled = false;
 	public static int BlazePoisonTime = 500;
 	public static int BlazePoisonPower = 0;
+	public static double BlazePoisonDodgeChance = 10;
 	// Regeneration
 	public static boolean BlazeRegenerationEnabled = false;
 	public static int BlazeRegenerationTime = 500;
 	public static int BlazeRegenerationPower = 0;
+	public static double BlazeRegenerationDodgeChance = 10;
 	// Slow
 	public static boolean BlazeSlowEnabled = false;
 	public static int BlazeSlowTime = 500;
 	public static int BlazeSlowPower = 0;
+	public static double BlazeSlowDodgeChance = 10;
 	// Slow Digging
 	public static boolean BlazeMiningFatigueEnabled = false;
 	public static int BlazeMiningFatigueTime = 500;
 	public static int BlazeMiningFatiguePower = 0;
+	public static double BlazeMiningFatigueDodgeChance = 10;
 	// Speed
 	public static boolean BlazeSpeedEnabled = false;
 	public static int BlazeSpeedTime = 500;
 	public static int BlazeSpeedPower = 0;
+	public static double BlazeSpeedDodgeChance = 10;
 	// Water Breathing
 	public static boolean BlazeWaterBreathingEnabled = false;
 	public static int BlazeWaterBreathingTime = 500;
 	public static int BlazeWaterBreathingPower = 0;
+	public static double BlazeWaterBreathingDodgeChance = 10;
 	// Weakness
 	public static boolean BlazeWeaknessEnabled = false;
 	public static int BlazeWeaknessTime = 500;
 	public static int BlazeWeaknessPower = 0;
+	public static double BlazeWeaknessDodgeChance = 10;
+	// Cave Spider Stuff
+	// Blindness
+	public static boolean CaveSpiderBlindnessEnabled = false;
+	public static int CaveSpiderBlindnessTime = 500;
+	public static int CaveSpiderBlindnessPower = 0;
+	public static double CaveSpiderBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean CaveSpiderNauseaEnabled = false;
+	public static int CaveSpiderNauseaTime = 500;
+	public static int CaveSpiderNauseaPower = 0;
+	public static double CaveSpiderNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean CaveSpiderResistanceEnabled = false;
+	public static int CaveSpiderResistanceTime = 500;
+	public static int CaveSpiderResistancePower = 0;
+	public static double CaveSpiderResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean CaveSpiderFastDiggingEnabled = false;
+	public static int CaveSpiderFastDiggingTime = 500;
+	public static int CaveSpiderFastDiggingPower = 0;
+	public static double CaveSpiderFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean CaveSpiderFireResistanceEnabled = false;
+	public static int CaveSpiderFireResistanceTime = 500;
+	public static int CaveSpiderFireResistancePower = 0;
+	public static double CaveSpiderFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean CaveSpiderHarmEnabled = false;
+	public static int CaveSpiderHarmTime = 500;
+	public static int CaveSpiderHarmPower = 0;
+	public static double CaveSpiderHarmDodgeChance = 10;
+	// Heal
+	public static boolean CaveSpiderHealEnabled = false;
+	public static int CaveSpiderHealTime = 500;
+	public static int CaveSpiderHealPower = 0;
+	public static double CaveSpiderHealDodgeChance = 10;
+	// Hunger
+	public static boolean CaveSpiderHungerEnabled = false;
+	public static int CaveSpiderHungerTime = 500;
+	public static int CaveSpiderHungerPower = 0;
+	public static double CaveSpiderHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean CaveSpiderStrengthEnabled = false;
+	public static int CaveSpiderStrengthTime = 500;
+	public static int CaveSpiderStrengthPower = 0;
+	public static double CaveSpiderStrengthDodgeChance = 10;
+	// Jump
+	public static boolean CaveSpiderJumpEnabled = false;
+	public static int CaveSpiderJumpTime = 500;
+	public static int CaveSpiderJumpPower = 0;
+	public static double CaveSpiderJumpDodgeChance = 10;
+	// Poison
+	public static boolean CaveSpiderPoisonEnabled = false;
+	public static int CaveSpiderPoisonTime = 500;
+	public static int CaveSpiderPoisonPower = 0;
+	public static double CaveSpiderPoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean CaveSpiderRegenerationEnabled = false;
+	public static int CaveSpiderRegenerationTime = 500;
+	public static int CaveSpiderRegenerationPower = 0;
+	public static double CaveSpiderRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean CaveSpiderSlowEnabled = false;
+	public static int CaveSpiderSlowTime = 500;
+	public static int CaveSpiderSlowPower = 0;
+	public static double CaveSpiderSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean CaveSpiderMiningFatigueEnabled = false;
+	public static int CaveSpiderMiningFatigueTime = 500;
+	public static int CaveSpiderMiningFatiguePower = 0;
+	public static double CaveSpiderMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean CaveSpiderSpeedEnabled = false;
+	public static int CaveSpiderSpeedTime = 500;
+	public static int CaveSpiderSpeedPower = 0;
+	public static double CaveSpiderSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean CaveSpiderWaterBreathingEnabled = false;
+	public static int CaveSpiderWaterBreathingTime = 500;
+	public static int CaveSpiderWaterBreathingPower = 0;
+	public static double CaveSpiderWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean CaveSpiderWeaknessEnabled = false;
+	public static int CaveSpiderWeaknessTime = 500;
+	public static int CaveSpiderWeaknessPower = 0;
+	public static double CaveSpiderWeaknessDodgeChance = 10;
+	// Creeper Stuff
+	// Blindness
+	public static boolean CreeperBlindnessEnabled = false;
+	public static int CreeperBlindnessTime = 500;
+	public static int CreeperBlindnessPower = 0;
+	public static double CreeperBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean CreeperNauseaEnabled = false;
+	public static int CreeperNauseaTime = 500;
+	public static int CreeperNauseaPower = 0;
+	public static double CreeperNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean CreeperResistanceEnabled = false;
+	public static int CreeperResistanceTime = 500;
+	public static int CreeperResistancePower = 0;
+	public static double CreeperResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean CreeperFastDiggingEnabled = false;
+	public static int CreeperFastDiggingTime = 500;
+	public static int CreeperFastDiggingPower = 0;
+	public static double CreeperFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean CreeperFireResistanceEnabled = false;
+	public static int CreeperFireResistanceTime = 500;
+	public static int CreeperFireResistancePower = 0;
+	public static double CreeperFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean CreeperHarmEnabled = false;
+	public static int CreeperHarmTime = 500;
+	public static int CreeperHarmPower = 0;
+	public static double CreeperHarmDodgeChance = 10;
+	// Heal
+	public static boolean CreeperHealEnabled = false;
+	public static int CreeperHealTime = 500;
+	public static int CreeperHealPower = 0;
+	public static double CreeperHealDodgeChance = 10;
+	// Hunger
+	public static boolean CreeperHungerEnabled = false;
+	public static int CreeperHungerTime = 500;
+	public static int CreeperHungerPower = 0;
+	public static double CreeperHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean CreeperStrengthEnabled = false;
+	public static int CreeperStrengthTime = 500;
+	public static int CreeperStrengthPower = 0;
+	public static double CreeperStrengthDodgeChance = 10;
+	// Jump
+	public static boolean CreeperJumpEnabled = false;
+	public static int CreeperJumpTime = 500;
+	public static int CreeperJumpPower = 0;
+	public static double CreeperJumpDodgeChance = 10;
+	// Poison
+	public static boolean CreeperPoisonEnabled = false;
+	public static int CreeperPoisonTime = 500;
+	public static int CreeperPoisonPower = 0;
+	public static double CreeperPoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean CreeperRegenerationEnabled = false;
+	public static int CreeperRegenerationTime = 500;
+	public static int CreeperRegenerationPower = 0;
+	public static double CreeperRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean CreeperSlowEnabled = false;
+	public static int CreeperSlowTime = 500;
+	public static int CreeperSlowPower = 0;
+	public static double CreeperSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean CreeperMiningFatigueEnabled = false;
+	public static int CreeperMiningFatigueTime = 500;
+	public static int CreeperMiningFatiguePower = 0;
+	public static double CreeperMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean CreeperSpeedEnabled = false;
+	public static int CreeperSpeedTime = 500;
+	public static int CreeperSpeedPower = 0;
+	public static double CreeperSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean CreeperWaterBreathingEnabled = false;
+	public static int CreeperWaterBreathingTime = 500;
+	public static int CreeperWaterBreathingPower = 0;
+	public static double CreeperWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean CreeperWeaknessEnabled = false;
+	public static int CreeperWeaknessTime = 500;
+	public static int CreeperWeaknessPower = 0;
+	public static double CreeperWeaknessDodgeChance = 10;
+	// Enderman Stuff
+	// Blindness
+	public static boolean EndermanBlindnessEnabled = false;
+	public static int EndermanBlindnessTime = 500;
+	public static int EndermanBlindnessPower = 0;
+	public static double EndermanBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean EndermanNauseaEnabled = false;
+	public static int EndermanNauseaTime = 500;
+	public static int EndermanNauseaPower = 0;
+	public static double EndermanNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean EndermanResistanceEnabled = false;
+	public static int EndermanResistanceTime = 500;
+	public static int EndermanResistancePower = 0;
+	public static double EndermanResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean EndermanFastDiggingEnabled = false;
+	public static int EndermanFastDiggingTime = 500;
+	public static int EndermanFastDiggingPower = 0;
+	public static double EndermanFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean EndermanFireResistanceEnabled = false;
+	public static int EndermanFireResistanceTime = 500;
+	public static int EndermanFireResistancePower = 0;
+	public static double EndermanFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean EndermanHarmEnabled = false;
+	public static int EndermanHarmTime = 500;
+	public static int EndermanHarmPower = 0;
+	public static double EndermanHarmDodgeChance = 10;
+	// Heal
+	public static boolean EndermanHealEnabled = false;
+	public static int EndermanHealTime = 500;
+	public static int EndermanHealPower = 0;
+	public static double EndermanHealDodgeChance = 10;
+	// Hunger
+	public static boolean EndermanHungerEnabled = false;
+	public static int EndermanHungerTime = 500;
+	public static int EndermanHungerPower = 0;
+	public static double EndermanHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean EndermanStrengthEnabled = false;
+	public static int EndermanStrengthTime = 500;
+	public static int EndermanStrengthPower = 0;
+	public static double EndermanStrengthDodgeChance = 10;
+	// Jump
+	public static boolean EndermanJumpEnabled = false;
+	public static int EndermanJumpTime = 500;
+	public static int EndermanJumpPower = 0;
+	public static double EndermanJumpDodgeChance = 10;
+	// Poison
+	public static boolean EndermanPoisonEnabled = false;
+	public static int EndermanPoisonTime = 500;
+	public static int EndermanPoisonPower = 0;
+	public static double EndermanPoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean EndermanRegenerationEnabled = false;
+	public static int EndermanRegenerationTime = 500;
+	public static int EndermanRegenerationPower = 0;
+	public static double EndermanRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean EndermanSlowEnabled = false;
+	public static int EndermanSlowTime = 500;
+	public static int EndermanSlowPower = 0;
+	public static double EndermanSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean EndermanMiningFatigueEnabled = false;
+	public static int EndermanMiningFatigueTime = 500;
+	public static int EndermanMiningFatiguePower = 0;
+	public static double EndermanMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean EndermanSpeedEnabled = false;
+	public static int EndermanSpeedTime = 500;
+	public static int EndermanSpeedPower = 0;
+	public static double EndermanSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean EndermanWaterBreathingEnabled = false;
+	public static int EndermanWaterBreathingTime = 500;
+	public static int EndermanWaterBreathingPower = 0;
+	public static double EndermanWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean EndermanWeaknessEnabled = false;
+	public static int EndermanWeaknessTime = 500;
+	public static int EndermanWeaknessPower = 0;
+	public static double EndermanWeaknessDodgeChance = 10;
+	// Giant Stuff
+	// Blindness
+	public static boolean GiantBlindnessEnabled = false;
+	public static int GiantBlindnessTime = 500;
+	public static int GiantBlindnessPower = 0;
+	public static double GiantBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean GiantNauseaEnabled = false;
+	public static int GiantNauseaTime = 500;
+	public static int GiantNauseaPower = 0;
+	public static double GiantNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean GiantResistanceEnabled = false;
+	public static int GiantResistanceTime = 500;
+	public static int GiantResistancePower = 0;
+	public static double GiantResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean GiantFastDiggingEnabled = false;
+	public static int GiantFastDiggingTime = 500;
+	public static int GiantFastDiggingPower = 0;
+	public static double GiantFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean GiantFireResistanceEnabled = false;
+	public static int GiantFireResistanceTime = 500;
+	public static int GiantFireResistancePower = 0;
+	public static double GiantFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean GiantHarmEnabled = false;
+	public static int GiantHarmTime = 500;
+	public static int GiantHarmPower = 0;
+	public static double GiantHarmDodgeChance = 10;
+	// Heal
+	public static boolean GiantHealEnabled = false;
+	public static int GiantHealTime = 500;
+	public static int GiantHealPower = 0;
+	public static double GiantHealDodgeChance = 10;
+	// Hunger
+	public static boolean GiantHungerEnabled = false;
+	public static int GiantHungerTime = 500;
+	public static int GiantHungerPower = 0;
+	public static double GiantHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean GiantStrengthEnabled = false;
+	public static int GiantStrengthTime = 500;
+	public static int GiantStrengthPower = 0;
+	public static double GiantStrengthDodgeChance = 10;
+	// Jump
+	public static boolean GiantJumpEnabled = false;
+	public static int GiantJumpTime = 500;
+	public static int GiantJumpPower = 0;
+	public static double GiantJumpDodgeChance = 10;
+	// Poison
+	public static boolean GiantPoisonEnabled = false;
+	public static int GiantPoisonTime = 500;
+	public static int GiantPoisonPower = 0;
+	public static double GiantPoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean GiantRegenerationEnabled = false;
+	public static int GiantRegenerationTime = 500;
+	public static int GiantRegenerationPower = 0;
+	public static double GiantRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean GiantSlowEnabled = false;
+	public static int GiantSlowTime = 500;
+	public static int GiantSlowPower = 0;
+	public static double GiantSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean GiantMiningFatigueEnabled = false;
+	public static int GiantMiningFatigueTime = 500;
+	public static int GiantMiningFatiguePower = 0;
+	public static double GiantMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean GiantSpeedEnabled = false;
+	public static int GiantSpeedTime = 500;
+	public static int GiantSpeedPower = 0;
+	public static double GiantSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean GiantWaterBreathingEnabled = false;
+	public static int GiantWaterBreathingTime = 500;
+	public static int GiantWaterBreathingPower = 0;
+	public static double GiantWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean GiantWeaknessEnabled = false;
+	public static int GiantWeaknessTime = 500;
+	public static int GiantWeaknessPower = 0;
+	public static double GiantWeaknessDodgeChance = 10;
 	// Magma Cube
 	// Blindness
 	public static boolean MagmaCubeBlindnessEnabled = false;
 	public static int MagmaCubeBlindnessTime = 500;
 	public static int MagmaCubeBlindnessPower = 0;
+	public static double MagmaCubeBlindnessDodgeChance = 10;
 	// Nausea
 	public static boolean MagmaCubeNauseaEnabled = false;
 	public static int MagmaCubeNauseaTime = 500;
 	public static int MagmaCubeNauseaPower = 0;
+	public static double MagmaCubeNauseaDodgeChance = 10;
 	// Damage Resistance
 	public static boolean MagmaCubeResistanceEnabled = false;
 	public static int MagmaCubeResistanceTime = 500;
 	public static int MagmaCubeResistancePower = 0;
+	public static double MagmaCubeResistanceDodgeChance = 0;
 	// Fast Digging
 	public static boolean MagmaCubeFastDiggingEnabled = false;
 	public static int MagmaCubeFastDiggingTime = 500;
 	public static int MagmaCubeFastDiggingPower = 0;
+	public static double MagmaCubeFastDiggingDodgeChance = 10;
 	// Fire Resistance
 	public static boolean MagmaCubeFireResistanceEnabled = false;
 	public static int MagmaCubeFireResistanceTime = 500;
 	public static int MagmaCubeFireResistancePower = 0;
+	public static double MagmaCubeFireResistanceDodgeChance = 10;
 	// Harm
 	public static boolean MagmaCubeHarmEnabled = false;
 	public static int MagmaCubeHarmTime = 500;
 	public static int MagmaCubeHarmPower = 0;
+	public static double MagmaCubeHarmDodgeChance = 10;
 	// Heal
 	public static boolean MagmaCubeHealEnabled = false;
 	public static int MagmaCubeHealTime = 500;
 	public static int MagmaCubeHealPower = 0;
+	public static double MagmaCubeHealDodgeChance = 10;
 	// Hunger
 	public static boolean MagmaCubeHungerEnabled = false;
 	public static int MagmaCubeHungerTime = 500;
 	public static int MagmaCubeHungerPower = 0;
+	public static double MagmaCubeHungerDodgeChance = 10;
 	// Increase Damage
 	public static boolean MagmaCubeStrengthEnabled = false;
 	public static int MagmaCubeStrengthTime = 500;
 	public static int MagmaCubeStrengthPower = 0;
+	public static double MagmaCubeStrengthDodgeChance = 10;
 	// Jump
 	public static boolean MagmaCubeJumpEnabled = false;
 	public static int MagmaCubeJumpTime = 500;
 	public static int MagmaCubeJumpPower = 0;
+	public static double MagmaCubeJumpDodgeChance = 10;
 	// Poison
 	public static boolean MagmaCubePoisonEnabled = false;
 	public static int MagmaCubePoisonTime = 500;
 	public static int MagmaCubePoisonPower = 0;
+	public static double MagmaCubePoisonDodgeChance = 10;
 	// Regeneration
 	public static boolean MagmaCubeRegenerationEnabled = false;
 	public static int MagmaCubeRegenerationTime = 500;
 	public static int MagmaCubeRegenerationPower = 0;
+	public static double MagmaCubeRegenerationDodgeChance = 10;
 	// Slow
 	public static boolean MagmaCubeSlowEnabled = false;
 	public static int MagmaCubeSlowTime = 500;
 	public static int MagmaCubeSlowPower = 0;
+	public static double MagmaCubeSlowDodgeChance = 10;
 	// Slow Digging
 	public static boolean MagmaCubeMiningFatigueEnabled = false;
 	public static int MagmaCubeMiningFatigueTime = 500;
 	public static int MagmaCubeMiningFatiguePower = 0;
+	public static double MagmaCubeMiningFatigueDodgeChance = 10;
 	// Speed
 	public static boolean MagmaCubeSpeedEnabled = false;
 	public static int MagmaCubeSpeedTime = 500;
 	public static int MagmaCubeSpeedPower = 0;
+	public static double MagmaCubeSpeedDodgeChance = 10;
 	// Water Breathing
 	public static boolean MagmaCubeWaterBreathingEnabled = false;
 	public static int MagmaCubeWaterBreathingTime = 500;
 	public static int MagmaCubeWaterBreathingPower = 0;
+	public static double MagmaCubeWaterBreathingDodgeChance = 10;
 	// Weakness
 	public static boolean MagmaCubeWeaknessEnabled = false;
 	public static int MagmaCubeWeaknessTime = 500;
 	public static int MagmaCubeWeaknessPower = 0;
-	// CaveSpiders
-	// Blindness
-	public static boolean CaveSpiderBlindnessEnabled = false;
-	public static int CaveSpiderBlindnessTime = 500;
-	public static int CaveSpiderBlindnessPower = 0;
-	// Nausea
-	public static boolean CaveSpiderNauseaEnabled = false;
-	public static int CaveSpiderNauseaTime = 500;
-	public static int CaveSpiderNauseaPower = 0;
-	// Damage Resistance
-	public static boolean CaveSpiderResistanceEnabled = false;
-	public static int CaveSpiderResistanceTime = 500;
-	public static int CaveSpiderResistancePower = 0;
-	// Fast Digging
-	public static boolean CaveSpiderFastDiggingEnabled = false;
-	public static int CaveSpiderFastDiggingTime = 500;
-	public static int CaveSpiderFastDiggingPower = 0;
-	// Fire Resistance
-	public static boolean CaveSpiderFireResistanceEnabled = false;
-	public static int CaveSpiderFireResistanceTime = 500;
-	public static int CaveSpiderFireResistancePower = 0;
-	// Harm
-	public static boolean CaveSpiderHarmEnabled = false;
-	public static int CaveSpiderHarmTime = 500;
-	public static int CaveSpiderHarmPower = 0;
-	// Heal
-	public static boolean CaveSpiderHealEnabled = false;
-	public static int CaveSpiderHealTime = 500;
-	public static int CaveSpiderHealPower = 0;
-	// Hunger
-	public static boolean CaveSpiderHungerEnabled = false;
-	public static int CaveSpiderHungerTime = 500;
-	public static int CaveSpiderHungerPower = 0;
-	// Increase Damage
-	public static boolean CaveSpiderStrengthEnabled = false;
-	public static int CaveSpiderStrengthTime = 500;
-	public static int CaveSpiderStrengthPower = 0;
-	// Jump
-	public static boolean CaveSpiderJumpEnabled = false;
-	public static int CaveSpiderJumpTime = 500;
-	public static int CaveSpiderJumpPower = 0;
-	// Poison
-	public static boolean CaveSpiderPoisonEnabled = false;
-	public static int CaveSpiderPoisonTime = 500;
-	public static int CaveSpiderPoisonPower = 0;
-	// Regeneration
-	public static boolean CaveSpiderRegenerationEnabled = false;
-	public static int CaveSpiderRegenerationTime = 500;
-	public static int CaveSpiderRegenerationPower = 0;
-	// Slow
-	public static boolean CaveSpiderSlowEnabled = false;
-	public static int CaveSpiderSlowTime = 500;
-	public static int CaveSpiderSlowPower = 0;
-	// Slow Digging
-	public static boolean CaveSpiderMiningFatigueEnabled = false;
-	public static int CaveSpiderMiningFatigueTime = 500;
-	public static int CaveSpiderMiningFatiguePower = 0;
-	// Speed
-	public static boolean CaveSpiderSpeedEnabled = false;
-	public static int CaveSpiderSpeedTime = 500;
-	public static int CaveSpiderSpeedPower = 0;
-	// Water Breathing
-	public static boolean CaveSpiderWaterBreathingEnabled = false;
-	public static int CaveSpiderWaterBreathingTime = 500;
-	public static int CaveSpiderWaterBreathingPower = 0;
-	// Weakness
-	public static boolean CaveSpiderWeaknessEnabled = false;
-	public static int CaveSpiderWeaknessTime = 500;
-	public static int CaveSpiderWeaknessPower = 0;
-	// PigZombies
+	public static double MagmaCubeWeaknessDodgeChance = 10;
+	// Pig Zombie
 	// Blindness
 	public static boolean PigZombieBlindnessEnabled = false;
 	public static int PigZombieBlindnessTime = 500;
 	public static int PigZombieBlindnessPower = 0;
+	public static double PigZombieBlindnessDodgeChance = 10;
 	// Nausea
 	public static boolean PigZombieNauseaEnabled = false;
 	public static int PigZombieNauseaTime = 500;
 	public static int PigZombieNauseaPower = 0;
+	public static double PigZombieNauseaDodgeChance = 10;
 	// Damage Resistance
 	public static boolean PigZombieResistanceEnabled = false;
 	public static int PigZombieResistanceTime = 500;
 	public static int PigZombieResistancePower = 0;
+	public static double PigZombieResistanceDodgeChance = 0;
 	// Fast Digging
 	public static boolean PigZombieFastDiggingEnabled = false;
 	public static int PigZombieFastDiggingTime = 500;
 	public static int PigZombieFastDiggingPower = 0;
+	public static double PigZombieFastDiggingDodgeChance = 10;
 	// Fire Resistance
 	public static boolean PigZombieFireResistanceEnabled = false;
 	public static int PigZombieFireResistanceTime = 500;
 	public static int PigZombieFireResistancePower = 0;
+	public static double PigZombieFireResistanceDodgeChance = 10;
 	// Harm
 	public static boolean PigZombieHarmEnabled = false;
 	public static int PigZombieHarmTime = 500;
 	public static int PigZombieHarmPower = 0;
+	public static double PigZombieHarmDodgeChance = 10;
 	// Heal
 	public static boolean PigZombieHealEnabled = false;
 	public static int PigZombieHealTime = 500;
 	public static int PigZombieHealPower = 0;
+	public static double PigZombieHealDodgeChance = 10;
 	// Hunger
 	public static boolean PigZombieHungerEnabled = false;
 	public static int PigZombieHungerTime = 500;
 	public static int PigZombieHungerPower = 0;
+	public static double PigZombieHungerDodgeChance = 10;
 	// Increase Damage
 	public static boolean PigZombieStrengthEnabled = false;
 	public static int PigZombieStrengthTime = 500;
 	public static int PigZombieStrengthPower = 0;
+	public static double PigZombieStrengthDodgeChance = 10;
 	// Jump
 	public static boolean PigZombieJumpEnabled = false;
 	public static int PigZombieJumpTime = 500;
 	public static int PigZombieJumpPower = 0;
+	public static double PigZombieJumpDodgeChance = 10;
 	// Poison
 	public static boolean PigZombiePoisonEnabled = false;
 	public static int PigZombiePoisonTime = 500;
 	public static int PigZombiePoisonPower = 0;
+	public static double PigZombiePoisonDodgeChance = 10;
 	// Regeneration
 	public static boolean PigZombieRegenerationEnabled = false;
 	public static int PigZombieRegenerationTime = 500;
 	public static int PigZombieRegenerationPower = 0;
+	public static double PigZombieRegenerationDodgeChance = 10;
 	// Slow
 	public static boolean PigZombieSlowEnabled = false;
 	public static int PigZombieSlowTime = 500;
 	public static int PigZombieSlowPower = 0;
+	public static double PigZombieSlowDodgeChance = 10;
 	// Slow Digging
 	public static boolean PigZombieMiningFatigueEnabled = false;
 	public static int PigZombieMiningFatigueTime = 500;
 	public static int PigZombieMiningFatiguePower = 0;
+	public static double PigZombieMiningFatigueDodgeChance = 10;
 	// Speed
 	public static boolean PigZombieSpeedEnabled = false;
 	public static int PigZombieSpeedTime = 500;
 	public static int PigZombieSpeedPower = 0;
+	public static double PigZombieSpeedDodgeChance = 10;
 	// Water Breathing
 	public static boolean PigZombieWaterBreathingEnabled = false;
 	public static int PigZombieWaterBreathingTime = 500;
 	public static int PigZombieWaterBreathingPower = 0;
+	public static double PigZombieWaterBreathingDodgeChance = 10;
 	// Weakness
 	public static boolean PigZombieWeaknessEnabled = false;
 	public static int PigZombieWeaknessTime = 500;
 	public static int PigZombieWeaknessPower = 0;
+	public static double PigZombieWeaknessDodgeChance = 10;
+	// Player Stuffs
+	// Blindness
+	public static boolean PlayerBlindnessEnabled = false;
+	public static int PlayerBlindnessTime = 500;
+	public static int PlayerBlindnessPower = 0;
+	public static double PlayerBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean PlayerNauseaEnabled = false;
+	public static int PlayerNauseaTime = 500;
+	public static int PlayerNauseaPower = 0;
+	public static double PlayerNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean PlayerResistanceEnabled = false;
+	public static int PlayerResistanceTime = 500;
+	public static int PlayerResistancePower = 0;
+	public static double PlayerResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean PlayerFastDiggingEnabled = false;
+	public static int PlayerFastDiggingTime = 500;
+	public static int PlayerFastDiggingPower = 0;
+	public static double PlayerFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean PlayerFireResistanceEnabled = false;
+	public static int PlayerFireResistanceTime = 500;
+	public static int PlayerFireResistancePower = 0;
+	public static double PlayerFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean PlayerHarmEnabled = false;
+	public static int PlayerHarmTime = 500;
+	public static int PlayerHarmPower = 0;
+	public static double PlayerHarmDodgeChance = 10;
+	// Heal
+	public static boolean PlayerHealEnabled = false;
+	public static int PlayerHealTime = 500;
+	public static int PlayerHealPower = 0;
+	public static double PlayerHealDodgeChance = 10;
+	// Hunger
+	public static boolean PlayerHungerEnabled = false;
+	public static int PlayerHungerTime = 500;
+	public static int PlayerHungerPower = 0;
+	public static double PlayerHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean PlayerStrengthEnabled = false;
+	public static int PlayerStrengthTime = 500;
+	public static int PlayerStrengthPower = 0;
+	public static double PlayerStrengthDodgeChance = 10;
+	// Jump
+	public static boolean PlayerJumpEnabled = false;
+	public static int PlayerJumpTime = 500;
+	public static int PlayerJumpPower = 0;
+	public static double PlayerJumpDodgeChance = 10;
+	// Poison
+	public static boolean PlayerPoisonEnabled = false;
+	public static int PlayerPoisonTime = 500;
+	public static int PlayerPoisonPower = 0;
+	public static double PlayerPoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean PlayerRegenerationEnabled = false;
+	public static int PlayerRegenerationTime = 500;
+	public static int PlayerRegenerationPower = 0;
+	public static double PlayerRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean PlayerSlowEnabled = false;
+	public static int PlayerSlowTime = 500;
+	public static int PlayerSlowPower = 0;
+	public static double PlayerSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean PlayerMiningFatigueEnabled = false;
+	public static int PlayerMiningFatigueTime = 500;
+	public static int PlayerMiningFatiguePower = 0;
+	public static double PlayerMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean PlayerSpeedEnabled = false;
+	public static int PlayerSpeedTime = 500;
+	public static int PlayerSpeedPower = 0;
+	public static double PlayerSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean PlayerWaterBreathingEnabled = false;
+	public static int PlayerWaterBreathingTime = 500;
+	public static int PlayerWaterBreathingPower = 0;
+	public static double PlayerWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean PlayerWeaknessEnabled = false;
+	public static int PlayerWeaknessTime = 500;
+	public static int PlayerWeaknessPower = 0;
+	public static double PlayerWeaknessDodgeChance = 10;
 	// Silverfish Stuffs
 	// Blindness
 	public static boolean SilverfishBlindnessEnabled = false;
 	public static int SilverfishBlindnessTime = 500;
 	public static int SilverfishBlindnessPower = 0;
+	public static double SilverfishBlindnessDodgeChance = 10;
 	// Nausea
 	public static boolean SilverfishNauseaEnabled = false;
 	public static int SilverfishNauseaTime = 500;
 	public static int SilverfishNauseaPower = 0;
+	public static double SilverfishNauseaDodgeChance = 10;
 	// Damage Resistance
 	public static boolean SilverfishResistanceEnabled = false;
 	public static int SilverfishResistanceTime = 500;
 	public static int SilverfishResistancePower = 0;
+	public static double SilverfishResistanceDodgeChance = 0;
 	// Fast Digging
 	public static boolean SilverfishFastDiggingEnabled = false;
 	public static int SilverfishFastDiggingTime = 500;
 	public static int SilverfishFastDiggingPower = 0;
+	public static double SilverfishFastDiggingDodgeChance = 10;
 	// Fire Resistance
 	public static boolean SilverfishFireResistanceEnabled = false;
 	public static int SilverfishFireResistanceTime = 500;
 	public static int SilverfishFireResistancePower = 0;
+	public static double SilverfishFireResistanceDodgeChance = 10;
 	// Harm
 	public static boolean SilverfishHarmEnabled = false;
 	public static int SilverfishHarmTime = 500;
 	public static int SilverfishHarmPower = 0;
+	public static double SilverfishHarmDodgeChance = 10;
 	// Heal
 	public static boolean SilverfishHealEnabled = false;
 	public static int SilverfishHealTime = 500;
 	public static int SilverfishHealPower = 0;
+	public static double SilverfishHealDodgeChance = 10;
 	// Hunger
 	public static boolean SilverfishHungerEnabled = false;
 	public static int SilverfishHungerTime = 500;
 	public static int SilverfishHungerPower = 0;
+	public static double SilverfishHungerDodgeChance = 10;
 	// Increase Damage
 	public static boolean SilverfishStrengthEnabled = false;
 	public static int SilverfishStrengthTime = 500;
 	public static int SilverfishStrengthPower = 0;
+	public static double SilverfishStrengthDodgeChance = 10;
 	// Jump
 	public static boolean SilverfishJumpEnabled = false;
 	public static int SilverfishJumpTime = 500;
 	public static int SilverfishJumpPower = 0;
+	public static double SilverfishJumpDodgeChance = 10;
 	// Poison
 	public static boolean SilverfishPoisonEnabled = false;
 	public static int SilverfishPoisonTime = 500;
 	public static int SilverfishPoisonPower = 0;
+	public static double SilverfishPoisonDodgeChance = 10;
 	// Regeneration
 	public static boolean SilverfishRegenerationEnabled = false;
 	public static int SilverfishRegenerationTime = 500;
 	public static int SilverfishRegenerationPower = 0;
+	public static double SilverfishRegenerationDodgeChance = 10;
 	// Slow
 	public static boolean SilverfishSlowEnabled = false;
 	public static int SilverfishSlowTime = 500;
 	public static int SilverfishSlowPower = 0;
+	public static double SilverfishSlowDodgeChance = 10;
 	// Slow Digging
 	public static boolean SilverfishMiningFatigueEnabled = false;
 	public static int SilverfishMiningFatigueTime = 500;
 	public static int SilverfishMiningFatiguePower = 0;
+	public static double SilverfishMiningFatigueDodgeChance = 10;
 	// Speed
 	public static boolean SilverfishSpeedEnabled = false;
 	public static int SilverfishSpeedTime = 500;
 	public static int SilverfishSpeedPower = 0;
+	public static double SilverfishSpeedDodgeChance = 10;
 	// Water Breathing
 	public static boolean SilverfishWaterBreathingEnabled = false;
 	public static int SilverfishWaterBreathingTime = 500;
 	public static int SilverfishWaterBreathingPower = 0;
+	public static double SilverfishWaterBreathingDodgeChance = 10;
 	// Weakness
 	public static boolean SilverfishWeaknessEnabled = false;
 	public static int SilverfishWeaknessTime = 500;
 	public static int SilverfishWeaknessPower = 0;
-	
+	public static double SilverfishWeaknessDodgeChance = 10;
+	// Slime
+	// Blindness
+	public static boolean SlimeBlindnessEnabled = false;
+	public static int SlimeBlindnessTime = 500;
+	public static int SlimeBlindnessPower = 0;
+	public static double SlimeBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean SlimeNauseaEnabled = false;
+	public static int SlimeNauseaTime = 500;
+	public static int SlimeNauseaPower = 0;
+	public static double SlimeNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean SlimeResistanceEnabled = false;
+	public static int SlimeResistanceTime = 500;
+	public static int SlimeResistancePower = 0;
+	public static double SlimeResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean SlimeFastDiggingEnabled = false;
+	public static int SlimeFastDiggingTime = 500;
+	public static int SlimeFastDiggingPower = 0;
+	public static double SlimeFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean SlimeFireResistanceEnabled = false;
+	public static int SlimeFireResistanceTime = 500;
+	public static int SlimeFireResistancePower = 0;
+	public static double SlimeFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean SlimeHarmEnabled = false;
+	public static int SlimeHarmTime = 500;
+	public static int SlimeHarmPower = 0;
+	public static double SlimeHarmDodgeChance = 10;
+	// Heal
+	public static boolean SlimeHealEnabled = false;
+	public static int SlimeHealTime = 500;
+	public static int SlimeHealPower = 0;
+	public static double SlimeHealDodgeChance = 10;
+	// Hunger
+	public static boolean SlimeHungerEnabled = false;
+	public static int SlimeHungerTime = 500;
+	public static int SlimeHungerPower = 0;
+	public static double SlimeHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean SlimeStrengthEnabled = false;
+	public static int SlimeStrengthTime = 500;
+	public static int SlimeStrengthPower = 0;
+	public static double SlimeStrengthDodgeChance = 10;
+	// Jump
+	public static boolean SlimeJumpEnabled = false;
+	public static int SlimeJumpTime = 500;
+	public static int SlimeJumpPower = 0;
+	public static double SlimeJumpDodgeChance = 10;
+	// Poison
+	public static boolean SlimePoisonEnabled = false;
+	public static int SlimePoisonTime = 500;
+	public static int SlimePoisonPower = 0;
+	public static double SlimePoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean SlimeRegenerationEnabled = false;
+	public static int SlimeRegenerationTime = 500;
+	public static int SlimeRegenerationPower = 0;
+	public static double SlimeRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean SlimeSlowEnabled = false;
+	public static int SlimeSlowTime = 500;
+	public static int SlimeSlowPower = 0;
+	public static double SlimeSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean SlimeMiningFatigueEnabled = false;
+	public static int SlimeMiningFatigueTime = 500;
+	public static int SlimeMiningFatiguePower = 0;
+	public static double SlimeMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean SlimeSpeedEnabled = false;
+	public static int SlimeSpeedTime = 500;
+	public static int SlimeSpeedPower = 0;
+	public static double SlimeSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean SlimeWaterBreathingEnabled = false;
+	public static int SlimeWaterBreathingTime = 500;
+	public static int SlimeWaterBreathingPower = 0;
+	public static double SlimeWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean SlimeWeaknessEnabled = false;
+	public static int SlimeWeaknessTime = 500;
+	public static int SlimeWeaknessPower = 0;
+	public static double SlimeWeaknessDodgeChance = 10;
+	// Spider Stuff
+	// Blindness
+	public static boolean SpiderBlindnessEnabled = false;
+	public static int SpiderBlindnessTime = 500;
+	public static int SpiderBlindnessPower = 0;
+	public static double SpiderBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean SpiderNauseaEnabled = false;
+	public static int SpiderNauseaTime = 500;
+	public static int SpiderNauseaPower = 0;
+	public static double SpiderNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean SpiderResistanceEnabled = false;
+	public static int SpiderResistanceTime = 500;
+	public static int SpiderResistancePower = 0;
+	public static double SpiderResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean SpiderFastDiggingEnabled = false;
+	public static int SpiderFastDiggingTime = 500;
+	public static int SpiderFastDiggingPower = 0;
+	public static double SpiderFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean SpiderFireResistanceEnabled = false;
+	public static int SpiderFireResistanceTime = 500;
+	public static int SpiderFireResistancePower = 0;
+	public static double SpiderFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean SpiderHarmEnabled = false;
+	public static int SpiderHarmTime = 500;
+	public static int SpiderHarmPower = 0;
+	public static double SpiderHarmDodgeChance = 10;
+	// Heal
+	public static boolean SpiderHealEnabled = false;
+	public static int SpiderHealTime = 500;
+	public static int SpiderHealPower = 0;
+	public static double SpiderHealDodgeChance = 10;
+	// Hunger
+	public static boolean SpiderHungerEnabled = false;
+	public static int SpiderHungerTime = 500;
+	public static int SpiderHungerPower = 0;
+	public static double SpiderHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean SpiderStrengthEnabled = false;
+	public static int SpiderStrengthTime = 500;
+	public static int SpiderStrengthPower = 0;
+	public static double SpiderStrengthDodgeChance = 10;
+	// Jump
+	public static boolean SpiderJumpEnabled = false;
+	public static int SpiderJumpTime = 500;
+	public static int SpiderJumpPower = 0;
+	public static double SpiderJumpDodgeChance = 10;
+	// Poison
+	public static boolean SpiderPoisonEnabled = false;
+	public static int SpiderPoisonTime = 500;
+	public static int SpiderPoisonPower = 0;
+	public static double SpiderPoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean SpiderRegenerationEnabled = false;
+	public static int SpiderRegenerationTime = 500;
+	public static int SpiderRegenerationPower = 0;
+	public static double SpiderRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean SpiderSlowEnabled = false;
+	public static int SpiderSlowTime = 500;
+	public static int SpiderSlowPower = 0;
+	public static double SpiderSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean SpiderMiningFatigueEnabled = false;
+	public static int SpiderMiningFatigueTime = 500;
+	public static int SpiderMiningFatiguePower = 0;
+	public static double SpiderMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean SpiderSpeedEnabled = false;
+	public static int SpiderSpeedTime = 500;
+	public static int SpiderSpeedPower = 0;
+	public static double SpiderSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean SpiderWaterBreathingEnabled = false;
+	public static int SpiderWaterBreathingTime = 500;
+	public static int SpiderWaterBreathingPower = 0;
+	public static double SpiderWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean SpiderWeaknessEnabled = false;
+	public static int SpiderWeaknessTime = 500;
+	public static int SpiderWeaknessPower = 0;
+	public static double SpiderWeaknessDodgeChance = 10;
+	// Zombie Stuffs
+	// Blindness
+	public static boolean ZombieBlindnessEnabled = false;
+	public static int ZombieBlindnessTime = 500;
+	public static int ZombieBlindnessPower = 0;
+	public static double ZombieBlindnessDodgeChance = 10;
+	// Nausea
+	public static boolean ZombieNauseaEnabled = false;
+	public static int ZombieNauseaTime = 500;
+	public static int ZombieNauseaPower = 0;
+	public static double ZombieNauseaDodgeChance = 10;
+	// Damage Resistance
+	public static boolean ZombieResistanceEnabled = false;
+	public static int ZombieResistanceTime = 500;
+	public static int ZombieResistancePower = 0;
+	public static double ZombieResistanceDodgeChance = 0;
+	// Fast Digging
+	public static boolean ZombieFastDiggingEnabled = false;
+	public static int ZombieFastDiggingTime = 500;
+	public static int ZombieFastDiggingPower = 0;
+	public static double ZombieFastDiggingDodgeChance = 10;
+	// Fire Resistance
+	public static boolean ZombieFireResistanceEnabled = false;
+	public static int ZombieFireResistanceTime = 500;
+	public static int ZombieFireResistancePower = 0;
+	public static double ZombieFireResistanceDodgeChance = 10;
+	// Harm
+	public static boolean ZombieHarmEnabled = false;
+	public static int ZombieHarmTime = 500;
+	public static int ZombieHarmPower = 0;
+	public static double ZombieHarmDodgeChance = 10;
+	// Heal
+	public static boolean ZombieHealEnabled = false;
+	public static int ZombieHealTime = 500;
+	public static int ZombieHealPower = 0;
+	public static double ZombieHealDodgeChance = 10;
+	// Hunger
+	public static boolean ZombieHungerEnabled = false;
+	public static int ZombieHungerTime = 500;
+	public static int ZombieHungerPower = 0;
+	public static double ZombieHungerDodgeChance = 10;
+	// Increase Damage
+	public static boolean ZombieStrengthEnabled = false;
+	public static int ZombieStrengthTime = 500;
+	public static int ZombieStrengthPower = 0;
+	public static double ZombieStrengthDodgeChance = 10;
+	// Jump
+	public static boolean ZombieJumpEnabled = false;
+	public static int ZombieJumpTime = 500;
+	public static int ZombieJumpPower = 0;
+	public static double ZombieJumpDodgeChance = 10;
+	// Poison
+	public static boolean ZombiePoisonEnabled = false;
+	public static int ZombiePoisonTime = 500;
+	public static int ZombiePoisonPower = 0;
+	public static double ZombiePoisonDodgeChance = 10;
+	// Regeneration
+	public static boolean ZombieRegenerationEnabled = false;
+	public static int ZombieRegenerationTime = 500;
+	public static int ZombieRegenerationPower = 0;
+	public static double ZombieRegenerationDodgeChance = 10;
+	// Slow
+	public static boolean ZombieSlowEnabled = false;
+	public static int ZombieSlowTime = 500;
+	public static int ZombieSlowPower = 0;
+	public static double ZombieSlowDodgeChance = 10;
+	// Slow Digging
+	public static boolean ZombieMiningFatigueEnabled = false;
+	public static int ZombieMiningFatigueTime = 500;
+	public static int ZombieMiningFatiguePower = 0;
+	public static double ZombieMiningFatigueDodgeChance = 10;
+	// Speed
+	public static boolean ZombieSpeedEnabled = false;
+	public static int ZombieSpeedTime = 500;
+	public static int ZombieSpeedPower = 0;
+	public static double ZombieSpeedDodgeChance = 10;
+	// Water Breathing
+	public static boolean ZombieWaterBreathingEnabled = false;
+	public static int ZombieWaterBreathingTime = 500;
+	public static int ZombieWaterBreathingPower = 0;
+	public static double ZombieWaterBreathingDodgeChance = 10;
+	// Weakness
+	public static boolean ZombieWeaknessEnabled = false;
+	public static int ZombieWeaknessTime = 500;
+	public static int ZombieWeaknessPower = 0;
+	public static double ZombieWeaknessDodgeChance = 10;
+
 	public void load(File file) {
 		FileConfiguration config = new YamlConfiguration();
 		try {
-			if (file.exists());
+			if (file.exists())
+				;
 			config.load(file);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidConfigurationException e) {
 			e.printStackTrace();
 		}
-		
+
 		// Worlds
 		Worlds = config.getStringList("Worlds");
-		// Player Blindness
-		PlayerBlindnessEnabled = config.getBoolean("Player.Blindness.Enabled", PlayerBlindnessEnabled);
-		PlayerBlindnessTime = config.getInt("Player.Blindness.Time", PlayerBlindnessTime);
-		PlayerBlindnessPower = config.getInt("Player.Blindness.Power", PlayerBlindnessPower);
-		
-		//Player Nausea
-		PlayerNauseaEnabled = config.getBoolean("Player.Nausea.Enabled", PlayerNauseaEnabled);
+		// Blaze
+		BlazeBlindnessEnabled = config.getBoolean("Blaze.Blindness.Enabled",BlazeBlindnessEnabled);
+		BlazeBlindnessTime = config.getInt("Blaze.Blindness.Time",BlazeBlindnessTime);
+		BlazeBlindnessPower = config.getInt("Blaze.Blindness.Power",BlazeBlindnessPower);
+		BlazeBlindnessDodgeChance = config.getDouble("Blaze.Blindness.DodgeChance", BlazeBlindnessDodgeChance);
+		BlazeNauseaEnabled = config.getBoolean("Blaze.Nausea.Enabled",BlazeNauseaEnabled);
+		BlazeNauseaTime = config.getInt("Blaze.Nausea.Time", BlazeNauseaTime);
+		BlazeNauseaPower = config.getInt("Blaze.Nausea.Power",BlazeNauseaPower);
+		BlazeNauseaDodgeChance = config.getDouble("Blaze.Nausea.DodgeChance",BlazeNauseaDodgeChance);
+		BlazeResistanceEnabled = config.getBoolean("Blaze.Resistance.Enabled", BlazeResistanceEnabled);
+		BlazeResistanceTime = config.getInt("Blaze.Resistance.Time",BlazeResistanceTime);
+		BlazeResistancePower = config.getInt("Blaze.Resistance.Power",BlazeResistancePower);
+		BlazeResistanceDodgeChance = config.getDouble("Blaze.Resistance.DodgeChance", BlazeResistanceDodgeChance);
+		BlazeFastDiggingEnabled = config.getBoolean("Blaze.FastDigging.Enabled", BlazeFastDiggingEnabled);
+		BlazeFastDiggingTime = config.getInt("Blaze.FastDigging.Time",BlazeFastDiggingTime);
+		BlazeFastDiggingPower = config.getInt("Blaze.FastDigging.Power",BlazeFastDiggingPower);
+		BlazeFastDiggingDodgeChance = config.getDouble("Blaze.FastDigging.DodgeChance", BlazeFastDiggingDodgeChance);
+		BlazeFireResistanceEnabled = config.getBoolean("Blaze.FireResistance.Enabled", BlazeFireResistanceEnabled);
+		BlazeFireResistanceTime = config.getInt("Blaze.FireResistance.Time",BlazeFireResistanceTime);
+		BlazeFireResistancePower = config.getInt("Blaze.FireResistance.Power", BlazeFireResistancePower);
+		BlazeFireResistanceDodgeChance = config.getDouble("Blaze.FireResistance.DogeChance", BlazeFireResistanceDodgeChance);
+		BlazeHarmEnabled = config.getBoolean("Blaze.Harm.Enabled",BlazeHarmEnabled);
+		BlazeHarmTime = config.getInt("Blaze.Harm.Time", BlazeHarmTime);
+		BlazeHarmPower = config.getInt("Blaze.Harm.Power", BlazeHarmPower);
+		BlazeHarmDodgeChance = config.getDouble("Blaze.Harm.DodgeChance", BlazeHarmDodgeChance);
+		BlazeHealEnabled = config.getBoolean("Blaze.Heal.Enabled",BlazeHealEnabled);
+		BlazeHealTime = config.getInt("Blaze.Heal.Time", BlazeHealTime);
+		BlazeHealPower = config.getInt("Blaze.Heal.Power", BlazeHealPower);
+		BlazeHealDodgeChance = config.getDouble("Blaze.Heal.DodgeChance", BlazeHealDodgeChance);
+		BlazeHungerEnabled = config.getBoolean("Blaze.Hunger.Enabled",BlazeHungerEnabled);
+		BlazeHungerTime = config.getInt("Blaze.Hunger.Time", BlazeHungerTime);
+		BlazeHungerPower = config.getInt("Blaze.Hunger.Power",BlazeHungerPower);
+		BlazeHungerDodgeChance = config.getDouble("Blaze.Hunger.DodgeChance",BlazeHungerDodgeChance);
+		BlazeStrengthEnabled = config.getBoolean("Blaze.Strength.Enabled",BlazeStrengthEnabled);
+		BlazeStrengthTime = config.getInt("Blaze.IncraseDamage.Time",BlazeStrengthTime);
+		BlazeStrengthPower = config.getInt("Blaze.Strength.Power",BlazeStrengthPower);
+		BlazeStrengthDodgeChance = config.getDouble("Blaze.Strength.DodgeChance", BlazeStrengthDodgeChance);
+		BlazeJumpEnabled = config.getBoolean("Blaze.Jump.Enabled",BlazeJumpEnabled);
+		BlazeJumpTime = config.getInt("Blaze.Jump.Time", BlazeJumpTime);
+		BlazeJumpPower = config.getInt("Blaze.Jump.Power", BlazeJumpPower);
+		BlazeJumpDodgeChance = config.getDouble("Blaze.Jump.DodgeChance",BlazeJumpDodgeChance);
+		BlazePoisonEnabled = config.getBoolean("Blaze.Poison.Enabled",BlazePoisonEnabled);
+		BlazePoisonTime = config.getInt("Blaze.Poison.Time", BlazePoisonTime);
+		BlazePoisonPower = config.getInt("Blaze.Poison.Power",BlazePoisonPower);
+		BlazePoisonDodgeChance = config.getDouble("Blaze.Poison.DodgeChance",BlazePoisonDodgeChance);
+		BlazeRegenerationEnabled = config.getBoolean("Blaze.Regeneration.Enabled", BlazeRegenerationEnabled);
+		BlazeRegenerationTime = config.getInt("Blaze.Regeneration.Time",BlazeRegenerationTime);
+		BlazeRegenerationPower = config.getInt("Blaze.Regeneration.Power",BlazeRegenerationPower);
+		BlazeRegenerationDodgeChance = config.getDouble("Blaze.Regeneration.DodgeChance",BlazeRegenerationDodgeChance);
+		BlazeSlowEnabled = config.getBoolean("Blaze.Slow.Enabled",BlazeSlowEnabled);
+		BlazeSlowTime = config.getInt("Blaze.Slow.Time", BlazeSlowTime);
+		BlazeSlowPower = config.getInt("Blaze.Slow.Power", BlazeSlowPower);
+		BlazeSlowDodgeChance = config.getDouble("Blaze.Slow.DodgeChance",BlazeSlowDodgeChance);
+		BlazeMiningFatigueEnabled = config.getBoolean("Blaze.MiningFatigue.Enabled", BlazeMiningFatigueEnabled);
+		BlazeMiningFatigueTime = config.getInt("Blaze.MiningFatigue.Time",BlazeMiningFatigueTime);
+		BlazeMiningFatiguePower = config.getInt("Blaze.MiningFatigue.Power",BlazeMiningFatiguePower);
+		BlazeMiningFatigueDodgeChance = config.getDouble("Blaze.MiningFatigue.DodgeChance",BlazeMiningFatigueDodgeChance);
+		BlazeSpeedEnabled = config.getBoolean("Blaze.Speed.Enabled",BlazeSpeedEnabled);
+		BlazeSpeedTime = config.getInt("Blaze.Speed.Time", BlazeSpeedTime);
+		BlazeSpeedPower = config.getInt("Blaze.Speed.Power", BlazeSpeedPower);
+		BlazeSpeedDodgeChance = config.getDouble("Blaze.Speed.DodgeChance",BlazeSpeedDodgeChance);
+		BlazeWaterBreathingEnabled = config.getBoolean("Blaze.WaterBreathing.Enabled", BlazeWaterBreathingEnabled);
+		BlazeWaterBreathingTime = config.getInt("Blaze.WaterBreathing.Time",BlazeWaterBreathingTime);
+		BlazeWaterBreathingPower = config.getInt("Blaze.WaterBreathing.Power", BlazeWaterBreathingPower);
+		BlazeWaterBreathingDodgeChance = config.getDouble("Blaze.WaterBreathing.DodgeChance",BlazeWaterBreathingDodgeChance);
+		BlazeWeaknessEnabled = config.getBoolean("Blaze.Weakness.Enabled",BlazeWeaknessEnabled);
+		BlazeWeaknessTime = config.getInt("Blaze.Weakness.Time",BlazeWeaknessTime);
+		BlazeWeaknessPower = config.getInt("Blaze.Weakness.Power",BlazeWeaknessPower);
+		BlazeWeaknessDodgeChance = config.getDouble("Blaze.Weakness.DodgeChance", BlazeWeaknessDodgeChance);
+		// Cave Spider
+		CaveSpiderBlindnessEnabled = config.getBoolean("CaveSpider.Blindness.Enabled",CaveSpiderBlindnessEnabled);
+		CaveSpiderBlindnessTime = config.getInt("CaveSpider.Blindness.Time",CaveSpiderBlindnessTime);
+		CaveSpiderBlindnessPower = config.getInt("CaveSpider.Blindness.Power",CaveSpiderBlindnessPower);
+		CaveSpiderBlindnessDodgeChance = config.getDouble("CaveSpider.Blindness.DodgeChance", CaveSpiderBlindnessDodgeChance);
+		CaveSpiderNauseaEnabled = config.getBoolean("CaveSpider.Nausea.Enabled",CaveSpiderNauseaEnabled);
+		CaveSpiderNauseaTime = config.getInt("CaveSpider.Nausea.Time", CaveSpiderNauseaTime);
+		CaveSpiderNauseaPower = config.getInt("CaveSpider.Nausea.Power",CaveSpiderNauseaPower);
+		CaveSpiderNauseaDodgeChance = config.getDouble("CaveSpider.Nausea.DodgeChance",CaveSpiderNauseaDodgeChance);
+		CaveSpiderResistanceEnabled = config.getBoolean("CaveSpider.Resistance.Enabled", CaveSpiderResistanceEnabled);
+		CaveSpiderResistanceTime = config.getInt("CaveSpider.Resistance.Time",CaveSpiderResistanceTime);
+		CaveSpiderResistancePower = config.getInt("CaveSpider.Resistance.Power",CaveSpiderResistancePower);
+		CaveSpiderResistanceDodgeChance = config.getDouble("CaveSpider.Resistance.DodgeChance", CaveSpiderResistanceDodgeChance);
+		CaveSpiderFastDiggingEnabled = config.getBoolean("CaveSpider.FastDigging.Enabled", CaveSpiderFastDiggingEnabled);
+		CaveSpiderFastDiggingTime = config.getInt("CaveSpider.FastDigging.Time",CaveSpiderFastDiggingTime);
+		CaveSpiderFastDiggingPower = config.getInt("CaveSpider.FastDigging.Power",CaveSpiderFastDiggingPower);
+		CaveSpiderFastDiggingDodgeChance = config.getDouble("CaveSpider.FastDigging.DodgeChance", CaveSpiderFastDiggingDodgeChance);
+		CaveSpiderFireResistanceEnabled = config.getBoolean("CaveSpider.FireResistance.Enabled", CaveSpiderFireResistanceEnabled);
+		CaveSpiderFireResistanceTime = config.getInt("CaveSpider.FireResistance.Time",CaveSpiderFireResistanceTime);
+		CaveSpiderFireResistancePower = config.getInt("CaveSpider.FireResistance.Power", CaveSpiderFireResistancePower);
+		CaveSpiderFireResistanceDodgeChance = config.getDouble("CaveSpider.FireResistance.DogeChance", CaveSpiderFireResistanceDodgeChance);
+		CaveSpiderHarmEnabled = config.getBoolean("CaveSpider.Harm.Enabled",CaveSpiderHarmEnabled);
+		CaveSpiderHarmTime = config.getInt("CaveSpider.Harm.Time", CaveSpiderHarmTime);
+		CaveSpiderHarmPower = config.getInt("CaveSpider.Harm.Power", CaveSpiderHarmPower);
+		CaveSpiderHarmDodgeChance = config.getDouble("CaveSpider.Harm.DodgeChance", CaveSpiderHarmDodgeChance);
+		CaveSpiderHealEnabled = config.getBoolean("CaveSpider.Heal.Enabled",CaveSpiderHealEnabled);
+		CaveSpiderHealTime = config.getInt("CaveSpider.Heal.Time", CaveSpiderHealTime);
+		CaveSpiderHealPower = config.getInt("CaveSpider.Heal.Power", CaveSpiderHealPower);
+		CaveSpiderHealDodgeChance = config.getDouble("CaveSpider.Heal.DodgeChance", CaveSpiderHealDodgeChance);
+		CaveSpiderHungerEnabled = config.getBoolean("CaveSpider.Hunger.Enabled",CaveSpiderHungerEnabled);
+		CaveSpiderHungerTime = config.getInt("CaveSpider.Hunger.Time", CaveSpiderHungerTime);
+		CaveSpiderHungerPower = config.getInt("CaveSpider.Hunger.Power",CaveSpiderHungerPower);
+		CaveSpiderHungerDodgeChance = config.getDouble("CaveSpider.Hunger.DodgeChance",CaveSpiderHungerDodgeChance);
+		CaveSpiderStrengthEnabled = config.getBoolean("CaveSpider.Strength.Enabled",CaveSpiderStrengthEnabled);
+		CaveSpiderStrengthTime = config.getInt("CaveSpider.IncraseDamage.Time",CaveSpiderStrengthTime);
+		CaveSpiderStrengthPower = config.getInt("CaveSpider.Strength.Power",CaveSpiderStrengthPower);
+		CaveSpiderStrengthDodgeChance = config.getDouble("CaveSpider.Strength.DodgeChance", CaveSpiderStrengthDodgeChance);
+		CaveSpiderJumpEnabled = config.getBoolean("CaveSpider.Jump.Enabled",CaveSpiderJumpEnabled);
+		CaveSpiderJumpTime = config.getInt("CaveSpider.Jump.Time", CaveSpiderJumpTime);
+		CaveSpiderJumpPower = config.getInt("CaveSpider.Jump.Power", CaveSpiderJumpPower);
+		CaveSpiderJumpDodgeChance = config.getDouble("CaveSpider.Jump.DodgeChance",CaveSpiderJumpDodgeChance);
+		CaveSpiderPoisonEnabled = config.getBoolean("CaveSpider.Poison.Enabled",CaveSpiderPoisonEnabled);
+		CaveSpiderPoisonTime = config.getInt("CaveSpider.Poison.Time", CaveSpiderPoisonTime);
+		CaveSpiderPoisonPower = config.getInt("CaveSpider.Poison.Power",CaveSpiderPoisonPower);
+		CaveSpiderPoisonDodgeChance = config.getDouble("CaveSpider.Poison.DodgeChance",CaveSpiderPoisonDodgeChance);
+		CaveSpiderRegenerationEnabled = config.getBoolean("CaveSpider.Regeneration.Enabled", CaveSpiderRegenerationEnabled);
+		CaveSpiderRegenerationTime = config.getInt("CaveSpider.Regeneration.Time",CaveSpiderRegenerationTime);
+		CaveSpiderRegenerationPower = config.getInt("CaveSpider.Regeneration.Power",CaveSpiderRegenerationPower);
+		CaveSpiderRegenerationDodgeChance = config.getDouble("CaveSpider.Regeneration.DodgeChance",CaveSpiderRegenerationDodgeChance);
+		CaveSpiderSlowEnabled = config.getBoolean("CaveSpider.Slow.Enabled",CaveSpiderSlowEnabled);
+		CaveSpiderSlowTime = config.getInt("CaveSpider.Slow.Time", CaveSpiderSlowTime);
+		CaveSpiderSlowPower = config.getInt("CaveSpider.Slow.Power", CaveSpiderSlowPower);
+		CaveSpiderSlowDodgeChance = config.getDouble("CaveSpider.Slow.DodgeChance",CaveSpiderSlowDodgeChance);
+		CaveSpiderMiningFatigueEnabled = config.getBoolean("CaveSpider.MiningFatigue.Enabled", CaveSpiderMiningFatigueEnabled);
+		CaveSpiderMiningFatigueTime = config.getInt("CaveSpider.MiningFatigue.Time",CaveSpiderMiningFatigueTime);
+		CaveSpiderMiningFatiguePower = config.getInt("CaveSpider.MiningFatigue.Power",CaveSpiderMiningFatiguePower);
+		CaveSpiderMiningFatigueDodgeChance = config.getDouble("CaveSpider.MiningFatigue.DodgeChance",CaveSpiderMiningFatigueDodgeChance);
+		CaveSpiderSpeedEnabled = config.getBoolean("CaveSpider.Speed.Enabled",CaveSpiderSpeedEnabled);
+		CaveSpiderSpeedTime = config.getInt("CaveSpider.Speed.Time", CaveSpiderSpeedTime);
+		CaveSpiderSpeedPower = config.getInt("CaveSpider.Speed.Power", CaveSpiderSpeedPower);
+		CaveSpiderSpeedDodgeChance = config.getDouble("CaveSpider.Speed.DodgeChance",CaveSpiderSpeedDodgeChance);
+		CaveSpiderWaterBreathingEnabled = config.getBoolean("CaveSpider.WaterBreathing.Enabled", CaveSpiderWaterBreathingEnabled);
+		CaveSpiderWaterBreathingTime = config.getInt("CaveSpider.WaterBreathing.Time",CaveSpiderWaterBreathingTime);
+		CaveSpiderWaterBreathingPower = config.getInt("CaveSpider.WaterBreathing.Power", CaveSpiderWaterBreathingPower);
+		CaveSpiderWaterBreathingDodgeChance = config.getDouble("CaveSpider.WaterBreathing.DodgeChance",CaveSpiderWaterBreathingDodgeChance);
+		CaveSpiderWeaknessEnabled = config.getBoolean("CaveSpider.Weakness.Enabled",CaveSpiderWeaknessEnabled);
+		CaveSpiderWeaknessTime = config.getInt("CaveSpider.Weakness.Time",CaveSpiderWeaknessTime);
+		CaveSpiderWeaknessPower = config.getInt("CaveSpider.Weakness.Power",CaveSpiderWeaknessPower);
+		CaveSpiderWeaknessDodgeChance = config.getDouble("CaveSpider.Weakness.DodgeChance", CaveSpiderWeaknessDodgeChance);
+		// Creeper
+		CreeperBlindnessEnabled = config.getBoolean("Creeper.Blindness.Enabled",CreeperBlindnessEnabled);
+		CreeperBlindnessTime = config.getInt("Creeper.Blindness.Time",CreeperBlindnessTime);
+		CreeperBlindnessPower = config.getInt("Creeper.Blindness.Power",CreeperBlindnessPower);
+		CreeperBlindnessDodgeChance = config.getDouble("Creeper.Blindness.DodgeChance", CreeperBlindnessDodgeChance);
+		CreeperNauseaEnabled = config.getBoolean("Creeper.Nausea.Enabled",CreeperNauseaEnabled);
+		CreeperNauseaTime = config.getInt("Creeper.Nausea.Time", CreeperNauseaTime);
+		CreeperNauseaPower = config.getInt("Creeper.Nausea.Power",CreeperNauseaPower);
+		CreeperNauseaDodgeChance = config.getDouble("Creeper.Nausea.DodgeChance",CreeperNauseaDodgeChance);
+		CreeperResistanceEnabled = config.getBoolean("Creeper.Resistance.Enabled", CreeperResistanceEnabled);
+		CreeperResistanceTime = config.getInt("Creeper.Resistance.Time",CreeperResistanceTime);
+		CreeperResistancePower = config.getInt("Creeper.Resistance.Power",CreeperResistancePower);
+		CreeperResistanceDodgeChance = config.getDouble("Creeper.Resistance.DodgeChance", CreeperResistanceDodgeChance);
+		CreeperFastDiggingEnabled = config.getBoolean("Creeper.FastDigging.Enabled", CreeperFastDiggingEnabled);
+		CreeperFastDiggingTime = config.getInt("Creeper.FastDigging.Time",CreeperFastDiggingTime);
+		CreeperFastDiggingPower = config.getInt("Creeper.FastDigging.Power",CreeperFastDiggingPower);
+		CreeperFastDiggingDodgeChance = config.getDouble("Creeper.FastDigging.DodgeChance", CreeperFastDiggingDodgeChance);
+		CreeperFireResistanceEnabled = config.getBoolean("Creeper.FireResistance.Enabled", CreeperFireResistanceEnabled);
+		CreeperFireResistanceTime = config.getInt("Creeper.FireResistance.Time",CreeperFireResistanceTime);
+		CreeperFireResistancePower = config.getInt("Creeper.FireResistance.Power", CreeperFireResistancePower);
+		CreeperFireResistanceDodgeChance = config.getDouble("Creeper.FireResistance.DogeChance", CreeperFireResistanceDodgeChance);
+		CreeperHarmEnabled = config.getBoolean("Creeper.Harm.Enabled",CreeperHarmEnabled);
+		CreeperHarmTime = config.getInt("Creeper.Harm.Time", CreeperHarmTime);
+		CreeperHarmPower = config.getInt("Creeper.Harm.Power", CreeperHarmPower);
+		CreeperHarmDodgeChance = config.getDouble("Creeper.Harm.DodgeChance", CreeperHarmDodgeChance);
+		CreeperHealEnabled = config.getBoolean("Creeper.Heal.Enabled",CreeperHealEnabled);
+		CreeperHealTime = config.getInt("Creeper.Heal.Time", CreeperHealTime);
+		CreeperHealPower = config.getInt("Creeper.Heal.Power", CreeperHealPower);
+		CreeperHealDodgeChance = config.getDouble("Creeper.Heal.DodgeChance", CreeperHealDodgeChance);
+		CreeperHungerEnabled = config.getBoolean("Creeper.Hunger.Enabled",CreeperHungerEnabled);
+		CreeperHungerTime = config.getInt("Creeper.Hunger.Time", CreeperHungerTime);
+		CreeperHungerPower = config.getInt("Creeper.Hunger.Power",CreeperHungerPower);
+		CreeperHungerDodgeChance = config.getDouble("Creeper.Hunger.DodgeChance",CreeperHungerDodgeChance);
+		CreeperStrengthEnabled = config.getBoolean("Creeper.Strength.Enabled",CreeperStrengthEnabled);
+		CreeperStrengthTime = config.getInt("Creeper.IncraseDamage.Time",CreeperStrengthTime);
+		CreeperStrengthPower = config.getInt("Creeper.Strength.Power",CreeperStrengthPower);
+		CreeperStrengthDodgeChance = config.getDouble("Creeper.Strength.DodgeChance", CreeperStrengthDodgeChance);
+		CreeperJumpEnabled = config.getBoolean("Creeper.Jump.Enabled",CreeperJumpEnabled);
+		CreeperJumpTime = config.getInt("Creeper.Jump.Time", CreeperJumpTime);
+		CreeperJumpPower = config.getInt("Creeper.Jump.Power", CreeperJumpPower);
+		CreeperJumpDodgeChance = config.getDouble("Creeper.Jump.DodgeChance",CreeperJumpDodgeChance);
+		CreeperPoisonEnabled = config.getBoolean("Creeper.Poison.Enabled",CreeperPoisonEnabled);
+		CreeperPoisonTime = config.getInt("Creeper.Poison.Time", CreeperPoisonTime);
+		CreeperPoisonPower = config.getInt("Creeper.Poison.Power",CreeperPoisonPower);
+		CreeperPoisonDodgeChance = config.getDouble("Creeper.Poison.DodgeChance",CreeperPoisonDodgeChance);
+		CreeperRegenerationEnabled = config.getBoolean("Creeper.Regeneration.Enabled", CreeperRegenerationEnabled);
+		CreeperRegenerationTime = config.getInt("Creeper.Regeneration.Time",CreeperRegenerationTime);
+		CreeperRegenerationPower = config.getInt("Creeper.Regeneration.Power",CreeperRegenerationPower);
+		CreeperRegenerationDodgeChance = config.getDouble("Creeper.Regeneration.DodgeChance",CreeperRegenerationDodgeChance);
+		CreeperSlowEnabled = config.getBoolean("Creeper.Slow.Enabled",CreeperSlowEnabled);
+		CreeperSlowTime = config.getInt("Creeper.Slow.Time", CreeperSlowTime);
+		CreeperSlowPower = config.getInt("Creeper.Slow.Power", CreeperSlowPower);
+		CreeperSlowDodgeChance = config.getDouble("Creeper.Slow.DodgeChance",CreeperSlowDodgeChance);
+		CreeperMiningFatigueEnabled = config.getBoolean("Creeper.MiningFatigue.Enabled", CreeperMiningFatigueEnabled);
+		CreeperMiningFatigueTime = config.getInt("Creeper.MiningFatigue.Time",CreeperMiningFatigueTime);
+		CreeperMiningFatiguePower = config.getInt("Creeper.MiningFatigue.Power",CreeperMiningFatiguePower);
+		CreeperMiningFatigueDodgeChance = config.getDouble("Creeper.MiningFatigue.DodgeChance",CreeperMiningFatigueDodgeChance);
+		CreeperSpeedEnabled = config.getBoolean("Creeper.Speed.Enabled",CreeperSpeedEnabled);
+		CreeperSpeedTime = config.getInt("Creeper.Speed.Time", CreeperSpeedTime);
+		CreeperSpeedPower = config.getInt("Creeper.Speed.Power", CreeperSpeedPower);
+		CreeperSpeedDodgeChance = config.getDouble("Creeper.Speed.DodgeChance",CreeperSpeedDodgeChance);
+		CreeperWaterBreathingEnabled = config.getBoolean("Creeper.WaterBreathing.Enabled", CreeperWaterBreathingEnabled);
+		CreeperWaterBreathingTime = config.getInt("Creeper.WaterBreathing.Time",CreeperWaterBreathingTime);
+		CreeperWaterBreathingPower = config.getInt("Creeper.WaterBreathing.Power", CreeperWaterBreathingPower);
+		CreeperWaterBreathingDodgeChance = config.getDouble("Creeper.WaterBreathing.DodgeChance",CreeperWaterBreathingDodgeChance);
+		CreeperWeaknessEnabled = config.getBoolean("Creeper.Weakness.Enabled",CreeperWeaknessEnabled);
+		CreeperWeaknessTime = config.getInt("Creeper.Weakness.Time",CreeperWeaknessTime);
+		CreeperWeaknessPower = config.getInt("Creeper.Weakness.Power",CreeperWeaknessPower);
+		CreeperWeaknessDodgeChance = config.getDouble("Creeper.Weakness.DodgeChance", CreeperWeaknessDodgeChance);
+		// Enderman
+		EndermanBlindnessEnabled = config.getBoolean("Enderman.Blindness.Enabled",EndermanBlindnessEnabled);
+		EndermanBlindnessTime = config.getInt("Enderman.Blindness.Time",EndermanBlindnessTime);
+		EndermanBlindnessPower = config.getInt("Enderman.Blindness.Power",EndermanBlindnessPower);
+		EndermanBlindnessDodgeChance = config.getDouble("Enderman.Blindness.DodgeChance", EndermanBlindnessDodgeChance);
+		EndermanNauseaEnabled = config.getBoolean("Enderman.Nausea.Enabled",EndermanNauseaEnabled);
+		EndermanNauseaTime = config.getInt("Enderman.Nausea.Time", EndermanNauseaTime);
+		EndermanNauseaPower = config.getInt("Enderman.Nausea.Power",EndermanNauseaPower);
+		EndermanNauseaDodgeChance = config.getDouble("Enderman.Nausea.DodgeChance",EndermanNauseaDodgeChance);
+		EndermanResistanceEnabled = config.getBoolean("Enderman.Resistance.Enabled", EndermanResistanceEnabled);
+		EndermanResistanceTime = config.getInt("Enderman.Resistance.Time",EndermanResistanceTime);
+		EndermanResistancePower = config.getInt("Enderman.Resistance.Power",EndermanResistancePower);
+		EndermanResistanceDodgeChance = config.getDouble("Enderman.Resistance.DodgeChance", EndermanResistanceDodgeChance);
+		EndermanFastDiggingEnabled = config.getBoolean("Enderman.FastDigging.Enabled", EndermanFastDiggingEnabled);
+		EndermanFastDiggingTime = config.getInt("Enderman.FastDigging.Time",EndermanFastDiggingTime);
+		EndermanFastDiggingPower = config.getInt("Enderman.FastDigging.Power",EndermanFastDiggingPower);
+		EndermanFastDiggingDodgeChance = config.getDouble("Enderman.FastDigging.DodgeChance", EndermanFastDiggingDodgeChance);
+		EndermanFireResistanceEnabled = config.getBoolean("Enderman.FireResistance.Enabled", EndermanFireResistanceEnabled);
+		EndermanFireResistanceTime = config.getInt("Enderman.FireResistance.Time",EndermanFireResistanceTime);
+		EndermanFireResistancePower = config.getInt("Enderman.FireResistance.Power", EndermanFireResistancePower);
+		EndermanFireResistanceDodgeChance = config.getDouble("Enderman.FireResistance.DogeChance", EndermanFireResistanceDodgeChance);
+		EndermanHarmEnabled = config.getBoolean("Enderman.Harm.Enabled",EndermanHarmEnabled);
+		EndermanHarmTime = config.getInt("Enderman.Harm.Time", EndermanHarmTime);
+		EndermanHarmPower = config.getInt("Enderman.Harm.Power", EndermanHarmPower);
+		EndermanHarmDodgeChance = config.getDouble("Enderman.Harm.DodgeChance", EndermanHarmDodgeChance);
+		EndermanHealEnabled = config.getBoolean("Enderman.Heal.Enabled",EndermanHealEnabled);
+		EndermanHealTime = config.getInt("Enderman.Heal.Time", EndermanHealTime);
+		EndermanHealPower = config.getInt("Enderman.Heal.Power", EndermanHealPower);
+		EndermanHealDodgeChance = config.getDouble("Enderman.Heal.DodgeChance", EndermanHealDodgeChance);
+		EndermanHungerEnabled = config.getBoolean("Enderman.Hunger.Enabled",EndermanHungerEnabled);
+		EndermanHungerTime = config.getInt("Enderman.Hunger.Time", EndermanHungerTime);
+		EndermanHungerPower = config.getInt("Enderman.Hunger.Power",EndermanHungerPower);
+		EndermanHungerDodgeChance = config.getDouble("Enderman.Hunger.DodgeChance",EndermanHungerDodgeChance);
+		EndermanStrengthEnabled = config.getBoolean("Enderman.Strength.Enabled",EndermanStrengthEnabled);
+		EndermanStrengthTime = config.getInt("Enderman.IncraseDamage.Time",EndermanStrengthTime);
+		EndermanStrengthPower = config.getInt("Enderman.Strength.Power",EndermanStrengthPower);
+		EndermanStrengthDodgeChance = config.getDouble("Enderman.Strength.DodgeChance", EndermanStrengthDodgeChance);
+		EndermanJumpEnabled = config.getBoolean("Enderman.Jump.Enabled",EndermanJumpEnabled);
+		EndermanJumpTime = config.getInt("Enderman.Jump.Time", EndermanJumpTime);
+		EndermanJumpPower = config.getInt("Enderman.Jump.Power", EndermanJumpPower);
+		EndermanJumpDodgeChance = config.getDouble("Enderman.Jump.DodgeChance",EndermanJumpDodgeChance);
+		EndermanPoisonEnabled = config.getBoolean("Enderman.Poison.Enabled",EndermanPoisonEnabled);
+		EndermanPoisonTime = config.getInt("Enderman.Poison.Time", EndermanPoisonTime);
+		EndermanPoisonPower = config.getInt("Enderman.Poison.Power",EndermanPoisonPower);
+		EndermanPoisonDodgeChance = config.getDouble("Enderman.Poison.DodgeChance",EndermanPoisonDodgeChance);
+		EndermanRegenerationEnabled = config.getBoolean("Enderman.Regeneration.Enabled", EndermanRegenerationEnabled);
+		EndermanRegenerationTime = config.getInt("Enderman.Regeneration.Time",EndermanRegenerationTime);
+		EndermanRegenerationPower = config.getInt("Enderman.Regeneration.Power",EndermanRegenerationPower);
+		EndermanRegenerationDodgeChance = config.getDouble("Enderman.Regeneration.DodgeChance",EndermanRegenerationDodgeChance);
+		EndermanSlowEnabled = config.getBoolean("Enderman.Slow.Enabled",EndermanSlowEnabled);
+		EndermanSlowTime = config.getInt("Enderman.Slow.Time", EndermanSlowTime);
+		EndermanSlowPower = config.getInt("Enderman.Slow.Power", EndermanSlowPower);
+		EndermanSlowDodgeChance = config.getDouble("Enderman.Slow.DodgeChance",EndermanSlowDodgeChance);
+		EndermanMiningFatigueEnabled = config.getBoolean("Enderman.MiningFatigue.Enabled", EndermanMiningFatigueEnabled);
+		EndermanMiningFatigueTime = config.getInt("Enderman.MiningFatigue.Time",EndermanMiningFatigueTime);
+		EndermanMiningFatiguePower = config.getInt("Enderman.MiningFatigue.Power",EndermanMiningFatiguePower);
+		EndermanMiningFatigueDodgeChance = config.getDouble("Enderman.MiningFatigue.DodgeChance",EndermanMiningFatigueDodgeChance);
+		EndermanSpeedEnabled = config.getBoolean("Enderman.Speed.Enabled",EndermanSpeedEnabled);
+		EndermanSpeedTime = config.getInt("Enderman.Speed.Time", EndermanSpeedTime);
+		EndermanSpeedPower = config.getInt("Enderman.Speed.Power", EndermanSpeedPower);
+		EndermanSpeedDodgeChance = config.getDouble("Enderman.Speed.DodgeChance",EndermanSpeedDodgeChance);
+		EndermanWaterBreathingEnabled = config.getBoolean("Enderman.WaterBreathing.Enabled", EndermanWaterBreathingEnabled);
+		EndermanWaterBreathingTime = config.getInt("Enderman.WaterBreathing.Time",EndermanWaterBreathingTime);
+		EndermanWaterBreathingPower = config.getInt("Enderman.WaterBreathing.Power", EndermanWaterBreathingPower);
+		EndermanWaterBreathingDodgeChance = config.getDouble("Enderman.WaterBreathing.DodgeChance",EndermanWaterBreathingDodgeChance);
+		EndermanWeaknessEnabled = config.getBoolean("Enderman.Weakness.Enabled",EndermanWeaknessEnabled);
+		EndermanWeaknessTime = config.getInt("Enderman.Weakness.Time",EndermanWeaknessTime);
+		EndermanWeaknessPower = config.getInt("Enderman.Weakness.Power",EndermanWeaknessPower);
+		EndermanWeaknessDodgeChance = config.getDouble("Enderman.Weakness.DodgeChance", EndermanWeaknessDodgeChance);
+		// Giant
+		GiantBlindnessEnabled = config.getBoolean("Giant.Blindness.Enabled",GiantBlindnessEnabled);
+		GiantBlindnessTime = config.getInt("Giant.Blindness.Time",GiantBlindnessTime);
+		GiantBlindnessPower = config.getInt("Giant.Blindness.Power",GiantBlindnessPower);
+		GiantBlindnessDodgeChance = config.getDouble("Giant.Blindness.DodgeChance", GiantBlindnessDodgeChance);
+		GiantNauseaEnabled = config.getBoolean("Giant.Nausea.Enabled",GiantNauseaEnabled);
+		GiantNauseaTime = config.getInt("Giant.Nausea.Time", GiantNauseaTime);
+		GiantNauseaPower = config.getInt("Giant.Nausea.Power",GiantNauseaPower);
+		GiantNauseaDodgeChance = config.getDouble("Giant.Nausea.DodgeChance",GiantNauseaDodgeChance);
+		GiantResistanceEnabled = config.getBoolean("Giant.Resistance.Enabled", GiantResistanceEnabled);
+		GiantResistanceTime = config.getInt("Giant.Resistance.Time",GiantResistanceTime);
+		GiantResistancePower = config.getInt("Giant.Resistance.Power",GiantResistancePower);
+		GiantResistanceDodgeChance = config.getDouble("Giant.Resistance.DodgeChance", GiantResistanceDodgeChance);
+		GiantFastDiggingEnabled = config.getBoolean("Giant.FastDigging.Enabled", GiantFastDiggingEnabled);
+		GiantFastDiggingTime = config.getInt("Giant.FastDigging.Time",GiantFastDiggingTime);
+		GiantFastDiggingPower = config.getInt("Giant.FastDigging.Power",GiantFastDiggingPower);
+		GiantFastDiggingDodgeChance = config.getDouble("Giant.FastDigging.DodgeChance", GiantFastDiggingDodgeChance);
+		GiantFireResistanceEnabled = config.getBoolean("Giant.FireResistance.Enabled", GiantFireResistanceEnabled);
+		GiantFireResistanceTime = config.getInt("Giant.FireResistance.Time",GiantFireResistanceTime);
+		GiantFireResistancePower = config.getInt("Giant.FireResistance.Power", GiantFireResistancePower);
+		GiantFireResistanceDodgeChance = config.getDouble("Giant.FireResistance.DogeChance", GiantFireResistanceDodgeChance);
+		GiantHarmEnabled = config.getBoolean("Giant.Harm.Enabled",GiantHarmEnabled);
+		GiantHarmTime = config.getInt("Giant.Harm.Time", GiantHarmTime);
+		GiantHarmPower = config.getInt("Giant.Harm.Power", GiantHarmPower);
+		GiantHarmDodgeChance = config.getDouble("Giant.Harm.DodgeChance", GiantHarmDodgeChance);
+		GiantHealEnabled = config.getBoolean("Giant.Heal.Enabled",GiantHealEnabled);
+		GiantHealTime = config.getInt("Giant.Heal.Time", GiantHealTime);
+		GiantHealPower = config.getInt("Giant.Heal.Power", GiantHealPower);
+		GiantHealDodgeChance = config.getDouble("Giant.Heal.DodgeChance", GiantHealDodgeChance);
+		GiantHungerEnabled = config.getBoolean("Giant.Hunger.Enabled",GiantHungerEnabled);
+		GiantHungerTime = config.getInt("Giant.Hunger.Time", GiantHungerTime);
+		GiantHungerPower = config.getInt("Giant.Hunger.Power",GiantHungerPower);
+		GiantHungerDodgeChance = config.getDouble("Giant.Hunger.DodgeChance",GiantHungerDodgeChance);
+		GiantStrengthEnabled = config.getBoolean("Giant.Strength.Enabled",GiantStrengthEnabled);
+		GiantStrengthTime = config.getInt("Giant.IncraseDamage.Time",GiantStrengthTime);
+		GiantStrengthPower = config.getInt("Giant.Strength.Power",GiantStrengthPower);
+		GiantStrengthDodgeChance = config.getDouble("Giant.Strength.DodgeChance", GiantStrengthDodgeChance);
+		GiantJumpEnabled = config.getBoolean("Giant.Jump.Enabled",GiantJumpEnabled);
+		GiantJumpTime = config.getInt("Giant.Jump.Time", GiantJumpTime);
+		GiantJumpPower = config.getInt("Giant.Jump.Power", GiantJumpPower);
+		GiantJumpDodgeChance = config.getDouble("Giant.Jump.DodgeChance",GiantJumpDodgeChance);
+		GiantPoisonEnabled = config.getBoolean("Giant.Poison.Enabled",GiantPoisonEnabled);
+		GiantPoisonTime = config.getInt("Giant.Poison.Time", GiantPoisonTime);
+		GiantPoisonPower = config.getInt("Giant.Poison.Power",GiantPoisonPower);
+		GiantPoisonDodgeChance = config.getDouble("Giant.Poison.DodgeChance",GiantPoisonDodgeChance);
+		GiantRegenerationEnabled = config.getBoolean("Giant.Regeneration.Enabled", GiantRegenerationEnabled);
+		GiantRegenerationTime = config.getInt("Giant.Regeneration.Time",GiantRegenerationTime);
+		GiantRegenerationPower = config.getInt("Giant.Regeneration.Power",GiantRegenerationPower);
+		GiantRegenerationDodgeChance = config.getDouble("Giant.Regeneration.DodgeChance",GiantRegenerationDodgeChance);
+		GiantSlowEnabled = config.getBoolean("Giant.Slow.Enabled",GiantSlowEnabled);
+		GiantSlowTime = config.getInt("Giant.Slow.Time", GiantSlowTime);
+		GiantSlowPower = config.getInt("Giant.Slow.Power", GiantSlowPower);
+		GiantSlowDodgeChance = config.getDouble("Giant.Slow.DodgeChance",GiantSlowDodgeChance);
+		GiantMiningFatigueEnabled = config.getBoolean("Giant.MiningFatigue.Enabled", GiantMiningFatigueEnabled);
+		GiantMiningFatigueTime = config.getInt("Giant.MiningFatigue.Time",GiantMiningFatigueTime);
+		GiantMiningFatiguePower = config.getInt("Giant.MiningFatigue.Power",GiantMiningFatiguePower);
+		GiantMiningFatigueDodgeChance = config.getDouble("Giant.MiningFatigue.DodgeChance",GiantMiningFatigueDodgeChance);
+		GiantSpeedEnabled = config.getBoolean("Giant.Speed.Enabled",GiantSpeedEnabled);
+		GiantSpeedTime = config.getInt("Giant.Speed.Time", GiantSpeedTime);
+		GiantSpeedPower = config.getInt("Giant.Speed.Power", GiantSpeedPower);
+		GiantSpeedDodgeChance = config.getDouble("Giant.Speed.DodgeChance",GiantSpeedDodgeChance);
+		GiantWaterBreathingEnabled = config.getBoolean("Giant.WaterBreathing.Enabled", GiantWaterBreathingEnabled);
+		GiantWaterBreathingTime = config.getInt("Giant.WaterBreathing.Time",GiantWaterBreathingTime);
+		GiantWaterBreathingPower = config.getInt("Giant.WaterBreathing.Power", GiantWaterBreathingPower);
+		GiantWaterBreathingDodgeChance = config.getDouble("Giant.WaterBreathing.DodgeChance",GiantWaterBreathingDodgeChance);
+		GiantWeaknessEnabled = config.getBoolean("Giant.Weakness.Enabled",GiantWeaknessEnabled);
+		GiantWeaknessTime = config.getInt("Giant.Weakness.Time",GiantWeaknessTime);
+		GiantWeaknessPower = config.getInt("Giant.Weakness.Power",GiantWeaknessPower);
+		GiantWeaknessDodgeChance = config.getDouble("Giant.Weakness.DodgeChance", GiantWeaknessDodgeChance);
+		MagmaCubeBlindnessEnabled = config.getBoolean("MagmaCube.Blindness.Enabled",MagmaCubeBlindnessEnabled);
+		MagmaCubeBlindnessTime = config.getInt("MagmaCube.Blindness.Time",MagmaCubeBlindnessTime);
+		MagmaCubeBlindnessPower = config.getInt("MagmaCube.Blindness.Power",MagmaCubeBlindnessPower);
+		MagmaCubeBlindnessDodgeChance = config.getDouble("MagmaCube.Blindness.DodgeChance", MagmaCubeBlindnessDodgeChance);
+		MagmaCubeNauseaEnabled = config.getBoolean("MagmaCube.Nausea.Enabled",MagmaCubeNauseaEnabled);
+		MagmaCubeNauseaTime = config.getInt("MagmaCube.Nausea.Time", MagmaCubeNauseaTime);
+		MagmaCubeNauseaPower = config.getInt("MagmaCube.Nausea.Power",MagmaCubeNauseaPower);
+		MagmaCubeNauseaDodgeChance = config.getDouble("MagmaCube.Nausea.DodgeChance",MagmaCubeNauseaDodgeChance);
+		MagmaCubeResistanceEnabled = config.getBoolean("MagmaCube.Resistance.Enabled", MagmaCubeResistanceEnabled);
+		MagmaCubeResistanceTime = config.getInt("MagmaCube.Resistance.Time",MagmaCubeResistanceTime);
+		MagmaCubeResistancePower = config.getInt("MagmaCube.Resistance.Power",MagmaCubeResistancePower);
+		MagmaCubeResistanceDodgeChance = config.getDouble("MagmaCube.Resistance.DodgeChance", MagmaCubeResistanceDodgeChance);
+		MagmaCubeFastDiggingEnabled = config.getBoolean("MagmaCube.FastDigging.Enabled", MagmaCubeFastDiggingEnabled);
+		MagmaCubeFastDiggingTime = config.getInt("MagmaCube.FastDigging.Time",MagmaCubeFastDiggingTime);
+		MagmaCubeFastDiggingPower = config.getInt("MagmaCube.FastDigging.Power",MagmaCubeFastDiggingPower);
+		MagmaCubeFastDiggingDodgeChance = config.getDouble("MagmaCube.FastDigging.DodgeChance", MagmaCubeFastDiggingDodgeChance);
+		MagmaCubeFireResistanceEnabled = config.getBoolean("MagmaCube.FireResistance.Enabled", MagmaCubeFireResistanceEnabled);
+		MagmaCubeFireResistanceTime = config.getInt("MagmaCube.FireResistance.Time",MagmaCubeFireResistanceTime);
+		MagmaCubeFireResistancePower = config.getInt("MagmaCube.FireResistance.Power", MagmaCubeFireResistancePower);
+		MagmaCubeFireResistanceDodgeChance = config.getDouble("MagmaCube.FireResistance.DogeChance", MagmaCubeFireResistanceDodgeChance);
+		MagmaCubeHarmEnabled = config.getBoolean("MagmaCube.Harm.Enabled",MagmaCubeHarmEnabled);
+		MagmaCubeHarmTime = config.getInt("MagmaCube.Harm.Time", MagmaCubeHarmTime);
+		MagmaCubeHarmPower = config.getInt("MagmaCube.Harm.Power", MagmaCubeHarmPower);
+		MagmaCubeHarmDodgeChance = config.getDouble("MagmaCube.Harm.DodgeChance", MagmaCubeHarmDodgeChance);
+		MagmaCubeHealEnabled = config.getBoolean("MagmaCube.Heal.Enabled",MagmaCubeHealEnabled);
+		MagmaCubeHealTime = config.getInt("MagmaCube.Heal.Time", MagmaCubeHealTime);
+		MagmaCubeHealPower = config.getInt("MagmaCube.Heal.Power", MagmaCubeHealPower);
+		MagmaCubeHealDodgeChance = config.getDouble("MagmaCube.Heal.DodgeChance", MagmaCubeHealDodgeChance);
+		MagmaCubeHungerEnabled = config.getBoolean("MagmaCube.Hunger.Enabled",MagmaCubeHungerEnabled);
+		MagmaCubeHungerTime = config.getInt("MagmaCube.Hunger.Time", MagmaCubeHungerTime);
+		MagmaCubeHungerPower = config.getInt("MagmaCube.Hunger.Power",MagmaCubeHungerPower);
+		MagmaCubeHungerDodgeChance = config.getDouble("MagmaCube.Hunger.DodgeChance",MagmaCubeHungerDodgeChance);
+		MagmaCubeStrengthEnabled = config.getBoolean("MagmaCube.Strength.Enabled",MagmaCubeStrengthEnabled);
+		MagmaCubeStrengthTime = config.getInt("MagmaCube.IncraseDamage.Time",MagmaCubeStrengthTime);
+		MagmaCubeStrengthPower = config.getInt("MagmaCube.Strength.Power",MagmaCubeStrengthPower);
+		MagmaCubeStrengthDodgeChance = config.getDouble("MagmaCube.Strength.DodgeChance", MagmaCubeStrengthDodgeChance);
+		MagmaCubeJumpEnabled = config.getBoolean("MagmaCube.Jump.Enabled",MagmaCubeJumpEnabled);
+		MagmaCubeJumpTime = config.getInt("MagmaCube.Jump.Time", MagmaCubeJumpTime);
+		MagmaCubeJumpPower = config.getInt("MagmaCube.Jump.Power", MagmaCubeJumpPower);
+		MagmaCubeJumpDodgeChance = config.getDouble("MagmaCube.Jump.DodgeChance",MagmaCubeJumpDodgeChance);
+		MagmaCubePoisonEnabled = config.getBoolean("MagmaCube.Poison.Enabled",MagmaCubePoisonEnabled);
+		MagmaCubePoisonTime = config.getInt("MagmaCube.Poison.Time", MagmaCubePoisonTime);
+		MagmaCubePoisonPower = config.getInt("MagmaCube.Poison.Power",MagmaCubePoisonPower);
+		MagmaCubePoisonDodgeChance = config.getDouble("MagmaCube.Poison.DodgeChance",MagmaCubePoisonDodgeChance);
+		MagmaCubeRegenerationEnabled = config.getBoolean("MagmaCube.Regeneration.Enabled", MagmaCubeRegenerationEnabled);
+		MagmaCubeRegenerationTime = config.getInt("MagmaCube.Regeneration.Time",MagmaCubeRegenerationTime);
+		MagmaCubeRegenerationPower = config.getInt("MagmaCube.Regeneration.Power",MagmaCubeRegenerationPower);
+		MagmaCubeRegenerationDodgeChance = config.getDouble("MagmaCube.Regeneration.DodgeChance",MagmaCubeRegenerationDodgeChance);
+		MagmaCubeSlowEnabled = config.getBoolean("MagmaCube.Slow.Enabled",MagmaCubeSlowEnabled);
+		MagmaCubeSlowTime = config.getInt("MagmaCube.Slow.Time", MagmaCubeSlowTime);
+		MagmaCubeSlowPower = config.getInt("MagmaCube.Slow.Power", MagmaCubeSlowPower);
+		MagmaCubeSlowDodgeChance = config.getDouble("MagmaCube.Slow.DodgeChance",MagmaCubeSlowDodgeChance);
+		MagmaCubeMiningFatigueEnabled = config.getBoolean("MagmaCube.MiningFatigue.Enabled", MagmaCubeMiningFatigueEnabled);
+		MagmaCubeMiningFatigueTime = config.getInt("MagmaCube.MiningFatigue.Time",MagmaCubeMiningFatigueTime);
+		MagmaCubeMiningFatiguePower = config.getInt("MagmaCube.MiningFatigue.Power",MagmaCubeMiningFatiguePower);
+		MagmaCubeMiningFatigueDodgeChance = config.getDouble("MagmaCube.MiningFatigue.DodgeChance",MagmaCubeMiningFatigueDodgeChance);
+		MagmaCubeSpeedEnabled = config.getBoolean("MagmaCube.Speed.Enabled",MagmaCubeSpeedEnabled);
+		MagmaCubeSpeedTime = config.getInt("MagmaCube.Speed.Time", MagmaCubeSpeedTime);
+		MagmaCubeSpeedPower = config.getInt("MagmaCube.Speed.Power", MagmaCubeSpeedPower);
+		MagmaCubeSpeedDodgeChance = config.getDouble("MagmaCube.Speed.DodgeChance",MagmaCubeSpeedDodgeChance);
+		MagmaCubeWaterBreathingEnabled = config.getBoolean("MagmaCube.WaterBreathing.Enabled", MagmaCubeWaterBreathingEnabled);
+		MagmaCubeWaterBreathingTime = config.getInt("MagmaCube.WaterBreathing.Time",MagmaCubeWaterBreathingTime);
+		MagmaCubeWaterBreathingPower = config.getInt("MagmaCube.WaterBreathing.Power", MagmaCubeWaterBreathingPower);
+		MagmaCubeWaterBreathingDodgeChance = config.getDouble("MagmaCube.WaterBreathing.DodgeChance",MagmaCubeWaterBreathingDodgeChance);
+		MagmaCubeWeaknessEnabled = config.getBoolean("MagmaCube.Weakness.Enabled",MagmaCubeWeaknessEnabled);
+		MagmaCubeWeaknessTime = config.getInt("MagmaCube.Weakness.Time",MagmaCubeWeaknessTime);
+		MagmaCubeWeaknessPower = config.getInt("MagmaCube.Weakness.Power",MagmaCubeWeaknessPower);
+		MagmaCubeWeaknessDodgeChance = config.getDouble("MagmaCube.Weakness.DodgeChance", MagmaCubeWeaknessDodgeChance);
+		// Pig Zombie
+		PigZombieBlindnessEnabled = config.getBoolean("PigZombie.Blindness.Enabled",PigZombieBlindnessEnabled);
+		PigZombieBlindnessTime = config.getInt("PigZombie.Blindness.Time",PigZombieBlindnessTime);
+		PigZombieBlindnessPower = config.getInt("PigZombie.Blindness.Power",PigZombieBlindnessPower);
+		PigZombieBlindnessDodgeChance = config.getDouble("PigZombie.Blindness.DodgeChance", PigZombieBlindnessDodgeChance);
+		PigZombieNauseaEnabled = config.getBoolean("PigZombie.Nausea.Enabled",PigZombieNauseaEnabled);
+		PigZombieNauseaTime = config.getInt("PigZombie.Nausea.Time", PigZombieNauseaTime);
+		PigZombieNauseaPower = config.getInt("PigZombie.Nausea.Power",PigZombieNauseaPower);
+		PigZombieNauseaDodgeChance = config.getDouble("PigZombie.Nausea.DodgeChance",PigZombieNauseaDodgeChance);
+		PigZombieResistanceEnabled = config.getBoolean("PigZombie.Resistance.Enabled", PigZombieResistanceEnabled);
+		PigZombieResistanceTime = config.getInt("PigZombie.Resistance.Time",PigZombieResistanceTime);
+		PigZombieResistancePower = config.getInt("PigZombie.Resistance.Power",PigZombieResistancePower);
+		PigZombieResistanceDodgeChance = config.getDouble("PigZombie.Resistance.DodgeChance", PigZombieResistanceDodgeChance);
+		PigZombieFastDiggingEnabled = config.getBoolean("PigZombie.FastDigging.Enabled", PigZombieFastDiggingEnabled);
+		PigZombieFastDiggingTime = config.getInt("PigZombie.FastDigging.Time",PigZombieFastDiggingTime);
+		PigZombieFastDiggingPower = config.getInt("PigZombie.FastDigging.Power",PigZombieFastDiggingPower);
+		PigZombieFastDiggingDodgeChance = config.getDouble("PigZombie.FastDigging.DodgeChance", PigZombieFastDiggingDodgeChance);
+		PigZombieFireResistanceEnabled = config.getBoolean("PigZombie.FireResistance.Enabled", PigZombieFireResistanceEnabled);
+		PigZombieFireResistanceTime = config.getInt("PigZombie.FireResistance.Time",PigZombieFireResistanceTime);
+		PigZombieFireResistancePower = config.getInt("PigZombie.FireResistance.Power", PigZombieFireResistancePower);
+		PigZombieFireResistanceDodgeChance = config.getDouble("PigZombie.FireResistance.DogeChance", PigZombieFireResistanceDodgeChance);
+		PigZombieHarmEnabled = config.getBoolean("PigZombie.Harm.Enabled",PigZombieHarmEnabled);
+		PigZombieHarmTime = config.getInt("PigZombie.Harm.Time", PigZombieHarmTime);
+		PigZombieHarmPower = config.getInt("PigZombie.Harm.Power", PigZombieHarmPower);
+		PigZombieHarmDodgeChance = config.getDouble("PigZombie.Harm.DodgeChance", PigZombieHarmDodgeChance);
+		PigZombieHealEnabled = config.getBoolean("PigZombie.Heal.Enabled",PigZombieHealEnabled);
+		PigZombieHealTime = config.getInt("PigZombie.Heal.Time", PigZombieHealTime);
+		PigZombieHealPower = config.getInt("PigZombie.Heal.Power", PigZombieHealPower);
+		PigZombieHealDodgeChance = config.getDouble("PigZombie.Heal.DodgeChance", PigZombieHealDodgeChance);
+		PigZombieHungerEnabled = config.getBoolean("PigZombie.Hunger.Enabled",PigZombieHungerEnabled);
+		PigZombieHungerTime = config.getInt("PigZombie.Hunger.Time", PigZombieHungerTime);
+		PigZombieHungerPower = config.getInt("PigZombie.Hunger.Power",PigZombieHungerPower);
+		PigZombieHungerDodgeChance = config.getDouble("PigZombie.Hunger.DodgeChance",PigZombieHungerDodgeChance);
+		PigZombieStrengthEnabled = config.getBoolean("PigZombie.Strength.Enabled",PigZombieStrengthEnabled);
+		PigZombieStrengthTime = config.getInt("PigZombie.IncraseDamage.Time",PigZombieStrengthTime);
+		PigZombieStrengthPower = config.getInt("PigZombie.Strength.Power",PigZombieStrengthPower);
+		PigZombieStrengthDodgeChance = config.getDouble("PigZombie.Strength.DodgeChance", PigZombieStrengthDodgeChance);
+		PigZombieJumpEnabled = config.getBoolean("PigZombie.Jump.Enabled",PigZombieJumpEnabled);
+		PigZombieJumpTime = config.getInt("PigZombie.Jump.Time", PigZombieJumpTime);
+		PigZombieJumpPower = config.getInt("PigZombie.Jump.Power", PigZombieJumpPower);
+		PigZombieJumpDodgeChance = config.getDouble("PigZombie.Jump.DodgeChance",PigZombieJumpDodgeChance);
+		PigZombiePoisonEnabled = config.getBoolean("PigZombie.Poison.Enabled",PigZombiePoisonEnabled);
+		PigZombiePoisonTime = config.getInt("PigZombie.Poison.Time", PigZombiePoisonTime);
+		PigZombiePoisonPower = config.getInt("PigZombie.Poison.Power",PigZombiePoisonPower);
+		PigZombiePoisonDodgeChance = config.getDouble("PigZombie.Poison.DodgeChance",PigZombiePoisonDodgeChance);
+		PigZombieRegenerationEnabled = config.getBoolean("PigZombie.Regeneration.Enabled", PigZombieRegenerationEnabled);
+		PigZombieRegenerationTime = config.getInt("PigZombie.Regeneration.Time",PigZombieRegenerationTime);
+		PigZombieRegenerationPower = config.getInt("PigZombie.Regeneration.Power",PigZombieRegenerationPower);
+		PigZombieRegenerationDodgeChance = config.getDouble("PigZombie.Regeneration.DodgeChance",PigZombieRegenerationDodgeChance);
+		PigZombieSlowEnabled = config.getBoolean("PigZombie.Slow.Enabled",PigZombieSlowEnabled);
+		PigZombieSlowTime = config.getInt("PigZombie.Slow.Time", PigZombieSlowTime);
+		PigZombieSlowPower = config.getInt("PigZombie.Slow.Power", PigZombieSlowPower);
+		PigZombieSlowDodgeChance = config.getDouble("PigZombie.Slow.DodgeChance",PigZombieSlowDodgeChance);
+		PigZombieMiningFatigueEnabled = config.getBoolean("PigZombie.MiningFatigue.Enabled", PigZombieMiningFatigueEnabled);
+		PigZombieMiningFatigueTime = config.getInt("PigZombie.MiningFatigue.Time",PigZombieMiningFatigueTime);
+		PigZombieMiningFatiguePower = config.getInt("PigZombie.MiningFatigue.Power",PigZombieMiningFatiguePower);
+		PigZombieMiningFatigueDodgeChance = config.getDouble("PigZombie.MiningFatigue.DodgeChance",PigZombieMiningFatigueDodgeChance);
+		PigZombieSpeedEnabled = config.getBoolean("PigZombie.Speed.Enabled",PigZombieSpeedEnabled);
+		PigZombieSpeedTime = config.getInt("PigZombie.Speed.Time", PigZombieSpeedTime);
+		PigZombieSpeedPower = config.getInt("PigZombie.Speed.Power", PigZombieSpeedPower);
+		PigZombieSpeedDodgeChance = config.getDouble("PigZombie.Speed.DodgeChance",PigZombieSpeedDodgeChance);
+		PigZombieWaterBreathingEnabled = config.getBoolean("PigZombie.WaterBreathing.Enabled", PigZombieWaterBreathingEnabled);
+		PigZombieWaterBreathingTime = config.getInt("PigZombie.WaterBreathing.Time",PigZombieWaterBreathingTime);
+		PigZombieWaterBreathingPower = config.getInt("PigZombie.WaterBreathing.Power", PigZombieWaterBreathingPower);
+		PigZombieWaterBreathingDodgeChance = config.getDouble("PigZombie.WaterBreathing.DodgeChance",PigZombieWaterBreathingDodgeChance);
+		PigZombieWeaknessEnabled = config.getBoolean("PigZombie.Weakness.Enabled",PigZombieWeaknessEnabled);
+		PigZombieWeaknessTime = config.getInt("PigZombie.Weakness.Time",PigZombieWeaknessTime);
+		PigZombieWeaknessPower = config.getInt("PigZombie.Weakness.Power",PigZombieWeaknessPower);
+		PigZombieWeaknessDodgeChance = config.getDouble("PigZombie.Weakness.DodgeChance", PigZombieWeaknessDodgeChance);
+		// Player
+		PlayerBlindnessEnabled = config.getBoolean("Player.Blindness.Enabled",PlayerBlindnessEnabled);
+		PlayerBlindnessTime = config.getInt("Player.Blindness.Time",PlayerBlindnessTime);
+		PlayerBlindnessPower = config.getInt("Player.Blindness.Power",PlayerBlindnessPower);
+		PlayerBlindnessDodgeChance = config.getDouble("Player.Blindness.DodgeChance", PlayerBlindnessDodgeChance);
+		PlayerNauseaEnabled = config.getBoolean("Player.Nausea.Enabled",PlayerNauseaEnabled);
 		PlayerNauseaTime = config.getInt("Player.Nausea.Time", PlayerNauseaTime);
-		PlayerNauseaPower = config.getInt("Player.Nausea.Power", PlayerNauseaPower);
-		
-		// Player Damage Resistance
+		PlayerNauseaPower = config.getInt("Player.Nausea.Power",PlayerNauseaPower);
+		PlayerNauseaDodgeChance = config.getDouble("Player.Nausea.DodgeChance",PlayerNauseaDodgeChance);
 		PlayerResistanceEnabled = config.getBoolean("Player.Resistance.Enabled", PlayerResistanceEnabled);
-		PlayerResistanceTime = config.getInt("Player.Resistance.Time", PlayerResistanceTime);
-		PlayerResistancePower = config.getInt("Player.Resistance.Power", PlayerResistancePower);
-		
-		// Player Fast Digging
+		PlayerResistanceTime = config.getInt("Player.Resistance.Time",PlayerResistanceTime);
+		PlayerResistancePower = config.getInt("Player.Resistance.Power",PlayerResistancePower);
+		PlayerResistanceDodgeChance = config.getDouble("Player.Resistance.DodgeChance", PlayerResistanceDodgeChance);
 		PlayerFastDiggingEnabled = config.getBoolean("Player.FastDigging.Enabled", PlayerFastDiggingEnabled);
-		PlayerFastDiggingTime = config.getInt("Player.FastDigging.Time", PlayerFastDiggingTime);
-		PlayerFastDiggingPower = config.getInt("Player.FastDigging.Power", PlayerFastDiggingPower);
-		
-		// Player Fire Resistance
+		PlayerFastDiggingTime = config.getInt("Player.FastDigging.Time",PlayerFastDiggingTime);
+		PlayerFastDiggingPower = config.getInt("Player.FastDigging.Power",PlayerFastDiggingPower);
+		PlayerFastDiggingDodgeChance = config.getDouble("Player.FastDigging.DodgeChance", PlayerFastDiggingDodgeChance);
 		PlayerFireResistanceEnabled = config.getBoolean("Player.FireResistance.Enabled", PlayerFireResistanceEnabled);
-		PlayerFireResistanceTime = config.getInt("Player.FireResistance.Time", PlayerFireResistanceTime);
+		PlayerFireResistanceTime = config.getInt("Player.FireResistance.Time",PlayerFireResistanceTime);
 		PlayerFireResistancePower = config.getInt("Player.FireResistance.Power", PlayerFireResistancePower);
-		
-		// Player Harm
-		PlayerHarmEnabled = config.getBoolean("Player.Harm.Enabled", PlayerHarmEnabled);
+		PlayerFireResistanceDodgeChance = config.getDouble("Player.FireResistance.DogeChance", PlayerFireResistanceDodgeChance);
+		PlayerHarmEnabled = config.getBoolean("Player.Harm.Enabled",PlayerHarmEnabled);
 		PlayerHarmTime = config.getInt("Player.Harm.Time", PlayerHarmTime);
-		PlayerHarmPower = config.getInt("Player.Harm.Powre", PlayerHarmPower);
-		
-		// Player Heal
-		PlayerHealEnabled = config.getBoolean("Player.Heal.Enabled", PlayerHealEnabled);
+		PlayerHarmPower = config.getInt("Player.Harm.Power", PlayerHarmPower);
+		PlayerHarmDodgeChance = config.getDouble("Player.Harm.DodgeChance", PlayerHarmDodgeChance);
+		PlayerHealEnabled = config.getBoolean("Player.Heal.Enabled",PlayerHealEnabled);
 		PlayerHealTime = config.getInt("Player.Heal.Time", PlayerHealTime);
 		PlayerHealPower = config.getInt("Player.Heal.Power", PlayerHealPower);
-		
-		// Player Hunger
-		PlayerHungerEnabled = config.getBoolean("Player.Hunger.Enabled", PlayerHungerEnabled);
+		PlayerHealDodgeChance = config.getDouble("Player.Heal.DodgeChance", PlayerHealDodgeChance);
+		PlayerHungerEnabled = config.getBoolean("Player.Hunger.Enabled",PlayerHungerEnabled);
 		PlayerHungerTime = config.getInt("Player.Hunger.Time", PlayerHungerTime);
-		PlayerHungerPower = config.getInt("Player.Hunger.Power", PlayerHungerPower);
-		
-		// Player Strength
-		PlayerStrengthEnabled = config.getBoolean("Player.Strength.Enabled", PlayerStrengthEnabled);
-		PlayerStrengthTime = config.getInt("Player.Strength.Time", PlayerStrengthTime);
-		PlayerStrengthPower = config.getInt("Player.Strength.Power", PlayerStrengthPower);
-		
-		// Player Jump
-		PlayerJumpEnabled = config.getBoolean("Player.Jump.Enabled", PlayerJumpEnabled);
+		PlayerHungerPower = config.getInt("Player.Hunger.Power",PlayerHungerPower);
+		PlayerHungerDodgeChance = config.getDouble("Player.Hunger.DodgeChance",PlayerHungerDodgeChance);
+		PlayerStrengthEnabled = config.getBoolean("Player.Strength.Enabled",PlayerStrengthEnabled);
+		PlayerStrengthTime = config.getInt("Player.IncraseDamage.Time",PlayerStrengthTime);
+		PlayerStrengthPower = config.getInt("Player.Strength.Power",PlayerStrengthPower);
+		PlayerStrengthDodgeChance = config.getDouble("Player.Strength.DodgeChance", PlayerStrengthDodgeChance);
+		PlayerJumpEnabled = config.getBoolean("Player.Jump.Enabled",PlayerJumpEnabled);
 		PlayerJumpTime = config.getInt("Player.Jump.Time", PlayerJumpTime);
 		PlayerJumpPower = config.getInt("Player.Jump.Power", PlayerJumpPower);
-		
-		// Player Poison
-		PlayerPoisonEnabled = config.getBoolean("Player.Poison.Enabled", PlayerPoisonEnabled);
+		PlayerJumpDodgeChance = config.getDouble("Player.Jump.DodgeChance",PlayerJumpDodgeChance);
+		PlayerPoisonEnabled = config.getBoolean("Player.Poison.Enabled",PlayerPoisonEnabled);
 		PlayerPoisonTime = config.getInt("Player.Poison.Time", PlayerPoisonTime);
-		PlayerPoisonPower = config.getInt("Player.Poison.Power", PlayerPoisonPower);
-		
-		// Player Regeneration
+		PlayerPoisonPower = config.getInt("Player.Poison.Power",PlayerPoisonPower);
+		PlayerPoisonDodgeChance = config.getDouble("Player.Poison.DodgeChance",PlayerPoisonDodgeChance);
 		PlayerRegenerationEnabled = config.getBoolean("Player.Regeneration.Enabled", PlayerRegenerationEnabled);
-		PlayerRegenerationTime = config.getInt("Player.Regeneration.Time", PlayerRegenerationTime);
-		PlayerRegenerationPower = config.getInt("Player.Regeneration.Power", PlayerRegenerationPower);
-		
-		// Player Slow
-		PlayerSlowEnabled = config.getBoolean("Player.Slow.Enabled", PlayerSlowEnabled);
+		PlayerRegenerationTime = config.getInt("Player.Regeneration.Time",PlayerRegenerationTime);
+		PlayerRegenerationPower = config.getInt("Player.Regeneration.Power",PlayerRegenerationPower);
+		PlayerRegenerationDodgeChance = config.getDouble("Player.Regeneration.DodgeChance",PlayerRegenerationDodgeChance);
+		PlayerSlowEnabled = config.getBoolean("Player.Slow.Enabled",PlayerSlowEnabled);
 		PlayerSlowTime = config.getInt("Player.Slow.Time", PlayerSlowTime);
 		PlayerSlowPower = config.getInt("Player.Slow.Power", PlayerSlowPower);
-		
-		// Player Slow Digging
+		PlayerSlowDodgeChance = config.getDouble("Player.Slow.DodgeChance",PlayerSlowDodgeChance);
 		PlayerMiningFatigueEnabled = config.getBoolean("Player.MiningFatigue.Enabled", PlayerMiningFatigueEnabled);
-		PlayerMiningFatigueTime = config.getInt("Player.MiningFatigue.Time", PlayerMiningFatigueTime);
-		PlayerMiningFatiguePower = config.getInt("Player.MiningFatigue.Power", PlayerMiningFatiguePower);
-		
-		// Player Speed
-		PlayerSpeedEnabled = config.getBoolean("Player.Speed.Enabled", PlayerSpeedEnabled);
+		PlayerMiningFatigueTime = config.getInt("Player.MiningFatigue.Time",PlayerMiningFatigueTime);
+		PlayerMiningFatiguePower = config.getInt("Player.MiningFatigue.Power",PlayerMiningFatiguePower);
+		PlayerMiningFatigueDodgeChance = config.getDouble("Player.MiningFatigue.DodgeChance",PlayerMiningFatigueDodgeChance);
+		PlayerSpeedEnabled = config.getBoolean("Player.Speed.Enabled",PlayerSpeedEnabled);
 		PlayerSpeedTime = config.getInt("Player.Speed.Time", PlayerSpeedTime);
 		PlayerSpeedPower = config.getInt("Player.Speed.Power", PlayerSpeedPower);
-		
-		// Player Water Breathing
+		PlayerSpeedDodgeChance = config.getDouble("Player.Speed.DodgeChance",PlayerSpeedDodgeChance);
 		PlayerWaterBreathingEnabled = config.getBoolean("Player.WaterBreathing.Enabled", PlayerWaterBreathingEnabled);
-		PlayerWaterBreathingTime = config.getInt("Player.WaterBreathing.Time", PlayerWaterBreathingTime);
+		PlayerWaterBreathingTime = config.getInt("Player.WaterBreathing.Time",PlayerWaterBreathingTime);
 		PlayerWaterBreathingPower = config.getInt("Player.WaterBreathing.Power", PlayerWaterBreathingPower);
-		
-		// Player Weakness
-		PlayerWeaknessEnabled = config.getBoolean("Player.Weakness.Enabled", PlayerWeaknessEnabled);
-		PlayerWeaknessTime = config.getInt("Player.Weakness.Time", PlayerWeaknessTime);
-		PlayerWeaknessPower = config.getInt("Player.Weakness.Power", PlayerWeaknessPower);
-		
-		// Zombie Blindness
-		ZombieBlindnessEnabled = config.getBoolean("Zombie.Blindness.Enabled", ZombieBlindnessEnabled);
-		ZombieBlindnessTime = config.getInt("Zombie.Blindness.Time", ZombieBlindnessTime);
-		ZombieBlindnessPower = config.getInt("Zombie.Blindness.Power", ZombieBlindnessPower);
+		PlayerWaterBreathingDodgeChance = config.getDouble("Player.WaterBreathing.DodgeChance",PlayerWaterBreathingDodgeChance);
+		PlayerWeaknessEnabled = config.getBoolean("Player.Weakness.Enabled",PlayerWeaknessEnabled);
+		PlayerWeaknessTime = config.getInt("Player.Weakness.Time",PlayerWeaknessTime);
+		PlayerWeaknessPower = config.getInt("Player.Weakness.Power",PlayerWeaknessPower);
+		PlayerWeaknessDodgeChance = config.getDouble("Player.Weakness.DodgeChance", PlayerWeaknessDodgeChance);
+		// Silverfish
+		SilverfishBlindnessEnabled = config.getBoolean("Silverfish.Blindness.Enabled",SilverfishBlindnessEnabled);
+		SilverfishBlindnessTime = config.getInt("Silverfish.Blindness.Time",SilverfishBlindnessTime);
+		SilverfishBlindnessPower = config.getInt("Silverfish.Blindness.Power",SilverfishBlindnessPower);
+		SilverfishBlindnessDodgeChance = config.getDouble("Silverfish.Blindness.DodgeChance", SilverfishBlindnessDodgeChance);
+		SilverfishNauseaEnabled = config.getBoolean("Silverfish.Nausea.Enabled",SilverfishNauseaEnabled);
+		SilverfishNauseaTime = config.getInt("Silverfish.Nausea.Time", SilverfishNauseaTime);
+		SilverfishNauseaPower = config.getInt("Silverfish.Nausea.Power",SilverfishNauseaPower);
+		SilverfishNauseaDodgeChance = config.getDouble("Silverfish.Nausea.DodgeChance",SilverfishNauseaDodgeChance);
+		SilverfishResistanceEnabled = config.getBoolean("Silverfish.Resistance.Enabled", SilverfishResistanceEnabled);
+		SilverfishResistanceTime = config.getInt("Silverfish.Resistance.Time",SilverfishResistanceTime);
+		SilverfishResistancePower = config.getInt("Silverfish.Resistance.Power",SilverfishResistancePower);
+		SilverfishResistanceDodgeChance = config.getDouble("Silverfish.Resistance.DodgeChance", SilverfishResistanceDodgeChance);
+		SilverfishFastDiggingEnabled = config.getBoolean("Silverfish.FastDigging.Enabled", SilverfishFastDiggingEnabled);
+		SilverfishFastDiggingTime = config.getInt("Silverfish.FastDigging.Time",SilverfishFastDiggingTime);
+		SilverfishFastDiggingPower = config.getInt("Silverfish.FastDigging.Power",SilverfishFastDiggingPower);
+		SilverfishFastDiggingDodgeChance = config.getDouble("Silverfish.FastDigging.DodgeChance", SilverfishFastDiggingDodgeChance);
+		SilverfishFireResistanceEnabled = config.getBoolean("Silverfish.FireResistance.Enabled", SilverfishFireResistanceEnabled);
+		SilverfishFireResistanceTime = config.getInt("Silverfish.FireResistance.Time",SilverfishFireResistanceTime);
+		SilverfishFireResistancePower = config.getInt("Silverfish.FireResistance.Power", SilverfishFireResistancePower);
+		SilverfishFireResistanceDodgeChance = config.getDouble("Silverfish.FireResistance.DogeChance", SilverfishFireResistanceDodgeChance);
+		SilverfishHarmEnabled = config.getBoolean("Silverfish.Harm.Enabled",SilverfishHarmEnabled);
+		SilverfishHarmTime = config.getInt("Silverfish.Harm.Time", SilverfishHarmTime);
+		SilverfishHarmPower = config.getInt("Silverfish.Harm.Power", SilverfishHarmPower);
+		SilverfishHarmDodgeChance = config.getDouble("Silverfish.Harm.DodgeChance", SilverfishHarmDodgeChance);
+		SilverfishHealEnabled = config.getBoolean("Silverfish.Heal.Enabled",SilverfishHealEnabled);
+		SilverfishHealTime = config.getInt("Silverfish.Heal.Time", SilverfishHealTime);
+		SilverfishHealPower = config.getInt("Silverfish.Heal.Power", SilverfishHealPower);
+		SilverfishHealDodgeChance = config.getDouble("Silverfish.Heal.DodgeChance", SilverfishHealDodgeChance);
+		SilverfishHungerEnabled = config.getBoolean("Silverfish.Hunger.Enabled",SilverfishHungerEnabled);
+		SilverfishHungerTime = config.getInt("Silverfish.Hunger.Time", SilverfishHungerTime);
+		SilverfishHungerPower = config.getInt("Silverfish.Hunger.Power",SilverfishHungerPower);
+		SilverfishHungerDodgeChance = config.getDouble("Silverfish.Hunger.DodgeChance",SilverfishHungerDodgeChance);
+		SilverfishStrengthEnabled = config.getBoolean("Silverfish.Strength.Enabled",SilverfishStrengthEnabled);
+		SilverfishStrengthTime = config.getInt("Silverfish.IncraseDamage.Time",SilverfishStrengthTime);
+		SilverfishStrengthPower = config.getInt("Silverfish.Strength.Power",SilverfishStrengthPower);
+		SilverfishStrengthDodgeChance = config.getDouble("Silverfish.Strength.DodgeChance", SilverfishStrengthDodgeChance);
+		SilverfishJumpEnabled = config.getBoolean("Silverfish.Jump.Enabled",SilverfishJumpEnabled);
+		SilverfishJumpTime = config.getInt("Silverfish.Jump.Time", SilverfishJumpTime);
+		SilverfishJumpPower = config.getInt("Silverfish.Jump.Power", SilverfishJumpPower);
+		SilverfishJumpDodgeChance = config.getDouble("Silverfish.Jump.DodgeChance",SilverfishJumpDodgeChance);
+		SilverfishPoisonEnabled = config.getBoolean("Silverfish.Poison.Enabled",SilverfishPoisonEnabled);
+		SilverfishPoisonTime = config.getInt("Silverfish.Poison.Time", SilverfishPoisonTime);
+		SilverfishPoisonPower = config.getInt("Silverfish.Poison.Power",SilverfishPoisonPower);
+		SilverfishPoisonDodgeChance = config.getDouble("Silverfish.Poison.DodgeChance",SilverfishPoisonDodgeChance);
+		SilverfishRegenerationEnabled = config.getBoolean("Silverfish.Regeneration.Enabled", SilverfishRegenerationEnabled);
+		SilverfishRegenerationTime = config.getInt("Silverfish.Regeneration.Time",SilverfishRegenerationTime);
+		SilverfishRegenerationPower = config.getInt("Silverfish.Regeneration.Power",SilverfishRegenerationPower);
+		SilverfishRegenerationDodgeChance = config.getDouble("Silverfish.Regeneration.DodgeChance",SilverfishRegenerationDodgeChance);
+		SilverfishSlowEnabled = config.getBoolean("Silverfish.Slow.Enabled",SilverfishSlowEnabled);
+		SilverfishSlowTime = config.getInt("Silverfish.Slow.Time", SilverfishSlowTime);
+		SilverfishSlowPower = config.getInt("Silverfish.Slow.Power", SilverfishSlowPower);
+		SilverfishSlowDodgeChance = config.getDouble("Silverfish.Slow.DodgeChance",SilverfishSlowDodgeChance);
+		SilverfishMiningFatigueEnabled = config.getBoolean("Silverfish.MiningFatigue.Enabled", SilverfishMiningFatigueEnabled);
+		SilverfishMiningFatigueTime = config.getInt("Silverfish.MiningFatigue.Time",SilverfishMiningFatigueTime);
+		SilverfishMiningFatiguePower = config.getInt("Silverfish.MiningFatigue.Power",SilverfishMiningFatiguePower);
+		SilverfishMiningFatigueDodgeChance = config.getDouble("Silverfish.MiningFatigue.DodgeChance",SilverfishMiningFatigueDodgeChance);
+		SilverfishSpeedEnabled = config.getBoolean("Silverfish.Speed.Enabled",SilverfishSpeedEnabled);
+		SilverfishSpeedTime = config.getInt("Silverfish.Speed.Time", SilverfishSpeedTime);
+		SilverfishSpeedPower = config.getInt("Silverfish.Speed.Power", SilverfishSpeedPower);
+		SilverfishSpeedDodgeChance = config.getDouble("Silverfish.Speed.DodgeChance",SilverfishSpeedDodgeChance);
+		SilverfishWaterBreathingEnabled = config.getBoolean("Silverfish.WaterBreathing.Enabled", SilverfishWaterBreathingEnabled);
+		SilverfishWaterBreathingTime = config.getInt("Silverfish.WaterBreathing.Time",SilverfishWaterBreathingTime);
+		SilverfishWaterBreathingPower = config.getInt("Silverfish.WaterBreathing.Power", SilverfishWaterBreathingPower);
+		SilverfishWaterBreathingDodgeChance = config.getDouble("Silverfish.WaterBreathing.DodgeChance",SilverfishWaterBreathingDodgeChance);
+		SilverfishWeaknessEnabled = config.getBoolean("Silverfish.Weakness.Enabled",SilverfishWeaknessEnabled);
+		SilverfishWeaknessTime = config.getInt("Silverfish.Weakness.Time",SilverfishWeaknessTime);
+		SilverfishWeaknessPower = config.getInt("Silverfish.Weakness.Power",SilverfishWeaknessPower);
+		SilverfishWeaknessDodgeChance = config.getDouble("Silverfish.Weakness.DodgeChance", SilverfishWeaknessDodgeChance);
+		// Slime
+		SlimeBlindnessEnabled = config.getBoolean("Slime.Blindness.Enabled",SlimeBlindnessEnabled);
+		SlimeBlindnessTime = config.getInt("Slime.Blindness.Time",SlimeBlindnessTime);
+		SlimeBlindnessPower = config.getInt("Slime.Blindness.Power",SlimeBlindnessPower);
+		SlimeBlindnessDodgeChance = config.getDouble("Slime.Blindness.DodgeChance", SlimeBlindnessDodgeChance);
+		SlimeNauseaEnabled = config.getBoolean("Slime.Nausea.Enabled",SlimeNauseaEnabled);
+		SlimeNauseaTime = config.getInt("Slime.Nausea.Time", SlimeNauseaTime);
+		SlimeNauseaPower = config.getInt("Slime.Nausea.Power",SlimeNauseaPower);
+		SlimeNauseaDodgeChance = config.getDouble("Slime.Nausea.DodgeChance",SlimeNauseaDodgeChance);
+		SlimeResistanceEnabled = config.getBoolean("Slime.Resistance.Enabled", SlimeResistanceEnabled);
+		SlimeResistanceTime = config.getInt("Slime.Resistance.Time",SlimeResistanceTime);
+		SlimeResistancePower = config.getInt("Slime.Resistance.Power",SlimeResistancePower);
+		SlimeResistanceDodgeChance = config.getDouble("Slime.Resistance.DodgeChance", SlimeResistanceDodgeChance);
+		SlimeFastDiggingEnabled = config.getBoolean("Slime.FastDigging.Enabled", SlimeFastDiggingEnabled);
+		SlimeFastDiggingTime = config.getInt("Slime.FastDigging.Time",SlimeFastDiggingTime);
+		SlimeFastDiggingPower = config.getInt("Slime.FastDigging.Power",SlimeFastDiggingPower);
+		SlimeFastDiggingDodgeChance = config.getDouble("Slime.FastDigging.DodgeChance", SlimeFastDiggingDodgeChance);
+		SlimeFireResistanceEnabled = config.getBoolean("Slime.FireResistance.Enabled", SlimeFireResistanceEnabled);
+		SlimeFireResistanceTime = config.getInt("Slime.FireResistance.Time",SlimeFireResistanceTime);
+		SlimeFireResistancePower = config.getInt("Slime.FireResistance.Power", SlimeFireResistancePower);
+		SlimeFireResistanceDodgeChance = config.getDouble("Slime.FireResistance.DogeChance", SlimeFireResistanceDodgeChance);
+		SlimeHarmEnabled = config.getBoolean("Slime.Harm.Enabled",SlimeHarmEnabled);
+		SlimeHarmTime = config.getInt("Slime.Harm.Time", SlimeHarmTime);
+		SlimeHarmPower = config.getInt("Slime.Harm.Power", SlimeHarmPower);
+		SlimeHarmDodgeChance = config.getDouble("Slime.Harm.DodgeChance", SlimeHarmDodgeChance);
+		SlimeHealEnabled = config.getBoolean("Slime.Heal.Enabled",SlimeHealEnabled);
+		SlimeHealTime = config.getInt("Slime.Heal.Time", SlimeHealTime);
+		SlimeHealPower = config.getInt("Slime.Heal.Power", SlimeHealPower);
+		SlimeHealDodgeChance = config.getDouble("Slime.Heal.DodgeChance", SlimeHealDodgeChance);
+		SlimeHungerEnabled = config.getBoolean("Slime.Hunger.Enabled",SlimeHungerEnabled);
+		SlimeHungerTime = config.getInt("Slime.Hunger.Time", SlimeHungerTime);
+		SlimeHungerPower = config.getInt("Slime.Hunger.Power",SlimeHungerPower);
+		SlimeHungerDodgeChance = config.getDouble("Slime.Hunger.DodgeChance",SlimeHungerDodgeChance);
+		SlimeStrengthEnabled = config.getBoolean("Slime.Strength.Enabled",SlimeStrengthEnabled);
+		SlimeStrengthTime = config.getInt("Slime.IncraseDamage.Time",SlimeStrengthTime);
+		SlimeStrengthPower = config.getInt("Slime.Strength.Power",SlimeStrengthPower);
+		SlimeStrengthDodgeChance = config.getDouble("Slime.Strength.DodgeChance", SlimeStrengthDodgeChance);
+		SlimeJumpEnabled = config.getBoolean("Slime.Jump.Enabled",SlimeJumpEnabled);
+		SlimeJumpTime = config.getInt("Slime.Jump.Time", SlimeJumpTime);
+		SlimeJumpPower = config.getInt("Slime.Jump.Power", SlimeJumpPower);
+		SlimeJumpDodgeChance = config.getDouble("Slime.Jump.DodgeChance",SlimeJumpDodgeChance);
+		SlimePoisonEnabled = config.getBoolean("Slime.Poison.Enabled",SlimePoisonEnabled);
+		SlimePoisonTime = config.getInt("Slime.Poison.Time", SlimePoisonTime);
+		SlimePoisonPower = config.getInt("Slime.Poison.Power",SlimePoisonPower);
+		SlimePoisonDodgeChance = config.getDouble("Slime.Poison.DodgeChance",SlimePoisonDodgeChance);
+		SlimeRegenerationEnabled = config.getBoolean("Slime.Regeneration.Enabled", SlimeRegenerationEnabled);
+		SlimeRegenerationTime = config.getInt("Slime.Regeneration.Time",SlimeRegenerationTime);
+		SlimeRegenerationPower = config.getInt("Slime.Regeneration.Power",SlimeRegenerationPower);
+		SlimeRegenerationDodgeChance = config.getDouble("Slime.Regeneration.DodgeChance",SlimeRegenerationDodgeChance);
+		SlimeSlowEnabled = config.getBoolean("Slime.Slow.Enabled",SlimeSlowEnabled);
+		SlimeSlowTime = config.getInt("Slime.Slow.Time", SlimeSlowTime);
+		SlimeSlowPower = config.getInt("Slime.Slow.Power", SlimeSlowPower);
+		SlimeSlowDodgeChance = config.getDouble("Slime.Slow.DodgeChance",SlimeSlowDodgeChance);
+		SlimeMiningFatigueEnabled = config.getBoolean("Slime.MiningFatigue.Enabled", SlimeMiningFatigueEnabled);
+		SlimeMiningFatigueTime = config.getInt("Slime.MiningFatigue.Time",SlimeMiningFatigueTime);
+		SlimeMiningFatiguePower = config.getInt("Slime.MiningFatigue.Power",SlimeMiningFatiguePower);
+		SlimeMiningFatigueDodgeChance = config.getDouble("Slime.MiningFatigue.DodgeChance",SlimeMiningFatigueDodgeChance);
+		SlimeSpeedEnabled = config.getBoolean("Slime.Speed.Enabled",SlimeSpeedEnabled);
+		SlimeSpeedTime = config.getInt("Slime.Speed.Time", SlimeSpeedTime);
+		SlimeSpeedPower = config.getInt("Slime.Speed.Power", SlimeSpeedPower);
+		SlimeSpeedDodgeChance = config.getDouble("Slime.Speed.DodgeChance",SlimeSpeedDodgeChance);
+		SlimeWaterBreathingEnabled = config.getBoolean("Slime.WaterBreathing.Enabled", SlimeWaterBreathingEnabled);
+		SlimeWaterBreathingTime = config.getInt("Slime.WaterBreathing.Time",SlimeWaterBreathingTime);
+		SlimeWaterBreathingPower = config.getInt("Slime.WaterBreathing.Power", SlimeWaterBreathingPower);
+		SlimeWaterBreathingDodgeChance = config.getDouble("Slime.WaterBreathing.DodgeChance",SlimeWaterBreathingDodgeChance);
+		SlimeWeaknessEnabled = config.getBoolean("Slime.Weakness.Enabled",SlimeWeaknessEnabled);
+		SlimeWeaknessTime = config.getInt("Slime.Weakness.Time",SlimeWeaknessTime);
+		SlimeWeaknessPower = config.getInt("Slime.Weakness.Power",SlimeWeaknessPower);
+		SlimeWeaknessDodgeChance = config.getDouble("Slime.Weakness.DodgeChance", SlimeWeaknessDodgeChance);
+		// Spider
+		SpiderBlindnessEnabled = config.getBoolean("Spider.Blindness.Enabled",SpiderBlindnessEnabled);
+		SpiderBlindnessTime = config.getInt("Spider.Blindness.Time",SpiderBlindnessTime);
+		SpiderBlindnessPower = config.getInt("Spider.Blindness.Power",SpiderBlindnessPower);
+		SpiderBlindnessDodgeChance = config.getDouble("Spider.Blindness.DodgeChance", SpiderBlindnessDodgeChance);
+		SpiderNauseaEnabled = config.getBoolean("Spider.Nausea.Enabled",SpiderNauseaEnabled);
+		SpiderNauseaTime = config.getInt("Spider.Nausea.Time", SpiderNauseaTime);
+		SpiderNauseaPower = config.getInt("Spider.Nausea.Power",SpiderNauseaPower);
+		SpiderNauseaDodgeChance = config.getDouble("Spider.Nausea.DodgeChance",SpiderNauseaDodgeChance);
+		SpiderResistanceEnabled = config.getBoolean("Spider.Resistance.Enabled", SpiderResistanceEnabled);
+		SpiderResistanceTime = config.getInt("Spider.Resistance.Time",SpiderResistanceTime);
+		SpiderResistancePower = config.getInt("Spider.Resistance.Power",SpiderResistancePower);
+		SpiderResistanceDodgeChance = config.getDouble("Spider.Resistance.DodgeChance", SpiderResistanceDodgeChance);
+		SpiderFastDiggingEnabled = config.getBoolean("Spider.FastDigging.Enabled", SpiderFastDiggingEnabled);
+		SpiderFastDiggingTime = config.getInt("Spider.FastDigging.Time",SpiderFastDiggingTime);
+		SpiderFastDiggingPower = config.getInt("Spider.FastDigging.Power",SpiderFastDiggingPower);
+		SpiderFastDiggingDodgeChance = config.getDouble("Spider.FastDigging.DodgeChance", SpiderFastDiggingDodgeChance);
+		SpiderFireResistanceEnabled = config.getBoolean("Spider.FireResistance.Enabled", SpiderFireResistanceEnabled);
+		SpiderFireResistanceTime = config.getInt("Spider.FireResistance.Time",SpiderFireResistanceTime);
+		SpiderFireResistancePower = config.getInt("Spider.FireResistance.Power", SpiderFireResistancePower);
+		SpiderFireResistanceDodgeChance = config.getDouble("Spider.FireResistance.DogeChance", SpiderFireResistanceDodgeChance);
+		SpiderHarmEnabled = config.getBoolean("Spider.Harm.Enabled",SpiderHarmEnabled);
+		SpiderHarmTime = config.getInt("Spider.Harm.Time", SpiderHarmTime);
+		SpiderHarmPower = config.getInt("Spider.Harm.Power", SpiderHarmPower);
+		SpiderHarmDodgeChance = config.getDouble("Spider.Harm.DodgeChance", SpiderHarmDodgeChance);
+		SpiderHealEnabled = config.getBoolean("Spider.Heal.Enabled",SpiderHealEnabled);
+		SpiderHealTime = config.getInt("Spider.Heal.Time", SpiderHealTime);
+		SpiderHealPower = config.getInt("Spider.Heal.Power", SpiderHealPower);
+		SpiderHealDodgeChance = config.getDouble("Spider.Heal.DodgeChance", SpiderHealDodgeChance);
+		SpiderHungerEnabled = config.getBoolean("Spider.Hunger.Enabled",SpiderHungerEnabled);
+		SpiderHungerTime = config.getInt("Spider.Hunger.Time", SpiderHungerTime);
+		SpiderHungerPower = config.getInt("Spider.Hunger.Power",SpiderHungerPower);
+		SpiderHungerDodgeChance = config.getDouble("Spider.Hunger.DodgeChance",SpiderHungerDodgeChance);
+		SpiderStrengthEnabled = config.getBoolean("Spider.Strength.Enabled",SpiderStrengthEnabled);
+		SpiderStrengthTime = config.getInt("Spider.IncraseDamage.Time",SpiderStrengthTime);
+		SpiderStrengthPower = config.getInt("Spider.Strength.Power",SpiderStrengthPower);
+		SpiderStrengthDodgeChance = config.getDouble("Spider.Strength.DodgeChance", SpiderStrengthDodgeChance);
+		SpiderJumpEnabled = config.getBoolean("Spider.Jump.Enabled",SpiderJumpEnabled);
+		SpiderJumpTime = config.getInt("Spider.Jump.Time", SpiderJumpTime);
+		SpiderJumpPower = config.getInt("Spider.Jump.Power", SpiderJumpPower);
+		SpiderJumpDodgeChance = config.getDouble("Spider.Jump.DodgeChance",SpiderJumpDodgeChance);
+		SpiderPoisonEnabled = config.getBoolean("Spider.Poison.Enabled",SpiderPoisonEnabled);
+		SpiderPoisonTime = config.getInt("Spider.Poison.Time", SpiderPoisonTime);
+		SpiderPoisonPower = config.getInt("Spider.Poison.Power",SpiderPoisonPower);
+		SpiderPoisonDodgeChance = config.getDouble("Spider.Poison.DodgeChance",SpiderPoisonDodgeChance);
+		SpiderRegenerationEnabled = config.getBoolean("Spider.Regeneration.Enabled", SpiderRegenerationEnabled);
+		SpiderRegenerationTime = config.getInt("Spider.Regeneration.Time",SpiderRegenerationTime);
+		SpiderRegenerationPower = config.getInt("Spider.Regeneration.Power",SpiderRegenerationPower);
+		SpiderRegenerationDodgeChance = config.getDouble("Spider.Regeneration.DodgeChance",SpiderRegenerationDodgeChance);
+		SpiderSlowEnabled = config.getBoolean("Spider.Slow.Enabled",SpiderSlowEnabled);
+		SpiderSlowTime = config.getInt("Spider.Slow.Time", SpiderSlowTime);
+		SpiderSlowPower = config.getInt("Spider.Slow.Power", SpiderSlowPower);
+		SpiderSlowDodgeChance = config.getDouble("Spider.Slow.DodgeChance",SpiderSlowDodgeChance);
+		SpiderMiningFatigueEnabled = config.getBoolean("Spider.MiningFatigue.Enabled", SpiderMiningFatigueEnabled);
+		SpiderMiningFatigueTime = config.getInt("Spider.MiningFatigue.Time",SpiderMiningFatigueTime);
+		SpiderMiningFatiguePower = config.getInt("Spider.MiningFatigue.Power",SpiderMiningFatiguePower);
+		SpiderMiningFatigueDodgeChance = config.getDouble("Spider.MiningFatigue.DodgeChance",SpiderMiningFatigueDodgeChance);
+		SpiderSpeedEnabled = config.getBoolean("Spider.Speed.Enabled",SpiderSpeedEnabled);
+		SpiderSpeedTime = config.getInt("Spider.Speed.Time", SpiderSpeedTime);
+		SpiderSpeedPower = config.getInt("Spider.Speed.Power", SpiderSpeedPower);
+		SpiderSpeedDodgeChance = config.getDouble("Spider.Speed.DodgeChance",SpiderSpeedDodgeChance);
+		SpiderWaterBreathingEnabled = config.getBoolean("Spider.WaterBreathing.Enabled", SpiderWaterBreathingEnabled);
+		SpiderWaterBreathingTime = config.getInt("Spider.WaterBreathing.Time",SpiderWaterBreathingTime);
+		SpiderWaterBreathingPower = config.getInt("Spider.WaterBreathing.Power", SpiderWaterBreathingPower);
+		SpiderWaterBreathingDodgeChance = config.getDouble("Spider.WaterBreathing.DodgeChance",SpiderWaterBreathingDodgeChance);
+		SpiderWeaknessEnabled = config.getBoolean("Spider.Weakness.Enabled",SpiderWeaknessEnabled);
+		SpiderWeaknessTime = config.getInt("Spider.Weakness.Time",SpiderWeaknessTime);
+		SpiderWeaknessPower = config.getInt("Spider.Weakness.Power",SpiderWeaknessPower);
+		SpiderWeaknessDodgeChance = config.getDouble("Spider.Weakness.DodgeChance", SpiderWeaknessDodgeChance);
+		// Zombie
+		ZombieBlindnessEnabled = config.getBoolean("Zombie.Blindness.Enabled",ZombieBlindnessEnabled);
+		ZombieBlindnessTime = config.getInt("Zombie.Blindness.Time",ZombieBlindnessTime);
+		ZombieBlindnessPower = config.getInt("Zombie.Blindness.Power",ZombieBlindnessPower);
 		ZombieBlindnessDodgeChance = config.getDouble("Zombie.Blindness.DodgeChance", ZombieBlindnessDodgeChance);
-		
-		//Zombie Nausea
-		ZombieNauseaEnabled = config.getBoolean("Zombie.Nausea.Enabled", ZombieNauseaEnabled);
+		ZombieNauseaEnabled = config.getBoolean("Zombie.Nausea.Enabled",ZombieNauseaEnabled);
 		ZombieNauseaTime = config.getInt("Zombie.Nausea.Time", ZombieNauseaTime);
-		ZombieNauseaPower = config.getInt("Zombie.Nausea.Power", ZombieNauseaPower);
-		ZombieNauseaDodgeChance = config.getDouble("Zombie.Nausea.DodgeChance", ZombieNauseaDodgeChance);
-
-		// Zombie Damage Resistance
+		ZombieNauseaPower = config.getInt("Zombie.Nausea.Power",ZombieNauseaPower);
+		ZombieNauseaDodgeChance = config.getDouble("Zombie.Nausea.DodgeChance",ZombieNauseaDodgeChance);
 		ZombieResistanceEnabled = config.getBoolean("Zombie.Resistance.Enabled", ZombieResistanceEnabled);
-		ZombieResistanceTime = config.getInt("Zombie.Resistance.Time", ZombieResistanceTime);
-		ZombieResistancePower = config.getInt("Zombie.Resistance.Power", ZombieResistancePower);
+		ZombieResistanceTime = config.getInt("Zombie.Resistance.Time",ZombieResistanceTime);
+		ZombieResistancePower = config.getInt("Zombie.Resistance.Power",ZombieResistancePower);
 		ZombieResistanceDodgeChance = config.getDouble("Zombie.Resistance.DodgeChance", ZombieResistanceDodgeChance);
-
-		// Zombie Fast Digging
 		ZombieFastDiggingEnabled = config.getBoolean("Zombie.FastDigging.Enabled", ZombieFastDiggingEnabled);
-		ZombieFastDiggingTime = config.getInt("Zombie.FastDigging.Time", ZombieFastDiggingTime);
-		ZombieFastDiggingPower = config.getInt("Zombie.FastDigging.Power", ZombieFastDiggingPower);
+		ZombieFastDiggingTime = config.getInt("Zombie.FastDigging.Time",ZombieFastDiggingTime);
+		ZombieFastDiggingPower = config.getInt("Zombie.FastDigging.Power",ZombieFastDiggingPower);
 		ZombieFastDiggingDodgeChance = config.getDouble("Zombie.FastDigging.DodgeChance", ZombieFastDiggingDodgeChance);
-
-		// Zombie Fire Resistance
 		ZombieFireResistanceEnabled = config.getBoolean("Zombie.FireResistance.Enabled", ZombieFireResistanceEnabled);
-		ZombieFireResistanceTime = config.getInt("Zombie.FireResistance.Time", ZombieFireResistanceTime);
+		ZombieFireResistanceTime = config.getInt("Zombie.FireResistance.Time",ZombieFireResistanceTime);
 		ZombieFireResistancePower = config.getInt("Zombie.FireResistance.Power", ZombieFireResistancePower);
 		ZombieFireResistanceDodgeChance = config.getDouble("Zombie.FireResistance.DogeChance", ZombieFireResistanceDodgeChance);
-
-		// Zombie Harm
-		ZombieHarmEnabled = config.getBoolean("Zombie.Harm.Enabled", ZombieHarmEnabled);
+		ZombieHarmEnabled = config.getBoolean("Zombie.Harm.Enabled",ZombieHarmEnabled);
 		ZombieHarmTime = config.getInt("Zombie.Harm.Time", ZombieHarmTime);
 		ZombieHarmPower = config.getInt("Zombie.Harm.Power", ZombieHarmPower);
 		ZombieHarmDodgeChance = config.getDouble("Zombie.Harm.DodgeChance", ZombieHarmDodgeChance);
-
-		// Zombie Heal
-		ZombieHealEnabled = config.getBoolean("Zombie.Heal.Enabled", ZombieHealEnabled);
+		ZombieHealEnabled = config.getBoolean("Zombie.Heal.Enabled",ZombieHealEnabled);
 		ZombieHealTime = config.getInt("Zombie.Heal.Time", ZombieHealTime);
 		ZombieHealPower = config.getInt("Zombie.Heal.Power", ZombieHealPower);
 		ZombieHealDodgeChance = config.getDouble("Zombie.Heal.DodgeChance", ZombieHealDodgeChance);
-
-		// Zombie Hunger
-		ZombieHungerEnabled = config.getBoolean("Zombie.Hunger.Enabled", ZombieHungerEnabled);
+		ZombieHungerEnabled = config.getBoolean("Zombie.Hunger.Enabled",ZombieHungerEnabled);
 		ZombieHungerTime = config.getInt("Zombie.Hunger.Time", ZombieHungerTime);
-		ZombieHungerPower = config.getInt("Zombie.Hunger.Power", ZombieHungerPower);
-		ZombieHungerDodgeChance = config.getDouble("Zombie.Hunger.DodgeChance", ZombieHungerDodgeChance);
-
-		// Zombie Strength
-		ZombieStrengthEnabled = config.getBoolean("Zombie.Strength.Enabled", ZombieStrengthEnabled);
-		ZombieStrengthTime = config.getInt("Zombie.IncraseDamage.Time", ZombieStrengthTime);
-		ZombieStrengthPower = config.getInt("Zombie.Strength.Power", ZombieStrengthPower);
+		ZombieHungerPower = config.getInt("Zombie.Hunger.Power",ZombieHungerPower);
+		ZombieHungerDodgeChance = config.getDouble("Zombie.Hunger.DodgeChance",ZombieHungerDodgeChance);
+		ZombieStrengthEnabled = config.getBoolean("Zombie.Strength.Enabled",ZombieStrengthEnabled);
+		ZombieStrengthTime = config.getInt("Zombie.IncraseDamage.Time",ZombieStrengthTime);
+		ZombieStrengthPower = config.getInt("Zombie.Strength.Power",ZombieStrengthPower);
 		ZombieStrengthDodgeChance = config.getDouble("Zombie.Strength.DodgeChance", ZombieStrengthDodgeChance);
-
-		// Zombie Jump
-		ZombieJumpEnabled = config.getBoolean("Zombie.Jump.Enabled", ZombieJumpEnabled);
+		ZombieJumpEnabled = config.getBoolean("Zombie.Jump.Enabled",ZombieJumpEnabled);
 		ZombieJumpTime = config.getInt("Zombie.Jump.Time", ZombieJumpTime);
 		ZombieJumpPower = config.getInt("Zombie.Jump.Power", ZombieJumpPower);
-		ZombieJumpDodgeChance = config.getDouble("Zombie.Jump.DodgeChance", ZombieJumpDodgeChance);
-
-		// Zombie Poison
-		ZombiePoisonEnabled = config.getBoolean("Zombie.Poison.Enabled", ZombiePoisonEnabled);
+		ZombieJumpDodgeChance = config.getDouble("Zombie.Jump.DodgeChance",ZombieJumpDodgeChance);
+		ZombiePoisonEnabled = config.getBoolean("Zombie.Poison.Enabled",ZombiePoisonEnabled);
 		ZombiePoisonTime = config.getInt("Zombie.Poison.Time", ZombiePoisonTime);
-		ZombiePoisonPower = config.getInt("Zombie.Poison.Power", ZombiePoisonPower);
-		ZombiePoisonDodgeChance = config.getDouble("Zombie.Poison.DodgeChance", ZombiePoisonDodgeChance);
-
-		// Zombie Regeneration
+		ZombiePoisonPower = config.getInt("Zombie.Poison.Power",ZombiePoisonPower);
+		ZombiePoisonDodgeChance = config.getDouble("Zombie.Poison.DodgeChance",ZombiePoisonDodgeChance);
 		ZombieRegenerationEnabled = config.getBoolean("Zombie.Regeneration.Enabled", ZombieRegenerationEnabled);
-		ZombieRegenerationTime = config.getInt("Zombie.Regeneration.Time", ZombieRegenerationTime);
-		ZombieRegenerationPower = config.getInt("Zombie.Regeneration.Power", ZombieRegenerationPower);
-		ZombieRegenerationDodgeChance = config.getDouble("Zombie.Regeneration.DodgeChance", ZombieRegenerationDodgeChance);
-
-		// Zombie Slow
-		ZombieSlowEnabled = config.getBoolean("Zombie.Slow.Enabled", ZombieSlowEnabled);
+		ZombieRegenerationTime = config.getInt("Zombie.Regeneration.Time",ZombieRegenerationTime);
+		ZombieRegenerationPower = config.getInt("Zombie.Regeneration.Power",ZombieRegenerationPower);
+		ZombieRegenerationDodgeChance = config.getDouble("Zombie.Regeneration.DodgeChance",ZombieRegenerationDodgeChance);
+		ZombieSlowEnabled = config.getBoolean("Zombie.Slow.Enabled",ZombieSlowEnabled);
 		ZombieSlowTime = config.getInt("Zombie.Slow.Time", ZombieSlowTime);
 		ZombieSlowPower = config.getInt("Zombie.Slow.Power", ZombieSlowPower);
-		ZombieSlowDodgeChance = config.getDouble("Zombie.Slow.DodgeChance", ZombieSlowDodgeChance);
-
-		// Zombie Slow Digging
+		ZombieSlowDodgeChance = config.getDouble("Zombie.Slow.DodgeChance",ZombieSlowDodgeChance);
 		ZombieMiningFatigueEnabled = config.getBoolean("Zombie.MiningFatigue.Enabled", ZombieMiningFatigueEnabled);
-		ZombieMiningFatigueTime = config.getInt("Zombie.MiningFatigue.Time", ZombieMiningFatigueTime);
-		ZombieMiningFatiguePower = config.getInt("Zombie.MiningFatigue.Power", ZombieMiningFatiguePower);
-		ZombieMiningFatigueDodgeChance = config.getDouble("Zombie.MiningFatigue.DodgeChance", ZombieMiningFatigueDodgeChance);
-
-		// Zombie Speed
-		ZombieSpeedEnabled = config.getBoolean("Zombie.Speed.Enabled", ZombieSpeedEnabled);
+		ZombieMiningFatigueTime = config.getInt("Zombie.MiningFatigue.Time",ZombieMiningFatigueTime);
+		ZombieMiningFatiguePower = config.getInt("Zombie.MiningFatigue.Power",ZombieMiningFatiguePower);
+		ZombieMiningFatigueDodgeChance = config.getDouble("Zombie.MiningFatigue.DodgeChance",ZombieMiningFatigueDodgeChance);
+		ZombieSpeedEnabled = config.getBoolean("Zombie.Speed.Enabled",ZombieSpeedEnabled);
 		ZombieSpeedTime = config.getInt("Zombie.Speed.Time", ZombieSpeedTime);
 		ZombieSpeedPower = config.getInt("Zombie.Speed.Power", ZombieSpeedPower);
-		ZombieSpeedDodgeChance = config.getDouble("Zombie.Speed.DodgeChance", ZombieSpeedDodgeChance);
-
-		// Zombie Water Breathing
+		ZombieSpeedDodgeChance = config.getDouble("Zombie.Speed.DodgeChance",ZombieSpeedDodgeChance);
 		ZombieWaterBreathingEnabled = config.getBoolean("Zombie.WaterBreathing.Enabled", ZombieWaterBreathingEnabled);
-		ZombieWaterBreathingTime = config.getInt("Zombie.WaterBreathing.Time", ZombieWaterBreathingTime);
+		ZombieWaterBreathingTime = config.getInt("Zombie.WaterBreathing.Time",ZombieWaterBreathingTime);
 		ZombieWaterBreathingPower = config.getInt("Zombie.WaterBreathing.Power", ZombieWaterBreathingPower);
-		ZombieWaterBreathingDodgeChance = config.getDouble("Zombie.WaterBreathing.DodgeChance", ZombieWaterBreathingDodgeChance);
-		
-		// Zombie Weakness
-		ZombieWeaknessEnabled = config.getBoolean("Zombie.Weakness.Enabled", ZombieWeaknessEnabled);
-		ZombieWeaknessTime = config.getInt("Zombie.Weakness.Time", ZombieWeaknessTime);
-		ZombieWeaknessPower = config.getInt("Zombie.Weakness.Power", ZombieWeaknessPower);
+		ZombieWaterBreathingDodgeChance = config.getDouble("Zombie.WaterBreathing.DodgeChance",ZombieWaterBreathingDodgeChance);
+		ZombieWeaknessEnabled = config.getBoolean("Zombie.Weakness.Enabled",ZombieWeaknessEnabled);
+		ZombieWeaknessTime = config.getInt("Zombie.Weakness.Time",ZombieWeaknessTime);
+		ZombieWeaknessPower = config.getInt("Zombie.Weakness.Power",ZombieWeaknessPower);
 		ZombieWeaknessDodgeChance = config.getDouble("Zombie.Weakness.DodgeChance", ZombieWeaknessDodgeChance);
-		
-		// Spider Blindness
-		SpiderBlindnessEnabled = config.getBoolean("Spider.Blindness.Enabled", SpiderBlindnessEnabled);
-		SpiderBlindnessTime = config.getInt("Spider.Blindness.Time", SpiderBlindnessTime);
-		SpiderBlindnessPower = config.getInt("Spider.Blindness.Power", SpiderBlindnessPower);
 
-		//Spider Nausea
-		SpiderNauseaEnabled = config.getBoolean("Spider.Nausea.Enabled", SpiderNauseaEnabled);
-		SpiderNauseaTime = config.getInt("Spider.Nausea.Time", SpiderNauseaTime);
-		SpiderNauseaPower = config.getInt("Spider.Nausea.Power", SpiderNauseaPower);
-
-		// Spider Damage Resistance
-		SpiderResistanceEnabled = config.getBoolean("Spider.Resistance.Enabled", SpiderResistanceEnabled);
-		SpiderResistanceTime = config.getInt("Spider.Resistance.Time", SpiderResistanceTime);
-		SpiderResistancePower = config.getInt("Spider.Resistance.Power", SpiderResistancePower);
-
-		// Spider Fast Digging
-		SpiderFastDiggingEnabled = config.getBoolean("Spider.FastDigging.Enabled", SpiderFastDiggingEnabled);
-		SpiderFastDiggingTime = config.getInt("Spider.FastDigging.Time", SpiderFastDiggingTime);
-		SpiderFastDiggingPower = config.getInt("Spider.FastDigging.Power", SpiderFastDiggingPower);
-
-		// Spider Fire Resistance
-		SpiderFireResistanceEnabled = config.getBoolean("Spider.FireResistance.Enabled", SpiderFireResistanceEnabled);
-		SpiderFireResistanceTime = config.getInt("Spider.FireResistance.Time", SpiderFireResistanceTime);
-		SpiderFireResistancePower = config.getInt("Spider.FireResistance.Power", SpiderFireResistancePower);
-
-		// Spider Harm
-		SpiderHarmEnabled = config.getBoolean("Spider.Harm.Enabled", SpiderHarmEnabled);
-		SpiderHarmTime = config.getInt("Spider.Harm.Time", SpiderHarmTime);
-		SpiderHarmPower = config.getInt("Spider.Harm.Powre", SpiderHarmPower);
-
-		// Spider Heal
-		SpiderHealEnabled = config.getBoolean("Spider.Heal.Enabled", SpiderHealEnabled);
-		SpiderHealTime = config.getInt("Spider.Heal.Time", SpiderHealTime);
-		SpiderHealPower = config.getInt("Spider.Heal.Power", SpiderHealPower);
-
-		// Spider Hunger
-		SpiderHungerEnabled = config.getBoolean("Spider.Hunger.Enabled", SpiderHungerEnabled);
-		SpiderHungerTime = config.getInt("Spider.Hunger.Time", SpiderHungerTime);
-		SpiderHungerPower = config.getInt("Spider.Hunger.Power", SpiderHungerPower);
-
-		// Spider Strength
-		SpiderStrengthEnabled = config.getBoolean("Spider.Strength.Enabled", SpiderStrengthEnabled);
-		SpiderStrengthTime = config.getInt("Spider.IncraseDamage.Time", SpiderStrengthTime);
-		SpiderStrengthPower = config.getInt("Spider.Strength.Power", SpiderStrengthPower);
-
-		// Spider Jump
-		SpiderJumpEnabled = config.getBoolean("Spider.Jump.Enabled", SpiderJumpEnabled);
-		SpiderJumpTime = config.getInt("Spider.Jump.Time", SpiderJumpTime);
-		SpiderJumpPower = config.getInt("Spider.Jump.Power", SpiderJumpPower);
-
-		// Spider Poison
-		SpiderPoisonEnabled = config.getBoolean("Spider.Poison.Enabled", SpiderPoisonEnabled);
-		SpiderPoisonTime = config.getInt("Spider.Poison.Time", SpiderPoisonTime);
-		SpiderPoisonPower = config.getInt("Spider.Poison.Power", SpiderPoisonPower);
-
-		// Spider Regeneration
-		SpiderRegenerationEnabled = config.getBoolean("Spider.Regeneration.Enabled", SpiderRegenerationEnabled);
-		SpiderRegenerationTime = config.getInt("Spider.Regeneration.Time", SpiderRegenerationTime);
-		SpiderRegenerationPower = config.getInt("Spider.Regeneration.Power", SpiderRegenerationPower);
-
-		// Spider Slow
-		SpiderSlowEnabled = config.getBoolean("Spider.Slow.Enabled", SpiderSlowEnabled);
-		SpiderSlowTime = config.getInt("Spider.Slow.Time", SpiderSlowTime);
-		SpiderSlowPower = config.getInt("Spider.Slow.Power", SpiderSlowPower);
-
-		// Spider Slow Digging
-		SpiderMiningFatigueEnabled = config.getBoolean("Spider.MiningFatigue.Enabled", SpiderMiningFatigueEnabled);
-		SpiderMiningFatigueTime = config.getInt("Spider.MiningFatigue.Time", SpiderMiningFatigueTime);
-		SpiderMiningFatiguePower = config.getInt("Spider.MiningFatigue.Power", SpiderMiningFatiguePower);
-
-		// Spider Speed
-		SpiderSpeedEnabled = config.getBoolean("Spider.Speed.Enabled", SpiderSpeedEnabled);
-		SpiderSpeedTime = config.getInt("Spider.Speed.Time", SpiderSpeedTime);
-		SpiderSpeedPower = config.getInt("Spider.Speed.Power", SpiderSpeedPower);
-
-		// Spider Water Breathing
-		SpiderWaterBreathingEnabled = config.getBoolean("Spider.WaterBreathing.Enabled", SpiderWaterBreathingEnabled);
-		SpiderWaterBreathingTime = config.getInt("Spider.WaterBreathing.Time", SpiderWaterBreathingTime);
-		SpiderWaterBreathingPower = config.getInt("Spider.WaterBreathing.Power", SpiderWaterBreathingPower);
-
-		// Spider Weakness
-		SpiderWeaknessEnabled = config.getBoolean("Spider.Weakness.Enabled", SpiderWeaknessEnabled);
-		SpiderWeaknessTime = config.getInt("Spider.Weakness.Time", SpiderWeaknessTime);
-		SpiderWeaknessPower = config.getInt("Spider.Weakness.Power", SpiderWeaknessPower);
-		
-		// Creeper Blindness
-		CreeperBlindnessEnabled = config.getBoolean("Creeper.Blindness.Enabled", CreeperBlindnessEnabled);
-		CreeperBlindnessTime = config.getInt("Creeper.Blindness.Time", CreeperBlindnessTime);
-		CreeperBlindnessPower = config.getInt("Creeper.Blindness.Power", CreeperBlindnessPower);
-
-		//Creeper Nausea
-		CreeperNauseaEnabled = config.getBoolean("Creeper.Nausea.Enabled", CreeperNauseaEnabled);
-		CreeperNauseaTime = config.getInt("Creeper.Nausea.Time", CreeperNauseaTime);
-		CreeperNauseaPower = config.getInt("Creeper.Nausea.Power", CreeperNauseaPower);
-
-		// Creeper Damage Resistance
-		CreeperResistanceEnabled = config.getBoolean("Creeper.Resistance.Enabled", CreeperResistanceEnabled);
-		CreeperResistanceTime = config.getInt("Creeper.Resistance.Time", CreeperResistanceTime);
-		CreeperResistancePower = config.getInt("Creeper.Resistance.Power", CreeperResistancePower);
-
-		// Creeper Fast Digging
-		CreeperFastDiggingEnabled = config.getBoolean("Creeper.FastDigging.Enabled", CreeperFastDiggingEnabled);
-		CreeperFastDiggingTime = config.getInt("Creeper.FastDigging.Time", CreeperFastDiggingTime);
-		CreeperFastDiggingPower = config.getInt("Creeper.FastDigging.Power", CreeperFastDiggingPower);
-
-		// Creeper Fire Resistance
-		CreeperFireResistanceEnabled = config.getBoolean("Creeper.FireResistance.Enabled", CreeperFireResistanceEnabled);
-		CreeperFireResistanceTime = config.getInt("Creeper.FireResistance.Time", CreeperFireResistanceTime);
-		CreeperFireResistancePower = config.getInt("Creeper.FireResistance.Power", CreeperFireResistancePower);
-
-		// Creeper Harm
-		CreeperHarmEnabled = config.getBoolean("Creeper.Harm.Enabled", CreeperHarmEnabled);
-		CreeperHarmTime = config.getInt("Creeper.Harm.Time", CreeperHarmTime);
-		CreeperHarmPower = config.getInt("Creeper.Harm.Powre", CreeperHarmPower);
-
-		// Creeper Heal
-		CreeperHealEnabled = config.getBoolean("Creeper.Heal.Enabled", CreeperHealEnabled);
-		CreeperHealTime = config.getInt("Creeper.Heal.Time", CreeperHealTime);
-		CreeperHealPower = config.getInt("Creeper.Heal.Power", CreeperHealPower);
-
-		// Creeper Hunger
-		CreeperHungerEnabled = config.getBoolean("Creeper.Hunger.Enabled", CreeperHungerEnabled);
-		CreeperHungerTime = config.getInt("Creeper.Hunger.Time", CreeperHungerTime);
-		CreeperHungerPower = config.getInt("Creeper.Hunger.Power", CreeperHungerPower);
-
-		// Creeper Strength
-		CreeperStrengthEnabled = config.getBoolean("Creeper.Strength.Enabled", CreeperStrengthEnabled);
-		CreeperStrengthTime = config.getInt("Creeper.IncraseDamage.Time", CreeperStrengthTime);
-		CreeperStrengthPower = config.getInt("Creeper.Strength.Power", CreeperStrengthPower);
-
-		// Creeper Jump
-		CreeperJumpEnabled = config.getBoolean("Creeper.Jump.Enabled", CreeperJumpEnabled);
-		CreeperJumpTime = config.getInt("Creeper.Jump.Time", CreeperJumpTime);
-		CreeperJumpPower = config.getInt("Creeper.Jump.Power", CreeperJumpPower);
-
-		// Creeper Poison
-		CreeperPoisonEnabled = config.getBoolean("Creeper.Poison.Enabled", CreeperPoisonEnabled);
-		CreeperPoisonTime = config.getInt("Creeper.Poison.Time", CreeperPoisonTime);
-		CreeperPoisonPower = config.getInt("Creeper.Poison.Power", CreeperPoisonPower);
-
-		// Creeper Regeneration
-		CreeperRegenerationEnabled = config.getBoolean("Creeper.Regeneration.Enabled", CreeperRegenerationEnabled);
-		CreeperRegenerationTime = config.getInt("Creeper.Regeneration.Time", CreeperRegenerationTime);
-		CreeperRegenerationPower = config.getInt("Creeper.Regeneration.Power", CreeperRegenerationPower);
-
-		// Creeper Slow
-		CreeperSlowEnabled = config.getBoolean("Creeper.Slow.Enabled", CreeperSlowEnabled);
-		CreeperSlowTime = config.getInt("Creeper.Slow.Time", CreeperSlowTime);
-		CreeperSlowPower = config.getInt("Creeper.Slow.Power", CreeperSlowPower);
-
-		// Creeper Slow Digging
-		CreeperMiningFatigueEnabled = config.getBoolean("Creeper.MiningFatigue.Enabled", CreeperMiningFatigueEnabled);
-		CreeperMiningFatigueTime = config.getInt("Creeper.MiningFatigue.Time", CreeperMiningFatigueTime);
-		CreeperMiningFatiguePower = config.getInt("Creeper.MiningFatigue.Power", CreeperMiningFatiguePower);
-
-		// Creeper Speed
-		CreeperSpeedEnabled = config.getBoolean("Creeper.Speed.Enabled", CreeperSpeedEnabled);
-		CreeperSpeedTime = config.getInt("Creeper.Speed.Time", CreeperSpeedTime);
-		CreeperSpeedPower = config.getInt("Creeper.Speed.Power", CreeperSpeedPower);
-
-		// Creeper Water Breathing
-		CreeperWaterBreathingEnabled = config.getBoolean("Creeper.WaterBreathing.Enabled", CreeperWaterBreathingEnabled);
-		CreeperWaterBreathingTime = config.getInt("Creeper.WaterBreathing.Time", CreeperWaterBreathingTime);
-		CreeperWaterBreathingPower = config.getInt("Creeper.WaterBreathing.Power", CreeperWaterBreathingPower);
-
-		// Creeper Weakness
-		CreeperWeaknessEnabled = config.getBoolean("Creeper.Weakness.Enabled", CreeperWeaknessEnabled);
-		CreeperWeaknessTime = config.getInt("Creeper.Weakness.Time", CreeperWeaknessTime);
-		CreeperWeaknessPower = config.getInt("Creeper.Weakness.Power", CreeperWeaknessPower);
-		
-		// Enderman Blindness
-		EndermanBlindnessEnabled = config.getBoolean("Enderman.Blindness.Enabled", EndermanBlindnessEnabled);
-		EndermanBlindnessTime = config.getInt("Enderman.Blindness.Time", EndermanBlindnessTime);
-		EndermanBlindnessPower = config.getInt("Enderman.Blindness.Power", EndermanBlindnessPower);
-
-		//Enderman Nausea
-		EndermanNauseaEnabled = config.getBoolean("Enderman.Nausea.Enabled", EndermanNauseaEnabled);
-		EndermanNauseaTime = config.getInt("Enderman.Nausea.Time", EndermanNauseaTime);
-		EndermanNauseaPower = config.getInt("Enderman.Nausea.Power", EndermanNauseaPower);
-
-		// Enderman Damage Resistance
-		EndermanResistanceEnabled = config.getBoolean("Enderman.Resistance.Enabled", EndermanResistanceEnabled);
-		EndermanResistanceTime = config.getInt("Enderman.Resistance.Time", EndermanResistanceTime);
-		EndermanResistancePower = config.getInt("Enderman.Resistance.Power", EndermanResistancePower);
-
-		// Enderman Fast Digging
-		EndermanFastDiggingEnabled = config.getBoolean("Enderman.FastDigging.Enabled", EndermanFastDiggingEnabled);
-		EndermanFastDiggingTime = config.getInt("Enderman.FastDigging.Time", EndermanFastDiggingTime);
-		EndermanFastDiggingPower = config.getInt("Enderman.FastDigging.Power", EndermanFastDiggingPower);
-
-		// Enderman Fire Resistance
-		EndermanFireResistanceEnabled = config.getBoolean("Enderman.FireResistance.Enabled", EndermanFireResistanceEnabled);
-		EndermanFireResistanceTime = config.getInt("Enderman.FireResistance.Time", EndermanFireResistanceTime);
-		EndermanFireResistancePower = config.getInt("Enderman.FireResistance.Power", EndermanFireResistancePower);
-
-		// Enderman Harm
-		EndermanHarmEnabled = config.getBoolean("Enderman.Harm.Enabled", EndermanHarmEnabled);
-		EndermanHarmTime = config.getInt("Enderman.Harm.Time", EndermanHarmTime);
-		EndermanHarmPower = config.getInt("Enderman.Harm.Powre", EndermanHarmPower);
-
-		// Enderman Heal
-		EndermanHealEnabled = config.getBoolean("Enderman.Heal.Enabled", EndermanHealEnabled);
-		EndermanHealTime = config.getInt("Enderman.Heal.Time", EndermanHealTime);
-		EndermanHealPower = config.getInt("Enderman.Heal.Power", EndermanHealPower);
-
-		// Enderman Hunger
-		EndermanHungerEnabled = config.getBoolean("Enderman.Hunger.Enabled", EndermanHungerEnabled);
-		EndermanHungerTime = config.getInt("Enderman.Hunger.Time", EndermanHungerTime);
-		EndermanHungerPower = config.getInt("Enderman.Hunger.Power", EndermanHungerPower);
-
-		// Enderman Strength
-		EndermanStrengthEnabled = config.getBoolean("Enderman.Strength.Enabled", EndermanStrengthEnabled);
-		EndermanStrengthTime = config.getInt("Enderman.IncraseDamage.Time", EndermanStrengthTime);
-		EndermanStrengthPower = config.getInt("Enderman.Strength.Power", EndermanStrengthPower);
-
-		// Enderman Jump
-		EndermanJumpEnabled = config.getBoolean("Enderman.Jump.Enabled", EndermanJumpEnabled);
-		EndermanJumpTime = config.getInt("Enderman.Jump.Time", EndermanJumpTime);
-		EndermanJumpPower = config.getInt("Enderman.Jump.Power", EndermanJumpPower);
-
-		// Enderman Poison
-		EndermanPoisonEnabled = config.getBoolean("Enderman.Poison.Enabled", EndermanPoisonEnabled);
-		EndermanPoisonTime = config.getInt("Enderman.Poison.Time", EndermanPoisonTime);
-		EndermanPoisonPower = config.getInt("Enderman.Poison.Power", EndermanPoisonPower);
-
-		// Enderman Regeneration
-		EndermanRegenerationEnabled = config.getBoolean("Enderman.Regeneration.Enabled", EndermanRegenerationEnabled);
-		EndermanRegenerationTime = config.getInt("Enderman.Regeneration.Time", EndermanRegenerationTime);
-		EndermanRegenerationPower = config.getInt("Enderman.Regeneration.Power", EndermanRegenerationPower);
-
-		// Enderman Slow
-		EndermanSlowEnabled = config.getBoolean("Enderman.Slow.Enabled", EndermanSlowEnabled);
-		EndermanSlowTime = config.getInt("Enderman.Slow.Time", EndermanSlowTime);
-		EndermanSlowPower = config.getInt("Enderman.Slow.Power", EndermanSlowPower);
-
-		// Enderman Slow Digging
-		EndermanMiningFatigueEnabled = config.getBoolean("Enderman.MiningFatigue.Enabled", EndermanMiningFatigueEnabled);
-		EndermanMiningFatigueTime = config.getInt("Enderman.MiningFatigue.Time", EndermanMiningFatigueTime);
-		EndermanMiningFatiguePower = config.getInt("Enderman.MiningFatigue.Power", EndermanMiningFatiguePower);
-
-		// Enderman Speed
-		EndermanSpeedEnabled = config.getBoolean("Enderman.Speed.Enabled", EndermanSpeedEnabled);
-		EndermanSpeedTime = config.getInt("Enderman.Speed.Time", EndermanSpeedTime);
-		EndermanSpeedPower = config.getInt("Enderman.Speed.Power", EndermanSpeedPower);
-
-		// Enderman Water Breathing
-		EndermanWaterBreathingEnabled = config.getBoolean("Enderman.WaterBreathing.Enabled", EndermanWaterBreathingEnabled);
-		EndermanWaterBreathingTime = config.getInt("Enderman.WaterBreathing.Time", EndermanWaterBreathingTime);
-		EndermanWaterBreathingPower = config.getInt("Enderman.WaterBreathing.Power", EndermanWaterBreathingPower);
-
-		// Enderman Weakness
-		EndermanWeaknessEnabled = config.getBoolean("Enderman.Weakness.Enabled", EndermanWeaknessEnabled);
-		EndermanWeaknessTime = config.getInt("Enderman.Weakness.Time", EndermanWeaknessTime);
-		EndermanWeaknessPower = config.getInt("Enderman.Weakness.Power", EndermanWeaknessPower);
-		
-		// Slime Blindness
-		SlimeBlindnessEnabled = config.getBoolean("Slime.Blindness.Enabled", SlimeBlindnessEnabled);
-		SlimeBlindnessTime = config.getInt("Slime.Blindness.Time", SlimeBlindnessTime);
-		SlimeBlindnessPower = config.getInt("Slime.Blindness.Power", SlimeBlindnessPower);
-
-		//Slime Nausea
-		SlimeNauseaEnabled = config.getBoolean("Slime.Nausea.Enabled", SlimeNauseaEnabled);
-		SlimeNauseaTime = config.getInt("Slime.Nausea.Time", SlimeNauseaTime);
-		SlimeNauseaPower = config.getInt("Slime.Nausea.Power", SlimeNauseaPower);
-
-		// Slime Damage Resistance
-		SlimeResistanceEnabled = config.getBoolean("Slime.Resistance.Enabled", SlimeResistanceEnabled);
-		SlimeResistanceTime = config.getInt("Slime.Resistance.Time", SlimeResistanceTime);
-		SlimeResistancePower = config.getInt("Slime.Resistance.Power", SlimeResistancePower);
-
-		// Slime Fast Digging
-		SlimeFastDiggingEnabled = config.getBoolean("Slime.FastDigging.Enabled", SlimeFastDiggingEnabled);
-		SlimeFastDiggingTime = config.getInt("Slime.FastDigging.Time", SlimeFastDiggingTime);
-		SlimeFastDiggingPower = config.getInt("Slime.FastDigging.Power", SlimeFastDiggingPower);
-
-		// Slime Fire Resistance
-		SlimeFireResistanceEnabled = config.getBoolean("Slime.FireResistance.Enabled", SlimeFireResistanceEnabled);
-		SlimeFireResistanceTime = config.getInt("Slime.FireResistance.Time", SlimeFireResistanceTime);
-		SlimeFireResistancePower = config.getInt("Slime.FireResistance.Power", SlimeFireResistancePower);
-
-		// Slime Harm
-		SlimeHarmEnabled = config.getBoolean("Slime.Harm.Enabled", SlimeHarmEnabled);
-		SlimeHarmTime = config.getInt("Slime.Harm.Time", SlimeHarmTime);
-		SlimeHarmPower = config.getInt("Slime.Harm.Powre", SlimeHarmPower);
-
-		// Slime Heal
-		SlimeHealEnabled = config.getBoolean("Slime.Heal.Enabled", SlimeHealEnabled);
-		SlimeHealTime = config.getInt("Slime.Heal.Time", SlimeHealTime);
-		SlimeHealPower = config.getInt("Slime.Heal.Power", SlimeHealPower);
-
-		// Slime Hunger
-		SlimeHungerEnabled = config.getBoolean("Slime.Hunger.Enabled", SlimeHungerEnabled);
-		SlimeHungerTime = config.getInt("Slime.Hunger.Time", SlimeHungerTime);
-		SlimeHungerPower = config.getInt("Slime.Hunger.Power", SlimeHungerPower);
-
-		// Slime Strength
-		SlimeStrengthEnabled = config.getBoolean("Slime.Strength.Enabled", SlimeStrengthEnabled);
-		SlimeStrengthTime = config.getInt("Slime.IncraseDamage.Time", SlimeStrengthTime);
-		SlimeStrengthPower = config.getInt("Slime.Strength.Power", SlimeStrengthPower);
-
-		// Slime Jump
-		SlimeJumpEnabled = config.getBoolean("Slime.Jump.Enabled", SlimeJumpEnabled);
-		SlimeJumpTime = config.getInt("Slime.Jump.Time", SlimeJumpTime);
-		SlimeJumpPower = config.getInt("Slime.Jump.Power", SlimeJumpPower);
-
-		// Slime Poison
-		SlimePoisonEnabled = config.getBoolean("Slime.Poison.Enabled", SlimePoisonEnabled);
-		SlimePoisonTime = config.getInt("Slime.Poison.Time", SlimePoisonTime);
-		SlimePoisonPower = config.getInt("Slime.Poison.Power", SlimePoisonPower);
-
-		// Slime Regeneration
-		SlimeRegenerationEnabled = config.getBoolean("Slime.Regeneration.Enabled", SlimeRegenerationEnabled);
-		SlimeRegenerationTime = config.getInt("Slime.Regeneration.Time", SlimeRegenerationTime);
-		SlimeRegenerationPower = config.getInt("Slime.Regeneration.Power", SlimeRegenerationPower);
-
-		// Slime Slow
-		SlimeSlowEnabled = config.getBoolean("Slime.Slow.Enabled", SlimeSlowEnabled);
-		SlimeSlowTime = config.getInt("Slime.Slow.Time", SlimeSlowTime);
-		SlimeSlowPower = config.getInt("Slime.Slow.Power", SlimeSlowPower);
-
-		// Slime Slow Digging
-		SlimeMiningFatigueEnabled = config.getBoolean("Slime.MiningFatigue.Enabled", SlimeMiningFatigueEnabled);
-		SlimeMiningFatigueTime = config.getInt("Slime.MiningFatigue.Time", SlimeMiningFatigueTime);
-		SlimeMiningFatiguePower = config.getInt("Slime.MiningFatigue.Power", SlimeMiningFatiguePower);
-
-		// Slime Speed
-		SlimeSpeedEnabled = config.getBoolean("Slime.Speed.Enabled", SlimeSpeedEnabled);
-		SlimeSpeedTime = config.getInt("Slime.Speed.Time", SlimeSpeedTime);
-		SlimeSpeedPower = config.getInt("Slime.Speed.Power", SlimeSpeedPower);
-
-		// Slime Water Breathing
-		SlimeWaterBreathingEnabled = config.getBoolean("Slime.WaterBreathing.Enabled", SlimeWaterBreathingEnabled);
-		SlimeWaterBreathingTime = config.getInt("Slime.WaterBreathing.Time", SlimeWaterBreathingTime);
-		SlimeWaterBreathingPower = config.getInt("Slime.WaterBreathing.Power", SlimeWaterBreathingPower);
-
-		// Slime Weakness
-		SlimeWeaknessEnabled = config.getBoolean("Slime.Weakness.Enabled", SlimeWeaknessEnabled);
-		SlimeWeaknessTime = config.getInt("Slime.Weakness.Time", SlimeWeaknessTime);
-		SlimeWeaknessPower = config.getInt("Slime.Weakness.Power", SlimeWeaknessPower);
-		
-		// Giant Blindness
-		GiantBlindnessEnabled = config.getBoolean("Giant.Blindness.Enabled", GiantBlindnessEnabled);
-		GiantBlindnessTime = config.getInt("Giant.Blindness.Time", GiantBlindnessTime);
-		GiantBlindnessPower = config.getInt("Giant.Blindness.Power", GiantBlindnessPower);
-
-		//Giant Nausea
-		GiantNauseaEnabled = config.getBoolean("Giant.Nausea.Enabled", GiantNauseaEnabled);
-		GiantNauseaTime = config.getInt("Giant.Nausea.Time", GiantNauseaTime);
-		GiantNauseaPower = config.getInt("Giant.Nausea.Power", GiantNauseaPower);
-
-		// Giant Damage Resistance
-		GiantResistanceEnabled = config.getBoolean("Giant.Resistance.Enabled", GiantResistanceEnabled);
-		GiantResistanceTime = config.getInt("Giant.Resistance.Time", GiantResistanceTime);
-		GiantResistancePower = config.getInt("Giant.Resistance.Power", GiantResistancePower);
-
-		// Giant Fast Digging
-		GiantFastDiggingEnabled = config.getBoolean("Giant.FastDigging.Enabled", GiantFastDiggingEnabled);
-		GiantFastDiggingTime = config.getInt("Giant.FastDigging.Time", GiantFastDiggingTime);
-		GiantFastDiggingPower = config.getInt("Giant.FastDigging.Power", GiantFastDiggingPower);
-
-		// Giant Fire Resistance
-		GiantFireResistanceEnabled = config.getBoolean("Giant.FireResistance.Enabled", GiantFireResistanceEnabled);
-		GiantFireResistanceTime = config.getInt("Giant.FireResistance.Time", GiantFireResistanceTime);
-		GiantFireResistancePower = config.getInt("Giant.FireResistance.Power", GiantFireResistancePower);
-
-		// Giant Harm
-		GiantHarmEnabled = config.getBoolean("Giant.Harm.Enabled", GiantHarmEnabled);
-		GiantHarmTime = config.getInt("Giant.Harm.Time", GiantHarmTime);
-		GiantHarmPower = config.getInt("Giant.Harm.Powre", GiantHarmPower);
-
-		// Giant Heal
-		GiantHealEnabled = config.getBoolean("Giant.Heal.Enabled", GiantHealEnabled);
-		GiantHealTime = config.getInt("Giant.Heal.Time", GiantHealTime);
-		GiantHealPower = config.getInt("Giant.Heal.Power", GiantHealPower);
-
-		// Giant Hunger
-		GiantHungerEnabled = config.getBoolean("Giant.Hunger.Enabled", GiantHungerEnabled);
-		GiantHungerTime = config.getInt("Giant.Hunger.Time", GiantHungerTime);
-		GiantHungerPower = config.getInt("Giant.Hunger.Power", GiantHungerPower);
-
-		// Giant Strength
-		GiantStrengthEnabled = config.getBoolean("Giant.Strength.Enabled", GiantStrengthEnabled);
-		GiantStrengthTime = config.getInt("Giant.IncraseDamage.Time", GiantStrengthTime);
-		GiantStrengthPower = config.getInt("Giant.Strength.Power", GiantStrengthPower);
-
-		// Giant Jump
-		GiantJumpEnabled = config.getBoolean("Giant.Jump.Enabled", GiantJumpEnabled);
-		GiantJumpTime = config.getInt("Giant.Jump.Time", GiantJumpTime);
-		GiantJumpPower = config.getInt("Giant.Jump.Power", GiantJumpPower);
-
-		// Giant Poison
-		GiantPoisonEnabled = config.getBoolean("Giant.Poison.Enabled", GiantPoisonEnabled);
-		GiantPoisonTime = config.getInt("Giant.Poison.Time", GiantPoisonTime);
-		GiantPoisonPower = config.getInt("Giant.Poison.Power", GiantPoisonPower);
-
-		// Giant Regeneration
-		GiantRegenerationEnabled = config.getBoolean("Giant.Regeneration.Enabled", GiantRegenerationEnabled);
-		GiantRegenerationTime = config.getInt("Giant.Regeneration.Time", GiantRegenerationTime);
-		GiantRegenerationPower = config.getInt("Giant.Regeneration.Power", GiantRegenerationPower);
-
-		// Giant Slow
-		GiantSlowEnabled = config.getBoolean("Giant.Slow.Enabled", GiantSlowEnabled);
-		GiantSlowTime = config.getInt("Giant.Slow.Time", GiantSlowTime);
-		GiantSlowPower = config.getInt("Giant.Slow.Power", GiantSlowPower);
-
-		// Giant Slow Digging
-		GiantMiningFatigueEnabled = config.getBoolean("Giant.MiningFatigue.Enabled", GiantMiningFatigueEnabled);
-		GiantMiningFatigueTime = config.getInt("Giant.MiningFatigue.Time", GiantMiningFatigueTime);
-		GiantMiningFatiguePower = config.getInt("Giant.MiningFatigue.Power", GiantMiningFatiguePower);
-
-		// Giant Speed
-		GiantSpeedEnabled = config.getBoolean("Giant.Speed.Enabled", GiantSpeedEnabled);
-		GiantSpeedTime = config.getInt("Giant.Speed.Time", GiantSpeedTime);
-		GiantSpeedPower = config.getInt("Giant.Speed.Power", GiantSpeedPower);
-
-		// Giant Water Breathing
-		GiantWaterBreathingEnabled = config.getBoolean("Giant.WaterBreathing.Enabled", GiantWaterBreathingEnabled);
-		GiantWaterBreathingTime = config.getInt("Giant.WaterBreathing.Time", GiantWaterBreathingTime);
-		GiantWaterBreathingPower = config.getInt("Giant.WaterBreathing.Power", GiantWaterBreathingPower);
-
-		// Giant Weakness
-		GiantWeaknessEnabled = config.getBoolean("Giant.Weakness.Enabled", GiantWeaknessEnabled);
-		GiantWeaknessTime = config.getInt("Giant.Weakness.Time", GiantWeaknessTime);
-		GiantWeaknessPower = config.getInt("Giant.Weakness.Power", GiantWeaknessPower);
-		
-		// Blaze Blindness
-		BlazeBlindnessEnabled = config.getBoolean("Blaze.Blindness.Enabled", BlazeBlindnessEnabled);
-		BlazeBlindnessTime = config.getInt("Blaze.Blindness.Time", BlazeBlindnessTime);
-		BlazeBlindnessPower = config.getInt("Blaze.Blindness.Power", BlazeBlindnessPower);
-
-		//Blaze Nausea
-		BlazeNauseaEnabled = config.getBoolean("Blaze.Nausea.Enabled", BlazeNauseaEnabled);
-		BlazeNauseaTime = config.getInt("Blaze.Nausea.Time", BlazeNauseaTime);
-		BlazeNauseaPower = config.getInt("Blaze.Nausea.Power", BlazeNauseaPower);
-
-		// Blaze Damage Resistance
-		BlazeResistanceEnabled = config.getBoolean("Blaze.Resistance.Enabled", BlazeResistanceEnabled);
-		BlazeResistanceTime = config.getInt("Blaze.Resistance.Time", BlazeResistanceTime);
-		BlazeResistancePower = config.getInt("Blaze.Resistance.Power", BlazeResistancePower);
-
-		// Blaze Fast Digging
-		BlazeFastDiggingEnabled = config.getBoolean("Blaze.FastDigging.Enabled", BlazeFastDiggingEnabled);
-		BlazeFastDiggingTime = config.getInt("Blaze.FastDigging.Time", BlazeFastDiggingTime);
-		BlazeFastDiggingPower = config.getInt("Blaze.FastDigging.Power", BlazeFastDiggingPower);
-
-		// Blaze Fire Resistance
-		BlazeFireResistanceEnabled = config.getBoolean("Blaze.FireResistance.Enabled", BlazeFireResistanceEnabled);
-		BlazeFireResistanceTime = config.getInt("Blaze.FireResistance.Time", BlazeFireResistanceTime);
-		BlazeFireResistancePower = config.getInt("Blaze.FireResistance.Power", BlazeFireResistancePower);
-
-		// Blaze Harm
-		BlazeHarmEnabled = config.getBoolean("Blaze.Harm.Enabled", BlazeHarmEnabled);
-		BlazeHarmTime = config.getInt("Blaze.Harm.Time", BlazeHarmTime);
-		BlazeHarmPower = config.getInt("Blaze.Harm.Powre", BlazeHarmPower);
-
-		// Blaze Heal
-		BlazeHealEnabled = config.getBoolean("Blaze.Heal.Enabled", BlazeHealEnabled);
-		BlazeHealTime = config.getInt("Blaze.Heal.Time", BlazeHealTime);
-		BlazeHealPower = config.getInt("Blaze.Heal.Power", BlazeHealPower);
-
-		// Blaze Hunger
-		BlazeHungerEnabled = config.getBoolean("Blaze.Hunger.Enabled", BlazeHungerEnabled);
-		BlazeHungerTime = config.getInt("Blaze.Hunger.Time", BlazeHungerTime);
-		BlazeHungerPower = config.getInt("Blaze.Hunger.Power", BlazeHungerPower);
-
-		// Blaze Strength
-		BlazeStrengthEnabled = config.getBoolean("Blaze.Strength.Enabled", BlazeStrengthEnabled);
-		BlazeStrengthTime = config.getInt("Blaze.Strength.Time", BlazeStrengthTime);
-		BlazeStrengthPower = config.getInt("Blaze.Strength.Power", BlazeStrengthPower);
-
-		// Blaze Jump
-		BlazeJumpEnabled = config.getBoolean("Blaze.Jump.Enabled", BlazeJumpEnabled);
-		BlazeJumpTime = config.getInt("Blaze.Jump.Time", BlazeJumpTime);
-		BlazeJumpPower = config.getInt("Blaze.Jump.Power", BlazeJumpPower);
-
-		// Blaze Poison
-		BlazePoisonEnabled = config.getBoolean("Blaze.Poison.Enabled", BlazePoisonEnabled);
-		BlazePoisonTime = config.getInt("Blaze.Poison.Time", BlazePoisonTime);
-		BlazePoisonPower = config.getInt("Blaze.Poison.Power", BlazePoisonPower);
-
-		// Blaze Regeneration
-		BlazeRegenerationEnabled = config.getBoolean("Blaze.Regeneration.Enabled", BlazeRegenerationEnabled);
-		BlazeRegenerationTime = config.getInt("Blaze.Regeneration.Time", BlazeRegenerationTime);
-		BlazeRegenerationPower = config.getInt("Blaze.Regeneration.Power", BlazeRegenerationPower);
-
-		// Blaze Slow
-		BlazeSlowEnabled = config.getBoolean("Blaze.Slow.Enabled", BlazeSlowEnabled);
-		BlazeSlowTime = config.getInt("Blaze.Slow.Time", BlazeSlowTime);
-		BlazeSlowPower = config.getInt("Blaze.Slow.Power", BlazeSlowPower);
-
-		// Blaze Slow Digging
-		BlazeMiningFatigueEnabled = config.getBoolean("Blaze.MiningFatigue.Enabled", BlazeMiningFatigueEnabled);
-		BlazeMiningFatigueTime = config.getInt("Blaze.MiningFatigue.Time", BlazeMiningFatigueTime);
-		BlazeMiningFatiguePower = config.getInt("Blaze.MiningFatigue.Power", BlazeMiningFatiguePower);
-
-		// Blaze Speed
-		BlazeSpeedEnabled = config.getBoolean("Blaze.Speed.Enabled", BlazeSpeedEnabled);
-		BlazeSpeedTime = config.getInt("Blaze.Speed.Time", BlazeSpeedTime);
-		BlazeSpeedPower = config.getInt("Blaze.Speed.Power", BlazeSpeedPower);
-
-		// Blaze Water Breathing
-		BlazeWaterBreathingEnabled = config.getBoolean("Blaze.WaterBreathing.Enabled", BlazeWaterBreathingEnabled);
-		BlazeWaterBreathingTime = config.getInt("Blaze.WaterBreathing.Time", BlazeWaterBreathingTime);
-		BlazeWaterBreathingPower = config.getInt("Blaze.WaterBreathing.Power", BlazeWaterBreathingPower);
-
-		// Blaze Weakness
-		BlazeWeaknessEnabled = config.getBoolean("Blaze.Weakness.Enabled", BlazeWeaknessEnabled);
-		BlazeWeaknessTime = config.getInt("Blaze.Weakness.Time", BlazeWeaknessTime);
-		BlazeWeaknessPower = config.getInt("Blaze.Weakness.Power", BlazeWeaknessPower);
-		
-		// MagmaCube Blindness
-		MagmaCubeBlindnessEnabled = config.getBoolean("MagmaCube.Blindness.Enabled", MagmaCubeBlindnessEnabled);
-		MagmaCubeBlindnessTime = config.getInt("MagmaCube.Blindness.Time", MagmaCubeBlindnessTime);
-		MagmaCubeBlindnessPower = config.getInt("MagmaCube.Blindness.Power", MagmaCubeBlindnessPower);
-
-		//MagmaCube Nausea
-		MagmaCubeNauseaEnabled = config.getBoolean("MagmaCube.Nausea.Enabled", MagmaCubeNauseaEnabled);
-		MagmaCubeNauseaTime = config.getInt("MagmaCube.Nausea.Time", MagmaCubeNauseaTime);
-		MagmaCubeNauseaPower = config.getInt("MagmaCube.Nausea.Power", MagmaCubeNauseaPower);
-
-		// MagmaCube Damage Resistance
-		MagmaCubeResistanceEnabled = config.getBoolean("MagmaCube.Resistance.Enabled", MagmaCubeResistanceEnabled);
-		MagmaCubeResistanceTime = config.getInt("MagmaCube.Resistance.Time", MagmaCubeResistanceTime);
-		MagmaCubeResistancePower = config.getInt("MagmaCube.Resistance.Power", MagmaCubeResistancePower);
-
-		// MagmaCube Fast Digging
-		MagmaCubeFastDiggingEnabled = config.getBoolean("MagmaCube.FastDigging.Enabled", MagmaCubeFastDiggingEnabled);
-		MagmaCubeFastDiggingTime = config.getInt("MagmaCube.FastDigging.Time", MagmaCubeFastDiggingTime);
-		MagmaCubeFastDiggingPower = config.getInt("MagmaCube.FastDigging.Power", MagmaCubeFastDiggingPower);
-
-		// MagmaCube Fire Resistance
-		MagmaCubeFireResistanceEnabled = config.getBoolean("MagmaCube.FireResistance.Enabled", MagmaCubeFireResistanceEnabled);
-		MagmaCubeFireResistanceTime = config.getInt("MagmaCube.FireResistance.Time", MagmaCubeFireResistanceTime);
-		MagmaCubeFireResistancePower = config.getInt("MagmaCube.FireResistance.Power", MagmaCubeFireResistancePower);
-
-		// MagmaCube Harm
-		MagmaCubeHarmEnabled = config.getBoolean("MagmaCube.Harm.Enabled", MagmaCubeHarmEnabled);
-		MagmaCubeHarmTime = config.getInt("MagmaCube.Harm.Time", MagmaCubeHarmTime);
-		MagmaCubeHarmPower = config.getInt("MagmaCube.Harm.Powre", MagmaCubeHarmPower);
-
-		// MagmaCube Heal
-		MagmaCubeHealEnabled = config.getBoolean("MagmaCube.Heal.Enabled", MagmaCubeHealEnabled);
-		MagmaCubeHealTime = config.getInt("MagmaCube.Heal.Time", MagmaCubeHealTime);
-		MagmaCubeHealPower = config.getInt("MagmaCube.Heal.Power", MagmaCubeHealPower);
-
-		// MagmaCube Hunger
-		MagmaCubeHungerEnabled = config.getBoolean("MagmaCube.Hunger.Enabled", MagmaCubeHungerEnabled);
-		MagmaCubeHungerTime = config.getInt("MagmaCube.Hunger.Time", MagmaCubeHungerTime);
-		MagmaCubeHungerPower = config.getInt("MagmaCube.Hunger.Power", MagmaCubeHungerPower);
-
-		// MagmaCube Strength
-		MagmaCubeStrengthEnabled = config.getBoolean("MagmaCube.Strength.Enabled", MagmaCubeStrengthEnabled);
-		MagmaCubeStrengthTime = config.getInt("MagmaCube.Strength.Time", MagmaCubeStrengthTime);
-		MagmaCubeStrengthPower = config.getInt("MagmaCube.Strength.Power", MagmaCubeStrengthPower);
-
-		// MagmaCube Jump
-		MagmaCubeJumpEnabled = config.getBoolean("MagmaCube.Jump.Enabled", MagmaCubeJumpEnabled);
-		MagmaCubeJumpTime = config.getInt("MagmaCube.Jump.Time", MagmaCubeJumpTime);
-		MagmaCubeJumpPower = config.getInt("MagmaCube.Jump.Power", MagmaCubeJumpPower);
-
-		// MagmaCube Poison
-		MagmaCubePoisonEnabled = config.getBoolean("MagmaCube.Poison.Enabled", MagmaCubePoisonEnabled);
-		MagmaCubePoisonTime = config.getInt("MagmaCube.Poison.Time", MagmaCubePoisonTime);
-		MagmaCubePoisonPower = config.getInt("MagmaCube.Poison.Power", MagmaCubePoisonPower);
-
-		// MagmaCube Regeneration
-		MagmaCubeRegenerationEnabled = config.getBoolean("MagmaCube.Regeneration.Enabled", MagmaCubeRegenerationEnabled);
-		MagmaCubeRegenerationTime = config.getInt("MagmaCube.Regeneration.Time", MagmaCubeRegenerationTime);
-		MagmaCubeRegenerationPower = config.getInt("MagmaCube.Regeneration.Power", MagmaCubeRegenerationPower);
-
-		// MagmaCube Slow
-		MagmaCubeSlowEnabled = config.getBoolean("MagmaCube.Slow.Enabled", MagmaCubeSlowEnabled);
-		MagmaCubeSlowTime = config.getInt("MagmaCube.Slow.Time", MagmaCubeSlowTime);
-		MagmaCubeSlowPower = config.getInt("MagmaCube.Slow.Power", MagmaCubeSlowPower);
-
-		// MagmaCube Slow Digging
-		MagmaCubeMiningFatigueEnabled = config.getBoolean("MagmaCube.MiningFatigue.Enabled", MagmaCubeMiningFatigueEnabled);
-		MagmaCubeMiningFatigueTime = config.getInt("MagmaCube.MiningFatigue.Time", MagmaCubeMiningFatigueTime);
-		MagmaCubeMiningFatiguePower = config.getInt("MagmaCube.MiningFatigue.Power", MagmaCubeMiningFatiguePower);
-
-		// MagmaCube Speed
-		MagmaCubeSpeedEnabled = config.getBoolean("MagmaCube.Speed.Enabled", MagmaCubeSpeedEnabled);
-		MagmaCubeSpeedTime = config.getInt("MagmaCube.Speed.Time", MagmaCubeSpeedTime);
-		MagmaCubeSpeedPower = config.getInt("MagmaCube.Speed.Power", MagmaCubeSpeedPower);
-
-		// MagmaCube Water Breathing
-		MagmaCubeWaterBreathingEnabled = config.getBoolean("MagmaCube.WaterBreathing.Enabled", MagmaCubeWaterBreathingEnabled);
-		MagmaCubeWaterBreathingTime = config.getInt("MagmaCube.WaterBreathing.Time", MagmaCubeWaterBreathingTime);
-		MagmaCubeWaterBreathingPower = config.getInt("MagmaCube.WaterBreathing.Power", MagmaCubeWaterBreathingPower);
-
-		// MagmaCube Weakness
-		MagmaCubeWeaknessEnabled = config.getBoolean("MagmaCube.Weakness.Enabled", MagmaCubeWeaknessEnabled);
-		MagmaCubeWeaknessTime = config.getInt("MagmaCube.Weakness.Time", MagmaCubeWeaknessTime);
-		MagmaCubeWeaknessPower = config.getInt("MagmaCube.Weakness.Power", MagmaCubeWeaknessPower);
-		
-		// CaveSpider Blindness
-		CaveSpiderBlindnessEnabled = config.getBoolean("CaveSpider.Blindness.Enabled", CaveSpiderBlindnessEnabled);
-		CaveSpiderBlindnessTime = config.getInt("CaveSpider.Blindness.Time", CaveSpiderBlindnessTime);
-		CaveSpiderBlindnessPower = config.getInt("CaveSpider.Blindness.Power", CaveSpiderBlindnessPower);
-
-		//CaveSpider Nausea
-		CaveSpiderNauseaEnabled = config.getBoolean("CaveSpider.Nausea.Enabled", CaveSpiderNauseaEnabled);
-		CaveSpiderNauseaTime = config.getInt("CaveSpider.Nausea.Time", CaveSpiderNauseaTime);
-		CaveSpiderNauseaPower = config.getInt("CaveSpider.Nausea.Power", CaveSpiderNauseaPower);
-
-		// CaveSpider Damage Resistance
-		CaveSpiderResistanceEnabled = config.getBoolean("CaveSpider.Resistance.Enabled", CaveSpiderResistanceEnabled);
-		CaveSpiderResistanceTime = config.getInt("CaveSpider.Resistance.Time", CaveSpiderResistanceTime);
-		CaveSpiderResistancePower = config.getInt("CaveSpider.Resistance.Power", CaveSpiderResistancePower);
-
-		// CaveSpider Fast Digging
-		CaveSpiderFastDiggingEnabled = config.getBoolean("CaveSpider.FastDigging.Enabled", CaveSpiderFastDiggingEnabled);
-		CaveSpiderFastDiggingTime = config.getInt("CaveSpider.FastDigging.Time", CaveSpiderFastDiggingTime);
-		CaveSpiderFastDiggingPower = config.getInt("CaveSpider.FastDigging.Power", CaveSpiderFastDiggingPower);
-
-		// CaveSpider Fire Resistance
-		CaveSpiderFireResistanceEnabled = config.getBoolean("CaveSpider.FireResistance.Enabled", CaveSpiderFireResistanceEnabled);
-		CaveSpiderFireResistanceTime = config.getInt("CaveSpider.FireResistance.Time", CaveSpiderFireResistanceTime);
-		CaveSpiderFireResistancePower = config.getInt("CaveSpider.FireResistance.Power", CaveSpiderFireResistancePower);
-
-		// CaveSpider Harm
-		CaveSpiderHarmEnabled = config.getBoolean("CaveSpider.Harm.Enabled", CaveSpiderHarmEnabled);
-		CaveSpiderHarmTime = config.getInt("CaveSpider.Harm.Time", CaveSpiderHarmTime);
-		CaveSpiderHarmPower = config.getInt("CaveSpider.Harm.Powre", CaveSpiderHarmPower);
-
-		// CaveSpider Heal
-		CaveSpiderHealEnabled = config.getBoolean("CaveSpider.Heal.Enabled", CaveSpiderHealEnabled);
-		CaveSpiderHealTime = config.getInt("CaveSpider.Heal.Time", CaveSpiderHealTime);
-		CaveSpiderHealPower = config.getInt("CaveSpider.Heal.Power", CaveSpiderHealPower);
-
-		// CaveSpider Hunger
-		CaveSpiderHungerEnabled = config.getBoolean("CaveSpider.Hunger.Enabled", CaveSpiderHungerEnabled);
-		CaveSpiderHungerTime = config.getInt("CaveSpider.Hunger.Time", CaveSpiderHungerTime);
-		CaveSpiderHungerPower = config.getInt("CaveSpider.Hunger.Power", CaveSpiderHungerPower);
-
-		// CaveSpider Strength
-		CaveSpiderStrengthEnabled = config.getBoolean("CaveSpider.Strength.Enabled", CaveSpiderStrengthEnabled);
-		CaveSpiderStrengthTime = config.getInt("CaveSpider.Strength.Time", CaveSpiderStrengthTime);
-		CaveSpiderStrengthPower = config.getInt("CaveSpider.Strength.Power", CaveSpiderStrengthPower);
-
-		// CaveSpider Jump
-		CaveSpiderJumpEnabled = config.getBoolean("CaveSpider.Jump.Enabled", CaveSpiderJumpEnabled);
-		CaveSpiderJumpTime = config.getInt("CaveSpider.Jump.Time", CaveSpiderJumpTime);
-		CaveSpiderJumpPower = config.getInt("CaveSpider.Jump.Power", CaveSpiderJumpPower);
-
-		// CaveSpider Poison
-		CaveSpiderPoisonEnabled = config.getBoolean("CaveSpider.Poison.Enabled", CaveSpiderPoisonEnabled);
-		CaveSpiderPoisonTime = config.getInt("CaveSpider.Poison.Time", CaveSpiderPoisonTime);
-		CaveSpiderPoisonPower = config.getInt("CaveSpider.Poison.Power", CaveSpiderPoisonPower);
-
-		// CaveSpider Regeneration
-		CaveSpiderRegenerationEnabled = config.getBoolean("CaveSpider.Regeneration.Enabled", CaveSpiderRegenerationEnabled);
-		CaveSpiderRegenerationTime = config.getInt("CaveSpider.Regeneration.Time", CaveSpiderRegenerationTime);
-		CaveSpiderRegenerationPower = config.getInt("CaveSpider.Regeneration.Power", CaveSpiderRegenerationPower);
-
-		// CaveSpider Slow
-		CaveSpiderSlowEnabled = config.getBoolean("CaveSpider.Slow.Enabled", CaveSpiderSlowEnabled);
-		CaveSpiderSlowTime = config.getInt("CaveSpider.Slow.Time", CaveSpiderSlowTime);
-		CaveSpiderSlowPower = config.getInt("CaveSpider.Slow.Power", CaveSpiderSlowPower);
-
-		// CaveSpider Slow Digging
-		CaveSpiderMiningFatigueEnabled = config.getBoolean("CaveSpider.MiningFatigue.Enabled", CaveSpiderMiningFatigueEnabled);
-		CaveSpiderMiningFatigueTime = config.getInt("CaveSpider.MiningFatigue.Time", CaveSpiderMiningFatigueTime);
-		CaveSpiderMiningFatiguePower = config.getInt("CaveSpider.MiningFatigue.Power", CaveSpiderMiningFatiguePower);
-
-		// CaveSpider Speed
-		CaveSpiderSpeedEnabled = config.getBoolean("CaveSpider.Speed.Enabled", CaveSpiderSpeedEnabled);
-		CaveSpiderSpeedTime = config.getInt("CaveSpider.Speed.Time", CaveSpiderSpeedTime);
-		CaveSpiderSpeedPower = config.getInt("CaveSpider.Speed.Power", CaveSpiderSpeedPower);
-
-		// CaveSpider Water Breathing
-		CaveSpiderWaterBreathingEnabled = config.getBoolean("CaveSpider.WaterBreathing.Enabled", CaveSpiderWaterBreathingEnabled);
-		CaveSpiderWaterBreathingTime = config.getInt("CaveSpider.WaterBreathing.Time", CaveSpiderWaterBreathingTime);
-		CaveSpiderWaterBreathingPower = config.getInt("CaveSpider.WaterBreathing.Power", CaveSpiderWaterBreathingPower);
-
-		// CaveSpider Weakness
-		CaveSpiderWeaknessEnabled = config.getBoolean("CaveSpider.Weakness.Enabled", CaveSpiderWeaknessEnabled);
-		CaveSpiderWeaknessTime = config.getInt("CaveSpider.Weakness.Time", CaveSpiderWeaknessTime);
-		CaveSpiderWeaknessPower = config.getInt("CaveSpider.Weakness.Power", CaveSpiderWeaknessPower);
-		
-		// PigZombie Blindness
-		PigZombieBlindnessEnabled = config.getBoolean("PigZombie.Blindness.Enabled", PigZombieBlindnessEnabled);
-		PigZombieBlindnessTime = config.getInt("PigZombie.Blindness.Time", PigZombieBlindnessTime);
-		PigZombieBlindnessPower = config.getInt("PigZombie.Blindness.Power", PigZombieBlindnessPower);
-
-		//PigZombie Nausea
-		PigZombieNauseaEnabled = config.getBoolean("PigZombie.Nausea.Enabled", PigZombieNauseaEnabled);
-		PigZombieNauseaTime = config.getInt("PigZombie.Nausea.Time", PigZombieNauseaTime);
-		PigZombieNauseaPower = config.getInt("PigZombie.Nausea.Power", PigZombieNauseaPower);
-
-		// PigZombie Damage Resistance
-		PigZombieResistanceEnabled = config.getBoolean("PigZombie.Resistance.Enabled", PigZombieResistanceEnabled);
-		PigZombieResistanceTime = config.getInt("PigZombie.Resistance.Time", PigZombieResistanceTime);
-		PigZombieResistancePower = config.getInt("PigZombie.Resistance.Power", PigZombieResistancePower);
-
-		// PigZombie Fast Digging
-		PigZombieFastDiggingEnabled = config.getBoolean("PigZombie.FastDigging.Enabled", PigZombieFastDiggingEnabled);
-		PigZombieFastDiggingTime = config.getInt("PigZombie.FastDigging.Time", PigZombieFastDiggingTime);
-		PigZombieFastDiggingPower = config.getInt("PigZombie.FastDigging.Power", PigZombieFastDiggingPower);
-
-		// PigZombie Fire Resistance
-		PigZombieFireResistanceEnabled = config.getBoolean("PigZombie.FireResistance.Enabled", PigZombieFireResistanceEnabled);
-		PigZombieFireResistanceTime = config.getInt("PigZombie.FireResistance.Time", PigZombieFireResistanceTime);
-		PigZombieFireResistancePower = config.getInt("PigZombie.FireResistance.Power", PigZombieFireResistancePower);
-
-		// PigZombie Harm
-		PigZombieHarmEnabled = config.getBoolean("PigZombie.Harm.Enabled", PigZombieHarmEnabled);
-		PigZombieHarmTime = config.getInt("PigZombie.Harm.Time", PigZombieHarmTime);
-		PigZombieHarmPower = config.getInt("PigZombie.Harm.Powre", PigZombieHarmPower);
-
-		// PigZombie Heal
-		PigZombieHealEnabled = config.getBoolean("PigZombie.Heal.Enabled", PigZombieHealEnabled);
-		PigZombieHealTime = config.getInt("PigZombie.Heal.Time", PigZombieHealTime);
-		PigZombieHealPower = config.getInt("PigZombie.Heal.Power", PigZombieHealPower);
-
-		// PigZombie Hunger
-		PigZombieHungerEnabled = config.getBoolean("PigZombie.Hunger.Enabled", PigZombieHungerEnabled);
-		PigZombieHungerTime = config.getInt("PigZombie.Hunger.Time", PigZombieHungerTime);
-		PigZombieHungerPower = config.getInt("PigZombie.Hunger.Power", PigZombieHungerPower);
-
-		// PigZombie Strength
-		PigZombieStrengthEnabled = config.getBoolean("PigZombie.Strength.Enabled", PigZombieStrengthEnabled);
-		PigZombieStrengthTime = config.getInt("PigZombie.Strength.Time", PigZombieStrengthTime);
-		PigZombieStrengthPower = config.getInt("PigZombie.Strength.Power", PigZombieStrengthPower);
-
-		// PigZombie Jump
-		PigZombieJumpEnabled = config.getBoolean("PigZombie.Jump.Enabled", PigZombieJumpEnabled);
-		PigZombieJumpTime = config.getInt("PigZombie.Jump.Time", PigZombieJumpTime);
-		PigZombieJumpPower = config.getInt("PigZombie.Jump.Power", PigZombieJumpPower);
-
-		// PigZombie Poison
-		PigZombiePoisonEnabled = config.getBoolean("PigZombie.Poison.Enabled", PigZombiePoisonEnabled);
-		PigZombiePoisonTime = config.getInt("PigZombie.Poison.Time", PigZombiePoisonTime);
-		PigZombiePoisonPower = config.getInt("PigZombie.Poison.Power", PigZombiePoisonPower);
-
-		// PigZombie Regeneration
-		PigZombieRegenerationEnabled = config.getBoolean("PigZombie.Regeneration.Enabled", PigZombieRegenerationEnabled);
-		PigZombieRegenerationTime = config.getInt("PigZombie.Regeneration.Time", PigZombieRegenerationTime);
-		PigZombieRegenerationPower = config.getInt("PigZombie.Regeneration.Power", PigZombieRegenerationPower);
-
-		// PigZombie Slow
-		PigZombieSlowEnabled = config.getBoolean("PigZombie.Slow.Enabled", PigZombieSlowEnabled);
-		PigZombieSlowTime = config.getInt("PigZombie.Slow.Time", PigZombieSlowTime);
-		PigZombieSlowPower = config.getInt("PigZombie.Slow.Power", PigZombieSlowPower);
-
-		// PigZombie Slow Digging
-		PigZombieMiningFatigueEnabled = config.getBoolean("PigZombie.MiningFatigue.Enabled", PigZombieMiningFatigueEnabled);
-		PigZombieMiningFatigueTime = config.getInt("PigZombie.MiningFatigue.Time", PigZombieMiningFatigueTime);
-		PigZombieMiningFatiguePower = config.getInt("PigZombie.MiningFatigue.Power", PigZombieMiningFatiguePower);
-
-		// PigZombie Speed
-		PigZombieSpeedEnabled = config.getBoolean("PigZombie.Speed.Enabled", PigZombieSpeedEnabled);
-		PigZombieSpeedTime = config.getInt("PigZombie.Speed.Time", PigZombieSpeedTime);
-		PigZombieSpeedPower = config.getInt("PigZombie.Speed.Power", PigZombieSpeedPower);
-
-		// PigZombie Water Breathing
-		PigZombieWaterBreathingEnabled = config.getBoolean("PigZombie.WaterBreathing.Enabled", PigZombieWaterBreathingEnabled);
-		PigZombieWaterBreathingTime = config.getInt("PigZombie.WaterBreathing.Time", PigZombieWaterBreathingTime);
-		PigZombieWaterBreathingPower = config.getInt("PigZombie.WaterBreathing.Power", PigZombieWaterBreathingPower);
-
-		// PigZombie Weakness
-		PigZombieWeaknessEnabled = config.getBoolean("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
-		PigZombieWeaknessTime = config.getInt("PigZombie.Weakness.Time", PigZombieWeaknessTime);
-		PigZombieWeaknessPower = config.getInt("PigZombie.Weakness.Power", PigZombieWeaknessPower);
-		
-		// Silverfish Blindness
-		SilverfishBlindnessEnabled = config.getBoolean("Silverfish.Blindness.Enabled", SilverfishBlindnessEnabled);
-		SilverfishBlindnessTime = config.getInt("Silverfish.Blindness.Time", SilverfishBlindnessTime);
-		SilverfishBlindnessPower = config.getInt("Silverfish.Blindness.Power", SilverfishBlindnessPower);
-
-		//Silverfish Nausea
-		SilverfishNauseaEnabled = config.getBoolean("Silverfish.Nausea.Enabled", SilverfishNauseaEnabled);
-		SilverfishNauseaTime = config.getInt("Silverfish.Nausea.Time", SilverfishNauseaTime);
-		SilverfishNauseaPower = config.getInt("Silverfish.Nausea.Power", SilverfishNauseaPower);
-
-		// Silverfish Damage Resistance
-		SilverfishResistanceEnabled = config.getBoolean("Silverfish.Resistance.Enabled", SilverfishResistanceEnabled);
-		SilverfishResistanceTime = config.getInt("Silverfish.Resistance.Time", SilverfishResistanceTime);
-		SilverfishResistancePower = config.getInt("Silverfish.Resistance.Power", SilverfishResistancePower);
-
-		// Silverfish Fast Digging
-		SilverfishFastDiggingEnabled = config.getBoolean("Silverfish.FastDigging.Enabled", SilverfishFastDiggingEnabled);
-		SilverfishFastDiggingTime = config.getInt("Silverfish.FastDigging.Time", SilverfishFastDiggingTime);
-		SilverfishFastDiggingPower = config.getInt("Silverfish.FastDigging.Power", SilverfishFastDiggingPower);
-
-		// Silverfish Fire Resistance
-		SilverfishFireResistanceEnabled = config.getBoolean("Silverfish.FireResistance.Enabled", SilverfishFireResistanceEnabled);
-		SilverfishFireResistanceTime = config.getInt("Silverfish.FireResistance.Time", SilverfishFireResistanceTime);
-		SilverfishFireResistancePower = config.getInt("Silverfish.FireResistance.Power", SilverfishFireResistancePower);
-
-		// Silverfish Harm
-		SilverfishHarmEnabled = config.getBoolean("Silverfish.Harm.Enabled", SilverfishHarmEnabled);
-		SilverfishHarmTime = config.getInt("Silverfish.Harm.Time", SilverfishHarmTime);
-		SilverfishHarmPower = config.getInt("Silverfish.Harm.Powre", SilverfishHarmPower);
-
-		// Silverfish Heal
-		SilverfishHealEnabled = config.getBoolean("Silverfish.Heal.Enabled", SilverfishHealEnabled);
-		SilverfishHealTime = config.getInt("Silverfish.Heal.Time", SilverfishHealTime);
-		SilverfishHealPower = config.getInt("Silverfish.Heal.Power", SilverfishHealPower);
-
-		// Silverfish Hunger
-		SilverfishHungerEnabled = config.getBoolean("Silverfish.Hunger.Enabled", SilverfishHungerEnabled);
-		SilverfishHungerTime = config.getInt("Silverfish.Hunger.Time", SilverfishHungerTime);
-		SilverfishHungerPower = config.getInt("Silverfish.Hunger.Power", SilverfishHungerPower);
-
-		// Silverfish Strength
-		SilverfishStrengthEnabled = config.getBoolean("Silverfish.Strength.Enabled", SilverfishStrengthEnabled);
-		SilverfishStrengthTime = config.getInt("Silverfish.Strength.Time", SilverfishStrengthTime);
-		SilverfishStrengthPower = config.getInt("Silverfish.Strength.Power", SilverfishStrengthPower);
-
-		// Silverfish Jump
-		SilverfishJumpEnabled = config.getBoolean("Silverfish.Jump.Enabled", SilverfishJumpEnabled);
-		SilverfishJumpTime = config.getInt("Silverfish.Jump.Time", SilverfishJumpTime);
-		SilverfishJumpPower = config.getInt("Silverfish.Jump.Power", SilverfishJumpPower);
-
-		// Silverfish Poison
-		SilverfishPoisonEnabled = config.getBoolean("Silverfish.Poison.Enabled", SilverfishPoisonEnabled);
-		SilverfishPoisonTime = config.getInt("Silverfish.Poison.Time", SilverfishPoisonTime);
-		SilverfishPoisonPower = config.getInt("Silverfish.Poison.Power", SilverfishPoisonPower);
-
-		// Silverfish Regeneration
-		SilverfishRegenerationEnabled = config.getBoolean("Silverfish.Regeneration.Enabled", SilverfishRegenerationEnabled);
-		SilverfishRegenerationTime = config.getInt("Silverfish.Regeneration.Time", SilverfishRegenerationTime);
-		SilverfishRegenerationPower = config.getInt("Silverfish.Regeneration.Power", SilverfishRegenerationPower);
-
-		// Silverfish Slow
-		SilverfishSlowEnabled = config.getBoolean("Silverfish.Slow.Enabled", SilverfishSlowEnabled);
-		SilverfishSlowTime = config.getInt("Silverfish.Slow.Time", SilverfishSlowTime);
-		SilverfishSlowPower = config.getInt("Silverfish.Slow.Power", SilverfishSlowPower);
-
-		// Silverfish Slow Digging
-		SilverfishMiningFatigueEnabled = config.getBoolean("Silverfish.MiningFatigue.Enabled", SilverfishMiningFatigueEnabled);
-		SilverfishMiningFatigueTime = config.getInt("Silverfish.MiningFatigue.Time", SilverfishMiningFatigueTime);
-		SilverfishMiningFatiguePower = config.getInt("Silverfish.MiningFatigue.Power", SilverfishMiningFatiguePower);
-
-		// Silverfish Speed
-		SilverfishSpeedEnabled = config.getBoolean("Silverfish.Speed.Enabled", SilverfishSpeedEnabled);
-		SilverfishSpeedTime = config.getInt("Silverfish.Speed.Time", SilverfishSpeedTime);
-		SilverfishSpeedPower = config.getInt("Silverfish.Speed.Power", SilverfishSpeedPower);
-
-		// Silverfish Water Breathing
-		SilverfishWaterBreathingEnabled = config.getBoolean("Silverfish.WaterBreathing.Enabled", SilverfishWaterBreathingEnabled);
-		SilverfishWaterBreathingTime = config.getInt("Silverfish.WaterBreathing.Time", SilverfishWaterBreathingTime);
-		SilverfishWaterBreathingPower = config.getInt("Silverfish.WaterBreathing.Power", SilverfishWaterBreathingPower);
-
-		// Silverfish Weakness
-		SilverfishWeaknessEnabled = config.getBoolean("Silverfish.Weakness.Enabled", SilverfishWeaknessEnabled);
-		SilverfishWeaknessTime = config.getInt("Silverfish.Weakness.Time", SilverfishWeaknessTime);
-		SilverfishWeaknessPower = config.getInt("Silverfish.Weakness.Power", SilverfishWeaknessPower);
-	
-	// Set Defaults
+		// Set Defaults
 		if (!config.contains("Worlds")) {
-			final String[] def_worlds = {"world", "world_nether", "world_the_end"};
+			final String[] def_worlds = { "world", "world_nether",
+			"world_the_end" };
 			config.set("Worlds", def_worlds);
 		}
 		// Blaze
 		config.set("Blaze.Blindness.Enabled", BlazeBlindnessEnabled);
 		config.set("Blaze.Blindness.Power", BlazeBlindnessPower);
 		config.set("Blaze.Blindness.Time", BlazeBlindnessTime);
+		config.set("Blaze.Blindness.DodgeChance", BlazeBlindnessDodgeChance);
 		config.set("Blaze.FastDigging.Enabled", BlazeFastDiggingEnabled);
 		config.set("Blaze.FastDigging.Power", BlazeFastDiggingPower);
 		config.set("Blaze.FastDigging.Time", BlazeFastDiggingTime);
+		config.set("Blaze.FastDigging.DodgeChance",BlazeFastDiggingDodgeChance);
+		config.set("Blaze.FireResistance.Enabled", BlazeFireResistanceEnabled);
+		config.set("Blaze.FireResistance.Power", BlazeFireResistancePower);
+		config.set("Blaze.FireResistance.Time", BlazeFireResistanceTime);
+		config.set("Blaze.FireResistance.DodgeChance",BlazeFireResistanceDodgeChance);
 		config.set("Blaze.Harm.Enabled", BlazeHarmEnabled);
 		config.set("Blaze.Harm.Power", BlazeHarmPower);
 		config.set("Blaze.Harm.Time", BlazeHarmTime);
+		config.set("Blaze.Harm.DodgeChance", BlazeHarmDodgeChance);
 		config.set("Blaze.Heal.Enabled", BlazeHealEnabled);
 		config.set("Blaze.Heal.Power", BlazeHealPower);
 		config.set("Blaze.Heal.Time", BlazeHealTime);
+		config.set("Blaze.Heal.DodgeChance", BlazeHealDodgeChance);
+		config.set("Blaze.Hunger.Enabled", BlazeHungerEnabled);
+		config.set("Blaze.Hunger.Power", BlazeHungerPower);
+		config.set("Blaze.Hunger.Time", BlazeHungerTime);
+		config.set("Blaze.Hunger.DodgeChance", BlazeHungerDodgeChance);
 		config.set("Blaze.Jump.Enabled", BlazeJumpEnabled);
 		config.set("Blaze.Jump.Power", BlazeJumpPower);
 		config.set("Blaze.Jump.Time", BlazeJumpTime);
+		config.set("Blaze.Jump.DodgeChance", BlazeJumpDodgeChance);
 		config.set("Blaze.MiningFatigue.Enabled", BlazeMiningFatigueEnabled);
 		config.set("Blaze.MiningFatigue.Power", BlazeMiningFatiguePower);
 		config.set("Blaze.MiningFatigue.Time", BlazeMiningFatigueTime);
+		config.set("Blaze.MiningFatigue.DodgeChannce",BlazeMiningFatigueDodgeChance);
 		config.set("Blaze.Nausea.Enabled", BlazeNauseaEnabled);
 		config.set("Blaze.Nausea.Power", BlazeNauseaPower);
 		config.set("Blaze.Nausea.Time", BlazeNauseaTime);
+		config.set("Blaze.Nausea.DodgeChance", BlazeNauseaDodgeChance);
+		config.set("Blaze.Poison.Enabled", BlazePoisonEnabled);
+		config.set("Blaze.Poison.Power", BlazePoisonPower);
+		config.set("Blaze.Poison.Time", BlazePoisonTime);
+		config.set("Blaze.Poison.DodgeChance", BlazePoisonDodgeChance);
+		config.set("Blaze.Regeneration.Enabled", BlazeRegenerationEnabled);
+		config.set("Blaze.Regeneration.Power", BlazeRegenerationPower);
+		config.set("Blaze.Regeneration.Time", BlazeRegenerationTime);
+		config.set("Blaze.Regeneration.DodgeChance",BlazeRegenerationDodgeChance);
 		config.set("Blaze.Resistance.Enabled", BlazeResistanceEnabled);
 		config.set("Blaze.Resistance.Power", BlazeResistancePower);
 		config.set("Blaze.Resistance.Time", BlazeResistanceTime);
+		config.set("Blaze.Resistance.DodgeChance", BlazeResistanceDodgeChance);
 		config.set("Blaze.Slow.Enabled", BlazeSlowEnabled);
 		config.set("Blaze.Slow.Power", BlazeSlowPower);
 		config.set("Blaze.Slow.Time", BlazeSlowTime);
+		config.set("Blaze.Slow.DodgeChance", BlazeSlowDodgeChance);
 		config.set("Blaze.Speed.Enabled", BlazeSpeedEnabled);
 		config.set("Blaze.Speed.Power", BlazeSpeedPower);
 		config.set("Blaze.Speed.Time", BlazeSpeedTime);
+		config.set("Blaze.Speed.DodgeChance", BlazeSpeedDodgeChance);
 		config.set("Blaze.Strength.Enabled", BlazeStrengthEnabled);
 		config.set("Blaze.Strength.Power", BlazeStrengthPower);
 		config.set("Blaze.Strength.Time", BlazeStrengthTime);
+		config.set("Blaze.Strength.DodgeChance", BlazeStrengthDodgeChance);
 		config.set("Blaze.WaterBreathing.Enabled", BlazeWaterBreathingEnabled);
 		config.set("Blaze.WaterBreathing.Power", BlazeWaterBreathingPower);
 		config.set("Blaze.WaterBreathing.Time", BlazeWaterBreathingTime);
+		config.set("Blaze.WaterBreathing.DodgeChance",BlazeWaterBreathingDodgeChance);
 		config.set("Blaze.Weakness.Enabled", BlazeWeaknessEnabled);
 		config.set("Blaze.Weakness.Power", BlazeWeaknessPower);
 		config.set("Blaze.Weakness.Time", BlazeWeaknessTime);
-		// Cave Spiders
+		config.set("Blaze.Weakness.DodgeChance", BlazeWeaknessDodgeChance);
+		// Cave Spider
 		config.set("CaveSpider.Blindness.Enabled", CaveSpiderBlindnessEnabled);
 		config.set("CaveSpider.Blindness.Power", CaveSpiderBlindnessPower);
 		config.set("CaveSpider.Blindness.Time", CaveSpiderBlindnessTime);
+		config.set("CaveSpider.Blindness.DodgeChance", CaveSpiderBlindnessDodgeChance);
 		config.set("CaveSpider.FastDigging.Enabled", CaveSpiderFastDiggingEnabled);
 		config.set("CaveSpider.FastDigging.Power", CaveSpiderFastDiggingPower);
 		config.set("CaveSpider.FastDigging.Time", CaveSpiderFastDiggingTime);
+		config.set("CaveSpider.FastDigging.DodgeChance",CaveSpiderFastDiggingDodgeChance);
+		config.set("CaveSpider.FireResistance.Enabled", CaveSpiderFireResistanceEnabled);
+		config.set("CaveSpider.FireResistance.Power", CaveSpiderFireResistancePower);
+		config.set("CaveSpider.FireResistance.Time", CaveSpiderFireResistanceTime);
+		config.set("CaveSpider.FireResistance.DodgeChance",CaveSpiderFireResistanceDodgeChance);
 		config.set("CaveSpider.Harm.Enabled", CaveSpiderHarmEnabled);
 		config.set("CaveSpider.Harm.Power", CaveSpiderHarmPower);
 		config.set("CaveSpider.Harm.Time", CaveSpiderHarmTime);
+		config.set("CaveSpider.Harm.DodgeChance", CaveSpiderHarmDodgeChance);
 		config.set("CaveSpider.Heal.Enabled", CaveSpiderHealEnabled);
 		config.set("CaveSpider.Heal.Power", CaveSpiderHealPower);
 		config.set("CaveSpider.Heal.Time", CaveSpiderHealTime);
+		config.set("CaveSpider.Heal.DodgeChance", CaveSpiderHealDodgeChance);
+		config.set("CaveSpider.Hunger.Enabled", CaveSpiderHungerEnabled);
+		config.set("CaveSpider.Hunger.Power", CaveSpiderHungerPower);
+		config.set("CaveSpider.Hunger.Time", CaveSpiderHungerTime);
+		config.set("CaveSpider.Hunger.DodgeChance", CaveSpiderHungerDodgeChance);
 		config.set("CaveSpider.Jump.Enabled", CaveSpiderJumpEnabled);
 		config.set("CaveSpider.Jump.Power", CaveSpiderJumpPower);
 		config.set("CaveSpider.Jump.Time", CaveSpiderJumpTime);
+		config.set("CaveSpider.Jump.DodgeChance", CaveSpiderJumpDodgeChance);
 		config.set("CaveSpider.MiningFatigue.Enabled", CaveSpiderMiningFatigueEnabled);
 		config.set("CaveSpider.MiningFatigue.Power", CaveSpiderMiningFatiguePower);
 		config.set("CaveSpider.MiningFatigue.Time", CaveSpiderMiningFatigueTime);
+		config.set("CaveSpider.MiningFatigue.DodgeChannce",CaveSpiderMiningFatigueDodgeChance);
 		config.set("CaveSpider.Nausea.Enabled", CaveSpiderNauseaEnabled);
 		config.set("CaveSpider.Nausea.Power", CaveSpiderNauseaPower);
 		config.set("CaveSpider.Nausea.Time", CaveSpiderNauseaTime);
+		config.set("CaveSpider.Nausea.DodgeChance", CaveSpiderNauseaDodgeChance);
+		config.set("CaveSpider.Poison.Enabled", CaveSpiderPoisonEnabled);
+		config.set("CaveSpider.Poison.Power", CaveSpiderPoisonPower);
+		config.set("CaveSpider.Poison.Time", CaveSpiderPoisonTime);
+		config.set("CaveSpider.Poison.DodgeChance", CaveSpiderPoisonDodgeChance);
+		config.set("CaveSpider.Regeneration.Enabled", CaveSpiderRegenerationEnabled);
+		config.set("CaveSpider.Regeneration.Power", CaveSpiderRegenerationPower);
+		config.set("CaveSpider.Regeneration.Time", CaveSpiderRegenerationTime);
+		config.set("CaveSpider.Regeneration.DodgeChance",CaveSpiderRegenerationDodgeChance);
 		config.set("CaveSpider.Resistance.Enabled", CaveSpiderResistanceEnabled);
 		config.set("CaveSpider.Resistance.Power", CaveSpiderResistancePower);
 		config.set("CaveSpider.Resistance.Time", CaveSpiderResistanceTime);
+		config.set("CaveSpider.Resistance.DodgeChance", CaveSpiderResistanceDodgeChance);
 		config.set("CaveSpider.Slow.Enabled", CaveSpiderSlowEnabled);
 		config.set("CaveSpider.Slow.Power", CaveSpiderSlowPower);
 		config.set("CaveSpider.Slow.Time", CaveSpiderSlowTime);
+		config.set("CaveSpider.Slow.DodgeChance", CaveSpiderSlowDodgeChance);
 		config.set("CaveSpider.Speed.Enabled", CaveSpiderSpeedEnabled);
 		config.set("CaveSpider.Speed.Power", CaveSpiderSpeedPower);
 		config.set("CaveSpider.Speed.Time", CaveSpiderSpeedTime);
+		config.set("CaveSpider.Speed.DodgeChance", CaveSpiderSpeedDodgeChance);
 		config.set("CaveSpider.Strength.Enabled", CaveSpiderStrengthEnabled);
 		config.set("CaveSpider.Strength.Power", CaveSpiderStrengthPower);
 		config.set("CaveSpider.Strength.Time", CaveSpiderStrengthTime);
+		config.set("CaveSpider.Strength.DodgeChance", CaveSpiderStrengthDodgeChance);
 		config.set("CaveSpider.WaterBreathing.Enabled", CaveSpiderWaterBreathingEnabled);
 		config.set("CaveSpider.WaterBreathing.Power", CaveSpiderWaterBreathingPower);
 		config.set("CaveSpider.WaterBreathing.Time", CaveSpiderWaterBreathingTime);
+		config.set("CaveSpider.WaterBreathing.DodgeChance",CaveSpiderWaterBreathingDodgeChance);
 		config.set("CaveSpider.Weakness.Enabled", CaveSpiderWeaknessEnabled);
 		config.set("CaveSpider.Weakness.Power", CaveSpiderWeaknessPower);
 		config.set("CaveSpider.Weakness.Time", CaveSpiderWeaknessTime);
+		config.set("CaveSpider.Weakness.DodgeChance", CaveSpiderWeaknessDodgeChance);
 		// Creeper
 		config.set("Creeper.Blindness.Enabled", CreeperBlindnessEnabled);
 		config.set("Creeper.Blindness.Power", CreeperBlindnessPower);
 		config.set("Creeper.Blindness.Time", CreeperBlindnessTime);
+		config.set("Creeper.Blindness.DodgeChance", CreeperBlindnessDodgeChance);
 		config.set("Creeper.FastDigging.Enabled", CreeperFastDiggingEnabled);
 		config.set("Creeper.FastDigging.Power", CreeperFastDiggingPower);
 		config.set("Creeper.FastDigging.Time", CreeperFastDiggingTime);
+		config.set("Creeper.FastDigging.DodgeChance",CreeperFastDiggingDodgeChance);
 		config.set("Creeper.FireResistance.Enabled", CreeperFireResistanceEnabled);
 		config.set("Creeper.FireResistance.Power", CreeperFireResistancePower);
 		config.set("Creeper.FireResistance.Time", CreeperFireResistanceTime);
+		config.set("Creeper.FireResistance.DodgeChance",CreeperFireResistanceDodgeChance);
 		config.set("Creeper.Harm.Enabled", CreeperHarmEnabled);
 		config.set("Creeper.Harm.Power", CreeperHarmPower);
 		config.set("Creeper.Harm.Time", CreeperHarmTime);
+		config.set("Creeper.Harm.DodgeChance", CreeperHarmDodgeChance);
 		config.set("Creeper.Heal.Enabled", CreeperHealEnabled);
 		config.set("Creeper.Heal.Power", CreeperHealPower);
 		config.set("Creeper.Heal.Time", CreeperHealTime);
+		config.set("Creeper.Heal.DodgeChance", CreeperHealDodgeChance);
 		config.set("Creeper.Hunger.Enabled", CreeperHungerEnabled);
 		config.set("Creeper.Hunger.Power", CreeperHungerPower);
 		config.set("Creeper.Hunger.Time", CreeperHungerTime);
+		config.set("Creeper.Hunger.DodgeChance", CreeperHungerDodgeChance);
 		config.set("Creeper.Jump.Enabled", CreeperJumpEnabled);
 		config.set("Creeper.Jump.Power", CreeperJumpPower);
 		config.set("Creeper.Jump.Time", CreeperJumpTime);
+		config.set("Creeper.Jump.DodgeChance", CreeperJumpDodgeChance);
 		config.set("Creeper.MiningFatigue.Enabled", CreeperMiningFatigueEnabled);
 		config.set("Creeper.MiningFatigue.Power", CreeperMiningFatiguePower);
 		config.set("Creeper.MiningFatigue.Time", CreeperMiningFatigueTime);
+		config.set("Creeper.MiningFatigue.DodgeChannce",CreeperMiningFatigueDodgeChance);
 		config.set("Creeper.Nausea.Enabled", CreeperNauseaEnabled);
 		config.set("Creeper.Nausea.Power", CreeperNauseaPower);
 		config.set("Creeper.Nausea.Time", CreeperNauseaTime);
+		config.set("Creeper.Nausea.DodgeChance", CreeperNauseaDodgeChance);
 		config.set("Creeper.Poison.Enabled", CreeperPoisonEnabled);
 		config.set("Creeper.Poison.Power", CreeperPoisonPower);
 		config.set("Creeper.Poison.Time", CreeperPoisonTime);
+		config.set("Creeper.Poison.DodgeChance", CreeperPoisonDodgeChance);
 		config.set("Creeper.Regeneration.Enabled", CreeperRegenerationEnabled);
 		config.set("Creeper.Regeneration.Power", CreeperRegenerationPower);
 		config.set("Creeper.Regeneration.Time", CreeperRegenerationTime);
+		config.set("Creeper.Regeneration.DodgeChance",CreeperRegenerationDodgeChance);
 		config.set("Creeper.Resistance.Enabled", CreeperResistanceEnabled);
 		config.set("Creeper.Resistance.Power", CreeperResistancePower);
 		config.set("Creeper.Resistance.Time", CreeperResistanceTime);
+		config.set("Creeper.Resistance.DodgeChance", CreeperResistanceDodgeChance);
 		config.set("Creeper.Slow.Enabled", CreeperSlowEnabled);
 		config.set("Creeper.Slow.Power", CreeperSlowPower);
 		config.set("Creeper.Slow.Time", CreeperSlowTime);
+		config.set("Creeper.Slow.DodgeChance", CreeperSlowDodgeChance);
 		config.set("Creeper.Speed.Enabled", CreeperSpeedEnabled);
 		config.set("Creeper.Speed.Power", CreeperSpeedPower);
 		config.set("Creeper.Speed.Time", CreeperSpeedTime);
+		config.set("Creeper.Speed.DodgeChance", CreeperSpeedDodgeChance);
 		config.set("Creeper.Strength.Enabled", CreeperStrengthEnabled);
 		config.set("Creeper.Strength.Power", CreeperStrengthPower);
 		config.set("Creeper.Strength.Time", CreeperStrengthTime);
+		config.set("Creeper.Strength.DodgeChance", CreeperStrengthDodgeChance);
 		config.set("Creeper.WaterBreathing.Enabled", CreeperWaterBreathingEnabled);
 		config.set("Creeper.WaterBreathing.Power", CreeperWaterBreathingPower);
 		config.set("Creeper.WaterBreathing.Time", CreeperWaterBreathingTime);
+		config.set("Creeper.WaterBreathing.DodgeChance",CreeperWaterBreathingDodgeChance);
 		config.set("Creeper.Weakness.Enabled", CreeperWeaknessEnabled);
 		config.set("Creeper.Weakness.Power", CreeperWeaknessPower);
 		config.set("Creeper.Weakness.Time", CreeperWeaknessTime);
-		// Enders
+		config.set("Creeper.Weakness.DodgeChance", CreeperWeaknessDodgeChance);
+		// Enderman
 		config.set("Enderman.Blindness.Enabled", EndermanBlindnessEnabled);
 		config.set("Enderman.Blindness.Power", EndermanBlindnessPower);
 		config.set("Enderman.Blindness.Time", EndermanBlindnessTime);
+		config.set("Enderman.Blindness.DodgeChance", EndermanBlindnessDodgeChance);
 		config.set("Enderman.FastDigging.Enabled", EndermanFastDiggingEnabled);
 		config.set("Enderman.FastDigging.Power", EndermanFastDiggingPower);
 		config.set("Enderman.FastDigging.Time", EndermanFastDiggingTime);
+		config.set("Enderman.FastDigging.DodgeChance",EndermanFastDiggingDodgeChance);
 		config.set("Enderman.FireResistance.Enabled", EndermanFireResistanceEnabled);
 		config.set("Enderman.FireResistance.Power", EndermanFireResistancePower);
 		config.set("Enderman.FireResistance.Time", EndermanFireResistanceTime);
+		config.set("Enderman.FireResistance.DodgeChance",EndermanFireResistanceDodgeChance);
 		config.set("Enderman.Harm.Enabled", EndermanHarmEnabled);
 		config.set("Enderman.Harm.Power", EndermanHarmPower);
 		config.set("Enderman.Harm.Time", EndermanHarmTime);
+		config.set("Enderman.Harm.DodgeChance", EndermanHarmDodgeChance);
 		config.set("Enderman.Heal.Enabled", EndermanHealEnabled);
 		config.set("Enderman.Heal.Power", EndermanHealPower);
 		config.set("Enderman.Heal.Time", EndermanHealTime);
+		config.set("Enderman.Heal.DodgeChance", EndermanHealDodgeChance);
 		config.set("Enderman.Hunger.Enabled", EndermanHungerEnabled);
 		config.set("Enderman.Hunger.Power", EndermanHungerPower);
 		config.set("Enderman.Hunger.Time", EndermanHungerTime);
+		config.set("Enderman.Hunger.DodgeChance", EndermanHungerDodgeChance);
 		config.set("Enderman.Jump.Enabled", EndermanJumpEnabled);
 		config.set("Enderman.Jump.Power", EndermanJumpPower);
 		config.set("Enderman.Jump.Time", EndermanJumpTime);
+		config.set("Enderman.Jump.DodgeChance", EndermanJumpDodgeChance);
 		config.set("Enderman.MiningFatigue.Enabled", EndermanMiningFatigueEnabled);
 		config.set("Enderman.MiningFatigue.Power", EndermanMiningFatiguePower);
 		config.set("Enderman.MiningFatigue.Time", EndermanMiningFatigueTime);
+		config.set("Enderman.MiningFatigue.DodgeChannce",EndermanMiningFatigueDodgeChance);
 		config.set("Enderman.Nausea.Enabled", EndermanNauseaEnabled);
 		config.set("Enderman.Nausea.Power", EndermanNauseaPower);
 		config.set("Enderman.Nausea.Time", EndermanNauseaTime);
+		config.set("Enderman.Nausea.DodgeChance", EndermanNauseaDodgeChance);
 		config.set("Enderman.Poison.Enabled", EndermanPoisonEnabled);
 		config.set("Enderman.Poison.Power", EndermanPoisonPower);
 		config.set("Enderman.Poison.Time", EndermanPoisonTime);
+		config.set("Enderman.Poison.DodgeChance", EndermanPoisonDodgeChance);
 		config.set("Enderman.Regeneration.Enabled", EndermanRegenerationEnabled);
 		config.set("Enderman.Regeneration.Power", EndermanRegenerationPower);
 		config.set("Enderman.Regeneration.Time", EndermanRegenerationTime);
+		config.set("Enderman.Regeneration.DodgeChance",EndermanRegenerationDodgeChance);
 		config.set("Enderman.Resistance.Enabled", EndermanResistanceEnabled);
 		config.set("Enderman.Resistance.Power", EndermanResistancePower);
 		config.set("Enderman.Resistance.Time", EndermanResistanceTime);
+		config.set("Enderman.Resistance.DodgeChance", EndermanResistanceDodgeChance);
 		config.set("Enderman.Slow.Enabled", EndermanSlowEnabled);
 		config.set("Enderman.Slow.Power", EndermanSlowPower);
 		config.set("Enderman.Slow.Time", EndermanSlowTime);
+		config.set("Enderman.Slow.DodgeChance", EndermanSlowDodgeChance);
 		config.set("Enderman.Speed.Enabled", EndermanSpeedEnabled);
 		config.set("Enderman.Speed.Power", EndermanSpeedPower);
 		config.set("Enderman.Speed.Time", EndermanSpeedTime);
+		config.set("Enderman.Speed.DodgeChance", EndermanSpeedDodgeChance);
 		config.set("Enderman.Strength.Enabled", EndermanStrengthEnabled);
 		config.set("Enderman.Strength.Power", EndermanStrengthPower);
 		config.set("Enderman.Strength.Time", EndermanStrengthTime);
+		config.set("Enderman.Strength.DodgeChance", EndermanStrengthDodgeChance);
 		config.set("Enderman.WaterBreathing.Enabled", EndermanWaterBreathingEnabled);
 		config.set("Enderman.WaterBreathing.Power", EndermanWaterBreathingPower);
 		config.set("Enderman.WaterBreathing.Time", EndermanWaterBreathingTime);
+		config.set("Enderman.WaterBreathing.DodgeChance",EndermanWaterBreathingDodgeChance);
 		config.set("Enderman.Weakness.Enabled", EndermanWeaknessEnabled);
 		config.set("Enderman.Weakness.Power", EndermanWeaknessPower);
 		config.set("Enderman.Weakness.Time", EndermanWeaknessTime);
+		config.set("Enderman.Weakness.DodgeChance", EndermanWeaknessDodgeChance);
 		// Giant
 		config.set("Giant.Blindness.Enabled", GiantBlindnessEnabled);
 		config.set("Giant.Blindness.Power", GiantBlindnessPower);
 		config.set("Giant.Blindness.Time", GiantBlindnessTime);
+		config.set("Giant.Blindness.DodgeChance", GiantBlindnessDodgeChance);
 		config.set("Giant.FastDigging.Enabled", GiantFastDiggingEnabled);
 		config.set("Giant.FastDigging.Power", GiantFastDiggingPower);
 		config.set("Giant.FastDigging.Time", GiantFastDiggingTime);
+		config.set("Giant.FastDigging.DodgeChance",GiantFastDiggingDodgeChance);
+		config.set("Giant.FireResistance.Enabled", GiantFireResistanceEnabled);
+		config.set("Giant.FireResistance.Power", GiantFireResistancePower);
+		config.set("Giant.FireResistance.Time", GiantFireResistanceTime);
+		config.set("Giant.FireResistance.DodgeChance",GiantFireResistanceDodgeChance);
 		config.set("Giant.Harm.Enabled", GiantHarmEnabled);
 		config.set("Giant.Harm.Power", GiantHarmPower);
 		config.set("Giant.Harm.Time", GiantHarmTime);
+		config.set("Giant.Harm.DodgeChance", GiantHarmDodgeChance);
 		config.set("Giant.Heal.Enabled", GiantHealEnabled);
 		config.set("Giant.Heal.Power", GiantHealPower);
 		config.set("Giant.Heal.Time", GiantHealTime);
+		config.set("Giant.Heal.DodgeChance", GiantHealDodgeChance);
+		config.set("Giant.Hunger.Enabled", GiantHungerEnabled);
+		config.set("Giant.Hunger.Power", GiantHungerPower);
+		config.set("Giant.Hunger.Time", GiantHungerTime);
+		config.set("Giant.Hunger.DodgeChance", GiantHungerDodgeChance);
 		config.set("Giant.Jump.Enabled", GiantJumpEnabled);
 		config.set("Giant.Jump.Power", GiantJumpPower);
 		config.set("Giant.Jump.Time", GiantJumpTime);
+		config.set("Giant.Jump.DodgeChance", GiantJumpDodgeChance);
 		config.set("Giant.MiningFatigue.Enabled", GiantMiningFatigueEnabled);
 		config.set("Giant.MiningFatigue.Power", GiantMiningFatiguePower);
 		config.set("Giant.MiningFatigue.Time", GiantMiningFatigueTime);
+		config.set("Giant.MiningFatigue.DodgeChannce",GiantMiningFatigueDodgeChance);
 		config.set("Giant.Nausea.Enabled", GiantNauseaEnabled);
 		config.set("Giant.Nausea.Power", GiantNauseaPower);
 		config.set("Giant.Nausea.Time", GiantNauseaTime);
+		config.set("Giant.Nausea.DodgeChance", GiantNauseaDodgeChance);
+		config.set("Giant.Poison.Enabled", GiantPoisonEnabled);
+		config.set("Giant.Poison.Power", GiantPoisonPower);
+		config.set("Giant.Poison.Time", GiantPoisonTime);
+		config.set("Giant.Poison.DodgeChance", GiantPoisonDodgeChance);
+		config.set("Giant.Regeneration.Enabled", GiantRegenerationEnabled);
+		config.set("Giant.Regeneration.Power", GiantRegenerationPower);
+		config.set("Giant.Regeneration.Time", GiantRegenerationTime);
+		config.set("Giant.Regeneration.DodgeChance",GiantRegenerationDodgeChance);
 		config.set("Giant.Resistance.Enabled", GiantResistanceEnabled);
 		config.set("Giant.Resistance.Power", GiantResistancePower);
 		config.set("Giant.Resistance.Time", GiantResistanceTime);
+		config.set("Giant.Resistance.DodgeChance", GiantResistanceDodgeChance);
 		config.set("Giant.Slow.Enabled", GiantSlowEnabled);
 		config.set("Giant.Slow.Power", GiantSlowPower);
 		config.set("Giant.Slow.Time", GiantSlowTime);
+		config.set("Giant.Slow.DodgeChance", GiantSlowDodgeChance);
 		config.set("Giant.Speed.Enabled", GiantSpeedEnabled);
 		config.set("Giant.Speed.Power", GiantSpeedPower);
 		config.set("Giant.Speed.Time", GiantSpeedTime);
+		config.set("Giant.Speed.DodgeChance", GiantSpeedDodgeChance);
 		config.set("Giant.Strength.Enabled", GiantStrengthEnabled);
 		config.set("Giant.Strength.Power", GiantStrengthPower);
 		config.set("Giant.Strength.Time", GiantStrengthTime);
+		config.set("Giant.Strength.DodgeChance", GiantStrengthDodgeChance);
 		config.set("Giant.WaterBreathing.Enabled", GiantWaterBreathingEnabled);
 		config.set("Giant.WaterBreathing.Power", GiantWaterBreathingPower);
 		config.set("Giant.WaterBreathing.Time", GiantWaterBreathingTime);
+		config.set("Giant.WaterBreathing.DodgeChance",GiantWaterBreathingDodgeChance);
 		config.set("Giant.Weakness.Enabled", GiantWeaknessEnabled);
 		config.set("Giant.Weakness.Power", GiantWeaknessPower);
 		config.set("Giant.Weakness.Time", GiantWeaknessTime);
-		// MagmaCube
+		config.set("Giant.Weakness.DodgeChance", GiantWeaknessDodgeChance);
+		// Magma Cube
 		config.set("MagmaCube.Blindness.Enabled", MagmaCubeBlindnessEnabled);
 		config.set("MagmaCube.Blindness.Power", MagmaCubeBlindnessPower);
 		config.set("MagmaCube.Blindness.Time", MagmaCubeBlindnessTime);
+		config.set("MagmaCube.Blindness.DodgeChance", MagmaCubeBlindnessDodgeChance);
 		config.set("MagmaCube.FastDigging.Enabled", MagmaCubeFastDiggingEnabled);
 		config.set("MagmaCube.FastDigging.Power", MagmaCubeFastDiggingPower);
 		config.set("MagmaCube.FastDigging.Time", MagmaCubeFastDiggingTime);
+		config.set("MagmaCube.FastDigging.DodgeChance",MagmaCubeFastDiggingDodgeChance);
+		config.set("MagmaCube.FireResistance.Enabled", MagmaCubeFireResistanceEnabled);
+		config.set("MagmaCube.FireResistance.Power", MagmaCubeFireResistancePower);
+		config.set("MagmaCube.FireResistance.Time", MagmaCubeFireResistanceTime);
+		config.set("MagmaCube.FireResistance.DodgeChance",MagmaCubeFireResistanceDodgeChance);
 		config.set("MagmaCube.Harm.Enabled", MagmaCubeHarmEnabled);
 		config.set("MagmaCube.Harm.Power", MagmaCubeHarmPower);
 		config.set("MagmaCube.Harm.Time", MagmaCubeHarmTime);
+		config.set("MagmaCube.Harm.DodgeChance", MagmaCubeHarmDodgeChance);
 		config.set("MagmaCube.Heal.Enabled", MagmaCubeHealEnabled);
 		config.set("MagmaCube.Heal.Power", MagmaCubeHealPower);
 		config.set("MagmaCube.Heal.Time", MagmaCubeHealTime);
+		config.set("MagmaCube.Heal.DodgeChance", MagmaCubeHealDodgeChance);
+		config.set("MagmaCube.Hunger.Enabled", MagmaCubeHungerEnabled);
+		config.set("MagmaCube.Hunger.Power", MagmaCubeHungerPower);
+		config.set("MagmaCube.Hunger.Time", MagmaCubeHungerTime);
+		config.set("MagmaCube.Hunger.DodgeChance", MagmaCubeHungerDodgeChance);
 		config.set("MagmaCube.Jump.Enabled", MagmaCubeJumpEnabled);
 		config.set("MagmaCube.Jump.Power", MagmaCubeJumpPower);
 		config.set("MagmaCube.Jump.Time", MagmaCubeJumpTime);
+		config.set("MagmaCube.Jump.DodgeChance", MagmaCubeJumpDodgeChance);
 		config.set("MagmaCube.MiningFatigue.Enabled", MagmaCubeMiningFatigueEnabled);
 		config.set("MagmaCube.MiningFatigue.Power", MagmaCubeMiningFatiguePower);
 		config.set("MagmaCube.MiningFatigue.Time", MagmaCubeMiningFatigueTime);
+		config.set("MagmaCube.MiningFatigue.DodgeChannce",MagmaCubeMiningFatigueDodgeChance);
 		config.set("MagmaCube.Nausea.Enabled", MagmaCubeNauseaEnabled);
 		config.set("MagmaCube.Nausea.Power", MagmaCubeNauseaPower);
 		config.set("MagmaCube.Nausea.Time", MagmaCubeNauseaTime);
+		config.set("MagmaCube.Nausea.DodgeChance", MagmaCubeNauseaDodgeChance);
+		config.set("MagmaCube.Poison.Enabled", MagmaCubePoisonEnabled);
+		config.set("MagmaCube.Poison.Power", MagmaCubePoisonPower);
+		config.set("MagmaCube.Poison.Time", MagmaCubePoisonTime);
+		config.set("MagmaCube.Poison.DodgeChance", MagmaCubePoisonDodgeChance);
+		config.set("MagmaCube.Regeneration.Enabled", MagmaCubeRegenerationEnabled);
+		config.set("MagmaCube.Regeneration.Power", MagmaCubeRegenerationPower);
+		config.set("MagmaCube.Regeneration.Time", MagmaCubeRegenerationTime);
+		config.set("MagmaCube.Regeneration.DodgeChance",MagmaCubeRegenerationDodgeChance);
 		config.set("MagmaCube.Resistance.Enabled", MagmaCubeResistanceEnabled);
 		config.set("MagmaCube.Resistance.Power", MagmaCubeResistancePower);
 		config.set("MagmaCube.Resistance.Time", MagmaCubeResistanceTime);
+		config.set("MagmaCube.Resistance.DodgeChance", MagmaCubeResistanceDodgeChance);
 		config.set("MagmaCube.Slow.Enabled", MagmaCubeSlowEnabled);
 		config.set("MagmaCube.Slow.Power", MagmaCubeSlowPower);
 		config.set("MagmaCube.Slow.Time", MagmaCubeSlowTime);
+		config.set("MagmaCube.Slow.DodgeChance", MagmaCubeSlowDodgeChance);
 		config.set("MagmaCube.Speed.Enabled", MagmaCubeSpeedEnabled);
 		config.set("MagmaCube.Speed.Power", MagmaCubeSpeedPower);
 		config.set("MagmaCube.Speed.Time", MagmaCubeSpeedTime);
+		config.set("MagmaCube.Speed.DodgeChance", MagmaCubeSpeedDodgeChance);
 		config.set("MagmaCube.Strength.Enabled", MagmaCubeStrengthEnabled);
 		config.set("MagmaCube.Strength.Power", MagmaCubeStrengthPower);
 		config.set("MagmaCube.Strength.Time", MagmaCubeStrengthTime);
+		config.set("MagmaCube.Strength.DodgeChance", MagmaCubeStrengthDodgeChance);
 		config.set("MagmaCube.WaterBreathing.Enabled", MagmaCubeWaterBreathingEnabled);
 		config.set("MagmaCube.WaterBreathing.Power", MagmaCubeWaterBreathingPower);
 		config.set("MagmaCube.WaterBreathing.Time", MagmaCubeWaterBreathingTime);
+		config.set("MagmaCube.WaterBreathing.DodgeChance",MagmaCubeWaterBreathingDodgeChance);
 		config.set("MagmaCube.Weakness.Enabled", MagmaCubeWeaknessEnabled);
 		config.set("MagmaCube.Weakness.Power", MagmaCubeWeaknessPower);
 		config.set("MagmaCube.Weakness.Time", MagmaCubeWeaknessTime);
+		config.set("MagmaCube.Weakness.DodgeChance", MagmaCubeWeaknessDodgeChance);
 		// Pig Zombie
 		config.set("PigZombie.Blindness.Enabled", PigZombieBlindnessEnabled);
 		config.set("PigZombie.Blindness.Power", PigZombieBlindnessPower);
 		config.set("PigZombie.Blindness.Time", PigZombieBlindnessTime);
+		config.set("PigZombie.Blindness.DodgeChance", PigZombieBlindnessDodgeChance);
 		config.set("PigZombie.FastDigging.Enabled", PigZombieFastDiggingEnabled);
 		config.set("PigZombie.FastDigging.Power", PigZombieFastDiggingPower);
 		config.set("PigZombie.FastDigging.Time", PigZombieFastDiggingTime);
+		config.set("PigZombie.FastDigging.DodgeChance",PigZombieFastDiggingDodgeChance);
+		config.set("PigZombie.FireResistance.Enabled", PigZombieFireResistanceEnabled);
+		config.set("PigZombie.FireResistance.Power", PigZombieFireResistancePower);
+		config.set("PigZombie.FireResistance.Time", PigZombieFireResistanceTime);
+		config.set("PigZombie.FireResistance.DodgeChance",PigZombieFireResistanceDodgeChance);
 		config.set("PigZombie.Harm.Enabled", PigZombieHarmEnabled);
 		config.set("PigZombie.Harm.Power", PigZombieHarmPower);
 		config.set("PigZombie.Harm.Time", PigZombieHarmTime);
+		config.set("PigZombie.Harm.DodgeChance", PigZombieHarmDodgeChance);
 		config.set("PigZombie.Heal.Enabled", PigZombieHealEnabled);
 		config.set("PigZombie.Heal.Power", PigZombieHealPower);
 		config.set("PigZombie.Heal.Time", PigZombieHealTime);
+		config.set("PigZombie.Heal.DodgeChance", PigZombieHealDodgeChance);
+		config.set("PigZombie.Hunger.Enabled", PigZombieHungerEnabled);
+		config.set("PigZombie.Hunger.Power", PigZombieHungerPower);
+		config.set("PigZombie.Hunger.Time", PigZombieHungerTime);
+		config.set("PigZombie.Hunger.DodgeChance", PigZombieHungerDodgeChance);
 		config.set("PigZombie.Jump.Enabled", PigZombieJumpEnabled);
 		config.set("PigZombie.Jump.Power", PigZombieJumpPower);
 		config.set("PigZombie.Jump.Time", PigZombieJumpTime);
+		config.set("PigZombie.Jump.DodgeChance", PigZombieJumpDodgeChance);
 		config.set("PigZombie.MiningFatigue.Enabled", PigZombieMiningFatigueEnabled);
 		config.set("PigZombie.MiningFatigue.Power", PigZombieMiningFatiguePower);
 		config.set("PigZombie.MiningFatigue.Time", PigZombieMiningFatigueTime);
+		config.set("PigZombie.MiningFatigue.DodgeChannce",PigZombieMiningFatigueDodgeChance);
 		config.set("PigZombie.Nausea.Enabled", PigZombieNauseaEnabled);
 		config.set("PigZombie.Nausea.Power", PigZombieNauseaPower);
 		config.set("PigZombie.Nausea.Time", PigZombieNauseaTime);
+		config.set("PigZombie.Nausea.DodgeChance", PigZombieNauseaDodgeChance);
+		config.set("PigZombie.Poison.Enabled", PigZombiePoisonEnabled);
+		config.set("PigZombie.Poison.Power", PigZombiePoisonPower);
+		config.set("PigZombie.Poison.Time", PigZombiePoisonTime);
+		config.set("PigZombie.Poison.DodgeChance", PigZombiePoisonDodgeChance);
+		config.set("PigZombie.Regeneration.Enabled", PigZombieRegenerationEnabled);
+		config.set("PigZombie.Regeneration.Power", PigZombieRegenerationPower);
+		config.set("PigZombie.Regeneration.Time", PigZombieRegenerationTime);
+		config.set("PigZombie.Regeneration.DodgeChance",PigZombieRegenerationDodgeChance);
 		config.set("PigZombie.Resistance.Enabled", PigZombieResistanceEnabled);
 		config.set("PigZombie.Resistance.Power", PigZombieResistancePower);
 		config.set("PigZombie.Resistance.Time", PigZombieResistanceTime);
+		config.set("PigZombie.Resistance.DodgeChance", PigZombieResistanceDodgeChance);
 		config.set("PigZombie.Slow.Enabled", PigZombieSlowEnabled);
 		config.set("PigZombie.Slow.Power", PigZombieSlowPower);
 		config.set("PigZombie.Slow.Time", PigZombieSlowTime);
+		config.set("PigZombie.Slow.DodgeChance", PigZombieSlowDodgeChance);
 		config.set("PigZombie.Speed.Enabled", PigZombieSpeedEnabled);
 		config.set("PigZombie.Speed.Power", PigZombieSpeedPower);
 		config.set("PigZombie.Speed.Time", PigZombieSpeedTime);
+		config.set("PigZombie.Speed.DodgeChance", PigZombieSpeedDodgeChance);
 		config.set("PigZombie.Strength.Enabled", PigZombieStrengthEnabled);
 		config.set("PigZombie.Strength.Power", PigZombieStrengthPower);
 		config.set("PigZombie.Strength.Time", PigZombieStrengthTime);
+		config.set("PigZombie.Strength.DodgeChance", PigZombieStrengthDodgeChance);
 		config.set("PigZombie.WaterBreathing.Enabled", PigZombieWaterBreathingEnabled);
 		config.set("PigZombie.WaterBreathing.Power", PigZombieWaterBreathingPower);
 		config.set("PigZombie.WaterBreathing.Time", PigZombieWaterBreathingTime);
+		config.set("PigZombie.WaterBreathing.DodgeChance",PigZombieWaterBreathingDodgeChance);
 		config.set("PigZombie.Weakness.Enabled", PigZombieWeaknessEnabled);
 		config.set("PigZombie.Weakness.Power", PigZombieWeaknessPower);
 		config.set("PigZombie.Weakness.Time", PigZombieWeaknessTime);
+		config.set("PigZombie.Weakness.DodgeChance", PigZombieWeaknessDodgeChance);
 		// Player
 		config.set("Player.Blindness.Enabled", PlayerBlindnessEnabled);
 		config.set("Player.Blindness.Power", PlayerBlindnessPower);
 		config.set("Player.Blindness.Time", PlayerBlindnessTime);
+		config.set("Player.Blindness.DodgeChance", PlayerBlindnessDodgeChance);
 		config.set("Player.FastDigging.Enabled", PlayerFastDiggingEnabled);
 		config.set("Player.FastDigging.Power", PlayerFastDiggingPower);
 		config.set("Player.FastDigging.Time", PlayerFastDiggingTime);
+		config.set("Player.FastDigging.DodgeChance",PlayerFastDiggingDodgeChance);
+		config.set("Player.FireResistance.Enabled", PlayerFireResistanceEnabled);
+		config.set("Player.FireResistance.Power", PlayerFireResistancePower);
+		config.set("Player.FireResistance.Time", PlayerFireResistanceTime);
+		config.set("Player.FireResistance.DodgeChance",PlayerFireResistanceDodgeChance);
 		config.set("Player.Harm.Enabled", PlayerHarmEnabled);
 		config.set("Player.Harm.Power", PlayerHarmPower);
 		config.set("Player.Harm.Time", PlayerHarmTime);
+		config.set("Player.Harm.DodgeChance", PlayerHarmDodgeChance);
 		config.set("Player.Heal.Enabled", PlayerHealEnabled);
 		config.set("Player.Heal.Power", PlayerHealPower);
 		config.set("Player.Heal.Time", PlayerHealTime);
+		config.set("Player.Heal.DodgeChance", PlayerHealDodgeChance);
+		config.set("Player.Hunger.Enabled", PlayerHungerEnabled);
+		config.set("Player.Hunger.Power", PlayerHungerPower);
+		config.set("Player.Hunger.Time", PlayerHungerTime);
+		config.set("Player.Hunger.DodgeChance", PlayerHungerDodgeChance);
 		config.set("Player.Jump.Enabled", PlayerJumpEnabled);
 		config.set("Player.Jump.Power", PlayerJumpPower);
 		config.set("Player.Jump.Time", PlayerJumpTime);
+		config.set("Player.Jump.DodgeChance", PlayerJumpDodgeChance);
 		config.set("Player.MiningFatigue.Enabled", PlayerMiningFatigueEnabled);
 		config.set("Player.MiningFatigue.Power", PlayerMiningFatiguePower);
 		config.set("Player.MiningFatigue.Time", PlayerMiningFatigueTime);
+		config.set("Player.MiningFatigue.DodgeChannce",PlayerMiningFatigueDodgeChance);
 		config.set("Player.Nausea.Enabled", PlayerNauseaEnabled);
 		config.set("Player.Nausea.Power", PlayerNauseaPower);
 		config.set("Player.Nausea.Time", PlayerNauseaTime);
+		config.set("Player.Nausea.DodgeChance", PlayerNauseaDodgeChance);
+		config.set("Player.Poison.Enabled", PlayerPoisonEnabled);
+		config.set("Player.Poison.Power", PlayerPoisonPower);
+		config.set("Player.Poison.Time", PlayerPoisonTime);
+		config.set("Player.Poison.DodgeChance", PlayerPoisonDodgeChance);
+		config.set("Player.Regeneration.Enabled", PlayerRegenerationEnabled);
+		config.set("Player.Regeneration.Power", PlayerRegenerationPower);
+		config.set("Player.Regeneration.Time", PlayerRegenerationTime);
+		config.set("Player.Regeneration.DodgeChance",PlayerRegenerationDodgeChance);
 		config.set("Player.Resistance.Enabled", PlayerResistanceEnabled);
 		config.set("Player.Resistance.Power", PlayerResistancePower);
 		config.set("Player.Resistance.Time", PlayerResistanceTime);
+		config.set("Player.Resistance.DodgeChance", PlayerResistanceDodgeChance);
 		config.set("Player.Slow.Enabled", PlayerSlowEnabled);
 		config.set("Player.Slow.Power", PlayerSlowPower);
 		config.set("Player.Slow.Time", PlayerSlowTime);
+		config.set("Player.Slow.DodgeChance", PlayerSlowDodgeChance);
 		config.set("Player.Speed.Enabled", PlayerSpeedEnabled);
 		config.set("Player.Speed.Power", PlayerSpeedPower);
 		config.set("Player.Speed.Time", PlayerSpeedTime);
+		config.set("Player.Speed.DodgeChance", PlayerSpeedDodgeChance);
 		config.set("Player.Strength.Enabled", PlayerStrengthEnabled);
 		config.set("Player.Strength.Power", PlayerStrengthPower);
 		config.set("Player.Strength.Time", PlayerStrengthTime);
+		config.set("Player.Strength.DodgeChance", PlayerStrengthDodgeChance);
 		config.set("Player.WaterBreathing.Enabled", PlayerWaterBreathingEnabled);
 		config.set("Player.WaterBreathing.Power", PlayerWaterBreathingPower);
 		config.set("Player.WaterBreathing.Time", PlayerWaterBreathingTime);
+		config.set("Player.WaterBreathing.DodgeChance",PlayerWaterBreathingDodgeChance);
 		config.set("Player.Weakness.Enabled", PlayerWeaknessEnabled);
 		config.set("Player.Weakness.Power", PlayerWeaknessPower);
 		config.set("Player.Weakness.Time", PlayerWeaknessTime);
+		config.set("Player.Weakness.DodgeChance", PlayerWeaknessDodgeChance);
 		// Silverfish
 		config.set("Silverfish.Blindness.Enabled", SilverfishBlindnessEnabled);
 		config.set("Silverfish.Blindness.Power", SilverfishBlindnessPower);
 		config.set("Silverfish.Blindness.Time", SilverfishBlindnessTime);
+		config.set("Silverfish.Blindness.DodgeChance", SilverfishBlindnessDodgeChance);
 		config.set("Silverfish.FastDigging.Enabled", SilverfishFastDiggingEnabled);
 		config.set("Silverfish.FastDigging.Power", SilverfishFastDiggingPower);
 		config.set("Silverfish.FastDigging.Time", SilverfishFastDiggingTime);
+		config.set("Silverfish.FastDigging.DodgeChance",SilverfishFastDiggingDodgeChance);
+		config.set("Silverfish.FireResistance.Enabled", SilverfishFireResistanceEnabled);
+		config.set("Silverfish.FireResistance.Power", SilverfishFireResistancePower);
+		config.set("Silverfish.FireResistance.Time", SilverfishFireResistanceTime);
+		config.set("Silverfish.FireResistance.DodgeChance",SilverfishFireResistanceDodgeChance);
 		config.set("Silverfish.Harm.Enabled", SilverfishHarmEnabled);
 		config.set("Silverfish.Harm.Power", SilverfishHarmPower);
 		config.set("Silverfish.Harm.Time", SilverfishHarmTime);
+		config.set("Silverfish.Harm.DodgeChance", SilverfishHarmDodgeChance);
 		config.set("Silverfish.Heal.Enabled", SilverfishHealEnabled);
 		config.set("Silverfish.Heal.Power", SilverfishHealPower);
 		config.set("Silverfish.Heal.Time", SilverfishHealTime);
+		config.set("Silverfish.Heal.DodgeChance", SilverfishHealDodgeChance);
+		config.set("Silverfish.Hunger.Enabled", SilverfishHungerEnabled);
+		config.set("Silverfish.Hunger.Power", SilverfishHungerPower);
+		config.set("Silverfish.Hunger.Time", SilverfishHungerTime);
+		config.set("Silverfish.Hunger.DodgeChance", SilverfishHungerDodgeChance);
 		config.set("Silverfish.Jump.Enabled", SilverfishJumpEnabled);
 		config.set("Silverfish.Jump.Power", SilverfishJumpPower);
 		config.set("Silverfish.Jump.Time", SilverfishJumpTime);
+		config.set("Silverfish.Jump.DodgeChance", SilverfishJumpDodgeChance);
 		config.set("Silverfish.MiningFatigue.Enabled", SilverfishMiningFatigueEnabled);
 		config.set("Silverfish.MiningFatigue.Power", SilverfishMiningFatiguePower);
 		config.set("Silverfish.MiningFatigue.Time", SilverfishMiningFatigueTime);
+		config.set("Silverfish.MiningFatigue.DodgeChannce",SilverfishMiningFatigueDodgeChance);
 		config.set("Silverfish.Nausea.Enabled", SilverfishNauseaEnabled);
 		config.set("Silverfish.Nausea.Power", SilverfishNauseaPower);
 		config.set("Silverfish.Nausea.Time", SilverfishNauseaTime);
+		config.set("Silverfish.Nausea.DodgeChance", SilverfishNauseaDodgeChance);
+		config.set("Silverfish.Poison.Enabled", SilverfishPoisonEnabled);
+		config.set("Silverfish.Poison.Power", SilverfishPoisonPower);
+		config.set("Silverfish.Poison.Time", SilverfishPoisonTime);
+		config.set("Silverfish.Poison.DodgeChance", SilverfishPoisonDodgeChance);
+		config.set("Silverfish.Regeneration.Enabled", SilverfishRegenerationEnabled);
+		config.set("Silverfish.Regeneration.Power", SilverfishRegenerationPower);
+		config.set("Silverfish.Regeneration.Time", SilverfishRegenerationTime);
+		config.set("Silverfish.Regeneration.DodgeChance",SilverfishRegenerationDodgeChance);
 		config.set("Silverfish.Resistance.Enabled", SilverfishResistanceEnabled);
 		config.set("Silverfish.Resistance.Power", SilverfishResistancePower);
 		config.set("Silverfish.Resistance.Time", SilverfishResistanceTime);
+		config.set("Silverfish.Resistance.DodgeChance", SilverfishResistanceDodgeChance);
 		config.set("Silverfish.Slow.Enabled", SilverfishSlowEnabled);
 		config.set("Silverfish.Slow.Power", SilverfishSlowPower);
 		config.set("Silverfish.Slow.Time", SilverfishSlowTime);
+		config.set("Silverfish.Slow.DodgeChance", SilverfishSlowDodgeChance);
 		config.set("Silverfish.Speed.Enabled", SilverfishSpeedEnabled);
 		config.set("Silverfish.Speed.Power", SilverfishSpeedPower);
 		config.set("Silverfish.Speed.Time", SilverfishSpeedTime);
+		config.set("Silverfish.Speed.DodgeChance", SilverfishSpeedDodgeChance);
 		config.set("Silverfish.Strength.Enabled", SilverfishStrengthEnabled);
 		config.set("Silverfish.Strength.Power", SilverfishStrengthPower);
 		config.set("Silverfish.Strength.Time", SilverfishStrengthTime);
+		config.set("Silverfish.Strength.DodgeChance", SilverfishStrengthDodgeChance);
 		config.set("Silverfish.WaterBreathing.Enabled", SilverfishWaterBreathingEnabled);
 		config.set("Silverfish.WaterBreathing.Power", SilverfishWaterBreathingPower);
 		config.set("Silverfish.WaterBreathing.Time", SilverfishWaterBreathingTime);
+		config.set("Silverfish.WaterBreathing.DodgeChance",SilverfishWaterBreathingDodgeChance);
 		config.set("Silverfish.Weakness.Enabled", SilverfishWeaknessEnabled);
 		config.set("Silverfish.Weakness.Power", SilverfishWeaknessPower);
 		config.set("Silverfish.Weakness.Time", SilverfishWeaknessTime);
+		config.set("Silverfish.Weakness.DodgeChance", SilverfishWeaknessDodgeChance);
 		// Slime
 		config.set("Slime.Blindness.Enabled", SlimeBlindnessEnabled);
 		config.set("Slime.Blindness.Power", SlimeBlindnessPower);
 		config.set("Slime.Blindness.Time", SlimeBlindnessTime);
+		config.set("Slime.Blindness.DodgeChance", SlimeBlindnessDodgeChance);
 		config.set("Slime.FastDigging.Enabled", SlimeFastDiggingEnabled);
 		config.set("Slime.FastDigging.Power", SlimeFastDiggingPower);
 		config.set("Slime.FastDigging.Time", SlimeFastDiggingTime);
+		config.set("Slime.FastDigging.DodgeChance",SlimeFastDiggingDodgeChance);
+		config.set("Slime.FireResistance.Enabled", SlimeFireResistanceEnabled);
+		config.set("Slime.FireResistance.Power", SlimeFireResistancePower);
+		config.set("Slime.FireResistance.Time", SlimeFireResistanceTime);
+		config.set("Slime.FireResistance.DodgeChance",SlimeFireResistanceDodgeChance);
 		config.set("Slime.Harm.Enabled", SlimeHarmEnabled);
 		config.set("Slime.Harm.Power", SlimeHarmPower);
 		config.set("Slime.Harm.Time", SlimeHarmTime);
+		config.set("Slime.Harm.DodgeChance", SlimeHarmDodgeChance);
 		config.set("Slime.Heal.Enabled", SlimeHealEnabled);
 		config.set("Slime.Heal.Power", SlimeHealPower);
 		config.set("Slime.Heal.Time", SlimeHealTime);
+		config.set("Slime.Heal.DodgeChance", SlimeHealDodgeChance);
+		config.set("Slime.Hunger.Enabled", SlimeHungerEnabled);
+		config.set("Slime.Hunger.Power", SlimeHungerPower);
+		config.set("Slime.Hunger.Time", SlimeHungerTime);
+		config.set("Slime.Hunger.DodgeChance", SlimeHungerDodgeChance);
 		config.set("Slime.Jump.Enabled", SlimeJumpEnabled);
 		config.set("Slime.Jump.Power", SlimeJumpPower);
 		config.set("Slime.Jump.Time", SlimeJumpTime);
+		config.set("Slime.Jump.DodgeChance", SlimeJumpDodgeChance);
 		config.set("Slime.MiningFatigue.Enabled", SlimeMiningFatigueEnabled);
 		config.set("Slime.MiningFatigue.Power", SlimeMiningFatiguePower);
 		config.set("Slime.MiningFatigue.Time", SlimeMiningFatigueTime);
+		config.set("Slime.MiningFatigue.DodgeChannce",SlimeMiningFatigueDodgeChance);
 		config.set("Slime.Nausea.Enabled", SlimeNauseaEnabled);
 		config.set("Slime.Nausea.Power", SlimeNauseaPower);
 		config.set("Slime.Nausea.Time", SlimeNauseaTime);
+		config.set("Slime.Nausea.DodgeChance", SlimeNauseaDodgeChance);
+		config.set("Slime.Poison.Enabled", SlimePoisonEnabled);
+		config.set("Slime.Poison.Power", SlimePoisonPower);
+		config.set("Slime.Poison.Time", SlimePoisonTime);
+		config.set("Slime.Poison.DodgeChance", SlimePoisonDodgeChance);
+		config.set("Slime.Regeneration.Enabled", SlimeRegenerationEnabled);
+		config.set("Slime.Regeneration.Power", SlimeRegenerationPower);
+		config.set("Slime.Regeneration.Time", SlimeRegenerationTime);
+		config.set("Slime.Regeneration.DodgeChance",SlimeRegenerationDodgeChance);
 		config.set("Slime.Resistance.Enabled", SlimeResistanceEnabled);
 		config.set("Slime.Resistance.Power", SlimeResistancePower);
 		config.set("Slime.Resistance.Time", SlimeResistanceTime);
+		config.set("Slime.Resistance.DodgeChance", SlimeResistanceDodgeChance);
 		config.set("Slime.Slow.Enabled", SlimeSlowEnabled);
 		config.set("Slime.Slow.Power", SlimeSlowPower);
 		config.set("Slime.Slow.Time", SlimeSlowTime);
+		config.set("Slime.Slow.DodgeChance", SlimeSlowDodgeChance);
 		config.set("Slime.Speed.Enabled", SlimeSpeedEnabled);
 		config.set("Slime.Speed.Power", SlimeSpeedPower);
 		config.set("Slime.Speed.Time", SlimeSpeedTime);
+		config.set("Slime.Speed.DodgeChance", SlimeSpeedDodgeChance);
 		config.set("Slime.Strength.Enabled", SlimeStrengthEnabled);
 		config.set("Slime.Strength.Power", SlimeStrengthPower);
 		config.set("Slime.Strength.Time", SlimeStrengthTime);
+		config.set("Slime.Strength.DodgeChance", SlimeStrengthDodgeChance);
 		config.set("Slime.WaterBreathing.Enabled", SlimeWaterBreathingEnabled);
 		config.set("Slime.WaterBreathing.Power", SlimeWaterBreathingPower);
 		config.set("Slime.WaterBreathing.Time", SlimeWaterBreathingTime);
+		config.set("Slime.WaterBreathing.DodgeChance",SlimeWaterBreathingDodgeChance);
 		config.set("Slime.Weakness.Enabled", SlimeWeaknessEnabled);
 		config.set("Slime.Weakness.Power", SlimeWeaknessPower);
 		config.set("Slime.Weakness.Time", SlimeWeaknessTime);
+		config.set("Slime.Weakness.DodgeChance", SlimeWeaknessDodgeChance);
 		// Spider
 		config.set("Spider.Blindness.Enabled", SpiderBlindnessEnabled);
 		config.set("Spider.Blindness.Power", SpiderBlindnessPower);
 		config.set("Spider.Blindness.Time", SpiderBlindnessTime);
+		config.set("Spider.Blindness.DodgeChance", SpiderBlindnessDodgeChance);
 		config.set("Spider.FastDigging.Enabled", SpiderFastDiggingEnabled);
 		config.set("Spider.FastDigging.Power", SpiderFastDiggingPower);
 		config.set("Spider.FastDigging.Time", SpiderFastDiggingTime);
+		config.set("Spider.FastDigging.DodgeChance",SpiderFastDiggingDodgeChance);
 		config.set("Spider.FireResistance.Enabled", SpiderFireResistanceEnabled);
 		config.set("Spider.FireResistance.Power", SpiderFireResistancePower);
 		config.set("Spider.FireResistance.Time", SpiderFireResistanceTime);
+		config.set("Spider.FireResistance.DodgeChance",SpiderFireResistanceDodgeChance);
 		config.set("Spider.Harm.Enabled", SpiderHarmEnabled);
 		config.set("Spider.Harm.Power", SpiderHarmPower);
 		config.set("Spider.Harm.Time", SpiderHarmTime);
+		config.set("Spider.Harm.DodgeChance", SpiderHarmDodgeChance);
 		config.set("Spider.Heal.Enabled", SpiderHealEnabled);
 		config.set("Spider.Heal.Power", SpiderHealPower);
 		config.set("Spider.Heal.Time", SpiderHealTime);
+		config.set("Spider.Heal.DodgeChance", SpiderHealDodgeChance);
 		config.set("Spider.Hunger.Enabled", SpiderHungerEnabled);
 		config.set("Spider.Hunger.Power", SpiderHungerPower);
 		config.set("Spider.Hunger.Time", SpiderHungerTime);
+		config.set("Spider.Hunger.DodgeChance", SpiderHungerDodgeChance);
 		config.set("Spider.Jump.Enabled", SpiderJumpEnabled);
 		config.set("Spider.Jump.Power", SpiderJumpPower);
 		config.set("Spider.Jump.Time", SpiderJumpTime);
+		config.set("Spider.Jump.DodgeChance", SpiderJumpDodgeChance);
 		config.set("Spider.MiningFatigue.Enabled", SpiderMiningFatigueEnabled);
 		config.set("Spider.MiningFatigue.Power", SpiderMiningFatiguePower);
 		config.set("Spider.MiningFatigue.Time", SpiderMiningFatigueTime);
+		config.set("Spider.MiningFatigue.DodgeChannce",SpiderMiningFatigueDodgeChance);
 		config.set("Spider.Nausea.Enabled", SpiderNauseaEnabled);
 		config.set("Spider.Nausea.Power", SpiderNauseaPower);
 		config.set("Spider.Nausea.Time", SpiderNauseaTime);
+		config.set("Spider.Nausea.DodgeChance", SpiderNauseaDodgeChance);
 		config.set("Spider.Poison.Enabled", SpiderPoisonEnabled);
 		config.set("Spider.Poison.Power", SpiderPoisonPower);
 		config.set("Spider.Poison.Time", SpiderPoisonTime);
+		config.set("Spider.Poison.DodgeChance", SpiderPoisonDodgeChance);
 		config.set("Spider.Regeneration.Enabled", SpiderRegenerationEnabled);
 		config.set("Spider.Regeneration.Power", SpiderRegenerationPower);
 		config.set("Spider.Regeneration.Time", SpiderRegenerationTime);
+		config.set("Spider.Regeneration.DodgeChance",SpiderRegenerationDodgeChance);
 		config.set("Spider.Resistance.Enabled", SpiderResistanceEnabled);
 		config.set("Spider.Resistance.Power", SpiderResistancePower);
 		config.set("Spider.Resistance.Time", SpiderResistanceTime);
+		config.set("Spider.Resistance.DodgeChance", SpiderResistanceDodgeChance);
 		config.set("Spider.Slow.Enabled", SpiderSlowEnabled);
 		config.set("Spider.Slow.Power", SpiderSlowPower);
 		config.set("Spider.Slow.Time", SpiderSlowTime);
+		config.set("Spider.Slow.DodgeChance", SpiderSlowDodgeChance);
 		config.set("Spider.Speed.Enabled", SpiderSpeedEnabled);
 		config.set("Spider.Speed.Power", SpiderSpeedPower);
 		config.set("Spider.Speed.Time", SpiderSpeedTime);
+		config.set("Spider.Speed.DodgeChance", SpiderSpeedDodgeChance);
 		config.set("Spider.Strength.Enabled", SpiderStrengthEnabled);
 		config.set("Spider.Strength.Power", SpiderStrengthPower);
 		config.set("Spider.Strength.Time", SpiderStrengthTime);
+		config.set("Spider.Strength.DodgeChance", SpiderStrengthDodgeChance);
 		config.set("Spider.WaterBreathing.Enabled", SpiderWaterBreathingEnabled);
 		config.set("Spider.WaterBreathing.Power", SpiderWaterBreathingPower);
 		config.set("Spider.WaterBreathing.Time", SpiderWaterBreathingTime);
+		config.set("Spider.WaterBreathing.DodgeChance",SpiderWaterBreathingDodgeChance);
 		config.set("Spider.Weakness.Enabled", SpiderWeaknessEnabled);
 		config.set("Spider.Weakness.Power", SpiderWeaknessPower);
 		config.set("Spider.Weakness.Time", SpiderWeaknessTime);
-		// Zombies
+		config.set("Spider.Weakness.DodgeChance", SpiderWeaknessDodgeChance);
+		// Zombie
 		config.set("Zombie.Blindness.Enabled", ZombieBlindnessEnabled);
 		config.set("Zombie.Blindness.Power", ZombieBlindnessPower);
 		config.set("Zombie.Blindness.Time", ZombieBlindnessTime);
@@ -2403,11 +2660,11 @@ public class Config {
 		config.set("Zombie.FastDigging.Enabled", ZombieFastDiggingEnabled);
 		config.set("Zombie.FastDigging.Power", ZombieFastDiggingPower);
 		config.set("Zombie.FastDigging.Time", ZombieFastDiggingTime);
-		config.set("Zombie.FastDigging.DodgeChance", ZombieFastDiggingDodgeChance);
+		config.set("Zombie.FastDigging.DodgeChance",ZombieFastDiggingDodgeChance);
 		config.set("Zombie.FireResistance.Enabled", ZombieFireResistanceEnabled);
 		config.set("Zombie.FireResistance.Power", ZombieFireResistancePower);
 		config.set("Zombie.FireResistance.Time", ZombieFireResistanceTime);
-		config.set("Zombie.FireResistance.DodgeChance", ZombieFireResistanceDodgeChance);
+		config.set("Zombie.FireResistance.DodgeChance",ZombieFireResistanceDodgeChance);
 		config.set("Zombie.Harm.Enabled", ZombieHarmEnabled);
 		config.set("Zombie.Harm.Power", ZombieHarmPower);
 		config.set("Zombie.Harm.Time", ZombieHarmTime);
@@ -2427,7 +2684,7 @@ public class Config {
 		config.set("Zombie.MiningFatigue.Enabled", ZombieMiningFatigueEnabled);
 		config.set("Zombie.MiningFatigue.Power", ZombieMiningFatiguePower);
 		config.set("Zombie.MiningFatigue.Time", ZombieMiningFatigueTime);
-		config.set("Zombie.MiningFatigue.DodgeChannce", ZombieMiningFatigueDodgeChance);
+		config.set("Zombie.MiningFatigue.DodgeChannce",ZombieMiningFatigueDodgeChance);
 		config.set("Zombie.Nausea.Enabled", ZombieNauseaEnabled);
 		config.set("Zombie.Nausea.Power", ZombieNauseaPower);
 		config.set("Zombie.Nausea.Time", ZombieNauseaTime);
@@ -2439,7 +2696,7 @@ public class Config {
 		config.set("Zombie.Regeneration.Enabled", ZombieRegenerationEnabled);
 		config.set("Zombie.Regeneration.Power", ZombieRegenerationPower);
 		config.set("Zombie.Regeneration.Time", ZombieRegenerationTime);
-		config.set("Zombie.Regeneration.DodgeChance", ZombieRegenerationDodgeChance);
+		config.set("Zombie.Regeneration.DodgeChance",ZombieRegenerationDodgeChance);
 		config.set("Zombie.Resistance.Enabled", ZombieResistanceEnabled);
 		config.set("Zombie.Resistance.Power", ZombieResistancePower);
 		config.set("Zombie.Resistance.Time", ZombieResistanceTime);
@@ -2459,17 +2716,16 @@ public class Config {
 		config.set("Zombie.WaterBreathing.Enabled", ZombieWaterBreathingEnabled);
 		config.set("Zombie.WaterBreathing.Power", ZombieWaterBreathingPower);
 		config.set("Zombie.WaterBreathing.Time", ZombieWaterBreathingTime);
-		config.set("Zombie.WaterBreathing.DodgeChance", ZombieWaterBreathingDodgeChance);;
+		config.set("Zombie.WaterBreathing.DodgeChance",ZombieWaterBreathingDodgeChance);
 		config.set("Zombie.Weakness.Enabled", ZombieWeaknessEnabled);
 		config.set("Zombie.Weakness.Power", ZombieWeaknessPower);
 		config.set("Zombie.Weakness.Time", ZombieWeaknessTime);
 		config.set("Zombie.Weakness.DodgeChance", ZombieWeaknessDodgeChance);
-	
-	try {
-		config.save(file);
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
-	
+		try {
+			config.save(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 }
