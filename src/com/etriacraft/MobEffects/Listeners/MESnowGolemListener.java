@@ -9,9 +9,15 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.etriacraft.MobEffects.Config;
+import com.etriacraft.MobEffects.MobEffects;
 
 public class MESnowGolemListener implements Listener {
+	
+	public static MobEffects plugin;
+	
+	public MESnowGolemListener(MobEffects instance) {
+		plugin = instance;
+		}
 	
 	@EventHandler
 	public void SnowmanBlindness(EntityDamageByEntityEvent event) {
@@ -20,11 +26,11 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanBlindnessDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if (Config.SnowmanBlindnessEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		} if ( plugin.getConfig().getBoolean("Snowman.Blindness.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.SnowmanBlindnessTime, Config.SnowmanBlindnessPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("Snowman.Blindness.Time"), plugin.getConfig().getInt("Snowman.Blindness.Power")));
 		}
 	}
 	
@@ -35,12 +41,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanNauseaDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanNauseaEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Nausea.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SnowmanNauseaTime, Config.SnowmanNauseaPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("Snowman.Nausea.Time"), plugin.getConfig().getInt("Snowman.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -50,12 +56,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanResistanceDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanResistanceEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Resistance.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SnowmanResistanceTime, Config.SnowmanResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("Snowman.Resistance.Time"), plugin.getConfig().getInt("Snowman.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -65,12 +71,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanFastDiggingDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanFastDiggingEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.FastDigging.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.SnowmanFastDiggingTime, Config.SnowmanFastDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("Snowman.FastDigging.Time"), plugin.getConfig().getInt("Snowman.FastDigging.Power")));
 		}
 	}
 	
@@ -81,12 +87,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanFireResistanceDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanFireResistanceEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.FireResistance.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.SnowmanFireResistanceTime, Config.SnowmanFireResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("Snowman.FireResistance.Time"), plugin.getConfig().getInt("Snowman.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -96,12 +102,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanHarmDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanHarmEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Harm.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.SnowmanHarmTime, Config.SnowmanHarmPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("Snowman.Harm.Time"), plugin.getConfig().getInt("Snowman.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -111,72 +117,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanHealDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanHarmEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Heal.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.SnowmanHealTime, Config.SnowmanHealPower));
-		}
-	}
-	@EventHandler
-	public void SnowmanHunger(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SnowmanHungerDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SnowmanHungerEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.SnowmanHungerTime, Config.SnowmanHungerPower));
-		}
-	}
-	@EventHandler
-	public void SnowmanStrength(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SnowmanStrengthDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SnowmanStrengthEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SnowmanStrengthTime, Config.SnowmanStrengthPower));
-		}
-	}
-	@EventHandler
-	public void SnowmanJump(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SnowmanJumpDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SnowmanJumpEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.SnowmanJumpTime, Config.SnowmanJumpPower));
-		}
-	}
-	@EventHandler
-	public void SnowmanPoison(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SnowmanPoisonDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SnowmanPoisonEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.SnowmanPoisonTime, Config.SnowmanPoisonPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("Snowman.Heal.Time"), plugin.getConfig().getInt("Snowman.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -186,12 +132,57 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanRegenerationDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanRegenerationEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Regeneration.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.SnowmanRegenerationTime, Config.SnowmanRegenerationPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("Snowman.Regeneration.Time"), plugin.getConfig().getInt("Snowman.Regeneration.Power")));
+		}
+	}
+	@EventHandler
+	public void SnowmanStrength(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Snowman.Strength.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Snowman.Strength.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("Snowman.Strength.Time"), plugin.getConfig().getInt("Snowman.Strength.Power")));
+		}
+	}
+	@EventHandler
+	public void SnowmanJump(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Snowman.Jump.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Snowman.Jump.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("Snowman.Jump.Time"), plugin.getConfig().getInt("Snowman.Jump.Power")));
+		}
+	}
+	@EventHandler
+	public void SnowmanPoison(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Snowman.Poison.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Snowman.Poison.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("Snowman.Poison.Time"), plugin.getConfig().getInt("Snowman.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -201,12 +192,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanSlowDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanSlowEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Slow.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.SnowmanSlowTime, Config.SnowmanSlowPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("Snowman.Slow.Time"), plugin.getConfig().getInt("Snowman.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -216,12 +207,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanMiningFatigueDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanMiningFatigueEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.MiningFatigue.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SnowmanMiningFatigueTime, Config.SnowmanMiningFatiguePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("Snowman.MiningFatigue.Time"), plugin.getConfig().getInt("Snowman.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -231,12 +222,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanSpeedDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanSpeedEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Speed.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.SnowmanSpeedTime, Config.SnowmanSpeedPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("Snowman.Speed.Time"), plugin.getConfig().getInt("Snowman.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -246,12 +237,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanWaterBreathingDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanWaterBreathingEnabled != false && damager instanceof Snowman && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.WaterBreathing.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.SnowmanWaterBreathingTime, Config.SnowmanWaterBreathingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("Snowman.WaterBreathing.Time"), plugin.getConfig().getInt("Snowman.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -261,12 +252,12 @@ public class MESnowGolemListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SnowmanWeaknessDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Snowman.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SnowmanWeaknessEnabled != false && damager instanceof Snowman && e instanceof Snowman && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Snowman.Weakness.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.SnowmanWeaknessTime, Config.SnowmanWeaknessPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("Snowman.Weakness.Time"), plugin.getConfig().getInt("Snowman.Weakness.Power")));
 		}
 	}
 }

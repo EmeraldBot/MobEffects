@@ -22,6 +22,19 @@ public class MobEffects extends JavaPlugin {
 	FileConfiguration config;
 	
 	//--- Privates ---//
+	private final MEBlazeListener blazeListener = new MEBlazeListener(this);
+	private final MECaveSpiderListener cavespiderListener = new MECaveSpiderListener(this);
+	private final MECreeperListener creeperListener = new MECreeperListener(this);
+	private final MEEnderDragonListener enderdragonListener = new MEEnderDragonListener(this);
+	private final MEEndermanListener endermanListener = new MEEndermanListener(this);
+	private final MEGiantListener giantListener = new MEGiantListener(this);
+	private final MEIronGolemListener irongolemListener = new MEIronGolemListener(this);
+	private final MEMagmaCubeListener magmacubeListener = new MEMagmaCubeListener(this);
+	private final MEPigZombieListener pigzombieListener = new MEPigZombieListener(this);
+	private final MEPlayerListener playerListener = new MEPlayerListener(this);
+	private final MESilverfishListener silverfishListener = new MESilverfishListener(this);
+	private final MESlimeListener slimeListener = new MESlimeListener(this);
+	private final MESnowGolemListener snowmanListener = new MESnowGolemListener(this);
 	private final MESpiderListener spiderListener = new MESpiderListener(this);
 	private final MEWolfListener wolfListener = new MEWolfListener(this);
 	private final MEZombieListener zombieListener = new MEZombieListener(this);
@@ -49,24 +62,24 @@ public class MobEffects extends JavaPlugin {
 		// Events
 		PluginManager pm  = getServer().getPluginManager();
 		
+		pm.registerEvents(blazeListener, this);
+		pm.registerEvents(cavespiderListener, this);
+		pm.registerEvents(creeperListener, this);
+		pm.registerEvents(enderdragonListener, this);
+		pm.registerEvents(endermanListener, this);
+		pm.registerEvents(giantListener, this);
+		pm.registerEvents(irongolemListener, this);
+		pm.registerEvents(magmacubeListener, this);
+		pm.registerEvents(pigzombieListener, this);
+		pm.registerEvents(playerListener, this);
+		pm.registerEvents(silverfishListener, this);
+		pm.registerEvents(slimeListener, this);
+		pm.registerEvents(snowmanListener, this);
 		pm.registerEvents(spiderListener, this);
 		pm.registerEvents(zombieListener, this);
 		pm.registerEvents(wolfListener, this);
 		//
 		pm.registerEvents(miscListener, this);
-		this.getServer().getPluginManager().registerEvents(new MEBlazeListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MECaveSpiderListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MECreeperListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MEEnderDragonListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MEEndermanListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MEIronGolemListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MEPlayerListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MEPigZombieListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MESilverfishListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MESlimeListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MESnowGolemListener(), this);
-		this.getServer().getPluginManager().registerEvents(new MEGiantListener(), this);
-		//
 		
 		// UpdateChecker to Console
 		this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/mobeffects/files.rss");
