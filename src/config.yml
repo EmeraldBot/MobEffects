@@ -5,7 +5,7 @@
 # Time: This is how long the effect will linger. Default is 500. This is in ticks. 500 = 25 seconds. 1 Second = 20 ticks.
 # DodgeChance: The Percentage of the effect missing the player. Default is 10%. If 0%, the player will always get the effect. If 100%, the player will never get the effect.
 # Should MobEffects check for updates?
-AutoCheckForUpdates: false
+AutoCheckForUpdates: true
 # Which Worlds do you want MobEffects enabled in?
 Worlds:
 - world
