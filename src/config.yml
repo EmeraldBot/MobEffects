@@ -1,0 +1,1389 @@
+# Default MobEffects Configuration File!
+# Each Effect is turned off by default and has four configurable options.
+# Enabled: If set to true, the effect will activate when the player is hit by this mob. If false, the player will not be hit.
+# Power: This is the potion level. 0 = Potion Level 1. 1 = Potion Level 2. 2 = Potion Level 3.
+# Time: This is how long the effect will linger. Default is 500. This is in ticks. 500 = 25 seconds. 1 Second = 20 ticks.
+# DodgeChance: The Percentage of the effect missing the player. Default is 10%. If 0%, the player will always get the effect. If 100%, the player will never get the effect.
+# Should MobEffects check for updates?
+AutoCheckForUpdates: false
+# Which Worlds do you want MobEffects enabled in?
+Worlds:
+- world
+- world_nether
+- world_the_end
+Blaze:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+CaveSpider:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Creeper:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+EnderDragon:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Enderman:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Giant:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+IronGolem:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+MagmaCube:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+PigZombie:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Player:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Silverfish:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Slime:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Snowman:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Spider:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Wolf:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+Zombie:
+  Blindness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FastDigging:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  FireResistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Harm:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Heal:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Hunger:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Jump:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  MiningFatigue:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChannce: 10
+  Nausea:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Poison:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Regeneration:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Resistance:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 0.0
+  Slow:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Speed:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Strength:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  WaterBreathing:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
+  Weakness:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10

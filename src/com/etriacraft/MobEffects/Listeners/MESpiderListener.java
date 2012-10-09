@@ -9,9 +9,15 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.etriacraft.MobEffects.Config;
+import com.etriacraft.MobEffects.MobEffects;
 
 public class MESpiderListener implements Listener {
+	
+	public static MobEffects plugin;
+	
+	public MESpiderListener(MobEffects instance) {
+		plugin = instance;
+		}
 	
 	@EventHandler
 	public void SpiderBlindness(EntityDamageByEntityEvent event) {
@@ -20,11 +26,11 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderBlindnessDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if (Config.SpiderBlindnessEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		} if ( plugin.getConfig().getBoolean("Spider.Blindness.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.SpiderBlindnessTime, Config.SpiderBlindnessPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("Spider.Blindness.Time"), plugin.getConfig().getInt("Spider.Blindness.Power")));
 		}
 	}
 	
@@ -35,12 +41,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderNauseaDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderNauseaEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Nausea.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.SpiderNauseaTime, Config.SpiderNauseaPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("Spider.Nausea.Time"), plugin.getConfig().getInt("Spider.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -50,12 +56,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderResistanceDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderResistanceEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Resistance.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.SpiderResistanceTime, Config.SpiderResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("Spider.Resistance.Time"), plugin.getConfig().getInt("Spider.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -65,12 +71,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderFastDiggingDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderFastDiggingEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.FastDigging.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.SpiderFastDiggingTime, Config.SpiderFastDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("Spider.FastDigging.Time"), plugin.getConfig().getInt("Spider.FastDigging.Power")));
 		}
 	}
 	
@@ -81,12 +87,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderFireResistanceDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderFireResistanceEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.FireResistance.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.SpiderFireResistanceTime, Config.SpiderFireResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("Spider.FireResistance.Time"), plugin.getConfig().getInt("Spider.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -96,12 +102,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderHarmDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderHarmEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Harm.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.SpiderHarmTime, Config.SpiderHarmPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("Spider.Harm.Time"), plugin.getConfig().getInt("Spider.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -111,72 +117,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderHealDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderHarmEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Heal.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.SpiderHealTime, Config.SpiderHealPower));
-		}
-	}
-	@EventHandler
-	public void SpiderHunger(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SpiderHungerDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SpiderHungerEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.SpiderHungerTime, Config.SpiderHungerPower));
-		}
-	}
-	@EventHandler
-	public void SpiderStrength(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SpiderStrengthDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SpiderStrengthEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.SpiderStrengthTime, Config.SpiderStrengthPower));
-		}
-	}
-	@EventHandler
-	public void SpiderJump(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SpiderJumpDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SpiderJumpEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.SpiderJumpTime, Config.SpiderJumpPower));
-		}
-	}
-	@EventHandler
-	public void SpiderPoison(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.SpiderPoisonDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.SpiderPoisonEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.SpiderPoisonTime, Config.SpiderPoisonPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("Spider.Heal.Time"), plugin.getConfig().getInt("Spider.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -186,12 +132,57 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderRegenerationDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderRegenerationEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Regeneration.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.SpiderRegenerationTime, Config.SpiderRegenerationPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("Spider.Regeneration.Time"), plugin.getConfig().getInt("Spider.Regeneration.Power")));
+		}
+	}
+	@EventHandler
+	public void SpiderStrength(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Spider.Strength.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Spider.Strength.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("Spider.Strength.Time"), plugin.getConfig().getInt("Spider.Strength.Power")));
+		}
+	}
+	@EventHandler
+	public void SpiderJump(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Spider.Jump.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Spider.Jump.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("Spider.Jump.Time"), plugin.getConfig().getInt("Spider.Jump.Power")));
+		}
+	}
+	@EventHandler
+	public void SpiderPoison(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Spider.Poison.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Spider.Poison.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("Spider.Poison.Time"), plugin.getConfig().getInt("Spider.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -201,12 +192,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderSlowDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderSlowEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Slow.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.SpiderSlowTime, Config.SpiderSlowPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("Spider.Slow.Time"), plugin.getConfig().getInt("Spider.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -216,12 +207,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderMiningFatigueDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderMiningFatigueEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.MiningFatigue.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.SpiderMiningFatigueTime, Config.SpiderMiningFatiguePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("Spider.MiningFatigue.Time"), plugin.getConfig().getInt("Spider.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -231,12 +222,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderSpeedDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderSpeedEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Speed.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.SpiderSpeedTime, Config.SpiderSpeedPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("Spider.Speed.Time"), plugin.getConfig().getInt("Spider.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -246,12 +237,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderWaterBreathingDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderWaterBreathingEnabled != false && damager instanceof Spider && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.WaterBreathing.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.SpiderWaterBreathingTime, Config.SpiderWaterBreathingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("Spider.WaterBreathing.Time"), plugin.getConfig().getInt("Spider.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -261,12 +252,12 @@ public class MESpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.SpiderWeaknessDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Spider.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.SpiderWeaknessEnabled != false && damager instanceof Spider && e instanceof Spider && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Spider.Weakness.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.SpiderWeaknessTime, Config.SpiderWeaknessPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("Spider.Weakness.Time"), plugin.getConfig().getInt("Spider.Weakness.Power")));
 		}
 	}
 }

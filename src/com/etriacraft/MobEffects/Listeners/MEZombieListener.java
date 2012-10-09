@@ -9,9 +9,15 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.etriacraft.MobEffects.Config;
+import com.etriacraft.MobEffects.MobEffects;
 
 public class MEZombieListener implements Listener {
+	
+	public static MobEffects plugin;
+	
+	public MEZombieListener(MobEffects instance) {
+		plugin = instance;
+		}
 	
 	@EventHandler
 	public void ZombieBlindness(EntityDamageByEntityEvent event) {
@@ -20,11 +26,11 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieBlindnessDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if (Config.ZombieBlindnessEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		} if ( plugin.getConfig().getBoolean("Zombie.Blindness.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Config.ZombieBlindnessTime, Config.ZombieBlindnessPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("Zombie.Blindness.Time"), plugin.getConfig().getInt("Zombie.Blindness.Power")));
 		}
 	}
 	
@@ -35,12 +41,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieNauseaDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieNauseaEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Nausea.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, Config.ZombieNauseaTime, Config.ZombieNauseaPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("Zombie.Nausea.Time"), plugin.getConfig().getInt("Zombie.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -50,12 +56,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieResistanceDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieResistanceEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Resistance.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Config.ZombieResistanceTime, Config.ZombieResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("Zombie.Resistance.Time"), plugin.getConfig().getInt("Zombie.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -65,12 +71,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieFastDiggingDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieFastDiggingEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.FastDigging.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, Config.ZombieFastDiggingTime, Config.ZombieFastDiggingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("Zombie.FastDigging.Time"), plugin.getConfig().getInt("Zombie.FastDigging.Power")));
 		}
 	}
 	
@@ -81,12 +87,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieFireResistanceDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieFireResistanceEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.FireResistance.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Config.ZombieFireResistanceTime, Config.ZombieFireResistancePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("Zombie.FireResistance.Time"), plugin.getConfig().getInt("Zombie.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -96,12 +102,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieHarmDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieHarmEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Harm.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, Config.ZombieHarmTime, Config.ZombieHarmPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("Zombie.Harm.Time"), plugin.getConfig().getInt("Zombie.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -111,72 +117,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieHealDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieHarmEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Heal.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, Config.ZombieHealTime, Config.ZombieHealPower));
-		}
-	}
-	@EventHandler
-	public void ZombieHunger(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.ZombieHungerDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.ZombieHungerEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, Config.ZombieHungerTime, Config.ZombieHungerPower));
-		}
-	}
-	@EventHandler
-	public void ZombieStrength(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.ZombieStrengthDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.ZombieStrengthEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Config.ZombieStrengthTime, Config.ZombieStrengthPower));
-		}
-	}
-	@EventHandler
-	public void ZombieJump(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.ZombieJumpDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.ZombieJumpEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Config.ZombieJumpTime, Config.ZombieJumpPower));
-		}
-	}
-	@EventHandler
-	public void ZombiePoison(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= Config.ZombiePoisonDodgeChance / 100) {
-			dodged = true;
-		}
-		if (Config.ZombiePoisonEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, Config.ZombiePoisonTime, Config.ZombiePoisonPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("Zombie.Heal.Time"), plugin.getConfig().getInt("Zombie.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -186,12 +132,57 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieRegenerationDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieRegenerationEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Regeneration.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Config.ZombieRegenerationTime, Config.ZombieRegenerationPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("Zombie.Regeneration.Time"), plugin.getConfig().getInt("Zombie.Regeneration.Power")));
+		}
+	}
+	@EventHandler
+	public void ZombieStrength(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Zombie.Strength.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Zombie.Strength.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("Zombie.Strength.Time"), plugin.getConfig().getInt("Zombie.Strength.Power")));
+		}
+	}
+	@EventHandler
+	public void ZombieJump(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Zombie.Jump.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Zombie.Jump.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("Zombie.Jump.Time"), plugin.getConfig().getInt("Zombie.Jump.Power")));
+		}
+	}
+	@EventHandler
+	public void ZombiePoison(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getConfig().getInt("Zombie.Poison.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (plugin.getConfig().getBoolean("Zombie.Poison.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("Zombie.Poison.Time"), plugin.getConfig().getInt("Zombie.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -201,12 +192,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieSlowDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieSlowEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Slow.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, Config.ZombieSlowTime, Config.ZombieSlowPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("Zombie.Slow.Time"), plugin.getConfig().getInt("Zombie.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -216,12 +207,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieMiningFatigueDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieMiningFatigueEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.MiningFatigue.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, Config.ZombieMiningFatigueTime, Config.ZombieMiningFatiguePower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("Zombie.MiningFatigue.Time"), plugin.getConfig().getInt("Zombie.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -231,12 +222,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieSpeedDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieSpeedEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Speed.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Config.ZombieSpeedTime, Config.ZombieSpeedPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("Zombie.Speed.Time"), plugin.getConfig().getInt("Zombie.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -246,12 +237,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieWaterBreathingDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieWaterBreathingEnabled != false && damager instanceof Zombie && e instanceof Player && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.WaterBreathing.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Config.ZombieWaterBreathingTime, Config.ZombieWaterBreathingPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("Zombie.WaterBreathing.Time"), plugin.getConfig().getInt("Zombie.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -261,12 +252,12 @@ public class MEZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= Config.ZombieWeaknessDodgeChance / 100) {
+		if (rand <= plugin.getConfig().getInt("Zombie.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (Config.ZombieWeaknessEnabled != false && damager instanceof Zombie && e instanceof Zombie && Config.Worlds.contains(world) && !dodged) {
+		if (plugin.getConfig().getBoolean("Zombie.Weakness.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, Config.ZombieWeaknessTime, Config.ZombieWeaknessPower));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("Zombie.Weakness.Time"), plugin.getConfig().getInt("Zombie.Weakness.Power")));
 		}
 	}
 }
