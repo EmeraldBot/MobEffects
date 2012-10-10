@@ -38,6 +38,7 @@ public class MobEffectsCommand {
 	
 	public void ConfigReload() {
 		plugin.reloadConfig();
+		plugin.reloadZombieConfig();
 	}
 	
 

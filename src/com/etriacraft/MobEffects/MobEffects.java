@@ -21,7 +21,12 @@ public class MobEffects extends JavaPlugin {
 	File configFile;
 	FileConfiguration config;
 	
-	//--- Privates ---//
+	FileConfiguration zombieConfig;
+	File zombieConfigFile;
+	
+	MobEffectsCommand mec;
+	
+	// Listeners
 	private final MEBlazeListener blazeListener = new MEBlazeListener(this);
 	private final MECaveSpiderListener cavespiderListener = new MECaveSpiderListener(this);
 	private final MECreeperListener creeperListener = new MECreeperListener(this);
@@ -44,7 +49,8 @@ public class MobEffects extends JavaPlugin {
 	public void onEnable() {
 		// Initialize Config
 		configFile = new File(getDataFolder(), "config.yml");
-		
+		zombieConfigFile = new File(getDataFolder(), "zombie.yml");
+
 		// Use firstRun() method
 		try {
 			firstRun();
@@ -54,6 +60,7 @@ public class MobEffects extends JavaPlugin {
 		
 		// Declare FileCOnfigurations, load COnfigs
 		config = new YamlConfiguration();
+		zombieConfig = new YamlConfiguration();
 		loadYamls();
 		
 		// Logger
@@ -94,6 +101,8 @@ public class MobEffects extends JavaPlugin {
 		} catch (IOException e) {
 			// Failed to submit stats :-(
 		}
+		
+		mec = new MobEffectsCommand(this);
 	}
 	
 	public void onDisable() {
@@ -104,6 +113,10 @@ public class MobEffects extends JavaPlugin {
 		if (!configFile.exists()) {
 			configFile.getParentFile().mkdirs();
 			copy(getResource("config.yml"), configFile);
+		}
+		if (!zombieConfigFile.exists()) {
+			zombieConfigFile.getParentFile().mkdirs();
+			copy(getResource("zombie.yml"), zombieConfigFile);
 		}
 	}
 	
@@ -125,6 +138,7 @@ public class MobEffects extends JavaPlugin {
 	public void saveYamls() {
 		try {
 			config.save(configFile);
+			config.save(zombieConfigFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -132,8 +146,40 @@ public class MobEffects extends JavaPlugin {
 	public void loadYamls() {
 		try {
 			config.load(configFile);
+			config.load(zombieConfigFile);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	public void reloadZombieConfig() {
+		if (zombieConfigFile == null) {
+			zombieConfigFile = new File(getDataFolder(), "zombie.yml");
+		}
+		zombieConfig = YamlConfiguration.loadConfiguration(zombieConfigFile);
+		
+		InputStream defConfigStream = getResource("zombie.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			zombieConfig.setDefaults(defConfig);
+		}
+		}
+		
+		public FileConfiguration getZombieConfig() {
+			if (zombieConfig == null) {
+				reloadZombieConfig();
+			}
+			return zombieConfig;
+		}
+		
+	public void saveZombieConfig() {
+		if (zombieConfig == null || zombieConfigFile == null) {
+			return;
+		}
+		try {
+			zombieConfig.save(zombieConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + zombieConfigFile);
 		}
 	}
 
