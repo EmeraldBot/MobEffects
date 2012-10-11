@@ -21,17 +21,27 @@ public class MobEffectsCommand {
 		exe = new CommandExecutor() {
 			@Override
 			public boolean onCommand(CommandSender s, Command c, String label, String[] args) {
-				if (args.length < 1) return false;
-				if (!s.hasPermission("mobeffects.reload")) {
-					s.sendMessage("§cYou don't have permission to do that!");
+				if (args.length < 1) {
+					s.sendMessage("§eMobEffects Commands");
+					s.sendMessage("§3/mobeffects reload:§f - Reloads the config.");
+					s.sendMessage("§3/mobeffects version:§f - Checks your version of MobEffects");
 					return true;
 				}
 				
-				if (args[0].equalsIgnoreCase("reload")) {
+				else if (args[0].equalsIgnoreCase("reload") && s.hasPermission("mobeffects.reload")) {
 					ConfigReload();
 					s.sendMessage("§aConfig reloaded");
 					return true;
-				} return false;
+				}
+				else if (args[0].equalsIgnoreCase("version")) {
+					if (s.hasPermission("mobeffects.version")) {
+						s.sendMessage("§eThis server is running MobEffects §4v" + plugin.getDescription().getVersion());
+						return true;
+					}
+					else {
+						s.sendMessage("§cYou don't have permission to do that!");
+					}
+			} return false;
 			}
 		}; mobeffects.setExecutor(exe);
 	}

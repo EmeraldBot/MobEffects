@@ -4,5 +4,5 @@ main: com.etriacraft.MobEffects.MobEffects
 author: MistPhizzle
 commands:
   mobeffects:
-    usage: /<command> [reload]
+    usage: /<command>
     aliases: [mobfx, mobe]
