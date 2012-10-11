@@ -26,11 +26,11 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Blindness.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if ( plugin.getConfig().getBoolean("Wolf.Blindness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		} if ( plugin.getWolfConfig().getBoolean("Wolf.Blindness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("Wolf.Blindness.Time"), plugin.getConfig().getInt("Wolf.Blindness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getWolfConfig().getInt("Wolf.Blindness.Time"), plugin.getWolfConfig().getInt("Wolf.Blindness.Power")));
 		}
 	}
 	
@@ -41,12 +41,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Nausea.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Nausea.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Nausea.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("Wolf.Nausea.Time"), plugin.getConfig().getInt("Wolf.Nausea.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getWolfConfig().getInt("Wolf.Nausea.Time"), plugin.getWolfConfig().getInt("Wolf.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -56,12 +56,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Resistance.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Resistance.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Resistance.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("Wolf.Resistance.Time"), plugin.getConfig().getInt("Wolf.Resistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getWolfConfig().getInt("Wolf.Resistance.Time"), plugin.getWolfConfig().getInt("Wolf.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -71,12 +71,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.FastDigging.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.FastDigging.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.FastDigging.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("Wolf.FastDigging.Time"), plugin.getConfig().getInt("Wolf.FastDigging.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getWolfConfig().getInt("Wolf.FastDigging.Time"), plugin.getWolfConfig().getInt("Wolf.FastDigging.Power")));
 		}
 	}
 	
@@ -87,12 +87,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.FireResistance.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.FireResistance.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.FireResistance.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("Wolf.FireResistance.Time"), plugin.getConfig().getInt("Wolf.FireResistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getWolfConfig().getInt("Wolf.FireResistance.Time"), plugin.getWolfConfig().getInt("Wolf.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -102,12 +102,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Harm.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Harm.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Harm.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("Wolf.Harm.Time"), plugin.getConfig().getInt("Wolf.Harm.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getWolfConfig().getInt("Wolf.Harm.Time"), plugin.getWolfConfig().getInt("Wolf.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -117,12 +117,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Heal.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Heal.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Heal.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("Wolf.Heal.Time"), plugin.getConfig().getInt("Wolf.Heal.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getWolfConfig().getInt("Wolf.Heal.Time"), plugin.getWolfConfig().getInt("Wolf.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -132,12 +132,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Regeneration.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Regeneration.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Regeneration.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("Wolf.Regeneration.Time"), plugin.getConfig().getInt("Wolf.Regeneration.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getWolfConfig().getInt("Wolf.Regeneration.Time"), plugin.getWolfConfig().getInt("Wolf.Regeneration.Power")));
 		}
 	}
 	@EventHandler
@@ -147,12 +147,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Strength.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Strength.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Strength.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Strength.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("Wolf.Strength.Time"), plugin.getConfig().getInt("Wolf.Strength.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getWolfConfig().getInt("Wolf.Strength.Time"), plugin.getWolfConfig().getInt("Wolf.Strength.Power")));
 		}
 	}
 	@EventHandler
@@ -162,12 +162,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Jump.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Jump.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Jump.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Jump.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("Wolf.Jump.Time"), plugin.getConfig().getInt("Wolf.Jump.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getWolfConfig().getInt("Wolf.Jump.Time"), plugin.getWolfConfig().getInt("Wolf.Jump.Power")));
 		}
 	}
 	@EventHandler
@@ -177,12 +177,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Poison.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Poison.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Poison.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Poison.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("Wolf.Poison.Time"), plugin.getConfig().getInt("Wolf.Poison.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getWolfConfig().getInt("Wolf.Poison.Time"), plugin.getWolfConfig().getInt("Wolf.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -192,12 +192,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Slow.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Slow.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Slow.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("Wolf.Slow.Time"), plugin.getConfig().getInt("Wolf.Slow.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getWolfConfig().getInt("Wolf.Slow.Time"), plugin.getWolfConfig().getInt("Wolf.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -207,12 +207,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.MiningFatigue.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.MiningFatigue.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.MiningFatigue.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("Wolf.MiningFatigue.Time"), plugin.getConfig().getInt("Wolf.MiningFatigue.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getWolfConfig().getInt("Wolf.MiningFatigue.Time"), plugin.getWolfConfig().getInt("Wolf.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -222,12 +222,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Speed.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Speed.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Speed.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("Wolf.Speed.Time"), plugin.getConfig().getInt("Wolf.Speed.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getWolfConfig().getInt("Wolf.Speed.Time"), plugin.getWolfConfig().getInt("Wolf.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -237,12 +237,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.WaterBreathing.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.WaterBreathing.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.WaterBreathing.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("Wolf.WaterBreathing.Time"), plugin.getConfig().getInt("Wolf.WaterBreathing.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getWolfConfig().getInt("Wolf.WaterBreathing.Time"), plugin.getWolfConfig().getInt("Wolf.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -252,12 +252,12 @@ public class MEWolfListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Wolf.Weakness.DodgeChance") / 100) {
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Wolf.Weakness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getWolfConfig().getBoolean("Wolf.Weakness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("Wolf.Weakness.Time"), plugin.getConfig().getInt("Wolf.Weakness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getWolfConfig().getInt("Wolf.Weakness.Time"), plugin.getWolfConfig().getInt("Wolf.Weakness.Power")));
 		}
 	}
 }

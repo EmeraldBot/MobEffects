@@ -26,11 +26,11 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Blindness.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if ( plugin.getConfig().getBoolean("MagmaCube.Blindness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		} if ( plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Blindness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("MagmaCube.Blindness.Time"), plugin.getConfig().getInt("MagmaCube.Blindness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getMagmaCubeConfig().getInt("MagmaCube.Blindness.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Blindness.Power")));
 		}
 	}
 	
@@ -41,12 +41,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Nausea.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Nausea.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Nausea.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("MagmaCube.Nausea.Time"), plugin.getConfig().getInt("MagmaCube.Nausea.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getMagmaCubeConfig().getInt("MagmaCube.Nausea.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -56,12 +56,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Resistance.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Resistance.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Resistance.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("MagmaCube.Resistance.Time"), plugin.getConfig().getInt("MagmaCube.Resistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getMagmaCubeConfig().getInt("MagmaCube.Resistance.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -71,12 +71,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.FastDigging.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.FastDigging.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.FastDigging.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("MagmaCube.FastDigging.Time"), plugin.getConfig().getInt("MagmaCube.FastDigging.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getMagmaCubeConfig().getInt("MagmaCube.FastDigging.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.FastDigging.Power")));
 		}
 	}
 	
@@ -87,12 +87,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.FireResistance.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.FireResistance.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.FireResistance.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("MagmaCube.FireResistance.Time"), plugin.getConfig().getInt("MagmaCube.FireResistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getMagmaCubeConfig().getInt("MagmaCube.FireResistance.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -102,12 +102,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Harm.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Harm.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Harm.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("MagmaCube.Harm.Time"), plugin.getConfig().getInt("MagmaCube.Harm.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getMagmaCubeConfig().getInt("MagmaCube.Harm.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -117,12 +117,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Heal.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Heal.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Heal.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("MagmaCube.Heal.Time"), plugin.getConfig().getInt("MagmaCube.Heal.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getMagmaCubeConfig().getInt("MagmaCube.Heal.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -132,12 +132,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Regeneration.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Regeneration.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Regeneration.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("MagmaCube.Regeneration.Time"), plugin.getConfig().getInt("MagmaCube.Regeneration.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getMagmaCubeConfig().getInt("MagmaCube.Regeneration.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Regeneration.Power")));
 		}
 	}
 	@EventHandler
@@ -147,12 +147,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Strength.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Strength.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Strength.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Strength.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("MagmaCube.Strength.Time"), plugin.getConfig().getInt("MagmaCube.Strength.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getMagmaCubeConfig().getInt("MagmaCube.Strength.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Strength.Power")));
 		}
 	}
 	@EventHandler
@@ -162,12 +162,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Jump.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Jump.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Jump.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Jump.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("MagmaCube.Jump.Time"), plugin.getConfig().getInt("MagmaCube.Jump.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getMagmaCubeConfig().getInt("MagmaCube.Jump.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Jump.Power")));
 		}
 	}
 	@EventHandler
@@ -177,12 +177,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Poison.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Poison.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Poison.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Poison.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("MagmaCube.Poison.Time"), plugin.getConfig().getInt("MagmaCube.Poison.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getMagmaCubeConfig().getInt("MagmaCube.Poison.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -192,12 +192,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Slow.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Slow.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Slow.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("MagmaCube.Slow.Time"), plugin.getConfig().getInt("MagmaCube.Slow.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getMagmaCubeConfig().getInt("MagmaCube.Slow.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -207,12 +207,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.MiningFatigue.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.MiningFatigue.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.MiningFatigue.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("MagmaCube.MiningFatigue.Time"), plugin.getConfig().getInt("MagmaCube.MiningFatigue.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getMagmaCubeConfig().getInt("MagmaCube.MiningFatigue.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -222,12 +222,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Speed.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Speed.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Speed.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("MagmaCube.Speed.Time"), plugin.getConfig().getInt("MagmaCube.Speed.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getMagmaCubeConfig().getInt("MagmaCube.Speed.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -237,12 +237,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.WaterBreathing.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.WaterBreathing.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.WaterBreathing.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("MagmaCube.WaterBreathing.Time"), plugin.getConfig().getInt("MagmaCube.WaterBreathing.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getMagmaCubeConfig().getInt("MagmaCube.WaterBreathing.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -252,12 +252,12 @@ public class MEMagmaCubeListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("MagmaCube.Weakness.DodgeChance") / 100) {
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("MagmaCube.Weakness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Weakness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("MagmaCube.Weakness.Time"), plugin.getConfig().getInt("MagmaCube.Weakness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getMagmaCubeConfig().getInt("MagmaCube.Weakness.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Weakness.Power")));
 		}
 	}
 }

@@ -26,11 +26,11 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Blindness.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if ( plugin.getConfig().getBoolean("Silverfish.Blindness.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		} if ( plugin.getSilverfishConfig().getBoolean("Silverfish.Blindness.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("Silverfish.Blindness.Time"), plugin.getConfig().getInt("Silverfish.Blindness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getSilverfishConfig().getInt("Silverfish.Blindness.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Blindness.Power")));
 		}
 	}
 	
@@ -41,12 +41,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Nausea.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Nausea.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Nausea.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("Silverfish.Nausea.Time"), plugin.getConfig().getInt("Silverfish.Nausea.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getSilverfishConfig().getInt("Silverfish.Nausea.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -56,12 +56,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Resistance.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Resistance.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Resistance.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("Silverfish.Resistance.Time"), plugin.getConfig().getInt("Silverfish.Resistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getSilverfishConfig().getInt("Silverfish.Resistance.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -71,12 +71,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.FastDigging.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.FastDigging.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.FastDigging.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("Silverfish.FastDigging.Time"), plugin.getConfig().getInt("Silverfish.FastDigging.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getSilverfishConfig().getInt("Silverfish.FastDigging.Time"), plugin.getSilverfishConfig().getInt("Silverfish.FastDigging.Power")));
 		}
 	}
 	
@@ -87,12 +87,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.FireResistance.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.FireResistance.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.FireResistance.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("Silverfish.FireResistance.Time"), plugin.getConfig().getInt("Silverfish.FireResistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getSilverfishConfig().getInt("Silverfish.FireResistance.Time"), plugin.getSilverfishConfig().getInt("Silverfish.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -102,12 +102,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Harm.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Harm.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Harm.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("Silverfish.Harm.Time"), plugin.getConfig().getInt("Silverfish.Harm.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getSilverfishConfig().getInt("Silverfish.Harm.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -117,12 +117,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Heal.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Heal.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Heal.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("Silverfish.Heal.Time"), plugin.getConfig().getInt("Silverfish.Heal.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getSilverfishConfig().getInt("Silverfish.Heal.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -132,12 +132,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Regeneration.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Regeneration.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Regeneration.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("Silverfish.Regeneration.Time"), plugin.getConfig().getInt("Silverfish.Regeneration.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getSilverfishConfig().getInt("Silverfish.Regeneration.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Regeneration.Power")));
 		}
 	}
 	@EventHandler
@@ -147,12 +147,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Strength.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Strength.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Strength.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Strength.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("Silverfish.Strength.Time"), plugin.getConfig().getInt("Silverfish.Strength.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getSilverfishConfig().getInt("Silverfish.Strength.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Strength.Power")));
 		}
 	}
 	@EventHandler
@@ -162,12 +162,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Jump.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Jump.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Jump.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Jump.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("Silverfish.Jump.Time"), plugin.getConfig().getInt("Silverfish.Jump.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getSilverfishConfig().getInt("Silverfish.Jump.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Jump.Power")));
 		}
 	}
 	@EventHandler
@@ -177,12 +177,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Poison.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Poison.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Poison.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Poison.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("Silverfish.Poison.Time"), plugin.getConfig().getInt("Silverfish.Poison.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getSilverfishConfig().getInt("Silverfish.Poison.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -192,12 +192,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Slow.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Slow.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Slow.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("Silverfish.Slow.Time"), plugin.getConfig().getInt("Silverfish.Slow.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getSilverfishConfig().getInt("Silverfish.Slow.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -207,12 +207,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.MiningFatigue.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.MiningFatigue.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.MiningFatigue.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("Silverfish.MiningFatigue.Time"), plugin.getConfig().getInt("Silverfish.MiningFatigue.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getSilverfishConfig().getInt("Silverfish.MiningFatigue.Time"), plugin.getSilverfishConfig().getInt("Silverfish.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -222,12 +222,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Speed.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Speed.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Speed.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("Silverfish.Speed.Time"), plugin.getConfig().getInt("Silverfish.Speed.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getSilverfishConfig().getInt("Silverfish.Speed.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -237,12 +237,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.WaterBreathing.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.WaterBreathing.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.WaterBreathing.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("Silverfish.WaterBreathing.Time"), plugin.getConfig().getInt("Silverfish.WaterBreathing.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getSilverfishConfig().getInt("Silverfish.WaterBreathing.Time"), plugin.getSilverfishConfig().getInt("Silverfish.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -252,12 +252,12 @@ public class MESilverfishListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("Silverfish.Weakness.DodgeChance") / 100) {
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("Silverfish.Weakness.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getSilverfishConfig().getBoolean("Silverfish.Weakness.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("Silverfish.Weakness.Time"), plugin.getConfig().getInt("Silverfish.Weakness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getSilverfishConfig().getInt("Silverfish.Weakness.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Weakness.Power")));
 		}
 	}
 }

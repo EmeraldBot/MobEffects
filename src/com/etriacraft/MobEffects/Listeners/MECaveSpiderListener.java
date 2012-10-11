@@ -26,11 +26,11 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Blindness.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if ( plugin.getConfig().getBoolean("CaveSpider.Blindness.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		} if ( plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Blindness.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("CaveSpider.Blindness.Time"), plugin.getConfig().getInt("CaveSpider.Blindness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getCaveSpiderConfig().getInt("CaveSpider.Blindness.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Blindness.Power")));
 		}
 	}
 	
@@ -41,12 +41,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Nausea.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Nausea.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Nausea.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("CaveSpider.Nausea.Time"), plugin.getConfig().getInt("CaveSpider.Nausea.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getCaveSpiderConfig().getInt("CaveSpider.Nausea.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -56,12 +56,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Resistance.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Resistance.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Resistance.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("CaveSpider.Resistance.Time"), plugin.getConfig().getInt("CaveSpider.Resistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getCaveSpiderConfig().getInt("CaveSpider.Resistance.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -71,12 +71,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.FastDigging.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.FastDigging.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.FastDigging.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("CaveSpider.FastDigging.Time"), plugin.getConfig().getInt("CaveSpider.FastDigging.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getCaveSpiderConfig().getInt("CaveSpider.FastDigging.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.FastDigging.Power")));
 		}
 	}
 	
@@ -87,12 +87,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.FireResistance.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.FireResistance.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.FireResistance.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("CaveSpider.FireResistance.Time"), plugin.getConfig().getInt("CaveSpider.FireResistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getCaveSpiderConfig().getInt("CaveSpider.FireResistance.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -102,12 +102,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Harm.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Harm.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Harm.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("CaveSpider.Harm.Time"), plugin.getConfig().getInt("CaveSpider.Harm.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getCaveSpiderConfig().getInt("CaveSpider.Harm.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -117,12 +117,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Heal.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Heal.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Heal.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("CaveSpider.Heal.Time"), plugin.getConfig().getInt("CaveSpider.Heal.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getCaveSpiderConfig().getInt("CaveSpider.Heal.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -132,12 +132,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Regeneration.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Regeneration.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Regeneration.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("CaveSpider.Regeneration.Time"), plugin.getConfig().getInt("CaveSpider.Regeneration.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getCaveSpiderConfig().getInt("CaveSpider.Regeneration.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Regeneration.Power")));
 		}
 	}
 	@EventHandler
@@ -147,12 +147,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Strength.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Strength.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Strength.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Strength.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("CaveSpider.Strength.Time"), plugin.getConfig().getInt("CaveSpider.Strength.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getCaveSpiderConfig().getInt("CaveSpider.Strength.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Strength.Power")));
 		}
 	}
 	@EventHandler
@@ -162,12 +162,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Jump.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Jump.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Jump.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Jump.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("CaveSpider.Jump.Time"), plugin.getConfig().getInt("CaveSpider.Jump.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getCaveSpiderConfig().getInt("CaveSpider.Jump.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Jump.Power")));
 		}
 	}
 	@EventHandler
@@ -177,12 +177,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Poison.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Poison.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Poison.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Poison.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("CaveSpider.Poison.Time"), plugin.getConfig().getInt("CaveSpider.Poison.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getCaveSpiderConfig().getInt("CaveSpider.Poison.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -192,12 +192,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Slow.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Slow.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Slow.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("CaveSpider.Slow.Time"), plugin.getConfig().getInt("CaveSpider.Slow.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getCaveSpiderConfig().getInt("CaveSpider.Slow.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -207,12 +207,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.MiningFatigue.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.MiningFatigue.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.MiningFatigue.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("CaveSpider.MiningFatigue.Time"), plugin.getConfig().getInt("CaveSpider.MiningFatigue.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getCaveSpiderConfig().getInt("CaveSpider.MiningFatigue.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -222,12 +222,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Speed.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Speed.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Speed.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("CaveSpider.Speed.Time"), plugin.getConfig().getInt("CaveSpider.Speed.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getCaveSpiderConfig().getInt("CaveSpider.Speed.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -237,12 +237,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.WaterBreathing.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.WaterBreathing.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.WaterBreathing.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("CaveSpider.WaterBreathing.Time"), plugin.getConfig().getInt("CaveSpider.WaterBreathing.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getCaveSpiderConfig().getInt("CaveSpider.WaterBreathing.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -252,12 +252,12 @@ public class MECaveSpiderListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("CaveSpider.Weakness.DodgeChance") / 100) {
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("CaveSpider.Weakness.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Weakness.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("CaveSpider.Weakness.Time"), plugin.getConfig().getInt("CaveSpider.Weakness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getCaveSpiderConfig().getInt("CaveSpider.Weakness.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Weakness.Power")));
 		}
 	}
 }

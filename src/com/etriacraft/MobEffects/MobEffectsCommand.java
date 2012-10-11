@@ -38,7 +38,21 @@ public class MobEffectsCommand {
 	
 	public void ConfigReload() {
 		plugin.reloadConfig();
+		plugin.reloadspiderConfig();
+		plugin.reloadwolfConfig();
 		plugin.reloadZombieConfig();
+		plugin.reloadSlimeConfig();
+		plugin.reloadSilverfishConfig();
+		plugin.reloadPlayerConfig();
+		plugin.reloadPigZombieConfig();
+		plugin.reloadMagmaCubeConfig();
+		plugin.reloadIronGolemConfig();
+		plugin.reloadGiantConfig();
+		plugin.reloadEndermanConfig();
+		plugin.reloadEnderDragonConfig();
+		plugin.reloadCreeperConfig();
+		plugin.reloadCaveSpiderConfig();
+		plugin.reloadBlazeConfig();
 	}
 	
 

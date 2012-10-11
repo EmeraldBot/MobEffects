@@ -26,11 +26,11 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Blindness.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Blindness.DodgeChance") / 100) {
 			dodged = true;
-		} if ( plugin.getConfig().getBoolean("PigZombie.Blindness.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		} if ( plugin.getPigZombieConfig().getBoolean("PigZombie.Blindness.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getConfig().getInt("PigZombie.Blindness.Time"), plugin.getConfig().getInt("PigZombie.Blindness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getPigZombieConfig().getInt("PigZombie.Blindness.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Blindness.Power")));
 		}
 	}
 	
@@ -41,12 +41,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Nausea.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Nausea.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Nausea.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Nausea.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getConfig().getInt("PigZombie.Nausea.Time"), plugin.getConfig().getInt("PigZombie.Nausea.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getPigZombieConfig().getInt("PigZombie.Nausea.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Nausea.Power")));
 		}
 	}
 	@EventHandler
@@ -56,12 +56,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Resistance.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Resistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Resistance.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Resistance.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getConfig().getInt("PigZombie.Resistance.Time"), plugin.getConfig().getInt("PigZombie.Resistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, plugin.getPigZombieConfig().getInt("PigZombie.Resistance.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Resistance.Power")));
 		}
 	}
 	@EventHandler
@@ -71,12 +71,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.FastDigging.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.FastDigging.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.FastDigging.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.FastDigging.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getConfig().getInt("PigZombie.FastDigging.Time"), plugin.getConfig().getInt("PigZombie.FastDigging.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getPigZombieConfig().getInt("PigZombie.FastDigging.Time"), plugin.getPigZombieConfig().getInt("PigZombie.FastDigging.Power")));
 		}
 	}
 	
@@ -87,12 +87,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.FireResistance.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.FireResistance.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.FireResistance.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.FireResistance.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getConfig().getInt("PigZombie.FireResistance.Time"), plugin.getConfig().getInt("PigZombie.FireResistance.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getPigZombieConfig().getInt("PigZombie.FireResistance.Time"), plugin.getPigZombieConfig().getInt("PigZombie.FireResistance.Power")));
 		}
 	}
 	@EventHandler
@@ -102,12 +102,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Harm.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Harm.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Harm.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Harm.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getConfig().getInt("PigZombie.Harm.Time"), plugin.getConfig().getInt("PigZombie.Harm.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, plugin.getPigZombieConfig().getInt("PigZombie.Harm.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Harm.Power")));
 		}
 	}
 	@EventHandler
@@ -117,12 +117,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Heal.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Heal.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Heal.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Heal.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getConfig().getInt("PigZombie.Heal.Time"), plugin.getConfig().getInt("PigZombie.Heal.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getPigZombieConfig().getInt("PigZombie.Heal.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Heal.Power")));
 		}
 	}
 	@EventHandler
@@ -132,12 +132,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Regeneration.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Regeneration.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Regeneration.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Regeneration.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getConfig().getInt("PigZombie.Regeneration.Time"), plugin.getConfig().getInt("PigZombie.Regeneration.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, plugin.getPigZombieConfig().getInt("PigZombie.Regeneration.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Regeneration.Power")));
 		}
 	}
 	@EventHandler
@@ -147,12 +147,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Strength.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Strength.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Strength.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Strength.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getConfig().getInt("PigZombie.Strength.Time"), plugin.getConfig().getInt("PigZombie.Strength.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, plugin.getPigZombieConfig().getInt("PigZombie.Strength.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Strength.Power")));
 		}
 	}
 	@EventHandler
@@ -162,12 +162,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Jump.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Jump.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Jump.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Jump.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getConfig().getInt("PigZombie.Jump.Time"), plugin.getConfig().getInt("PigZombie.Jump.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, plugin.getPigZombieConfig().getInt("PigZombie.Jump.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Jump.Power")));
 		}
 	}
 	@EventHandler
@@ -177,12 +177,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Poison.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Poison.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Poison.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Poison.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getConfig().getInt("PigZombie.Poison.Time"), plugin.getConfig().getInt("PigZombie.Poison.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, plugin.getPigZombieConfig().getInt("PigZombie.Poison.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Poison.Power")));
 		}
 	}
 	@EventHandler
@@ -192,12 +192,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Slow.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Slow.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Slow.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Slow.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getConfig().getInt("PigZombie.Slow.Time"), plugin.getConfig().getInt("PigZombie.Slow.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, plugin.getPigZombieConfig().getInt("PigZombie.Slow.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Slow.Power")));
 		}
 	}
 	@EventHandler
@@ -207,12 +207,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.MiningFatigue.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.MiningFatigue.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.MiningFatigue.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.MiningFatigue.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getConfig().getInt("PigZombie.MiningFatigue.Time"), plugin.getConfig().getInt("PigZombie.MiningFatigue.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, plugin.getPigZombieConfig().getInt("PigZombie.MiningFatigue.Time"), plugin.getPigZombieConfig().getInt("PigZombie.MiningFatigue.Power")));
 		}
 	}
 	@EventHandler
@@ -222,12 +222,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Speed.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Speed.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Speed.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Speed.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getConfig().getInt("PigZombie.Speed.Time"), plugin.getConfig().getInt("PigZombie.Speed.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, plugin.getPigZombieConfig().getInt("PigZombie.Speed.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Speed.Power")));
 		}
 	}
 	@EventHandler
@@ -237,12 +237,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.WaterBreathing.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.WaterBreathing.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.WaterBreathing.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.WaterBreathing.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getConfig().getInt("PigZombie.WaterBreathing.Time"), plugin.getConfig().getInt("PigZombie.WaterBreathing.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, plugin.getPigZombieConfig().getInt("PigZombie.WaterBreathing.Time"), plugin.getPigZombieConfig().getInt("PigZombie.WaterBreathing.Power")));
 		}
 	}
 	@EventHandler
@@ -252,12 +252,12 @@ public class MEPigZombieListener implements Listener {
 		String world = e.getWorld().getName();
 		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getConfig().getInt("PigZombie.Weakness.DodgeChance") / 100) {
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Weakness.DodgeChance") / 100) {
 			dodged = true;
 		}
-		if (plugin.getConfig().getBoolean("PigZombie.Weakness.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		if (plugin.getPigZombieConfig().getBoolean("PigZombie.Weakness.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getConfig().getInt("PigZombie.Weakness.Time"), plugin.getConfig().getInt("PigZombie.Weakness.Power")));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getPigZombieConfig().getInt("PigZombie.Weakness.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Weakness.Power")));
 		}
 	}
 }

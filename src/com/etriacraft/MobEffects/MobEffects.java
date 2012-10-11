@@ -23,6 +23,36 @@ public class MobEffects extends JavaPlugin {
 	
 	FileConfiguration zombieConfig;
 	File zombieConfigFile;
+	FileConfiguration wolfConfig;
+	File wolfConfigFile;
+	FileConfiguration spiderConfig;
+	File spiderConfigFile;
+	FileConfiguration snowgolemConfig;
+	File snowgolemConfigFile;
+	FileConfiguration SlimeConfig;
+	File SlimeConfigFile;
+	FileConfiguration SilverfishConfig;
+	File SilverfishConfigFile;
+	FileConfiguration PlayerConfig;
+	File PlayerConfigFile;
+	FileConfiguration PigZombieConfig;
+	File PigZombieConfigFile;
+	FileConfiguration MagmaCubeConfig;
+	File MagmaCubeConfigFile;
+	File IronGolemConfigFile;
+	FileConfiguration IronGolemConfig;
+	File GiantConfigFile;
+	FileConfiguration GiantConfig;
+	File EndermanConfigFile;
+	FileConfiguration EndermanConfig;
+	File EnderDragonConfigFile;
+	FileConfiguration EnderDragonConfig;
+	File CreeperConfigFile;
+	FileConfiguration CreeperConfig;
+	File CaveSpiderConfigFile;
+	FileConfiguration CaveSpiderConfig;
+	File BlazeConfigFile;
+	FileConfiguration BlazeConfig;
 	
 	MobEffectsCommand mec;
 	
@@ -50,6 +80,21 @@ public class MobEffects extends JavaPlugin {
 		// Initialize Config
 		configFile = new File(getDataFolder(), "config.yml");
 		zombieConfigFile = new File(getDataFolder(), "zombie.yml");
+		wolfConfigFile = new File(getDataFolder(), "wolf.yml");
+		spiderConfigFile = new File(getDataFolder(), "spider.yml");
+		snowgolemConfigFile = new File(getDataFolder(), "snowgolem.yml");
+		SlimeConfigFile = new File(getDataFolder(), "slime.yml");
+		SilverfishConfigFile = new File(getDataFolder(), "silverfish.yml");
+		PlayerConfigFile = new File(getDataFolder(), "player.yml");
+		PigZombieConfigFile = new File(getDataFolder(), "pigzombie.yml");
+		MagmaCubeConfigFile = new File(getDataFolder(), "magmacube.yml");
+		IronGolemConfigFile = new File(getDataFolder(), "irongolem.yml");
+		GiantConfigFile = new File(getDataFolder(), "giant.yml");
+		EndermanConfigFile = new File(getDataFolder(), "enderman.yml");
+		EnderDragonConfigFile = new File(getDataFolder(), "enderdragon.yml");
+		CreeperConfigFile = new File(getDataFolder(), "creeper.yml");
+		CaveSpiderConfigFile = new File(getDataFolder(), "cavespider.yml");
+		BlazeConfigFile = new File(getDataFolder(), "blaze.yml");
 
 		// Use firstRun() method
 		try {
@@ -61,6 +106,21 @@ public class MobEffects extends JavaPlugin {
 		// Declare FileCOnfigurations, load COnfigs
 		config = new YamlConfiguration();
 		zombieConfig = new YamlConfiguration();
+		wolfConfig = new YamlConfiguration();
+		spiderConfig = new YamlConfiguration();
+		snowgolemConfig = new YamlConfiguration();
+		SlimeConfig = new YamlConfiguration();
+		SilverfishConfig = new YamlConfiguration();
+		PlayerConfig = new YamlConfiguration();
+		PigZombieConfig = new YamlConfiguration();
+		MagmaCubeConfig = new YamlConfiguration();
+		IronGolemConfig = new YamlConfiguration();
+		GiantConfig = new YamlConfiguration();
+		EndermanConfig = new YamlConfiguration();
+		EnderDragonConfig = new YamlConfiguration();
+		CreeperConfig = new YamlConfiguration();
+		CaveSpiderConfig = new YamlConfiguration();
+		BlazeConfig = new YamlConfiguration();
 		loadYamls();
 		
 		// Logger
@@ -118,6 +178,66 @@ public class MobEffects extends JavaPlugin {
 			zombieConfigFile.getParentFile().mkdirs();
 			copy(getResource("zombie.yml"), zombieConfigFile);
 		}
+		if (!wolfConfigFile.exists()) {
+			wolfConfigFile.getParentFile().mkdirs();
+			copy(getResource("wolf.yml"), wolfConfigFile);
+		}
+		if (!spiderConfigFile.exists()) {
+			spiderConfigFile.getParentFile().mkdirs();
+			copy(getResource("spider.yml"), spiderConfigFile);
+		}
+		if (!snowgolemConfigFile.exists()) {
+			snowgolemConfigFile.getParentFile().mkdirs();
+			copy(getResource("snowgolem.yml"), snowgolemConfigFile);
+		}
+		if (!SlimeConfigFile.exists()) {
+			SlimeConfigFile.getParentFile().mkdirs();
+			copy(getResource("slime.yml"), SlimeConfigFile);
+		}
+		if (!SilverfishConfigFile.exists()) {
+			SilverfishConfigFile.getParentFile().mkdirs();
+			copy(getResource("silverfish.yml"), SilverfishConfigFile);
+		}
+		if (!PlayerConfigFile.exists()) {
+			PlayerConfigFile.getParentFile().mkdirs();
+			copy(getResource("player.yml"), PlayerConfigFile);
+		}
+		if (!PigZombieConfigFile.exists()) {
+			PigZombieConfigFile.getParentFile().mkdirs();
+			copy(getResource("pigzombie.yml"), PigZombieConfigFile);
+		}
+		if (!MagmaCubeConfigFile.exists()) {
+			MagmaCubeConfigFile.getParentFile().mkdirs();
+			copy(getResource("magmacube.yml"), MagmaCubeConfigFile);
+		}
+		if (!IronGolemConfigFile.exists()) {
+			IronGolemConfigFile.getParentFile().mkdirs();
+			copy(getResource("irongolem.yml"), IronGolemConfigFile);
+		}
+		if (!GiantConfigFile.exists()) {
+			GiantConfigFile.getParentFile().mkdirs();
+			copy(getResource("giant.yml"), GiantConfigFile);
+		}
+		if (!EndermanConfigFile.exists()) {
+			EndermanConfigFile.getParentFile().mkdirs();
+			copy(getResource("enderman.yml"), EndermanConfigFile);
+		}
+		if (!EnderDragonConfigFile.exists()) {
+			EnderDragonConfigFile.getParentFile().mkdirs();
+			copy(getResource("enderdragon.yml"), EnderDragonConfigFile);
+		}
+		if (!CreeperConfigFile.exists()) {
+			CreeperConfigFile.getParentFile().mkdirs();
+			copy(getResource("creeper.yml"), CreeperConfigFile);
+		}
+		if (!CaveSpiderConfigFile.exists()) {
+			CaveSpiderConfigFile.getParentFile().mkdirs();
+			copy(getResource("cavespider.yml"), CaveSpiderConfigFile);
+		}
+		if (!BlazeConfigFile.exists()) {
+			BlazeConfigFile.getParentFile().mkdirs();
+			copy(getResource("blaze.yml"), BlazeConfigFile);
+		}
 	}
 	
 	private void copy(InputStream in, File file) {
@@ -139,6 +259,21 @@ public class MobEffects extends JavaPlugin {
 		try {
 			config.save(configFile);
 			config.save(zombieConfigFile);
+			config.save(wolfConfigFile);
+			config.save(spiderConfigFile);
+			config.save(snowgolemConfigFile);
+			config.save(SlimeConfigFile);
+			config.save(SilverfishConfigFile);
+			config.save(PlayerConfigFile);
+			config.save(PigZombieConfigFile);
+			config.save(MagmaCubeConfigFile);
+			config.save(IronGolemConfigFile);
+			config.save(GiantConfigFile);
+			config.save(EndermanConfigFile);
+			config.save(EnderDragonConfigFile);
+			config.save(CreeperConfigFile);
+			config.save(CaveSpiderConfigFile);
+			config.save(BlazeConfigFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -147,6 +282,21 @@ public class MobEffects extends JavaPlugin {
 		try {
 			config.load(configFile);
 			config.load(zombieConfigFile);
+			config.load(wolfConfigFile);
+			config.load(spiderConfigFile);
+			config.load(snowgolemConfigFile);
+			config.load(SlimeConfigFile);
+			config.load(SilverfishConfigFile);
+			config.load(PlayerConfigFile);
+			config.load(PigZombieConfigFile);
+			config.load(MagmaCubeConfigFile);
+			config.load(IronGolemConfigFile);
+			config.load(GiantConfigFile);
+			config.load(EndermanConfigFile);
+			config.load(EnderDragonConfigFile);
+			config.load(CreeperConfigFile);
+			config.load(CaveSpiderConfigFile);
+			config.load(BlazeConfigFile);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -165,12 +315,39 @@ public class MobEffects extends JavaPlugin {
 		}
 		}
 		
-		public FileConfiguration getZombieConfig() {
-			if (zombieConfig == null) {
-				reloadZombieConfig();
+		public FileConfiguration getwolfConfig() {
+			if (wolfConfig == null) {
+				reloadwolfConfig();
 			}
-			return zombieConfig;
+			return wolfConfig;
 		}
+	
+		public void reloadwolfConfig() {
+			if (wolfConfigFile == null) {
+				wolfConfigFile = new File(getDataFolder(), "wolf.yml");
+			}
+			wolfConfig = YamlConfiguration.loadConfiguration(wolfConfigFile);
+			
+			InputStream defConfigStream = getResource("wolf.yml");
+			if (defConfigStream != null) {
+				YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+				wolfConfig.setDefaults(defConfig);
+			}
+			}
+			
+			public FileConfiguration getWolfConfig() {
+				if (wolfConfig == null) {
+					reloadwolfConfig();
+				}
+				return wolfConfig;
+			}
+			
+			public FileConfiguration getZombieConfig() {
+				if (zombieConfig == null) {
+					reloadZombieConfig();
+				}
+				return zombieConfig;
+			}
 		
 	public void saveZombieConfig() {
 		if (zombieConfig == null || zombieConfigFile == null) {
@@ -182,5 +359,449 @@ public class MobEffects extends JavaPlugin {
 			this.log.info("Could not save config to " + zombieConfigFile);
 		}
 	}
+	
+	public void saveWolfConfig() {
+		if (wolfConfig == null || wolfConfigFile == null) {
+			return;
+		}
+		try {
+			wolfConfig.save(wolfConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + wolfConfigFile);
+		}
+	}
+	
+	public FileConfiguration getspiderConfig() {
+		if (spiderConfig == null) {
+			reloadspiderConfig();
+		}
+		return spiderConfig;
+	}
 
+	public void reloadspiderConfig() {
+		if (spiderConfigFile == null) {
+			spiderConfigFile = new File(getDataFolder(), "spider.yml");
+		}
+		spiderConfig = YamlConfiguration.loadConfiguration(spiderConfigFile);
+		
+		InputStream defConfigStream = getResource("spider.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			spiderConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void savespiderConfig() {
+		if (spiderConfig == null || spiderConfigFile == null) {
+			return;
+		}
+		try {
+			spiderConfig.save(spiderConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + spiderConfigFile);
+		}
+	}
+	
+	public FileConfiguration getsnowgolemConfig() {
+		if (snowgolemConfig == null) {
+			reloadsnowgolemConfig();
+		}
+		return snowgolemConfig;
+	}
+
+	public void reloadsnowgolemConfig() {
+		if (snowgolemConfigFile == null) {
+			snowgolemConfigFile = new File(getDataFolder(), "snowgolem.yml");
+		}
+		snowgolemConfig = YamlConfiguration.loadConfiguration(snowgolemConfigFile);
+		
+		InputStream defConfigStream = getResource("snowgolem.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			snowgolemConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void savesnowgolemConfig() {
+		if (snowgolemConfig == null || snowgolemConfigFile == null) {
+			return;
+		}
+		try {
+			snowgolemConfig.save(snowgolemConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + snowgolemConfigFile);
+		}
+	}
+
+	public FileConfiguration getSlimeConfig() {
+		if (SlimeConfig == null) {
+			reloadSlimeConfig();
+		}
+		return SlimeConfig;
+	}
+
+	public void reloadSlimeConfig() {
+		if (SlimeConfigFile == null) {
+			SlimeConfigFile = new File(getDataFolder(), "Slime.yml");
+		}
+		SlimeConfig = YamlConfiguration.loadConfiguration(SlimeConfigFile);
+		
+		InputStream defConfigStream = getResource("Slime.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			SlimeConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveSlimeConfig() {
+		if (SlimeConfig == null || SlimeConfigFile == null) {
+			return;
+		}
+		try {
+			SlimeConfig.save(SlimeConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + SlimeConfigFile);
+		}
+	}
+	
+	public FileConfiguration getSilverfishConfig() {
+		if (SilverfishConfig == null) {
+			reloadSilverfishConfig();
+		}
+		return SilverfishConfig;
+	}
+
+	public void reloadSilverfishConfig() {
+		if (SilverfishConfigFile == null) {
+			SilverfishConfigFile = new File(getDataFolder(), "Silverfish.yml");
+		}
+		SilverfishConfig = YamlConfiguration.loadConfiguration(SilverfishConfigFile);
+		
+		InputStream defConfigStream = getResource("Silverfish.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			SilverfishConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveSilverfishConfig() {
+		if (SilverfishConfig == null || SilverfishConfigFile == null) {
+			return;
+		}
+		try {
+			SilverfishConfig.save(SilverfishConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + SilverfishConfigFile);
+		}
+	}
+	
+	public FileConfiguration getPlayerConfig() {
+		if (PlayerConfig == null) {
+			reloadPlayerConfig();
+		}
+		return PlayerConfig;
+	}
+
+	public void reloadPlayerConfig() {
+		if (PlayerConfigFile == null) {
+			PlayerConfigFile = new File(getDataFolder(), "Player.yml");
+		}
+		PlayerConfig = YamlConfiguration.loadConfiguration(PlayerConfigFile);
+		
+		InputStream defConfigStream = getResource("Player.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			PlayerConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void savePlayerConfig() {
+		if (PlayerConfig == null || PlayerConfigFile == null) {
+			return;
+		}
+		try {
+			PlayerConfig.save(PlayerConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + PlayerConfigFile);
+		}
+	}
+	
+	public FileConfiguration getPigZombieConfig() {
+		if (PigZombieConfig == null) {
+			reloadPigZombieConfig();
+		}
+		return PigZombieConfig;
+	}
+
+	public void reloadPigZombieConfig() {
+		if (PigZombieConfigFile == null) {
+			PigZombieConfigFile = new File(getDataFolder(), "PigZombie.yml");
+		}
+		PigZombieConfig = YamlConfiguration.loadConfiguration(PigZombieConfigFile);
+		
+		InputStream defConfigStream = getResource("PigZombie.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			PigZombieConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void savePigZombieConfig() {
+		if (PigZombieConfig == null || PigZombieConfigFile == null) {
+			return;
+		}
+		try {
+			PigZombieConfig.save(PigZombieConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + PigZombieConfigFile);
+		}
+	}
+	
+	public FileConfiguration getMagmaCubeConfig() {
+		if (MagmaCubeConfig == null) {
+			reloadMagmaCubeConfig();
+		}
+		return MagmaCubeConfig;
+	}
+
+	public void reloadMagmaCubeConfig() {
+		if (MagmaCubeConfigFile == null) {
+			MagmaCubeConfigFile = new File(getDataFolder(), "MagmaCube.yml");
+		}
+		MagmaCubeConfig = YamlConfiguration.loadConfiguration(MagmaCubeConfigFile);
+		
+		InputStream defConfigStream = getResource("MagmaCube.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			MagmaCubeConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveMagmaCubeConfig() {
+		if (MagmaCubeConfig == null || MagmaCubeConfigFile == null) {
+			return;
+		}
+		try {
+			MagmaCubeConfig.save(MagmaCubeConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + MagmaCubeConfigFile);
+		}
+	}
+	
+	public FileConfiguration getIronGolemConfig() {
+		if (IronGolemConfig == null) {
+			reloadIronGolemConfig();
+		}
+		return IronGolemConfig;
+	}
+
+	public void reloadIronGolemConfig() {
+		if (IronGolemConfigFile == null) {
+			IronGolemConfigFile = new File(getDataFolder(), "IronGolem.yml");
+		}
+		IronGolemConfig = YamlConfiguration.loadConfiguration(IronGolemConfigFile);
+		
+		InputStream defConfigStream = getResource("IronGolem.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			IronGolemConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveIronGolemConfig() {
+		if (IronGolemConfig == null || IronGolemConfigFile == null) {
+			return;
+		}
+		try {
+			IronGolemConfig.save(IronGolemConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + IronGolemConfigFile);
+		}
+	}
+	
+	public FileConfiguration getGiantConfig() {
+		if (GiantConfig == null) {
+			reloadGiantConfig();
+		}
+		return GiantConfig;
+	}
+
+	public void reloadGiantConfig() {
+		if (GiantConfigFile == null) {
+			GiantConfigFile = new File(getDataFolder(), "Giant.yml");
+		}
+		GiantConfig = YamlConfiguration.loadConfiguration(GiantConfigFile);
+		
+		InputStream defConfigStream = getResource("Giant.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			GiantConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveGiantConfig() {
+		if (GiantConfig == null || GiantConfigFile == null) {
+			return;
+		}
+		try {
+			GiantConfig.save(GiantConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + GiantConfigFile);
+		}
+	}
+	
+	public FileConfiguration getEndermanConfig() {
+		if (EndermanConfig == null) {
+			reloadEndermanConfig();
+		}
+		return EndermanConfig;
+	}
+
+	public void reloadEndermanConfig() {
+		if (EndermanConfigFile == null) {
+			EndermanConfigFile = new File(getDataFolder(), "Enderman.yml");
+		}
+		EndermanConfig = YamlConfiguration.loadConfiguration(EndermanConfigFile);
+		
+		InputStream defConfigStream = getResource("Enderman.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			EndermanConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveEndermanConfig() {
+		if (EndermanConfig == null || EndermanConfigFile == null) {
+			return;
+		}
+		try {
+			EndermanConfig.save(EndermanConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + EndermanConfigFile);
+		}
+	}
+	
+	public FileConfiguration getEnderDragonConfig() {
+		if (EnderDragonConfig == null) {
+			reloadEnderDragonConfig();
+		}
+		return EnderDragonConfig;
+	}
+
+	public void reloadEnderDragonConfig() {
+		if (EnderDragonConfigFile == null) {
+			EnderDragonConfigFile = new File(getDataFolder(), "EnderDragon.yml");
+		}
+		EnderDragonConfig = YamlConfiguration.loadConfiguration(EnderDragonConfigFile);
+		
+		InputStream defConfigStream = getResource("EnderDragon.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			EnderDragonConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveEnderDragonConfig() {
+		if (EnderDragonConfig == null || EnderDragonConfigFile == null) {
+			return;
+		}
+		try {
+			EnderDragonConfig.save(EnderDragonConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + EnderDragonConfigFile);
+		}
+	}
+	
+	public FileConfiguration getCreeperConfig() {
+		if (CreeperConfig == null) {
+			reloadCreeperConfig();
+		}
+		return CreeperConfig;
+	}
+
+	public void reloadCreeperConfig() {
+		if (CreeperConfigFile == null) {
+			CreeperConfigFile = new File(getDataFolder(), "Creeper.yml");
+		}
+		CreeperConfig = YamlConfiguration.loadConfiguration(CreeperConfigFile);
+		
+		InputStream defConfigStream = getResource("Creeper.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			CreeperConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveCreeperConfig() {
+		if (CreeperConfig == null || CreeperConfigFile == null) {
+			return;
+		}
+		try {
+			CreeperConfig.save(CreeperConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + CreeperConfigFile);
+		}
+	}
+	
+	public FileConfiguration getCaveSpiderConfig() {
+		if (CaveSpiderConfig == null) {
+			reloadCaveSpiderConfig();
+		}
+		return CaveSpiderConfig;
+	}
+
+	public void reloadCaveSpiderConfig() {
+		if (CaveSpiderConfigFile == null) {
+			CaveSpiderConfigFile = new File(getDataFolder(), "CaveSpider.yml");
+		}
+		CaveSpiderConfig = YamlConfiguration.loadConfiguration(CaveSpiderConfigFile);
+		
+		InputStream defConfigStream = getResource("CaveSpider.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			CaveSpiderConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveCaveSpiderConfig() {
+		if (CaveSpiderConfig == null || CaveSpiderConfigFile == null) {
+			return;
+		}
+		try {
+			CaveSpiderConfig.save(CaveSpiderConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + CaveSpiderConfigFile);
+		}
+	}
+	
+	public FileConfiguration getBlazeConfig() {
+		if (BlazeConfig == null) {
+			reloadBlazeConfig();
+		}
+		return BlazeConfig;
+	}
+
+	public void reloadBlazeConfig() {
+		if (BlazeConfigFile == null) {
+			BlazeConfigFile = new File(getDataFolder(), "Blaze.yml");
+		}
+		BlazeConfig = YamlConfiguration.loadConfiguration(BlazeConfigFile);
+		
+		InputStream defConfigStream = getResource("Blaze.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			BlazeConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveBlazeConfig() {
+		if (BlazeConfig == null || BlazeConfigFile == null) {
+			return;
+		}
+		try {
+			BlazeConfig.save(BlazeConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + BlazeConfigFile);
+		}
+	}
 }
