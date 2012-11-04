@@ -51,6 +51,7 @@ public class MobEffectsCommand {
 		plugin.reloadspiderConfig();
 		plugin.reloadwolfConfig();
 		plugin.reloadZombieConfig();
+		plugin.reloadSkeletonConfig();
 		plugin.reloadSlimeConfig();
 		plugin.reloadSilverfishConfig();
 		plugin.reloadPlayerConfig();

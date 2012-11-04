@@ -32,6 +32,8 @@ public class MobEffects extends JavaPlugin {
 	FileConfiguration SlimeConfig;
 	File SlimeConfigFile;
 	FileConfiguration SilverfishConfig;
+	File SkeletonConfigFile;
+	FileConfiguration SkeletonConfig;
 	File SilverfishConfigFile;
 	FileConfiguration PlayerConfig;
 	File PlayerConfigFile;
@@ -68,6 +70,7 @@ public class MobEffects extends JavaPlugin {
 	private final MEPigZombieListener pigzombieListener = new MEPigZombieListener(this);
 	private final MEPlayerListener playerListener = new MEPlayerListener(this);
 	private final MESilverfishListener silverfishListener = new MESilverfishListener(this);
+	private final MESkeletonListener skeletonListener = new MESkeletonListener(this);
 	private final MESlimeListener slimeListener = new MESlimeListener(this);
 	private final MESnowGolemListener snowmanListener = new MESnowGolemListener(this);
 	private final MESpiderListener spiderListener = new MESpiderListener(this);
@@ -87,6 +90,7 @@ public class MobEffects extends JavaPlugin {
 		SilverfishConfigFile = new File(getDataFolder(), "silverfish.yml");
 		PlayerConfigFile = new File(getDataFolder(), "player.yml");
 		PigZombieConfigFile = new File(getDataFolder(), "pigzombie.yml");
+		SkeletonConfigFile = new File(getDataFolder(), "skeleton.yml");
 		MagmaCubeConfigFile = new File(getDataFolder(), "magmacube.yml");
 		IronGolemConfigFile = new File(getDataFolder(), "irongolem.yml");
 		GiantConfigFile = new File(getDataFolder(), "giant.yml");
@@ -116,6 +120,7 @@ public class MobEffects extends JavaPlugin {
 		MagmaCubeConfig = new YamlConfiguration();
 		IronGolemConfig = new YamlConfiguration();
 		GiantConfig = new YamlConfiguration();
+		SkeletonConfig = new YamlConfiguration();
 		EndermanConfig = new YamlConfiguration();
 		EnderDragonConfig = new YamlConfiguration();
 		CreeperConfig = new YamlConfiguration();
@@ -140,6 +145,7 @@ public class MobEffects extends JavaPlugin {
 		pm.registerEvents(pigzombieListener, this);
 		pm.registerEvents(playerListener, this);
 		pm.registerEvents(silverfishListener, this);
+		pm.registerEvents(skeletonListener, this);
 		pm.registerEvents(slimeListener, this);
 		pm.registerEvents(snowmanListener, this);
 		pm.registerEvents(spiderListener, this);
@@ -238,6 +244,10 @@ public class MobEffects extends JavaPlugin {
 			BlazeConfigFile.getParentFile().mkdirs();
 			copy(getResource("blaze.yml"), BlazeConfigFile);
 		}
+		if (!SkeletonConfigFile.exists()) {
+			SkeletonConfigFile.getParentFile().mkdirs();
+			copy(getResource("skeleton.yml"), SkeletonConfigFile);
+		}
 	}
 	
 	private void copy(InputStream in, File file) {
@@ -263,6 +273,7 @@ public class MobEffects extends JavaPlugin {
 			config.save(spiderConfigFile);
 			config.save(snowgolemConfigFile);
 			config.save(SlimeConfigFile);
+			config.save(SkeletonConfigFile);
 			config.save(SilverfishConfigFile);
 			config.save(PlayerConfigFile);
 			config.save(PigZombieConfigFile);
@@ -289,6 +300,7 @@ public class MobEffects extends JavaPlugin {
 			config.load(SilverfishConfigFile);
 			config.load(PlayerConfigFile);
 			config.load(PigZombieConfigFile);
+			config.load(SkeletonConfigFile);
 			config.load(MagmaCubeConfigFile);
 			config.load(IronGolemConfigFile);
 			config.load(GiantConfigFile);
@@ -802,6 +814,37 @@ public class MobEffects extends JavaPlugin {
 			BlazeConfig.save(BlazeConfigFile);
 		} catch (IOException ex) {
 			this.log.info("Could not save config to " + BlazeConfigFile);
+		}
+	}
+	//
+	public FileConfiguration getSkeletonConfig() {
+		if (SkeletonConfig == null) {
+			reloadSkeletonConfig();
+		}
+		return SkeletonConfig;
+	}
+
+	public void reloadSkeletonConfig() {
+		if (SkeletonConfigFile == null) {
+			SkeletonConfigFile = new File(getDataFolder(), "Skeleton.yml");
+		}
+		SkeletonConfig = YamlConfiguration.loadConfiguration(SkeletonConfigFile);
+		
+		InputStream defConfigStream = getResource("Skeleton.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			SkeletonConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveSkeletonConfig() {
+		if (SkeletonConfig == null || SkeletonConfigFile == null) {
+			return;
+		}
+		try {
+			SkeletonConfig.save(SkeletonConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + SkeletonConfigFile);
 		}
 	}
 }
