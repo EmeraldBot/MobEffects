@@ -1,5 +1,3 @@
-# Configuration file for wolves.
-# Changes made in here can be reloaded with /mobeffects reload
 Wolf:
   Blindness:
     Enabled: false
@@ -31,6 +29,11 @@ Wolf:
     Power: 0
     Time: 500
     DodgeChance: 10
+  Invisibility:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChance: 10
   Jump:
     Enabled: false
     Power: 0
@@ -46,6 +49,11 @@ Wolf:
     Power: 0
     Time: 500
     DodgeChance: 10
+  NightVision:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChange: 10
   Poison:
     Enabled: false
     Power: 0
@@ -86,3 +94,8 @@ Wolf:
     Power: 0
     Time: 500
     DodgeChance: 10
+  Wither:
+    Enabled: false
+    Power: 0
+    Time: 500
+    DodgeChange: 10

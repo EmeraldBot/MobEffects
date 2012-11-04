@@ -79,6 +79,50 @@ public class MESlimeListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getSlimeConfig().getInt("Slime.FastDigging.Time"), plugin.getSlimeConfig().getInt("Slime.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void SlimeInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSlimeConfig().getInt("Slime.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getSlimeConfig().getBoolean("Slime.Invisibility.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getSlimeConfig().getInt("Slime.Invisibility.Time"), plugin.getSlimeConfig().getInt("Slime.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SlimeNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSlimeConfig().getInt("Slime.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getSlimeConfig().getBoolean("Slime.NightVision.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getSlimeConfig().getInt("Slime.NightVision.Time"), plugin.getSlimeConfig().getInt("Slime.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SlimeWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSlimeConfig().getInt("Slime.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getSlimeConfig().getBoolean("Slime.Wither.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getSlimeConfig().getInt("Slime.Wither.Time"), plugin.getSlimeConfig().getInt("Slime.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void SlimeFireResistance(EntityDamageByEntityEvent event) {

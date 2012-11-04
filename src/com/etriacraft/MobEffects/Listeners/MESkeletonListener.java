@@ -59,6 +59,27 @@ public static MobEffects plugin;
 			}
 		}
 	}
+	
+	@EventHandler
+	public void SkeletonInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Arrow) {
+			Arrow a = (Arrow) event.getDamager();
+			LivingEntity shooter = a.getShooter();
+			if (plugin.getSkeletonConfig().getBoolean("Skeleton.Invisibility.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getSkeletonConfig().getInt("Skeleton.Invisibility.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Invisibility.Power")));
+			}
+		}
+	}
+	
 	@EventHandler
 	public void SkeletonResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
@@ -154,6 +175,26 @@ public static MobEffects plugin;
 			if (plugin.getSkeletonConfig().getBoolean("Skeleton.Heal.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, plugin.getSkeletonConfig().getInt("Skeleton.Heal.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Heal.Power")));
+			}
+		}
+	}
+	
+	@EventHandler
+	public void SkeletonNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Arrow) {
+			Arrow a = (Arrow) event.getDamager();
+			LivingEntity shooter = a.getShooter();
+			if (plugin.getSkeletonConfig().getBoolean("Skeleton.NightVision.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getSkeletonConfig().getInt("Skeleton.NightVision.Time"), plugin.getSkeletonConfig().getInt("Skeleton.NightVision.Power")));
 			}
 		}
 	}
@@ -332,6 +373,26 @@ public static MobEffects plugin;
 			if (plugin.getSkeletonConfig().getBoolean("Skeleton.Weakness.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getSkeletonConfig().getInt("Skeleton.Weakness.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Weakness.Power")));
+			}
+		}
+	}
+	
+	@EventHandler
+	public void SkeletonWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Wither.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Arrow) {
+			Arrow a = (Arrow) event.getDamager();
+			LivingEntity shooter = a.getShooter();
+			if (plugin.getSkeletonConfig().getBoolean("Skeleton.Wither.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getSkeletonConfig().getInt("Skeleton.Wither.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Wither.Power")));
 			}
 		}
 	}

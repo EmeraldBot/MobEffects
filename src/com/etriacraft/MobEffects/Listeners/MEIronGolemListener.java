@@ -79,6 +79,50 @@ public class MEIronGolemListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getIronGolemConfig().getInt("IronGolem.FastDigging.Time"), plugin.getIronGolemConfig().getInt("IronGolem.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void IronGolemInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.Invisibility.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getIronGolemConfig().getInt("IronGolem.Invisibility.Time"), plugin.getIronGolemConfig().getInt("IronGolem.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void IronGolemNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.NightVision.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getIronGolemConfig().getInt("IronGolem.NightVision.Time"), plugin.getIronGolemConfig().getInt("IronGolem.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void IronGolemWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.Wither.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getIronGolemConfig().getInt("IronGolem.Wither.Time"), plugin.getIronGolemConfig().getInt("IronGolem.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void IronGolemFireResistance(EntityDamageByEntityEvent event) {

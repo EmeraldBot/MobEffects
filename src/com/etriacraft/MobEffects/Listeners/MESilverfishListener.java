@@ -79,6 +79,50 @@ public class MESilverfishListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getSilverfishConfig().getInt("Silverfish.FastDigging.Time"), plugin.getSilverfishConfig().getInt("Silverfish.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void SilverfishInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getSilverfishConfig().getBoolean("Silverfish.Invisibility.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getSilverfishConfig().getInt("Silverfish.Invisibility.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SilverfishNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getSilverfishConfig().getBoolean("Silverfish.NightVision.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getSilverfishConfig().getInt("Silverfish.NightVision.Time"), plugin.getSilverfishConfig().getInt("Silverfish.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SilverfishWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getSilverfishConfig().getBoolean("Silverfish.Wither.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getSilverfishConfig().getInt("Silverfish.Wither.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void SilverfishFireResistance(EntityDamageByEntityEvent event) {

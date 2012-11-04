@@ -2,7 +2,6 @@ package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -77,6 +76,50 @@ public class MEPlayerListener implements Listener {
 		if (plugin.getPlayerConfig().getBoolean("Player.FastDigging.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getPlayerConfig().getInt("Player.FastDigging.Time"), plugin.getPlayerConfig().getInt("Player.FastDigging.Power")));
+		}
+	}
+	@EventHandler
+	public void PlayerInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPlayerConfig().getInt("Player.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getPlayerConfig().getBoolean("Player.Invisibility.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getPlayerConfig().getInt("Player.Invisibility.Time"), plugin.getPlayerConfig().getInt("Player.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void PlayerNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPlayerConfig().getInt("Player.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getPlayerConfig().getBoolean("Player.NightVision.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getPlayerConfig().getInt("Player.NightVision.Time"), plugin.getPlayerConfig().getInt("Player.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void PlayerWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPlayerConfig().getInt("Player.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getPlayerConfig().getBoolean("Player.Wither.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getPlayerConfig().getInt("Player.Wither.Time"), plugin.getPlayerConfig().getInt("Player.Wither.Power")));
 		}
 	}
 	

@@ -79,6 +79,50 @@ public class MEWolfListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getWolfConfig().getInt("Wolf.FastDigging.Time"), plugin.getWolfConfig().getInt("Wolf.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void WolfInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getWolfConfig().getBoolean("Wolf.Invisibility.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getWolfConfig().getInt("Wolf.Invisibility.Time"), plugin.getWolfConfig().getInt("Wolf.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void WolfNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getWolfConfig().getBoolean("Wolf.NightVision.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getWolfConfig().getInt("Wolf.NightVision.Time"), plugin.getWolfConfig().getInt("Wolf.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void WolfWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getWolfConfig().getBoolean("Wolf.Wither.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getWolfConfig().getInt("Wolf.Wither.Time"), plugin.getWolfConfig().getInt("Wolf.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void WolfFireResistance(EntityDamageByEntityEvent event) {

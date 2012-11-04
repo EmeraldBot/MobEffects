@@ -25,8 +25,8 @@ public class MobEffects extends JavaPlugin {
 	File zombieConfigFile;
 	FileConfiguration wolfConfig;
 	File wolfConfigFile;
-	FileConfiguration spiderConfig;
-	File spiderConfigFile;
+	FileConfiguration SpiderConfig;
+	File SpiderConfigFile;
 	FileConfiguration snowgolemConfig;
 	File snowgolemConfigFile;
 	FileConfiguration SlimeConfig;
@@ -84,7 +84,7 @@ public class MobEffects extends JavaPlugin {
 		configFile = new File(getDataFolder(), "config.yml");
 		zombieConfigFile = new File(getDataFolder(), "zombie.yml");
 		wolfConfigFile = new File(getDataFolder(), "wolf.yml");
-		spiderConfigFile = new File(getDataFolder(), "spider.yml");
+		SpiderConfigFile = new File(getDataFolder(), "spider.yml");
 		snowgolemConfigFile = new File(getDataFolder(), "snowgolem.yml");
 		SlimeConfigFile = new File(getDataFolder(), "slime.yml");
 		SilverfishConfigFile = new File(getDataFolder(), "silverfish.yml");
@@ -111,7 +111,7 @@ public class MobEffects extends JavaPlugin {
 		config = new YamlConfiguration();
 		zombieConfig = new YamlConfiguration();
 		wolfConfig = new YamlConfiguration();
-		spiderConfig = new YamlConfiguration();
+		SpiderConfig = new YamlConfiguration();
 		snowgolemConfig = new YamlConfiguration();
 		SlimeConfig = new YamlConfiguration();
 		SilverfishConfig = new YamlConfiguration();
@@ -188,9 +188,9 @@ public class MobEffects extends JavaPlugin {
 			wolfConfigFile.getParentFile().mkdirs();
 			copy(getResource("wolf.yml"), wolfConfigFile);
 		}
-		if (!spiderConfigFile.exists()) {
-			spiderConfigFile.getParentFile().mkdirs();
-			copy(getResource("spider.yml"), spiderConfigFile);
+		if (!SpiderConfigFile.exists()) {
+			SpiderConfigFile.getParentFile().mkdirs();
+			copy(getResource("spider.yml"), SpiderConfigFile);
 		}
 		if (!snowgolemConfigFile.exists()) {
 			snowgolemConfigFile.getParentFile().mkdirs();
@@ -270,7 +270,7 @@ public class MobEffects extends JavaPlugin {
 			config.save(configFile);
 			config.save(zombieConfigFile);
 			config.save(wolfConfigFile);
-			config.save(spiderConfigFile);
+			config.save(SpiderConfigFile);
 			config.save(snowgolemConfigFile);
 			config.save(SlimeConfigFile);
 			config.save(SkeletonConfigFile);
@@ -294,7 +294,7 @@ public class MobEffects extends JavaPlugin {
 			config.load(configFile);
 			config.load(zombieConfigFile);
 			config.load(wolfConfigFile);
-			config.load(spiderConfigFile);
+			config.load(SpiderConfigFile);
 			config.load(snowgolemConfigFile);
 			config.load(SlimeConfigFile);
 			config.load(SilverfishConfigFile);
@@ -383,34 +383,34 @@ public class MobEffects extends JavaPlugin {
 		}
 	}
 	
-	public FileConfiguration getspiderConfig() {
-		if (spiderConfig == null) {
+	public FileConfiguration getSpiderConfig() {
+		if (SpiderConfig == null) {
 			reloadspiderConfig();
 		}
-		return spiderConfig;
+		return SpiderConfig;
 	}
 
 	public void reloadspiderConfig() {
-		if (spiderConfigFile == null) {
-			spiderConfigFile = new File(getDataFolder(), "spider.yml");
+		if (SpiderConfigFile == null) {
+			SpiderConfigFile = new File(getDataFolder(), "spider.yml");
 		}
-		spiderConfig = YamlConfiguration.loadConfiguration(spiderConfigFile);
+		SpiderConfig = YamlConfiguration.loadConfiguration(SpiderConfigFile);
 		
 		InputStream defConfigStream = getResource("spider.yml");
 		if (defConfigStream != null) {
 			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
-			spiderConfig.setDefaults(defConfig);
+			SpiderConfig.setDefaults(defConfig);
 		}
 		}
 	
 	public void savespiderConfig() {
-		if (spiderConfig == null || spiderConfigFile == null) {
+		if (SpiderConfig == null || SpiderConfigFile == null) {
 			return;
 		}
 		try {
-			spiderConfig.save(spiderConfigFile);
+			SpiderConfig.save(SpiderConfigFile);
 		} catch (IOException ex) {
-			this.log.info("Could not save config to " + spiderConfigFile);
+			this.log.info("Could not save config to " + SpiderConfigFile);
 		}
 	}
 	

@@ -79,6 +79,50 @@ public class MEEndermanListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getEndermanConfig().getInt("Enderman.FastDigging.Time"), plugin.getEndermanConfig().getInt("Enderman.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void EndermanInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEndermanConfig().getInt("Enderman.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getEndermanConfig().getBoolean("Enderman.Invisibility.Enabled", true) && damager instanceof Enderman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getEndermanConfig().getInt("Enderman.Invisibility.Time"), plugin.getEndermanConfig().getInt("Enderman.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void EndermanNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEndermanConfig().getInt("Enderman.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getEndermanConfig().getBoolean("Enderman.NightVision.Enabled", true) && damager instanceof Enderman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getEndermanConfig().getInt("Enderman.NightVision.Time"), plugin.getEndermanConfig().getInt("Enderman.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void EndermanWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEndermanConfig().getInt("Enderman.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getEndermanConfig().getBoolean("Enderman.Wither.Enabled", true) && damager instanceof Enderman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getEndermanConfig().getInt("Enderman.Wither.Time"), plugin.getEndermanConfig().getInt("Enderman.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void EndermanFireResistance(EntityDamageByEntityEvent event) {

@@ -79,6 +79,50 @@ public class MECreeperListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getCreeperConfig().getInt("Creeper.FastDigging.Time"), plugin.getCreeperConfig().getInt("Creeper.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void CreeperInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getCreeperConfig().getInt("Creeper.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getCreeperConfig().getBoolean("Creeper.Invisibility.Enabled", true) && damager instanceof Creeper && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getCreeperConfig().getInt("Creeper.Invisibility.Time"), plugin.getCreeperConfig().getInt("Creeper.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void CreeperNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getCreeperConfig().getInt("Creeper.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getCreeperConfig().getBoolean("Creeper.NightVision.Enabled", true) && damager instanceof Creeper && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getCreeperConfig().getInt("Creeper.NightVision.Time"), plugin.getCreeperConfig().getInt("Creeper.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void CreeperWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getCreeperConfig().getInt("Creeper.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getCreeperConfig().getBoolean("Creeper.Wither.Enabled", true) && damager instanceof Creeper && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getCreeperConfig().getInt("Creeper.Wither.Time"), plugin.getCreeperConfig().getInt("Creeper.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void CreeperFireResistance(EntityDamageByEntityEvent event) {

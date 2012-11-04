@@ -79,6 +79,50 @@ public class MEZombieListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getZombieConfig().getInt("Zombie.FastDigging.Time"), plugin.getZombieConfig().getInt("Zombie.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void ZombieInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getZombieConfig().getInt("Zombie.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getZombieConfig().getBoolean("Zombie.Invisibility.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getZombieConfig().getInt("Zombie.Invisibility.Time"), plugin.getZombieConfig().getInt("Zombie.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void ZombieNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getZombieConfig().getInt("Zombie.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getZombieConfig().getBoolean("Zombie.NightVision.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getZombieConfig().getInt("Zombie.NightVision.Time"), plugin.getZombieConfig().getInt("Zombie.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void ZombieWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getZombieConfig().getInt("Zombie.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getZombieConfig().getBoolean("Zombie.Wither.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getZombieConfig().getInt("Zombie.Wither.Time"), plugin.getZombieConfig().getInt("Zombie.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void ZombieFireResistance(EntityDamageByEntityEvent event) {

@@ -79,6 +79,50 @@ public class MEPigZombieListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getPigZombieConfig().getInt("PigZombie.FastDigging.Time"), plugin.getPigZombieConfig().getInt("PigZombie.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void PigZombieInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getPigZombieConfig().getBoolean("PigZombie.Invisibility.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getPigZombieConfig().getInt("PigZombie.Invisibility.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void PigZombieNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getPigZombieConfig().getBoolean("PigZombie.NightVision.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getPigZombieConfig().getInt("PigZombie.NightVision.Time"), plugin.getPigZombieConfig().getInt("PigZombie.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void PigZombieWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getPigZombieConfig().getBoolean("PigZombie.Wither.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getPigZombieConfig().getInt("PigZombie.Wither.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void PigZombieFireResistance(EntityDamageByEntityEvent event) {

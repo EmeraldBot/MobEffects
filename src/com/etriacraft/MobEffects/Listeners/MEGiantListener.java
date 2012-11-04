@@ -79,6 +79,50 @@ public class MEGiantListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getGiantConfig().getInt("Giant.FastDigging.Time"), plugin.getGiantConfig().getInt("Giant.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void GiantInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getGiantConfig().getInt("Giant.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getGiantConfig().getBoolean("Giant.Invisibility.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getGiantConfig().getInt("Giant.Invisibility.Time"), plugin.getGiantConfig().getInt("Giant.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void GiantNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getGiantConfig().getInt("Giant.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getGiantConfig().getBoolean("Giant.NightVision.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getGiantConfig().getInt("Giant.NightVision.Time"), plugin.getGiantConfig().getInt("Giant.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void GiantWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getGiantConfig().getInt("Giant.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getGiantConfig().getBoolean("Giant.Wither.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getGiantConfig().getInt("Giant.Wither.Time"), plugin.getGiantConfig().getInt("Giant.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void GiantFireResistance(EntityDamageByEntityEvent event) {
