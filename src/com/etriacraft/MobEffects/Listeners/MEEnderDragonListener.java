@@ -79,6 +79,50 @@ public class MEEnderDragonListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, plugin.getEnderDragonConfig().getInt("EnderDragon.FastDigging.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.FastDigging.Power")));
 		}
 	}
+	@EventHandler
+	public void EnderDragonInvisibility(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Invisibility.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.Invisibility.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, plugin.getEnderDragonConfig().getInt("EnderDragon.Invisibility.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.Invisibility.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void EnderDragonNightVision(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.NightVision.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.NightVision.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, plugin.getEnderDragonConfig().getInt("EnderDragon.NightVision.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.NightVision.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void EnderDragonWither(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Wither.DodgeChance") / 100) {
+			dodged = true;
+		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.Wither.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getEnderDragonConfig().getInt("EnderDragon.Wither.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.Wither.Power")));
+		}
+	}
 	
 	@EventHandler
 	public void EnderDragonFireResistance(EntityDamageByEntityEvent event) {
