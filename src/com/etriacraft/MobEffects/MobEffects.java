@@ -23,6 +23,8 @@ public class MobEffects extends JavaPlugin {
 	
 	FileConfiguration zombieConfig;
 	File zombieConfigFile;
+	FileConfiguration WitherConfig;
+	File WitherConfigFile;
 	FileConfiguration wolfConfig;
 	File wolfConfigFile;
 	FileConfiguration SpiderConfig;
@@ -45,6 +47,8 @@ public class MobEffects extends JavaPlugin {
 	FileConfiguration IronGolemConfig;
 	File GiantConfigFile;
 	FileConfiguration GiantConfig;
+	File GhastConfigFile;
+	FileConfiguration GhastConfig;
 	File EndermanConfigFile;
 	FileConfiguration EndermanConfig;
 	File EnderDragonConfigFile;
@@ -68,12 +72,14 @@ public class MobEffects extends JavaPlugin {
 	private final MEIronGolemListener irongolemListener = new MEIronGolemListener(this);
 	private final MEMagmaCubeListener magmacubeListener = new MEMagmaCubeListener(this);
 	private final MEPigZombieListener pigzombieListener = new MEPigZombieListener(this);
+	private final MEGhastListener ghastListener = new MEGhastListener(this);
 	private final MEPlayerListener playerListener = new MEPlayerListener(this);
 	private final MESilverfishListener silverfishListener = new MESilverfishListener(this);
 	private final MESkeletonListener skeletonListener = new MESkeletonListener(this);
 	private final MESlimeListener slimeListener = new MESlimeListener(this);
 	private final MESnowGolemListener snowmanListener = new MESnowGolemListener(this);
 	private final MESpiderListener spiderListener = new MESpiderListener(this);
+	private final MEWitherListener witherListener = new MEWitherListener(this);
 	private final MEWolfListener wolfListener = new MEWolfListener(this);
 	private final MEZombieListener zombieListener = new MEZombieListener(this);
 	private final MiscListener miscListener = new MiscListener(this);
@@ -91,6 +97,7 @@ public class MobEffects extends JavaPlugin {
 		PlayerConfigFile = new File(getDataFolder(), "player.yml");
 		PigZombieConfigFile = new File(getDataFolder(), "pigzombie.yml");
 		SkeletonConfigFile = new File(getDataFolder(), "skeleton.yml");
+		GhastConfigFile = new File(getDataFolder(), "ghast.yml");
 		MagmaCubeConfigFile = new File(getDataFolder(), "magmacube.yml");
 		IronGolemConfigFile = new File(getDataFolder(), "irongolem.yml");
 		GiantConfigFile = new File(getDataFolder(), "giant.yml");
@@ -99,6 +106,7 @@ public class MobEffects extends JavaPlugin {
 		CreeperConfigFile = new File(getDataFolder(), "creeper.yml");
 		CaveSpiderConfigFile = new File(getDataFolder(), "cavespider.yml");
 		BlazeConfigFile = new File(getDataFolder(), "blaze.yml");
+		WitherConfigFile = new File(getDataFolder(), "wither.yml");
 
 		// Use firstRun() method
 		try {
@@ -123,8 +131,10 @@ public class MobEffects extends JavaPlugin {
 		SkeletonConfig = new YamlConfiguration();
 		EndermanConfig = new YamlConfiguration();
 		EnderDragonConfig = new YamlConfiguration();
+		WitherConfig = new YamlConfiguration();
 		CreeperConfig = new YamlConfiguration();
 		CaveSpiderConfig = new YamlConfiguration();
+		GhastConfig = new YamlConfiguration();
 		BlazeConfig = new YamlConfiguration();
 		loadYamls();
 		
@@ -150,7 +160,9 @@ public class MobEffects extends JavaPlugin {
 		pm.registerEvents(snowmanListener, this);
 		pm.registerEvents(spiderListener, this);
 		pm.registerEvents(zombieListener, this);
+		pm.registerEvents(ghastListener, this);
 		pm.registerEvents(wolfListener, this);
+		pm.registerEvents(witherListener, this);
 		//
 		pm.registerEvents(miscListener, this);
 		
@@ -248,6 +260,14 @@ public class MobEffects extends JavaPlugin {
 			SkeletonConfigFile.getParentFile().mkdirs();
 			copy(getResource("skeleton.yml"), SkeletonConfigFile);
 		}
+		if (!WitherConfigFile.exists()) {
+			WitherConfigFile.getParentFile().mkdirs();
+			copy(getResource("wither.yml"), WitherConfigFile);
+		}
+		if (!GhastConfigFile.exists()) {
+			GhastConfigFile.getParentFile().mkdirs();
+			copy(getResource("ghast.yml"), GhastConfigFile);
+		}
 	}
 	
 	private void copy(InputStream in, File file) {
@@ -269,6 +289,7 @@ public class MobEffects extends JavaPlugin {
 		try {
 			config.save(configFile);
 			config.save(zombieConfigFile);
+			config.save(WitherConfigFile);
 			config.save(wolfConfigFile);
 			config.save(SpiderConfigFile);
 			config.save(snowgolemConfigFile);
@@ -284,6 +305,7 @@ public class MobEffects extends JavaPlugin {
 			config.save(EnderDragonConfigFile);
 			config.save(CreeperConfigFile);
 			config.save(CaveSpiderConfigFile);
+			config.save(GhastConfigFile);
 			config.save(BlazeConfigFile);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -295,6 +317,7 @@ public class MobEffects extends JavaPlugin {
 			config.load(zombieConfigFile);
 			config.load(wolfConfigFile);
 			config.load(SpiderConfigFile);
+			config.load(WitherConfigFile);
 			config.load(snowgolemConfigFile);
 			config.load(SlimeConfigFile);
 			config.load(SilverfishConfigFile);
@@ -308,6 +331,7 @@ public class MobEffects extends JavaPlugin {
 			config.load(EnderDragonConfigFile);
 			config.load(CreeperConfigFile);
 			config.load(CaveSpiderConfigFile);
+			config.load(GhastConfigFile);
 			config.load(BlazeConfigFile);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -845,6 +869,68 @@ public class MobEffects extends JavaPlugin {
 			SkeletonConfig.save(SkeletonConfigFile);
 		} catch (IOException ex) {
 			this.log.info("Could not save config to " + SkeletonConfigFile);
+		}
+	}
+	//
+	public FileConfiguration getWitherConfig() {
+		if (WitherConfig == null) {
+			reloadWitherConfig();
+		}
+		return WitherConfig;
+	}
+
+	public void reloadWitherConfig() {
+		if (WitherConfigFile == null) {
+			WitherConfigFile = new File(getDataFolder(), "Wither.yml");
+		}
+		WitherConfig = YamlConfiguration.loadConfiguration(WitherConfigFile);
+		
+		InputStream defConfigStream = getResource("Wither.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			WitherConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveWitherConfig() {
+		if (WitherConfig == null || WitherConfigFile == null) {
+			return;
+		}
+		try {
+			WitherConfig.save(WitherConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + WitherConfigFile);
+		}
+	}
+	//
+	public FileConfiguration getGhastConfig() {
+		if (GhastConfig == null) {
+			reloadGhastConfig();
+		}
+		return GhastConfig;
+	}
+
+	public void reloadGhastConfig() {
+		if (GhastConfigFile == null) {
+			GhastConfigFile = new File(getDataFolder(), "Ghast.yml");
+		}
+		GhastConfig = YamlConfiguration.loadConfiguration(GhastConfigFile);
+		
+		InputStream defConfigStream = getResource("Ghast.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			GhastConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveGhastConfig() {
+		if (GhastConfig == null || GhastConfigFile == null) {
+			return;
+		}
+		try {
+			GhastConfig.save(GhastConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + GhastConfigFile);
 		}
 	}
 }
