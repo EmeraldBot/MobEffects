@@ -23,6 +23,8 @@ public class MobEffects extends JavaPlugin {
 	
 	FileConfiguration zombieConfig;
 	File zombieConfigFile;
+	FileConfiguration WitchConfig;
+	File WitchConfigFile;
 	FileConfiguration WitherConfig;
 	File WitherConfigFile;
 	FileConfiguration wolfConfig;
@@ -72,6 +74,7 @@ public class MobEffects extends JavaPlugin {
 	private final MEIronGolemListener irongolemListener = new MEIronGolemListener(this);
 	private final MEMagmaCubeListener magmacubeListener = new MEMagmaCubeListener(this);
 	private final MEPigZombieListener pigzombieListener = new MEPigZombieListener(this);
+	private final MEWitchListener witchListener = new MEWitchListener(this);
 	private final MEGhastListener ghastListener = new MEGhastListener(this);
 	private final MEPlayerListener playerListener = new MEPlayerListener(this);
 	private final MESilverfishListener silverfishListener = new MESilverfishListener(this);
@@ -93,6 +96,7 @@ public class MobEffects extends JavaPlugin {
 		SpiderConfigFile = new File(getDataFolder(), "spider.yml");
 		snowgolemConfigFile = new File(getDataFolder(), "snowgolem.yml");
 		SlimeConfigFile = new File(getDataFolder(), "slime.yml");
+		WitchConfigFile = new File(getDataFolder(), "witch.yml");
 		SilverfishConfigFile = new File(getDataFolder(), "silverfish.yml");
 		PlayerConfigFile = new File(getDataFolder(), "player.yml");
 		PigZombieConfigFile = new File(getDataFolder(), "pigzombie.yml");
@@ -119,6 +123,7 @@ public class MobEffects extends JavaPlugin {
 		config = new YamlConfiguration();
 		zombieConfig = new YamlConfiguration();
 		wolfConfig = new YamlConfiguration();
+		WitchConfig = new YamlConfiguration();
 		SpiderConfig = new YamlConfiguration();
 		snowgolemConfig = new YamlConfiguration();
 		SlimeConfig = new YamlConfiguration();
@@ -148,6 +153,7 @@ public class MobEffects extends JavaPlugin {
 		pm.registerEvents(cavespiderListener, this);
 		pm.registerEvents(creeperListener, this);
 		pm.registerEvents(enderdragonListener, this);
+		pm.registerEvents(witchListener, this);
 		pm.registerEvents(endermanListener, this);
 		pm.registerEvents(giantListener, this);
 		pm.registerEvents(irongolemListener, this);
@@ -268,6 +274,10 @@ public class MobEffects extends JavaPlugin {
 			GhastConfigFile.getParentFile().mkdirs();
 			copy(getResource("ghast.yml"), GhastConfigFile);
 		}
+		if (!WitchConfigFile.exists()) {
+			WitchConfigFile.getParentFile().mkdirs();
+			copy(getResource("witch.yml"), WitchConfigFile);
+		}
 	}
 	
 	private void copy(InputStream in, File file) {
@@ -295,6 +305,7 @@ public class MobEffects extends JavaPlugin {
 			config.save(snowgolemConfigFile);
 			config.save(SlimeConfigFile);
 			config.save(SkeletonConfigFile);
+			config.save(WitchConfigFile);
 			config.save(SilverfishConfigFile);
 			config.save(PlayerConfigFile);
 			config.save(PigZombieConfigFile);
@@ -318,6 +329,7 @@ public class MobEffects extends JavaPlugin {
 			config.load(wolfConfigFile);
 			config.load(SpiderConfigFile);
 			config.load(WitherConfigFile);
+			config.load(WitchConfigFile);
 			config.load(snowgolemConfigFile);
 			config.load(SlimeConfigFile);
 			config.load(SilverfishConfigFile);
@@ -931,6 +943,37 @@ public class MobEffects extends JavaPlugin {
 			GhastConfig.save(GhastConfigFile);
 		} catch (IOException ex) {
 			this.log.info("Could not save config to " + GhastConfigFile);
+		}
+	}
+	//
+	public FileConfiguration getWitchConfig() {
+		if (GhastConfig == null) {
+			reloadGhastConfig();
+		}
+		return GhastConfig;
+	}
+
+	public void reloadWitchConfig() {
+		if (WitchConfigFile == null) {
+			WitchConfigFile = new File(getDataFolder(), "Witch.yml");
+		}
+		WitchConfig = YamlConfiguration.loadConfiguration(WitchConfigFile);
+		
+		InputStream defConfigStream = getResource("Witch.yml");
+		if (defConfigStream != null) {
+			YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+			WitchConfig.setDefaults(defConfig);
+		}
+		}
+	
+	public void saveWitchConfig() {
+		if (WitchConfig == null || WitchConfigFile == null) {
+			return;
+		}
+		try {
+			WitchConfig.save(WitchConfigFile);
+		} catch (IOException ex) {
+			this.log.info("Could not save config to " + WitchConfigFile);
 		}
 	}
 }

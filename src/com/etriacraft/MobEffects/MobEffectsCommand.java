@@ -54,6 +54,7 @@ public class MobEffectsCommand {
 		plugin.reloadZombieConfig();
 		plugin.reloadSkeletonConfig();
 		plugin.reloadSlimeConfig();
+		plugin.reloadWitchConfig();
 		plugin.reloadSilverfishConfig();
 		plugin.reloadPlayerConfig();
 		plugin.reloadWitherConfig();
