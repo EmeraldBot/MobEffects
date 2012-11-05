@@ -35,6 +35,21 @@ public class MEIronGolemListener implements Listener {
 	}
 	
 	@EventHandler
+	public void IronGolemHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getIronGolemConfig().getBoolean("IronGolem.Hunger.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getIronGolemConfig().getInt("IronGolem.Hunger.Time"), plugin.getIronGolemConfig().getInt("IronGolem.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void IronGolemNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

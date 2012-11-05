@@ -1,8 +1,8 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import org.bukkit.entity.Snowman;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Snowman;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -31,6 +31,21 @@ public class MESnowGolemListener implements Listener {
 		} if ( plugin.getsnowgolemConfig().getBoolean("Snowman.Blindness.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getsnowgolemConfig().getInt("Snowman.Blindness.Time"), plugin.getsnowgolemConfig().getInt("Snowman.Blindness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SnowmanHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getsnowgolemConfig().getInt("Snowman.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getsnowgolemConfig().getBoolean("Snowman.Hunger.Enabled", true) && damager instanceof Snowman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getsnowgolemConfig().getInt("Snowman.Hunger.Time"), plugin.getsnowgolemConfig().getInt("Snowman.Hunger.Power")));
 		}
 	}
 	

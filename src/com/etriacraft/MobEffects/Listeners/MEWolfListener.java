@@ -35,6 +35,21 @@ public class MEWolfListener implements Listener {
 	}
 	
 	@EventHandler
+	public void WolfHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getWolfConfig().getInt("Wolf.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getWolfConfig().getBoolean("Wolf.Hunger.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getWolfConfig().getInt("Wolf.Hunger.Time"), plugin.getWolfConfig().getInt("Wolf.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void WolfNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

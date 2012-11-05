@@ -35,6 +35,21 @@ public class MEPigZombieListener implements Listener {
 	}
 	
 	@EventHandler
+	public void PigZombieHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPigZombieConfig().getInt("PigZombie.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getPigZombieConfig().getBoolean("PigZombie.Hunger.Enabled", true) && damager instanceof PigZombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getPigZombieConfig().getInt("PigZombie.Hunger.Time"), plugin.getPigZombieConfig().getInt("PigZombie.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void PigZombieNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

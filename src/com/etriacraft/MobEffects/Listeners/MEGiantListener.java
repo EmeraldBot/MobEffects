@@ -35,6 +35,21 @@ public class MEGiantListener implements Listener {
 	}
 	
 	@EventHandler
+	public void GiantHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getGiantConfig().getInt("Giant.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getGiantConfig().getBoolean("Giant.Hunger.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getGiantConfig().getInt("Giant.Hunger.Time"), plugin.getGiantConfig().getInt("Giant.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void GiantNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

@@ -35,6 +35,21 @@ public class MEEnderDragonListener implements Listener {
 	}
 	
 	@EventHandler
+	public void EnderDragonHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Hunger.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getEnderDragonConfig().getInt("EnderDragon.Hunger.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void EnderDragonNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

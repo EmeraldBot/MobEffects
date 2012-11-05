@@ -35,6 +35,21 @@ public class MEMagmaCubeListener implements Listener {
 	}
 	
 	@EventHandler
+	public void MagmaCubeHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Hunger.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getMagmaCubeConfig().getInt("MagmaCube.Hunger.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void MagmaCubeNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

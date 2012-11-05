@@ -35,6 +35,21 @@ public class MECaveSpiderListener implements Listener {
 	}
 	
 	@EventHandler
+	public void CaveSpiderHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getCaveSpiderConfig().getInt("CaveSpider.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getCaveSpiderConfig().getBoolean("CaveSpider.Hunger.Enabled", true) && damager instanceof CaveSpider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getCaveSpiderConfig().getInt("CaveSpider.Hunger.Time"), plugin.getCaveSpiderConfig().getInt("CaveSpider.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void CaveSpiderNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

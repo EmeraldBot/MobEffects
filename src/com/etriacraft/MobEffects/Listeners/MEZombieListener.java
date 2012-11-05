@@ -1,8 +1,8 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import org.bukkit.entity.Zombie;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -31,6 +31,20 @@ public class MEZombieListener implements Listener {
 		} if ( plugin.getZombieConfig().getBoolean("Zombie.Blindness.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getZombieConfig().getInt("Zombie.Blindness.Time"), plugin.getZombieConfig().getInt("Zombie.Blindness.Power")));
+		}
+	}
+	@EventHandler
+	public void ZombieHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getZombieConfig().getInt("Zombie.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getZombieConfig().getBoolean("Zombie.Hunger.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getZombieConfig().getInt("Zombie.Hunger.Time"), plugin.getZombieConfig().getInt("Zombie.Hunger.Power")));
 		}
 	}
 	

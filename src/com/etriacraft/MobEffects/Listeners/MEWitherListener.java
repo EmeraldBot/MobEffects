@@ -1,9 +1,10 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Fireball;
+import org.bukkit.entity.Wither;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Wither;
 import org.bukkit.entity.WitherSkull;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -37,6 +38,25 @@ public class MEWitherListener implements Listener {
 			if (plugin.getWitherConfig().getBoolean("Wither.Blindness.Enabled", true) && shooter instanceof Wither && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getWitherConfig().getInt("Wither.Blindness.Time"), plugin.getWitherConfig().getInt("Wither.Blindness.Power")));
+			}
+		}
+	}
+	@EventHandler
+	public void WitherHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getWitherConfig().getInt("Wither.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Fireball) {
+			Fireball f = (Fireball) event.getDamager();
+			LivingEntity shooter = f.getShooter();
+			if (plugin.getWitherConfig().getBoolean("Wither.Hunger.Enabled", true) && shooter instanceof Wither && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getWitherConfig().getInt("Wither.Hunger.Time"), plugin.getWitherConfig().getInt("Wither.Hunger.Power")));
 			}
 		}
 	}

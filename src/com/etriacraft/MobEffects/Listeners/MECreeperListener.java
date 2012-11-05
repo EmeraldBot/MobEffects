@@ -110,6 +110,21 @@ public class MECreeperListener implements Listener {
 	}
 	
 	@EventHandler
+	public void CreeperHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getCreeperConfig().getInt("Creeper.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getCreeperConfig().getBoolean("Creeper.Hunger.Enabled", true) && damager instanceof Creeper && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getCreeperConfig().getInt("Creeper.Hunger.Time"), plugin.getCreeperConfig().getInt("Creeper.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void CreeperWither(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

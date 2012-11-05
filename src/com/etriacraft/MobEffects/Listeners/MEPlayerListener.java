@@ -34,6 +34,21 @@ public class MEPlayerListener implements Listener {
 	}
 	
 	@EventHandler
+	public void PlayerHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getPlayerConfig().getInt("Player.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getPlayerConfig().getBoolean("Player.Hunger.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getPlayerConfig().getInt("Player.Hunger.Time"), plugin.getPlayerConfig().getInt("Player.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void PlayerNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

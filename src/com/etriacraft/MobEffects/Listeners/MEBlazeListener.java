@@ -35,6 +35,21 @@ public class MEBlazeListener implements Listener {
 	}
 	
 	@EventHandler
+	public void BlazeHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getBlazeConfig().getInt("Blaze.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getBlazeConfig().getBoolean("Blaze.Hunger.Enabled", true) && damager instanceof Blaze && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getBlazeConfig().getInt("Blaze.Hunger.Time"), plugin.getBlazeConfig().getInt("Blaze.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void BlazeNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

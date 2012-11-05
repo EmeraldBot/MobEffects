@@ -40,6 +40,26 @@ public class MEGhastListener implements Listener {
 			}
 		}
 	}
+	
+	@EventHandler
+	public void GhastHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getGhastConfig().getInt("Ghast.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Fireball) {
+			Fireball f = (Fireball) event.getDamager();
+			LivingEntity shooter = f.getShooter();
+			if (plugin.getGhastConfig().getBoolean("Ghast.Hunger.Enabled", true) && shooter instanceof Ghast && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getGhastConfig().getInt("Ghast.Hunger.Time"), plugin.getGhastConfig().getInt("Ghast.Hunger.Power")));
+			}
+		}
+	}
 	@EventHandler
 	public void GhastConfusion(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();

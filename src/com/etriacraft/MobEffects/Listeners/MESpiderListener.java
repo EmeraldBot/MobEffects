@@ -1,8 +1,8 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import org.bukkit.entity.Spider;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Spider;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -31,6 +31,21 @@ public class MESpiderListener implements Listener {
 		} if ( plugin.getSpiderConfig().getBoolean("Spider.Blindness.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getSpiderConfig().getInt("Spider.Blindness.Time"), plugin.getSpiderConfig().getInt("Spider.Blindness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SpiderHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSpiderConfig().getInt("Spider.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getSpiderConfig().getBoolean("Spider.Hunger.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getSpiderConfig().getInt("Spider.Hunger.Time"), plugin.getSpiderConfig().getInt("Spider.Hunger.Power")));
 		}
 	}
 	

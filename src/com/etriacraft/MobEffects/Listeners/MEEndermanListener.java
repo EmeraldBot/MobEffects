@@ -35,6 +35,21 @@ public class MEEndermanListener implements Listener {
 	}
 	
 	@EventHandler
+	public void EndermanHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getEndermanConfig().getInt("Enderman.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getEndermanConfig().getBoolean("Enderman.Hunger.Enabled", true) && damager instanceof Enderman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getEndermanConfig().getInt("Enderman.Hunger.Time"), plugin.getEndermanConfig().getInt("Enderman.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void EndermanNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();

@@ -2,9 +2,10 @@ package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Fireball;
+import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Skeleton;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -37,6 +38,26 @@ public static MobEffects plugin;
 			if (plugin.getSkeletonConfig().getBoolean("Skeleton.Blindness.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getSkeletonConfig().getInt("Skeleton.Blindness.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Blindness.Power")));
+			}
+		}
+	}
+	
+	@EventHandler
+	public void SkeletonHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Fireball) {
+			Fireball f = (Fireball) event.getDamager();
+			LivingEntity shooter = f.getShooter();
+			if (plugin.getSkeletonConfig().getBoolean("Skeleton.Hunger.Enabled", true) && shooter instanceof Skeleton && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getSkeletonConfig().getInt("Skeleton.Hunger.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Hunger.Power")));
 			}
 		}
 	}

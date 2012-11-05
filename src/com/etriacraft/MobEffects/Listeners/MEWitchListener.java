@@ -1,10 +1,11 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import org.bukkit.entity.Fireball;
+import org.bukkit.entity.Witch;
 import org.bukkit.entity.ThrownPotion;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Witch;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -37,6 +38,25 @@ public class MEWitchListener implements Listener {
 			if (plugin.getWitchConfig().getBoolean("Witch.Blindness.Enabled", true) && shooter instanceof Witch && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getWitchConfig().getInt("Witch.Blindness.Time"), plugin.getWitchConfig().getInt("Witch.Blindness.Power")));
+			}
+		}
+	}
+	@EventHandler
+	public void WitchHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getWitchConfig().getInt("Witch.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		}
+		if (damager instanceof Fireball) {
+			Fireball f = (Fireball) event.getDamager();
+			LivingEntity shooter = f.getShooter();
+			if (plugin.getWitchConfig().getBoolean("Witch.Hunger.Enabled", true) && shooter instanceof Witch && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+				Player player = (Player) e;
+				player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getWitchConfig().getInt("Witch.Hunger.Time"), plugin.getWitchConfig().getInt("Witch.Hunger.Power")));
 			}
 		}
 	}

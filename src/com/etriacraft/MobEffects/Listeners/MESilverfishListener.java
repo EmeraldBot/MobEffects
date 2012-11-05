@@ -35,6 +35,21 @@ public class MESilverfishListener implements Listener {
 	}
 	
 	@EventHandler
+	public void SilverfishHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		double rand = Math.random();
+		boolean dodged = false;
+		if (rand <= plugin.getSilverfishConfig().getInt("Silverfish.Hunger.DodgeChance") / 100) {
+			dodged = true;
+		} if (plugin.getSilverfishConfig().getBoolean("Silverfish.Hunger.Enabled", true) && damager instanceof Silverfish && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getSilverfishConfig().getInt("Silverfish.Hunger.Time"), plugin.getSilverfishConfig().getInt("Silverfish.Hunger.Power")));
+		}
+	}
+	
+	@EventHandler
 	public void SilverfishNausea(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
