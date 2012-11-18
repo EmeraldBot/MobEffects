@@ -25,9 +25,9 @@ public class MobEffectsCommand {
 					s.sendMessage("§eMobEffects Commands");
 					s.sendMessage("§3/mobeffects reload:§f - Reloads the config.");
 					s.sendMessage("§3/mobeffects version:§f - Checks your version of MobEffects");
+					s.sendMessage("§3/mobeffects update:§f - Checks if there is a new version available");
 					return true;
 				}
-				
 				else if (args[0].equalsIgnoreCase("reload") && s.hasPermission("mobeffects.reload")) {
 					ConfigReload();
 					s.sendMessage("§aConfig reloaded");
@@ -41,7 +41,17 @@ public class MobEffectsCommand {
 					else {
 						s.sendMessage("§cYou don't have permission to do that!");
 					}
-			} return false;
+				} else if (args[0].equalsIgnoreCase("update")) {
+					if (s.hasPermission("mobeffects.update") && UpdateChecker.updateNeeded()) {
+						s.sendMessage("§eYour server is not running the same file as the one on Bukkit!");
+						s.sendMessage("§ePerhaps you should get the new one?");
+					} else if (s.hasPermission("mobeffects.update") && !UpdateChecker.updateNeeded()){
+						s.sendMessage("§eYou are running the same MobEffects version as the one on Bukkit!");
+						s.sendMessage("§eNo need for an update now :)");
+					} else {
+						s.sendMessage("§cYou don't have permission to do that!");
+					}
+			} return true;
 			}
 		}; mobeffects.setExecutor(exe);
 	}
