@@ -1,10 +1,12 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.EnderDragon;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -317,6 +319,16 @@ public class MEEnderDragonListener implements Listener {
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Weakness.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getEnderDragonConfig().getInt("EnderDragon.Weakness.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.Weakness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void EnderDragonSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.ENDER_DRAGON && plugin.getEnderDragonConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 }

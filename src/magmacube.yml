@@ -99,3 +99,7 @@ MagmaCube:
     Power: 0
     Time: 500
     DodgeChange: 10
+DisableSpawnInWorlds:
+- world1
+- world1_nether
+- world1_the_end

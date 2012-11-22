@@ -1,9 +1,3 @@
-# Default MobEffects Configuration File!
-# Each Effect is turned off by default and has four configurable options.
-# Enabled: If set to true, the effect will activate when the player is hit by this mob. If false, the player will not be hit.
-# Power: This is the potion level. 0 = Potion Level 1. 1 = Potion Level 2. 2 = Potion Level 3.
-# Time: This is how long the effect will linger. Default is 500. This is in ticks. 500 = 25 seconds. 1 Second = 20 ticks.
-# DodgeChance: The Percentage of the effect missing the player. Default is 10%. If 0%, the player will always get the effect. If 100%, the player will never get the effect.
 # Should MobEffects check for updates?
 AutoCheckForUpdates: true
 # Which Worlds do you want MobEffects enabled in?
@@ -11,3 +5,5 @@ Worlds:
 - world
 - world_nether
 - world_the_end
+# Should MobEffects control the spawns on your server? Each mob can be configured separately.
+ManipulateSpawns: false

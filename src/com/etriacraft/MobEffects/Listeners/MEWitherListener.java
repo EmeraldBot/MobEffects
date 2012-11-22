@@ -1,6 +1,7 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Wither;
 import org.bukkit.entity.LivingEntity;
@@ -8,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.WitherSkull;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -416,5 +418,14 @@ public class MEWitherListener implements Listener {
 			}
 		}
 	}
-
+	
+	@EventHandler
+	public void WitherSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.WITHER && plugin.getWitherConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
+		}
+	}
 }

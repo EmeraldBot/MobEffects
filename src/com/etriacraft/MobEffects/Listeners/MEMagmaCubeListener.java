@@ -1,10 +1,12 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.MagmaCube;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -317,6 +319,16 @@ public class MEMagmaCubeListener implements Listener {
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Weakness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getMagmaCubeConfig().getInt("MagmaCube.Weakness.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Weakness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void MagmaCubeSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.MAGMA_CUBE && plugin.getMagmaCubeConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 }

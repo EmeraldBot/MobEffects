@@ -1,10 +1,12 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Slime;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -317,6 +319,16 @@ public class MESlimeListener implements Listener {
 		if (plugin.getSlimeConfig().getBoolean("Slime.Weakness.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getSlimeConfig().getInt("Slime.Weakness.Time"), plugin.getSlimeConfig().getInt("Slime.Weakness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void SlimeSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.SLIME && plugin.getSlimeConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 }

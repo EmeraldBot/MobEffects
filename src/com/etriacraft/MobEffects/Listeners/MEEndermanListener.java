@@ -1,10 +1,12 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Enderman;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -317,6 +319,16 @@ public class MEEndermanListener implements Listener {
 		if (plugin.getEndermanConfig().getBoolean("Enderman.Weakness.Enabled", true) && damager instanceof Enderman && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getEndermanConfig().getInt("Enderman.Weakness.Time"), plugin.getEndermanConfig().getInt("Enderman.Weakness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void EndermanSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.ENDERMAN && plugin.getEndermanConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 }

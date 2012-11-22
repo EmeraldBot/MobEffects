@@ -1,10 +1,12 @@
 package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Wolf;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -317,6 +319,16 @@ public class MEWolfListener implements Listener {
 		if (plugin.getWolfConfig().getBoolean("Wolf.Weakness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getWolfConfig().getInt("Wolf.Weakness.Time"), plugin.getWolfConfig().getInt("Wolf.Weakness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void WolfSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.WOLF && plugin.getWolfConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 }

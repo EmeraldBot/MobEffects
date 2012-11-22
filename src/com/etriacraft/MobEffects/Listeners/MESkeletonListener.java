@@ -2,12 +2,14 @@ package com.etriacraft.MobEffects.Listeners;
 
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Skeleton;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -415,6 +417,16 @@ public static MobEffects plugin;
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getSkeletonConfig().getInt("Skeleton.Wither.Time"), plugin.getSkeletonConfig().getInt("Skeleton.Wither.Power")));
 			}
+		}
+	}
+	
+	@EventHandler
+	public void SkeletonSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.SKELETON && plugin.getSkeletonConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 

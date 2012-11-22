@@ -1,5 +1,6 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Witch;
 import org.bukkit.entity.ThrownPotion;
@@ -8,6 +9,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -414,6 +416,16 @@ public class MEWitchListener implements Listener {
 				Player player = (Player) e;
 				player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, plugin.getWitchConfig().getInt("Witch.Wither.Time"), plugin.getWitchConfig().getInt("Witch.Wither.Power")));
 			}
+		}
+	}
+	
+	@EventHandler
+	public void WitchSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.WITCH && plugin.getWitchConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 
