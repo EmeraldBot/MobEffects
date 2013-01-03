@@ -29,7 +29,7 @@ public class MobEffectsCommand {
 					return true;
 				}
 				else if (args[0].equalsIgnoreCase("reload") && s.hasPermission("mobeffects.reload")) {
-					ConfigReload();
+					plugin.ConfigReload();
 					s.sendMessage("§aConfig reloaded");
 					return true;
 				}
@@ -54,29 +54,6 @@ public class MobEffectsCommand {
 			} return true;
 			}
 		}; mobeffects.setExecutor(exe);
-	}
-	
-	public void ConfigReload() {
-		plugin.reloadConfig();
-		plugin.reloadspiderConfig();
-		plugin.reloadwolfConfig();
-		plugin.reloadGhastConfig();
-		plugin.reloadZombieConfig();
-		plugin.reloadSkeletonConfig();
-		plugin.reloadSlimeConfig();
-		plugin.reloadWitchConfig();
-		plugin.reloadSilverfishConfig();
-		plugin.reloadPlayerConfig();
-		plugin.reloadWitherConfig();
-		plugin.reloadPigZombieConfig();
-		plugin.reloadMagmaCubeConfig();
-		plugin.reloadIronGolemConfig();
-		plugin.reloadGiantConfig();
-		plugin.reloadEndermanConfig();
-		plugin.reloadEnderDragonConfig();
-		plugin.reloadCreeperConfig();
-		plugin.reloadCaveSpiderConfig();
-		plugin.reloadBlazeConfig();
 	}
 	
 

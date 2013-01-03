@@ -142,6 +142,7 @@ public class MobEffects extends JavaPlugin {
 		GhastConfig = new YamlConfiguration();
 		BlazeConfig = new YamlConfiguration();
 		loadYamls();
+		ConfigReload();
 		
 		// Logger
 		this.log = this.getLogger();
@@ -975,5 +976,28 @@ public class MobEffects extends JavaPlugin {
 		} catch (IOException ex) {
 			this.log.info("Could not save config to " + WitchConfigFile);
 		}
+	}
+	
+	public void ConfigReload() {
+		reloadConfig();
+		reloadspiderConfig();
+		reloadwolfConfig();
+		reloadGhastConfig();
+		reloadZombieConfig();
+		reloadSkeletonConfig();
+		reloadSlimeConfig();
+		reloadWitchConfig();
+		reloadSilverfishConfig();
+		reloadPlayerConfig();
+		reloadWitherConfig();
+		reloadPigZombieConfig();
+		reloadMagmaCubeConfig();
+		reloadIronGolemConfig();
+		reloadGiantConfig();
+		reloadEndermanConfig();
+		reloadEnderDragonConfig();
+		reloadCreeperConfig();
+		reloadCaveSpiderConfig();
+		reloadBlazeConfig();
 	}
 }
