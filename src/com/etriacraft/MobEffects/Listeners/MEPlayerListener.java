@@ -1,9 +1,14 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import java.util.Random;
+
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -23,24 +28,28 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getPlayerConfig().getBoolean("Player.Blindness.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getPlayerConfig().getBoolean("Player.Blindness.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getPlayerConfig().getInt("Player.Blindness.Time"), plugin.getPlayerConfig().getInt("Player.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void PlayerHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getPlayerConfig().getBoolean("Player.Hunger.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -53,9 +62,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Nausea.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -68,9 +79,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Resistance.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -83,9 +96,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.FastDigging.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -98,9 +113,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getPlayerConfig().getBoolean("Player.Invisibility.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -113,9 +130,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getPlayerConfig().getBoolean("Player.NightVision.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -128,9 +147,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getPlayerConfig().getBoolean("Player.Wither.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -143,11 +164,13 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getPlayerConfig().getBoolean("Player.FireResistance.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getPlayerConfig().getInt("Player.FireResistance.Time"), plugin.getPlayerConfig().getInt("Player.FireResistance.Power")));
@@ -158,9 +181,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Harm.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -173,9 +198,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Heal.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -188,9 +215,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Regeneration.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -203,9 +232,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Strength.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -218,9 +249,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Jump.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -233,9 +266,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Poison.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -248,9 +283,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Slow.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -263,9 +300,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.MiningFatigue.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -278,9 +317,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Speed.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -293,9 +334,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.WaterBreathing.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -308,9 +351,11 @@ public class MEPlayerListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getPlayerConfig().getInt("Player.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getPlayerConfig().getDouble("Player.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getPlayerConfig().getBoolean("Player.Weakness.Enabled", true) && damager instanceof Player && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

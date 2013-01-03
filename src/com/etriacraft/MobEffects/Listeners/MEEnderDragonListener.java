@@ -1,9 +1,11 @@
 package com.etriacraft.MobEffects.Listeners;
 
-import org.bukkit.entity.Entity;
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
 import org.bukkit.entity.EnderDragon;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -26,24 +28,28 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.Blindness.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.Blindness.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getEnderDragonConfig().getInt("EnderDragon.Blindness.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void EnderDragonHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Hunger.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -56,9 +62,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Nausea.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -71,9 +79,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Resistance.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -86,9 +96,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.FastDigging.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -101,9 +113,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.Invisibility.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -116,9 +130,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.NightVision.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -131,9 +147,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getEnderDragonConfig().getBoolean("EnderDragon.Wither.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -146,11 +164,13 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.FireResistance.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getEnderDragonConfig().getInt("EnderDragon.FireResistance.Time"), plugin.getEnderDragonConfig().getInt("EnderDragon.FireResistance.Power")));
@@ -161,9 +181,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Harm.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -176,9 +198,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Heal.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -191,9 +215,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Regeneration.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -206,9 +232,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Strength.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -221,9 +249,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Jump.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -236,9 +266,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Poison.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -251,9 +283,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Slow.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -266,9 +300,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.MiningFatigue.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -281,9 +317,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Speed.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -296,9 +334,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.WaterBreathing.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -311,9 +351,11 @@ public class MEEnderDragonListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getEnderDragonConfig().getInt("EnderDragon.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getEnderDragonConfig().getDouble("EnderDragon.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getEnderDragonConfig().getBoolean("EnderDragon.Weakness.Enabled", true) && damager instanceof EnderDragon && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

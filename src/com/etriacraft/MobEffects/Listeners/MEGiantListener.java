@@ -1,10 +1,14 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import java.util.Random;
+
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Giant;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Giant;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -24,24 +28,28 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getGiantConfig().getBoolean("Giant.Blindness.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getGiantConfig().getBoolean("Giant.Blindness.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getGiantConfig().getInt("Giant.Blindness.Time"), plugin.getGiantConfig().getInt("Giant.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void GiantHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getGiantConfig().getBoolean("Giant.Hunger.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -54,9 +62,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Nausea.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -69,9 +79,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Resistance.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -84,9 +96,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.FastDigging.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -99,9 +113,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getGiantConfig().getBoolean("Giant.Invisibility.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -114,9 +130,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getGiantConfig().getBoolean("Giant.NightVision.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -129,9 +147,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getGiantConfig().getBoolean("Giant.Wither.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -144,11 +164,13 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getGiantConfig().getBoolean("Giant.FireResistance.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getGiantConfig().getInt("Giant.FireResistance.Time"), plugin.getGiantConfig().getInt("Giant.FireResistance.Power")));
@@ -159,9 +181,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Harm.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -174,9 +198,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Heal.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -189,9 +215,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Regeneration.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -204,9 +232,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Strength.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -219,9 +249,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Jump.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -234,9 +266,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Poison.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -249,9 +283,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Slow.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -264,9 +300,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.MiningFatigue.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -279,9 +317,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Speed.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -294,9 +334,11 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.WaterBreathing.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -309,14 +351,26 @@ public class MEGiantListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getGiantConfig().getInt("Giant.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getGiantConfig().getDouble("Giant.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getGiantConfig().getBoolean("Giant.Weakness.Enabled", true) && damager instanceof Giant && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, plugin.getGiantConfig().getInt("Giant.Weakness.Time"), plugin.getGiantConfig().getInt("Giant.Weakness.Power")));
+		}
+	}
+	
+	@EventHandler
+	public void GiantSpawnEvent(CreatureSpawnEvent event) {
+		Entity e = event.getEntity();
+		EntityType type = event.getEntity().getType();
+		String world = e.getWorld().getName();
+		if (type == EntityType.GIANT && plugin.getGiantConfig().getStringList("DisableSpawnInWorlds").contains(world) && plugin.getConfig().getBoolean("ManipulateSpawns", true)) {
+			event.setCancelled(true);
 		}
 	}
 }

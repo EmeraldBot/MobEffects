@@ -1,9 +1,11 @@
 package com.etriacraft.MobEffects.Listeners;
 
-import org.bukkit.entity.Entity;
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
 import org.bukkit.entity.Wolf;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -26,24 +28,28 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getWolfConfig().getBoolean("Wolf.Blindness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getWolfConfig().getBoolean("Wolf.Blindness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getWolfConfig().getInt("Wolf.Blindness.Time"), plugin.getWolfConfig().getInt("Wolf.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void WolfHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getWolfConfig().getBoolean("Wolf.Hunger.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -56,9 +62,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Nausea.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -71,9 +79,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Resistance.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -86,9 +96,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.FastDigging.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -101,9 +113,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getWolfConfig().getBoolean("Wolf.Invisibility.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -116,9 +130,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getWolfConfig().getBoolean("Wolf.NightVision.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -131,9 +147,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getWolfConfig().getBoolean("Wolf.Wither.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -146,11 +164,13 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getWolfConfig().getBoolean("Wolf.FireResistance.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getWolfConfig().getInt("Wolf.FireResistance.Time"), plugin.getWolfConfig().getInt("Wolf.FireResistance.Power")));
@@ -161,9 +181,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Harm.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -176,9 +198,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Heal.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -191,9 +215,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Regeneration.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -206,9 +232,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Strength.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -221,9 +249,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Jump.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -236,9 +266,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Poison.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -251,9 +283,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Slow.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -266,9 +300,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.MiningFatigue.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -281,9 +317,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Speed.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -296,9 +334,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.WaterBreathing.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -311,9 +351,11 @@ public class MEWolfListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getWolfConfig().getInt("Wolf.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getWolfConfig().getDouble("Wolf.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getWolfConfig().getBoolean("Wolf.Weakness.Enabled", true) && damager instanceof Wolf && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

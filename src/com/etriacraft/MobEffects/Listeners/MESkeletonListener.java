@@ -1,5 +1,7 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import java.util.Random;
+
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -29,9 +31,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -49,9 +53,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Fireball) {
@@ -68,9 +74,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -88,9 +96,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -108,9 +118,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -127,9 +139,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -147,9 +161,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -167,9 +183,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -187,9 +205,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -207,9 +227,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -227,9 +249,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -247,9 +271,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -267,9 +293,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -287,9 +315,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -307,9 +337,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -327,9 +359,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -347,9 +381,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -366,9 +402,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -385,9 +423,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {
@@ -405,9 +445,11 @@ public static MobEffects plugin;
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSkeletonConfig().getInt("Skeleton.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Skeleton.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (damager instanceof Arrow) {

@@ -1,9 +1,11 @@
 package com.etriacraft.MobEffects.Listeners;
 
-import org.bukkit.entity.Entity;
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
 import org.bukkit.entity.IronGolem;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -26,24 +28,28 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.Blindness.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getIronGolemConfig().getBoolean("IronGolem.Blindness.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getIronGolemConfig().getInt("IronGolem.Blindness.Time"), plugin.getIronGolemConfig().getInt("IronGolem.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void IronGolemHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getIronGolemConfig().getBoolean("IronGolem.Hunger.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -56,9 +62,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Nausea.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -71,9 +79,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Resistance.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -86,9 +96,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.FastDigging.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -101,9 +113,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.Invisibility.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -116,9 +130,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.NightVision.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -131,9 +147,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getIronGolemConfig().getBoolean("IronGolem.Wither.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -146,11 +164,13 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.FireResistance.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getIronGolemConfig().getInt("IronGolem.FireResistance.Time"), plugin.getIronGolemConfig().getInt("IronGolem.FireResistance.Power")));
@@ -161,9 +181,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Harm.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -176,9 +198,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Heal.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -191,9 +215,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Regeneration.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -206,9 +232,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Strength.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -221,9 +249,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Jump.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -236,9 +266,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Poison.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -251,9 +283,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Slow.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -266,9 +300,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.MiningFatigue.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -281,9 +317,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Speed.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -296,9 +334,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.WaterBreathing.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -311,9 +351,11 @@ public class MEIronGolemListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getIronGolemConfig().getInt("IronGolem.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getIronGolemConfig().getDouble("IronGolem.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getIronGolemConfig().getBoolean("IronGolem.Weakness.Enabled", true) && damager instanceof IronGolem && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

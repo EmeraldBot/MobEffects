@@ -1,8 +1,10 @@
 package com.etriacraft.MobEffects.Listeners;
 
-import org.bukkit.entity.Entity;
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Slime;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -26,13 +28,32 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getSlimeConfig().getBoolean("Slime.Blindness.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getSlimeConfig().getBoolean("Slime.Blindness.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getSlimeConfig().getInt("Slime.Blindness.Time"), plugin.getSlimeConfig().getInt("Slime.Blindness.Power")));
+		}
+	}
+	@EventHandler
+	public void SlimeHunger(EntityDamageByEntityEvent event) {
+		Entity e = event.getEntity();
+		Entity damager = event.getDamager();
+		String world = e.getWorld().getName();
+		boolean dodged = false;
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
+			dodged = true;
+		} if (plugin.getSlimeConfig().getBoolean("Slime.Hunger.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+			Player player = (Player) e;
+			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getSlimeConfig().getInt("Slime.Hunger.Time"), plugin.getSlimeConfig().getInt("Slime.Hunger.Power")));
 		}
 	}
 	
@@ -41,9 +62,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Nausea.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -51,29 +74,16 @@ public class MESlimeListener implements Listener {
 			player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, plugin.getSlimeConfig().getInt("Slime.Nausea.Time"), plugin.getSlimeConfig().getInt("Slime.Nausea.Power")));
 		}
 	}
-	
-	@EventHandler
-	public void SlimeHunger(EntityDamageByEntityEvent event) {
-		Entity e = event.getEntity();
-		Entity damager = event.getDamager();
-		String world = e.getWorld().getName();
-		double rand = Math.random();
-		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Hunger.DodgeChance") / 100) {
-			dodged = true;
-		} if (plugin.getSlimeConfig().getBoolean("Slime.Hunger.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
-			Player player = (Player) e;
-			player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, plugin.getSlimeConfig().getInt("Slime.Hunger.Time"), plugin.getSlimeConfig().getInt("Slime.Hunger.Power")));
-		}
-	}
 	@EventHandler
 	public void SlimeResistance(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Resistance.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -86,9 +96,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.FastDigging.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -101,9 +113,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getSlimeConfig().getBoolean("Slime.Invisibility.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -116,9 +130,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getSlimeConfig().getBoolean("Slime.NightVision.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -131,9 +147,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getSlimeConfig().getBoolean("Slime.Wither.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -146,11 +164,13 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getSlimeConfig().getBoolean("Slime.FireResistance.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getSlimeConfig().getInt("Slime.FireResistance.Time"), plugin.getSlimeConfig().getInt("Slime.FireResistance.Power")));
@@ -161,9 +181,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Harm.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -176,9 +198,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Heal.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -191,9 +215,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Regeneration.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -206,9 +232,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Strength.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -221,9 +249,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Jump.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -236,9 +266,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Poison.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -251,9 +283,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Slow.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -266,9 +300,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.MiningFatigue.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -281,9 +317,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Speed.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -296,9 +334,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.WaterBreathing.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -311,9 +351,11 @@ public class MESlimeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSlimeConfig().getInt("Slime.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSlimeConfig().getDouble("Slime.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSlimeConfig().getBoolean("Slime.Weakness.Enabled", true) && damager instanceof Slime && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

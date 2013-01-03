@@ -1,5 +1,7 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Spider;
 import org.bukkit.entity.Entity;
@@ -26,24 +28,28 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getSpiderConfig().getBoolean("Spider.Blindness.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getSpiderConfig().getBoolean("Spider.Blindness.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getSpiderConfig().getInt("Spider.Blindness.Time"), plugin.getSpiderConfig().getInt("Spider.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void SpiderHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getSpiderConfig().getBoolean("Spider.Hunger.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -56,9 +62,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Nausea.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -71,9 +79,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Resistance.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -86,9 +96,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.FastDigging.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -101,9 +113,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getSpiderConfig().getBoolean("Spider.Invisibility.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -116,9 +130,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getSpiderConfig().getBoolean("Spider.NightVision.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -131,9 +147,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getSpiderConfig().getBoolean("Spider.Wither.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -146,11 +164,13 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getSpiderConfig().getBoolean("Spider.FireResistance.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getSpiderConfig().getInt("Spider.FireResistance.Time"), plugin.getSpiderConfig().getInt("Spider.FireResistance.Power")));
@@ -161,9 +181,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Harm.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -176,9 +198,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Heal.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -191,9 +215,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Regeneration.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -206,9 +232,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Strength.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -221,9 +249,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Jump.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -236,9 +266,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Poison.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -251,9 +283,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Slow.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -266,9 +300,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.MiningFatigue.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -281,9 +317,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Speed.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -296,9 +334,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.WaterBreathing.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -311,9 +351,11 @@ public class MESpiderListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getSpiderConfig().getInt("Spider.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getSpiderConfig().getDouble("Spider.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getSpiderConfig().getBoolean("Spider.Weakness.Enabled", true) && damager instanceof Spider && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

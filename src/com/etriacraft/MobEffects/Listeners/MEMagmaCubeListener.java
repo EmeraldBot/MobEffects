@@ -1,9 +1,11 @@
 package com.etriacraft.MobEffects.Listeners;
 
-import org.bukkit.entity.Entity;
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
 import org.bukkit.entity.MagmaCube;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -26,24 +28,28 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Blindness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Blindness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getMagmaCubeConfig().getInt("MagmaCube.Blindness.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.Blindness.Power")));
 		}
 	}
-	
 	@EventHandler
 	public void MagmaCubeHunger(EntityDamageByEntityEvent event) {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Hunger.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -56,9 +62,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Nausea.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -71,9 +79,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Resistance.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -86,9 +96,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.FastDigging.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -101,9 +113,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Invisibility.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -116,9 +130,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getMagmaCubeConfig().getBoolean("MagmaCube.NightVision.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -131,9 +147,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Wither.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -146,11 +164,13 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.FireResistance.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getMagmaCubeConfig().getInt("MagmaCube.FireResistance.Time"), plugin.getMagmaCubeConfig().getInt("MagmaCube.FireResistance.Power")));
@@ -161,9 +181,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Harm.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -176,9 +198,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Heal.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -191,9 +215,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Regeneration.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -206,9 +232,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Strength.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -221,9 +249,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Jump.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -236,9 +266,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Poison.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -251,9 +283,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Slow.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -266,9 +300,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.MiningFatigue.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -281,9 +317,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Speed.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -296,9 +334,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.WaterBreathing.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -311,9 +351,11 @@ public class MEMagmaCubeListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getMagmaCubeConfig().getInt("MagmaCube.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getMagmaCubeConfig().getDouble("MagmaCube.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getMagmaCubeConfig().getBoolean("MagmaCube.Weakness.Enabled", true) && damager instanceof MagmaCube && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {

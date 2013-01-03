@@ -1,5 +1,7 @@
 package com.etriacraft.MobEffects.Listeners;
 
+import java.util.Random;
+
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Zombie;
 import org.bukkit.entity.Entity;
@@ -26,11 +28,14 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Blindness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Blindness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		} if ( plugin.getZombieConfig().getBoolean("Zombie.Blindness.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
+		}
+		if ( plugin.getZombieConfig().getBoolean("Zombie.Blindness.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, plugin.getZombieConfig().getInt("Zombie.Blindness.Time"), plugin.getZombieConfig().getInt("Zombie.Blindness.Power")));
 		}
@@ -40,9 +45,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Hunger.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Hunger.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if (plugin.getZombieConfig().getBoolean("Zombie.Hunger.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -55,9 +62,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Nausea.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Nausea.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Nausea.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -70,9 +79,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Resistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Resistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Resistance.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -85,9 +96,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.FastDigging.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.FastDigging.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.FastDigging.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -100,9 +113,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Invisibility.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Invisibility.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getZombieConfig().getBoolean("Zombie.Invisibility.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -115,9 +130,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.NightVision.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.NightVision.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getZombieConfig().getBoolean("Zombie.NightVision.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -130,9 +147,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Wither.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Wither.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		} if ( plugin.getZombieConfig().getBoolean("Zombie.Wither.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
@@ -145,11 +164,13 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.FireResistance.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.FireResistance.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
-		}
+		}dodged = true;
 		if (plugin.getZombieConfig().getBoolean("Zombie.FireResistance.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
 			Player player = (Player) e;
 			player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, plugin.getZombieConfig().getInt("Zombie.FireResistance.Time"), plugin.getZombieConfig().getInt("Zombie.FireResistance.Power")));
@@ -160,9 +181,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Harm.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Harm.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Harm.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -175,9 +198,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Heal.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Heal.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Heal.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -190,9 +215,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Regeneration.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Regeneration.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Regeneration.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -205,9 +232,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Strength.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Strength.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Strength.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -220,9 +249,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Jump.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Jump.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Jump.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -235,9 +266,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Poison.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Poison.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Poison.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -250,9 +283,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Slow.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Slow.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Slow.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -265,9 +300,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.MiningFatigue.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.MiningFatigue.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.MiningFatigue.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -280,9 +317,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Speed.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Speed.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Speed.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -295,9 +334,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.WaterBreathing.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.WaterBreathing.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.WaterBreathing.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
@@ -310,9 +351,11 @@ public class MEZombieListener implements Listener {
 		Entity e = event.getEntity();
 		Entity damager = event.getDamager();
 		String world = e.getWorld().getName();
-		double rand = Math.random();
 		boolean dodged = false;
-		if (rand <= plugin.getZombieConfig().getInt("Zombie.Weakness.DodgeChance") / 100) {
+		Random random = new Random();
+		double randomChance = plugin.getZombieConfig().getDouble("Zombie.Weakness.DodgeChance") / 100;
+		final double ChanceOfHappening = random.nextDouble();
+		if (ChanceOfHappening >= randomChance) {
 			dodged = true;
 		}
 		if (plugin.getZombieConfig().getBoolean("Zombie.Weakness.Enabled", true) && damager instanceof Zombie && e instanceof Player && plugin.getConfig().getStringList("Worlds").contains(world) && !dodged) {
