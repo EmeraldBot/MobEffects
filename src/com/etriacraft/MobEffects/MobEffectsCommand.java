@@ -6,18 +6,18 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.PluginCommand;
 
 public class MobEffectsCommand { 
-	
+
 	MobEffects plugin;
-	
+
 	public MobEffectsCommand(MobEffects instance) {
 		this.plugin = instance;
 		init();
 	}
-	
+
 	private void init() {
 		PluginCommand mobeffects = plugin.getCommand("mobeffects");
 		CommandExecutor exe;
-		
+
 		exe = new CommandExecutor() {
 			@Override
 			public boolean onCommand(CommandSender s, Command c, String label, String[] args) {
@@ -41,20 +41,10 @@ public class MobEffectsCommand {
 					else {
 						s.sendMessage("§cYou don't have permission to do that!");
 					}
-				} else if (args[0].equalsIgnoreCase("update")) {
-					if (s.hasPermission("mobeffects.update") && UpdateChecker.updateNeeded()) {
-						s.sendMessage("§eYour server is not running the same file as the one on Bukkit!");
-						s.sendMessage("§ePerhaps you should get the new one?");
-					} else if (s.hasPermission("mobeffects.update") && !UpdateChecker.updateNeeded()){
-						s.sendMessage("§eYou are running the same MobEffects version as the one on Bukkit!");
-						s.sendMessage("§eNo need for an update now :)");
-					} else {
-						s.sendMessage("§cYou don't have permission to do that!");
-					}
-			} return true;
+				} return true;
 			}
 		}; mobeffects.setExecutor(exe);
 	}
-	
+
 
 }

@@ -1,5 +1,5 @@
 name: MobEffects
-version: 1.5
+version: 1.5.1
 main: com.etriacraft.MobEffects.MobEffects
 author: MistPhizzle
 commands:

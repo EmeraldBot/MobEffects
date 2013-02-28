@@ -16,7 +16,6 @@ import com.etriacraft.MobEffects.Listeners.*;
 public class MobEffects extends JavaPlugin {
 	
 	protected Logger log;
-	protected UpdateChecker updateChecker;
 
 	File configFile;
 	FileConfiguration config;
@@ -85,7 +84,6 @@ public class MobEffects extends JavaPlugin {
 	private final MEWitherListener witherListener = new MEWitherListener(this);
 	private final MEWolfListener wolfListener = new MEWolfListener(this);
 	private final MEZombieListener zombieListener = new MEZombieListener(this);
-	private final MiscListener miscListener = new MiscListener(this);
 	
 	@Override
 	public void onEnable() {
@@ -170,15 +168,7 @@ public class MobEffects extends JavaPlugin {
 		pm.registerEvents(ghastListener, this);
 		pm.registerEvents(wolfListener, this);
 		pm.registerEvents(witherListener, this);
-		//
-		pm.registerEvents(miscListener, this);
 		
-		// UpdateChecker to Console
-		this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/mobeffects/files.rss");
-		if (UpdateChecker.updateNeeded() && this.getConfig().getBoolean("AutoCheckForUpdates", true)) {
-			this.log.info("A new version is available: " + this.updateChecker.getVersion());
-			this.log.info("Get it from: " + this.updateChecker.getLink());
-		}
 		// Metrics
 		try {
 			MetricsLite metrics = new MetricsLite(this);
